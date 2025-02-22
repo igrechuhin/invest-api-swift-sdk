@@ -606,3 +606,31 @@ internal extension Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest {
         .init()
     }
 }
+
+internal extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest {
+    static func new() -> Self {
+        .init()
+    }
+}
+
+internal extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest {
+    static func new() -> Self {
+        .init()
+    }
+}
+
+internal extension Tinkoff_Public_Invest_Api_Contract_V1_Page {
+    init(limit: Int32, pageNumber: Int32) {
+        self.limit = limit
+        self.pageNumber = pageNumber
+    }
+}
+
+internal extension Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest {
+    init(limit: Int32, pageNumber: Int32) {
+        self.paging = .init(limit: limit, pageNumber: pageNumber)
+    }
+    static func new(limit: Int32, pageNumber: Int32) -> Self {
+        .init(limit: limit, pageNumber: pageNumber)
+    }
+}

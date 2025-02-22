@@ -100,4 +100,8 @@ internal struct SandboxServiceClientInterceptorFactory:
     {
         return []
     }
+    
+    func makeGetSandboxMaxLotsInterceptors() -> [GRPC.ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>] {
+        return []
+    }
 }

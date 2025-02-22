@@ -1,0 +1,1 @@
+public typealias AssetReportPeriodType = Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.AssetReportPeriodType

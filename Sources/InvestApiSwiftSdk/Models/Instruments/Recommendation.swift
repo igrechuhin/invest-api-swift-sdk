@@ -1,0 +1,1 @@
+public typealias Recommendation = Tinkoff_Public_Invest_Api_Contract_V1_Recommendation

@@ -476,6 +476,24 @@ public protocol InstrumentsService {
     /// - Returns: Список брендов `[Brand]`.
     @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
     func getBrands() async throws -> [Brand]
+    
+    /// Получить фундаментальные показатели по активу.
+    ///
+    /// - Returns: Список фундаментальных показателей `[AssetFundamentals]`.
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+    func getAssetFundamentals(assets: [String]) async throws -> [AssetFundamentals]
+    
+    /// Получить расписания выхода отчётностей эмитентов.
+    ///
+    /// - Returns: Массив событий по инструментам.
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+    func getAssetReports(uid: String, from: Date, to: Date) async throws -> [AssetReport]
+    
+    /// Запрос консенсус-прогнозов
+    ///
+    /// - Returns: Список консенсус прогнозов `[ConsensusForecasts]`.
+    @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+    func getConsensusForecasts() async throws -> [ConsensusForecasts]
 #endif
 }
 
@@ -911,6 +929,41 @@ internal struct GrpcInstrumentsService: InstrumentsService {
             .getBrands(.new())
             .brands
             .map { $0.toModel() }
+    }
+    
+    func getAssetFundamentals(assets: [String]) async throws -> [AssetFundamentals] {
+        try await self.client
+            .getAssetFundamentals(.new())
+            .fundamentals
+            .map { $0.toModel() }
+    }
+    
+    func getAssetReports(uid: String, from: Date, to: Date) async throws -> [AssetReport] {
+        try await self.client
+            .getAssetReports(.new())
+            .events
+            .map { $0.toModel() }
+    }
+    
+    func getConsensusForecasts() async throws -> [ConsensusForecasts] {
+        typealias Request = Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest
+
+        var result = [ConsensusForecasts]()
+        
+        var request = Request.new(
+            limit: 10000,
+            pageNumber: 0
+        )
+        
+        var proceed = true
+        while proceed {
+            let response = try await self.client.getConsensusForecasts(request)
+            result.append(contentsOf: response.items.map { $0.toModel() })
+            proceed = result.count < response.page.totalCount
+            request.paging.pageNumber += 1
+        }
+
+        return result
     }
 #endif
 }

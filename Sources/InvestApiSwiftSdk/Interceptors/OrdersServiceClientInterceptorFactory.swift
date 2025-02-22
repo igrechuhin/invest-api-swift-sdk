@@ -1,7 +1,19 @@
 import GRPC
 
 internal struct OrdersServiceClientInterceptorFactory:
-        Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol {
+    Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol {
+    func makePostOrderAsyncInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse>] {
+        return []
+    }
+    
+    func makeGetMaxLotsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>] {
+        return []
+    }
+    
+    func makeGetOrderPriceInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse>] {
+        return []
+    }
+    
     
     func makePostOrderInterceptors() ->
         [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,

@@ -1,3 +1,3 @@
 [submodule "InvestApi"]
-	path = InvestApi
+	path = investApi
 	url = https://github.com/Tinkoff/investAPI

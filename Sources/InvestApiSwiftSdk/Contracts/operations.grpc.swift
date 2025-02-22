@@ -11,9 +11,9 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-///Сервис предназначен для получения:</br> **1**.  списка операций по счёту;</br> **2**.
-///портфеля по счёту;</br> **3**. позиций ценных бумаг на счёте;</br> **4**.
-///доступного остатка для вывода средств;</br> **5**. получения различных отчётов.
+///С помощью методов сервиса можно получить:<br/><br/> **1**. Список операций по счету.<br/> **2**.
+///Портфель по счету.<br/> **3**. Позиции ценных бумаг на счете.<br/> **4**.
+///Доступный остаток для вывода средств.<br/> **5**. Различные отчеты.
 ///
 /// Usage: instantiate `Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClient`, then call methods of this protocol to make API calls.
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol: GRPCClient {
@@ -61,8 +61,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol 
     return "tinkoff.public.invest.api.contract.v1.OperationsService"
   }
 
-  ///Метод получения списка операций по счёту.При работе с данным методом необходимо учитывать
-  /// [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
+  ///Получить список операций по счету.
+  ///При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
   ///
   /// - Parameters:
   ///   - request: Request to send to GetOperations.
@@ -80,7 +80,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol 
     )
   }
 
-  ///Метод получения портфеля по счёту.
+  ///Получить портфель по счету.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetPortfolio.
@@ -98,7 +98,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol 
     )
   }
 
-  ///Метод получения списка позиций по счёту.
+  ///Получить список позиций по счету.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetPositions.
@@ -116,7 +116,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol 
     )
   }
 
-  ///Метод получения доступного остатка для вывода средств.
+  ///Получить доступный остаток для вывода средств.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetWithdrawLimits.
@@ -134,7 +134,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol 
     )
   }
 
-  ///Метод получения брокерского отчёта.
+  ///Получить брокерский отчет.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetBrokerReport.
@@ -152,7 +152,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol 
     )
   }
 
-  ///Метод получения отчёта "Справка о доходах за пределами РФ".
+  ///Получить отчет «Справка о доходах за пределами РФ».
   ///
   /// - Parameters:
   ///   - request: Request to send to GetDividendsForeignIssuer.
@@ -170,8 +170,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceClientProtocol 
     )
   }
 
-  ///Метод получения списка операций по счёту с пагинацией. При работе с данным методом необходимо учитывать
-  /// [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
+  ///Получить список операций по счету с пагинацией.
+  ///При работе с методом учитывайте [особенности взаимодействия](/invest/services/operations/operations_problems).
   ///
   /// - Parameters:
   ///   - request: Request to send to GetOperationsByCursor.
@@ -247,9 +247,9 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceNIOClient: 
   }
 }
 
-///Сервис предназначен для получения:</br> **1**.  списка операций по счёту;</br> **2**.
-///портфеля по счёту;</br> **3**. позиций ценных бумаг на счёте;</br> **4**.
-///доступного остатка для вывода средств;</br> **5**. получения различных отчётов.
+///С помощью методов сервиса можно получить:<br/><br/> **1**. Список операций по счету.<br/> **2**.
+///Портфель по счету.<br/> **3**. Позиции ценных бумаг на счете.<br/> **4**.
+///Доступный остаток для вывода средств.<br/> **5**. Различные отчеты.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OperationsServiceAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
@@ -597,7 +597,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsStreamServiceClientPro
     return "tinkoff.public.invest.api.contract.v1.OperationsStreamService"
   }
 
-  ///Server-side stream обновлений портфеля
+  ///Server-side stream обновлений портфеля.
   ///
   /// - Parameters:
   ///   - request: Request to send to PortfolioStream.
@@ -618,7 +618,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OperationsStreamServiceClientPro
     )
   }
 
-  ///Server-side stream обновлений информации по изменению позиций портфеля
+  ///Server-side stream обновлений информации по изменению позиций портфеля.
   ///
   /// - Parameters:
   ///   - request: Request to send to PositionsStream.

@@ -11,8 +11,7 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-/// Сервис предназначен для работы со стоп-заявками:</br> **1**.
-///выставление;</br> **2**. отмена;</br> **3**. получение списка стоп-заявок.
+/// Сервис для работы со стоп-заявками: выставление, отмена, получение списка стоп-заявок.
 ///
 /// Usage: instantiate `Tinkoff_Public_Invest_Api_Contract_V1_StopOrdersServiceClient`, then call methods of this protocol to make API calls.
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_StopOrdersServiceClientProtocol: GRPCClient {
@@ -40,7 +39,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrdersServiceClientProtocol 
     return "tinkoff.public.invest.api.contract.v1.StopOrdersService"
   }
 
-  ///Метод выставления стоп-заявки.
+  ///Выставить стоп-заявку.
   ///
   /// - Parameters:
   ///   - request: Request to send to PostStopOrder.
@@ -58,7 +57,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrdersServiceClientProtocol 
     )
   }
 
-  ///Метод получения списка активных стоп заявок по счёту.
+  ///Получить список активных стоп-заявок по счету.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetStopOrders.
@@ -76,7 +75,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrdersServiceClientProtocol 
     )
   }
 
-  ///Метод отмены стоп-заявки.
+  ///Отменить стоп-заявку.
   ///
   /// - Parameters:
   ///   - request: Request to send to CancelStopOrder.
@@ -152,8 +151,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_StopOrdersServiceNIOClient: 
   }
 }
 
-/// Сервис предназначен для работы со стоп-заявками:</br> **1**.
-///выставление;</br> **2**. отмена;</br> **3**. получение списка стоп-заявок.
+/// Сервис для работы со стоп-заявками: выставление, отмена, получение списка стоп-заявок.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_StopOrdersServiceAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }

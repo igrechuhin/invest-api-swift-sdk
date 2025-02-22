@@ -11,7 +11,7 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-///Сервис для работы с песочницей TINKOFF INVEST API
+/// Методы для работы с песочницей T-Invest API
 ///
 /// Usage: instantiate `Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClient`, then call methods of this protocol to make API calls.
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol: GRPCClient {
@@ -87,6 +87,11 @@ public protocol Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtoc
     _ request: Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsRequest, Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsResponse>
+
+  func getSandboxMaxLots(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
@@ -94,7 +99,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     return "tinkoff.public.invest.api.contract.v1.SandboxService"
   }
 
-  ///Метод регистрации счёта в песочнице.
+  ///Зарегистрировать счет.
   ///
   /// - Parameters:
   ///   - request: Request to send to OpenSandboxAccount.
@@ -112,7 +117,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения счетов в песочнице.
+  ///Получить счета.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxAccounts.
@@ -130,7 +135,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод закрытия счёта в песочнице.
+  ///Закрыть счет.
   ///
   /// - Parameters:
   ///   - request: Request to send to CloseSandboxAccount.
@@ -148,7 +153,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод выставления торгового поручения в песочнице.
+  ///Выставить торговое поручение.
   ///
   /// - Parameters:
   ///   - request: Request to send to PostSandboxOrder.
@@ -166,7 +171,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод изменения выставленной заявки.
+  ///Изменить выставленную заявку.
   ///
   /// - Parameters:
   ///   - request: Request to send to ReplaceSandboxOrder.
@@ -184,7 +189,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения списка активных заявок по счёту в песочнице.
+  ///Получить список активных заявок по счету.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxOrders.
@@ -202,7 +207,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод отмены торгового поручения в песочнице.
+  ///Отменить торговое поручение.
   ///
   /// - Parameters:
   ///   - request: Request to send to CancelSandboxOrder.
@@ -220,7 +225,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения статуса заявки в песочнице. Заявки хранятся в таблице 7 дней.
+  ///Получить статус заявки в песочнице. Заявки хранятся в таблице 7 дней.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxOrderState.
@@ -238,7 +243,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения позиций по виртуальному счёту песочницы.
+  ///Получить позиции по виртуальному счету.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxPositions.
@@ -256,7 +261,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения операций в песочнице по номеру счёта.
+  ///Получить операции по номеру счета.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxOperations.
@@ -274,7 +279,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения операций в песочнице по номеру счета с пагинацией.
+  ///Получить операции по номеру счета с пагинацией.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxOperationsByCursor.
@@ -292,7 +297,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения портфолио в песочнице.
+  ///Получить портфель.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxPortfolio.
@@ -310,7 +315,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод пополнения счёта в песочнице.
+  ///Пополнить счет.
   ///
   /// - Parameters:
   ///   - request: Request to send to SandboxPayIn.
@@ -328,7 +333,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
     )
   }
 
-  ///Метод получения доступного остатка для вывода средств в песочнице.
+  ///Получить доступный остаток для вывода средств.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetSandboxWithdrawLimits.
@@ -343,6 +348,24 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientProtocol {
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeGetSandboxWithdrawLimitsInterceptors() ?? []
+    )
+  }
+
+  ///Расчет количества доступных для покупки/продажи лотов в песочнице.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to GetSandboxMaxLots.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  public func getSandboxMaxLots(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse> {
+    return self.makeUnaryCall(
+      path: Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata.Methods.getSandboxMaxLots.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetSandboxMaxLotsInterceptors() ?? []
     )
   }
 }
@@ -404,7 +427,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceNIOClient: Tin
   }
 }
 
-///Сервис для работы с песочницей TINKOFF INVEST API
+/// Методы для работы с песочницей T-Invest API
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
@@ -479,6 +502,11 @@ public protocol Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceAsyncClientP
     _ request: Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsRequest, Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsResponse>
+
+  func makeGetSandboxMaxLotsCall(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -658,6 +686,18 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceAsyncClientProtoco
       interceptors: self.interceptors?.makeGetSandboxWithdrawLimitsInterceptors() ?? []
     )
   }
+
+  public func makeGetSandboxMaxLotsCall(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata.Methods.getSandboxMaxLots.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetSandboxMaxLotsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -829,6 +869,18 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceAsyncClientProtoco
       interceptors: self.interceptors?.makeGetSandboxWithdrawLimitsInterceptors() ?? []
     )
   }
+
+  public func getSandboxMaxLots(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata.Methods.getSandboxMaxLots.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetSandboxMaxLotsInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -891,6 +943,9 @@ public protocol Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientInterc
 
   /// - Returns: Interceptors to use when invoking 'getSandboxWithdrawLimits'.
   func makeGetSandboxWithdrawLimitsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsRequest, Tinkoff_Public_Invest_Api_Contract_V1_WithdrawLimitsResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'getSandboxMaxLots'.
+  func makeGetSandboxMaxLotsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>]
 }
 
 public enum Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata {
@@ -912,6 +967,7 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata {
       Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata.Methods.getSandboxPortfolio,
       Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata.Methods.sandboxPayIn,
       Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata.Methods.getSandboxWithdrawLimits,
+      Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata.Methods.getSandboxMaxLots,
     ]
   )
 
@@ -997,6 +1053,12 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_SandboxServiceClientMetadata {
     public static let getSandboxWithdrawLimits = GRPCMethodDescriptor(
       name: "GetSandboxWithdrawLimits",
       path: "/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxWithdrawLimits",
+      type: GRPCCallType.unary
+    )
+
+    public static let getSandboxMaxLots = GRPCMethodDescriptor(
+      name: "GetSandboxMaxLots",
+      path: "/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxMaxLots",
       type: GRPCCallType.unary
     )
   }

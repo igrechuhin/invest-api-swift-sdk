@@ -11,7 +11,7 @@ import NIOConcurrencyHelpers
 import SwiftProtobuf
 
 
-///Сервис получения биржевой информации:</br> **1**. свечи;</br> **2**. стаканы;</br> **3**. торговые статусы;</br> **4**. лента сделок.
+///Сервис для получения биржевой информации:<br/> 1. Свечи.<br/> 2. Стаканы.<br/> 3. Торговые статусы.<br/> 4. Лента сделок.
 ///
 /// Usage: instantiate `Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClient`, then call methods of this protocol to make API calls.
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol: GRPCClient {
@@ -52,6 +52,11 @@ public protocol Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientPro
     _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest,
     callOptions: CallOptions?
   ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse>
+
+  func getTechAnalysis(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest,
+    callOptions: CallOptions?
+  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse>
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol {
@@ -59,7 +64,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
     return "tinkoff.public.invest.api.contract.v1.MarketDataService"
   }
 
-  ///Метод запроса исторических свечей по инструменту.
+  ///Запросить исторические свечи по инструменту.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetCandles.
@@ -77,7 +82,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
     )
   }
 
-  ///Метод запроса цен последних сделок по инструментам.
+  ///Запросить цены последних сделок по инструментам.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetLastPrices.
@@ -95,7 +100,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
     )
   }
 
-  ///Метод получения стакана по инструменту.
+  ///Получить стакан по инструменту.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetOrderBook.
@@ -113,7 +118,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
     )
   }
 
-  ///Метод запроса статуса торгов по инструментам.
+  ///Запросить статус торгов по инструментам.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetTradingStatus.
@@ -131,7 +136,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
     )
   }
 
-  ///Метод запроса статуса торгов по инструментам.
+  ///Запросить статус торгов по инструментам.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetTradingStatuses.
@@ -149,7 +154,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
     )
   }
 
-  ///Метод запроса обезличенных сделок за последний час.
+  ///Запросить обезличенные сделки за последний час.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetLastTrades.
@@ -167,7 +172,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
     )
   }
 
-  ///Метод запроса цен закрытия торговой сессии по инструментам.
+  ///Запросить цены закрытия торговой сессии по инструментам.
   ///
   /// - Parameters:
   ///   - request: Request to send to GetClosePrices.
@@ -182,6 +187,24 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientProtocol 
       request: request,
       callOptions: callOptions ?? self.defaultCallOptions,
       interceptors: self.interceptors?.makeGetClosePricesInterceptors() ?? []
+    )
+  }
+
+  ///Получить технические индикаторы по инструменту.
+  ///
+  /// - Parameters:
+  ///   - request: Request to send to GetTechAnalysis.
+  ///   - callOptions: Call options.
+  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+  public func getTechAnalysis(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest,
+    callOptions: CallOptions? = nil
+  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse> {
+    return self.makeUnaryCall(
+      path: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata.Methods.getTechAnalysis.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetTechAnalysisInterceptors() ?? []
     )
   }
 }
@@ -243,7 +266,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceNIOClient: 
   }
 }
 
-///Сервис получения биржевой информации:</br> **1**. свечи;</br> **2**. стаканы;</br> **3**. торговые статусы;</br> **4**. лента сделок.
+///Сервис для получения биржевой информации:<br/> 1. Свечи.<br/> 2. Стаканы.<br/> 3. Торговые статусы.<br/> 4. Лента сделок.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceAsyncClientProtocol: GRPCClient {
   static var serviceDescriptor: GRPCServiceDescriptor { get }
@@ -283,6 +306,11 @@ public protocol Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceAsyncClie
     _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest,
     callOptions: CallOptions?
   ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse>
+
+  func makeGetTechAnalysisCall(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest,
+    callOptions: CallOptions?
+  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -378,6 +406,18 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceAsyncClientProt
       interceptors: self.interceptors?.makeGetClosePricesInterceptors() ?? []
     )
   }
+
+  public func makeGetTechAnalysisCall(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest,
+    callOptions: CallOptions? = nil
+  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse> {
+    return self.makeAsyncUnaryCall(
+      path: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata.Methods.getTechAnalysis.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetTechAnalysisInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -465,6 +505,18 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceAsyncClientProt
       interceptors: self.interceptors?.makeGetClosePricesInterceptors() ?? []
     )
   }
+
+  public func getTechAnalysis(
+    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest,
+    callOptions: CallOptions? = nil
+  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse {
+    return try await self.performAsyncUnaryCall(
+      path: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata.Methods.getTechAnalysis.path,
+      request: request,
+      callOptions: callOptions ?? self.defaultCallOptions,
+      interceptors: self.interceptors?.makeGetTechAnalysisInterceptors() ?? []
+    )
+  }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -506,6 +558,9 @@ public protocol Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientInt
 
   /// - Returns: Interceptors to use when invoking 'getClosePrices'.
   func makeGetClosePricesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse>]
+
+  /// - Returns: Interceptors to use when invoking 'getTechAnalysis'.
+  func makeGetTechAnalysisInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse>]
 }
 
 public enum Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata {
@@ -520,6 +575,7 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadat
       Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata.Methods.getTradingStatuses,
       Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata.Methods.getLastTrades,
       Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata.Methods.getClosePrices,
+      Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadata.Methods.getTechAnalysis,
     ]
   )
 
@@ -565,6 +621,12 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServiceClientMetadat
       path: "/tinkoff.public.invest.api.contract.v1.MarketDataService/GetClosePrices",
       type: GRPCCallType.unary
     )
+
+    public static let getTechAnalysis = GRPCMethodDescriptor(
+      name: "GetTechAnalysis",
+      path: "/tinkoff.public.invest.api.contract.v1.MarketDataService/GetTechAnalysis",
+      type: GRPCCallType.unary
+    )
   }
 }
 
@@ -590,7 +652,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataStreamServiceClientPro
     return "tinkoff.public.invest.api.contract.v1.MarketDataStreamService"
   }
 
-  ///Bi-directional стрим предоставления биржевой информации.
+  ///Bidirectional-стрим предоставления биржевой информации.
   ///
   /// Callers should use the `send` method on the returned object to send messages
   /// to the server. The caller should send an `.end` after the final message has been sent.

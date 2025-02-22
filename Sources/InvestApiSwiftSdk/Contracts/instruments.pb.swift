@@ -24,28 +24,28 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
 public enum Tinkoff_Public_Invest_Api_Contract_V1_CouponType: SwiftProtobuf.Enum {
   public typealias RawValue = Int
 
-  ///Неопределенное значение
+  ///Неопределенное значение.
   case unspecified // = 0
 
-  ///Постоянный
+  ///Постоянный.
   case constant // = 1
 
-  ///Плавающий
+  ///Плавающий.
   case floating // = 2
 
-  ///Дисконт
+  ///Дисконт.
   case discount // = 3
 
-  ///Ипотечный
+  ///Ипотечный.
   case mortgage // = 4
 
-  ///Фиксированный
+  ///Фиксированный.
   case fix // = 5
 
-  ///Переменный
+  ///Переменный.
   case variable // = 6
 
-  ///Прочее
+  ///Прочее.
   case other // = 7
   case UNRECOGNIZED(Int)
 
@@ -305,14 +305,14 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OptionSettlementType: CaseIterab
 
 #endif  // swift(>=4.2)
 
-///Тип идентификатора инструмента. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
+///Тип идентификатора инструмента. [Подробнее об идентификации инструментов](./faq_identification/).
 public enum Tinkoff_Public_Invest_Api_Contract_V1_InstrumentIdType: SwiftProtobuf.Enum {
   public typealias RawValue = Int
 
   ///Значение не определено.
   case instrumentIDUnspecified // = 0
 
-  ///Figi.
+  ///FIGI.
   case figi // = 1
 
   ///Ticker.
@@ -368,57 +368,6 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentIdType: CaseIterable {
 
 #endif  // swift(>=4.2)
 
-///Статус запрашиваемых инструментов.
-public enum Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не определено.
-  case unspecified // = 0
-
-  ///Базовый список инструментов (по умолчанию). Инструменты доступные для торговли через TINKOFF INVEST API.
-  case base // = 1
-
-  ///Список всех инструментов.
-  case all // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .base
-    case 2: self = .all
-    default: self = .UNRECOGNIZED(rawValue)
-    }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .base: return 1
-    case .all: return 2
-    case .UNRECOGNIZED(let i): return i
-    }
-  }
-
-}
-
-#if swift(>=4.2)
-
-extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus] = [
-    .unspecified,
-    .base,
-    .all,
-  ]
-}
-
-#endif  // swift(>=4.2)
-
 ///Тип акций.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_ShareType: SwiftProtobuf.Enum {
   public typealias RawValue = Int
@@ -426,28 +375,28 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_ShareType: SwiftProtobuf.Enum 
   ///Значение не определено.
   case unspecified // = 0
 
-  ///Обыкновенная
+  ///Обыкновенная.
   case common // = 1
 
-  ///Привилегированная
+  ///Привилегированная.
   case preferred // = 2
 
-  ///Американские депозитарные расписки
+  ///Американские депозитарные расписки.
   case adr // = 3
 
-  ///Глобальные депозитарные расписки
+  ///Глобальные депозитарные расписки.
   case gdr // = 4
 
-  ///Товарищество с ограниченной ответственностью
+  ///Товарищество с ограниченной ответственностью.
   case mlp // = 5
 
-  ///Акции из реестра Нью-Йорка
+  ///Акции из реестра Нью-Йорка.
   case nyRegShrs // = 6
 
-  ///Закрытый инвестиционный фонд
+  ///Закрытый инвестиционный фонд.
   case closedEndFund // = 7
 
-  ///Траст недвижимости
+  ///Траст недвижимости.
   case reit // = 8
   case UNRECOGNIZED(Int)
 
@@ -510,7 +459,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_ShareType: CaseIterable {
 public enum Tinkoff_Public_Invest_Api_Contract_V1_AssetType: SwiftProtobuf.Enum {
   public typealias RawValue = Int
 
-  ///Тип не определён.
+  ///Тип не определен.
   case unspecified // = 0
 
   ///Валюта.
@@ -573,7 +522,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_AssetType: CaseIterable {
 public enum Tinkoff_Public_Invest_Api_Contract_V1_StructuredProductType: SwiftProtobuf.Enum {
   public typealias RawValue = Int
 
-  ///Тип не определён.
+  ///Тип не определен.
   case spTypeUnspecified // = 0
 
   ///Поставочный.
@@ -624,7 +573,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_StructuredProductType: CaseItera
 public enum Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesActionType: SwiftProtobuf.Enum {
   public typealias RawValue = Int
 
-  ///Тип не определён.
+  ///Тип не определен.
   case unspecified // = 0
 
   ///Добавить в список.
@@ -671,11 +620,11 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesActionType: CaseIte
 
 #endif  // swift(>=4.2)
 
-///Реальная площадка исполнения расчётов.
+///Реальная площадка исполнения расчетов.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: SwiftProtobuf.Enum {
   public typealias RawValue = Int
 
-  ///Тип не определён.
+  ///Тип не определен.
   case unspecified // = 0
 
   ///Московская биржа.
@@ -686,6 +635,9 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: SwiftProtobuf.En
 
   ///Внебиржевой инструмент.
   case otc // = 3
+
+  ///Инструмент, торгуемый на площадке брокера.
+  case dealer // = 4
   case UNRECOGNIZED(Int)
 
   public init() {
@@ -698,6 +650,7 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: SwiftProtobuf.En
     case 1: self = .moex
     case 2: self = .rts
     case 3: self = .otc
+    case 4: self = .dealer
     default: self = .UNRECOGNIZED(rawValue)
     }
   }
@@ -708,6 +661,7 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: SwiftProtobuf.En
     case .moex: return 1
     case .rts: return 2
     case .otc: return 3
+    case .dealer: return 4
     case .UNRECOGNIZED(let i): return i
     }
   }
@@ -723,6 +677,63 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: CaseIterable {
     .moex,
     .rts,
     .otc,
+    .dealer,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
+public enum Tinkoff_Public_Invest_Api_Contract_V1_Recommendation: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
+
+  /// Не определено.
+  case unspecified // = 0
+
+  /// Покупать.
+  case buy // = 1
+
+  /// Держать.
+  case hold // = 2
+
+  /// Продавать.
+  case sell // = 3
+  case UNRECOGNIZED(Int)
+
+  public init() {
+    self = .unspecified
+  }
+
+  public init?(rawValue: Int) {
+    switch rawValue {
+    case 0: self = .unspecified
+    case 1: self = .buy
+    case 2: self = .hold
+    case 3: self = .sell
+    default: self = .UNRECOGNIZED(rawValue)
+    }
+  }
+
+  public var rawValue: Int {
+    switch self {
+    case .unspecified: return 0
+    case .buy: return 1
+    case .hold: return 2
+    case .sell: return 3
+    case .UNRECOGNIZED(let i): return i
+    }
+  }
+
+}
+
+#if swift(>=4.2)
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_Recommendation: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_Recommendation] = [
+    .unspecified,
+    .buy,
+    .hold,
+    .sell,
   ]
 }
 
@@ -731,15 +742,17 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: CaseIterable {
 ///Уровень риска облигации.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_RiskLevel: SwiftProtobuf.Enum {
   public typealias RawValue = Int
+
+  ///Не указан.
   case unspecified // = 0
 
-  ///Низкий уровень риска
+  ///Низкий уровень риска.
   case low // = 1
 
-  ///Средний уровень риска
+  ///Средний уровень риска.
   case moderate // = 2
 
-  ///Высокий уровень риска
+  ///Высокий уровень риска.
   case high // = 3
   case UNRECOGNIZED(Int)
 
@@ -783,16 +796,112 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_RiskLevel: CaseIterable {
 
 #endif  // swift(>=4.2)
 
+public enum Tinkoff_Public_Invest_Api_Contract_V1_BondType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
+
+  /// Тип облигации не определен.
+  case unspecified // = 0
+
+  /// Замещающая облигация.
+  case replaced // = 1
+  case UNRECOGNIZED(Int)
+
+  public init() {
+    self = .unspecified
+  }
+
+  public init?(rawValue: Int) {
+    switch rawValue {
+    case 0: self = .unspecified
+    case 1: self = .replaced
+    default: self = .UNRECOGNIZED(rawValue)
+    }
+  }
+
+  public var rawValue: Int {
+    switch self {
+    case .unspecified: return 0
+    case .replaced: return 1
+    case .UNRECOGNIZED(let i): return i
+    }
+  }
+
+}
+
+#if swift(>=4.2)
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_BondType: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_BondType] = [
+    .unspecified,
+    .replaced,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
+/// Площадка торговли.
+public enum Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType: SwiftProtobuf.Enum {
+  public typealias RawValue = Int
+
+  /// Площадка торговли не определена.
+  case instrumentExchangeUnspecified // = 0
+
+  /// Бумага, торгуемая у дилера.
+  case instrumentExchangeDealer // = 1
+  case UNRECOGNIZED(Int)
+
+  public init() {
+    self = .instrumentExchangeUnspecified
+  }
+
+  public init?(rawValue: Int) {
+    switch rawValue {
+    case 0: self = .instrumentExchangeUnspecified
+    case 1: self = .instrumentExchangeDealer
+    default: self = .UNRECOGNIZED(rawValue)
+    }
+  }
+
+  public var rawValue: Int {
+    switch self {
+    case .instrumentExchangeUnspecified: return 0
+    case .instrumentExchangeDealer: return 1
+    case .UNRECOGNIZED(let i): return i
+    }
+  }
+
+}
+
+#if swift(>=4.2)
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType] = [
+    .instrumentExchangeUnspecified,
+    .instrumentExchangeDealer,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
 ///Запрос расписания торгов.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Наименование биржи или расчетного календаря. </br>Если не передаётся, возвращается информация по всем доступным торговым площадкам.
-  public var exchange: String = String()
+  ///Наименование биржи или расчетного календаря. <br/>Если не передается, возвращается информация по всем доступным торговым площадкам.
+  public var exchange: String {
+    get {return _exchange ?? String()}
+    set {_exchange = newValue}
+  }
+  /// Returns true if `exchange` has been explicitly set.
+  public var hasExchange: Bool {return self._exchange != nil}
+  /// Clears the value of `exchange`. Subsequent reads from it will return its default value.
+  public mutating func clearExchange() {self._exchange = nil}
 
-  ///Начало периода по часовому поясу UTC.
+  ///Начало периода по UTC.
   public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_from = newValue}
@@ -802,7 +911,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest {
   /// Clears the value of `from`. Subsequent reads from it will return its default value.
   public mutating func clearFrom() {self._from = nil}
 
-  ///Окончание периода по часовому поясу UTC.
+  ///Окончание периода по UTC.
   public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_to = newValue}
@@ -816,6 +925,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest {
 
   public init() {}
 
+  fileprivate var _exchange: String? = nil
   fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
   fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
@@ -873,7 +983,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
     set {_uniqueStorage()._isTradingDay = newValue}
   }
 
-  /// Время начала торгов по часовому поясу UTC.
+  /// Время начала торгов по UTC.
   public var startTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._startTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._startTime = newValue}
@@ -883,7 +993,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `startTime`. Subsequent reads from it will return its default value.
   public mutating func clearStartTime() {_uniqueStorage()._startTime = nil}
 
-  /// Время окончания торгов по часовому поясу UTC.
+  /// Время окончания торгов по UTC.
   public var endTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._endTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._endTime = newValue}
@@ -893,7 +1003,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `endTime`. Subsequent reads from it will return its default value.
   public mutating func clearEndTime() {_uniqueStorage()._endTime = nil}
 
-  /// Время начала аукциона открытия в часовом поясе UTC.
+  /// Время начала аукциона открытия по UTC.
   public var openingAuctionStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._openingAuctionStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._openingAuctionStartTime = newValue}
@@ -903,7 +1013,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `openingAuctionStartTime`. Subsequent reads from it will return its default value.
   public mutating func clearOpeningAuctionStartTime() {_uniqueStorage()._openingAuctionStartTime = nil}
 
-  /// Время окончания аукциона закрытия в часовом поясе UTC.
+  /// Время окончания аукциона закрытия по UTC.
   public var closingAuctionEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._closingAuctionEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._closingAuctionEndTime = newValue}
@@ -913,7 +1023,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `closingAuctionEndTime`. Subsequent reads from it will return its default value.
   public mutating func clearClosingAuctionEndTime() {_uniqueStorage()._closingAuctionEndTime = nil}
 
-  /// Время начала аукциона открытия вечерней сессии в часовом поясе UTC.
+  /// Время начала аукциона открытия вечерней сессии по UTC.
   public var eveningOpeningAuctionStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._eveningOpeningAuctionStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._eveningOpeningAuctionStartTime = newValue}
@@ -923,7 +1033,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `eveningOpeningAuctionStartTime`. Subsequent reads from it will return its default value.
   public mutating func clearEveningOpeningAuctionStartTime() {_uniqueStorage()._eveningOpeningAuctionStartTime = nil}
 
-  /// Время начала вечерней сессии в часовом поясе UTC.
+  /// Время начала вечерней сессии по UTC.
   public var eveningStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._eveningStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._eveningStartTime = newValue}
@@ -933,7 +1043,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `eveningStartTime`. Subsequent reads from it will return its default value.
   public mutating func clearEveningStartTime() {_uniqueStorage()._eveningStartTime = nil}
 
-  /// Время окончания вечерней сессии в часовом поясе UTC.
+  /// Время окончания вечерней сессии по UTC.
   public var eveningEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._eveningEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._eveningEndTime = newValue}
@@ -943,7 +1053,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `eveningEndTime`. Subsequent reads from it will return its default value.
   public mutating func clearEveningEndTime() {_uniqueStorage()._eveningEndTime = nil}
 
-  /// Время начала основного клиринга в часовом поясе UTC.
+  /// Время начала основного клиринга по UTC.
   public var clearingStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._clearingStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._clearingStartTime = newValue}
@@ -953,7 +1063,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `clearingStartTime`. Subsequent reads from it will return its default value.
   public mutating func clearClearingStartTime() {_uniqueStorage()._clearingStartTime = nil}
 
-  /// Время окончания основного клиринга в часовом поясе UTC.
+  /// Время окончания основного клиринга по UTC.
   public var clearingEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._clearingEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._clearingEndTime = newValue}
@@ -963,7 +1073,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `clearingEndTime`. Subsequent reads from it will return its default value.
   public mutating func clearClearingEndTime() {_uniqueStorage()._clearingEndTime = nil}
 
-  /// Время начала премаркета в часовом поясе UTC.
+  /// Время начала премаркета по UTC.
   public var premarketStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._premarketStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._premarketStartTime = newValue}
@@ -973,7 +1083,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `premarketStartTime`. Subsequent reads from it will return its default value.
   public mutating func clearPremarketStartTime() {_uniqueStorage()._premarketStartTime = nil}
 
-  /// Время окончания премаркета в часовом поясе UTC.
+  /// Время окончания премаркета по UTC.
   public var premarketEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._premarketEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._premarketEndTime = newValue}
@@ -983,7 +1093,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `premarketEndTime`. Subsequent reads from it will return its default value.
   public mutating func clearPremarketEndTime() {_uniqueStorage()._premarketEndTime = nil}
 
-  /// Время начала аукциона закрытия в часовом поясе UTC.
+  /// Время начала аукциона закрытия по UTC.
   public var closingAuctionStartTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._closingAuctionStartTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._closingAuctionStartTime = newValue}
@@ -993,7 +1103,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   /// Clears the value of `closingAuctionStartTime`. Subsequent reads from it will return its default value.
   public mutating func clearClosingAuctionStartTime() {_uniqueStorage()._closingAuctionStartTime = nil}
 
-  /// Время окончания аукциона открытия в часовом поясе UTC.
+  /// Время окончания аукциона открытия по UTC.
   public var openingAuctionEndTime: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._openingAuctionEndTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._openingAuctionEndTime = newValue}
@@ -1002,6 +1112,12 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingDay {
   public var hasOpeningAuctionEndTime: Bool {return _storage._openingAuctionEndTime != nil}
   /// Clears the value of `openingAuctionEndTime`. Subsequent reads from it will return its default value.
   public mutating func clearOpeningAuctionEndTime() {_uniqueStorage()._openingAuctionEndTime = nil}
+
+  /// Торговые интервалы.
+  public var intervals: [Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval] {
+    get {return _storage._intervals}
+    set {_uniqueStorage()._intervals = newValue}
+  }
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -1016,11 +1132,18 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  /// Тип идентификатора инструмента. Возможные значения: figi, ticker. Подробнее об идентификации инструментов: [Идентификация инструментов](https://tinkoff.github.io/investAPI/faq_identification/)
+  /// Тип идентификатора инструмента. Возможные значения — `figi`, `ticker`. [Подробнее об идентификации инструментов](./faq_identification/).
   public var idType: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentIdType = .instrumentIDUnspecified
 
-  /// Идентификатор class_code. Обязателен при id_type = ticker.
-  public var classCode: String = String()
+  /// Идентификатор `class_code`. Обязательный, если `id_type = ticker`.
+  public var classCode: String {
+    get {return _classCode ?? String()}
+    set {_classCode = newValue}
+  }
+  /// Returns true if `classCode` has been explicitly set.
+  public var hasClassCode: Bool {return self._classCode != nil}
+  /// Clears the value of `classCode`. Subsequent reads from it will return its default value.
+  public mutating func clearClassCode() {self._classCode = nil}
 
   /// Идентификатор запрашиваемого инструмента.
   public var id: String = String()
@@ -1028,6 +1151,8 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest {
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _classCode: String? = nil
 }
 
 ///Запрос получения инструментов.
@@ -1036,29 +1161,66 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Статус запрашиваемых инструментов. Возможные значения: [InstrumentStatus](#instrumentstatus)
-  public var instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus = .unspecified
+  ///Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+  public var instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus {
+    get {return _instrumentStatus ?? .unspecified}
+    set {_instrumentStatus = newValue}
+  }
+  /// Returns true if `instrumentStatus` has been explicitly set.
+  public var hasInstrumentStatus: Bool {return self._instrumentStatus != nil}
+  /// Clears the value of `instrumentStatus`. Subsequent reads from it will return its default value.
+  public mutating func clearInstrumentStatus() {self._instrumentStatus = nil}
+
+  /// Тип площадки торговли. [Возможные значения](#instrumentexchangetype).
+  public var instrumentExchange: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType {
+    get {return _instrumentExchange ?? .instrumentExchangeUnspecified}
+    set {_instrumentExchange = newValue}
+  }
+  /// Returns true if `instrumentExchange` has been explicitly set.
+  public var hasInstrumentExchange: Bool {return self._instrumentExchange != nil}
+  /// Clears the value of `instrumentExchange`. Subsequent reads from it will return its default value.
+  public mutating func clearInstrumentExchange() {self._instrumentExchange = nil}
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus? = nil
+  fileprivate var _instrumentExchange: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType? = nil
 }
 
-///Параметры фильтрации опционов
+///Параметры фильтрации опционов.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
   ///Идентификатор базового актива опциона.  Обязательный параметр.
-  public var basicAssetUid: String = String()
+  public var basicAssetUid: String {
+    get {return _basicAssetUid ?? String()}
+    set {_basicAssetUid = newValue}
+  }
+  /// Returns true if `basicAssetUid` has been explicitly set.
+  public var hasBasicAssetUid: Bool {return self._basicAssetUid != nil}
+  /// Clears the value of `basicAssetUid`. Subsequent reads from it will return its default value.
+  public mutating func clearBasicAssetUid() {self._basicAssetUid = nil}
 
-  ///Идентификатор позиции базового актива опциона
-  public var basicAssetPositionUid: String = String()
+  ///Идентификатор позиции базового актива опциона.
+  public var basicAssetPositionUid: String {
+    get {return _basicAssetPositionUid ?? String()}
+    set {_basicAssetPositionUid = newValue}
+  }
+  /// Returns true if `basicAssetPositionUid` has been explicitly set.
+  public var hasBasicAssetPositionUid: Bool {return self._basicAssetPositionUid != nil}
+  /// Clears the value of `basicAssetPositionUid`. Subsequent reads from it will return its default value.
+  public mutating func clearBasicAssetPositionUid() {self._basicAssetPositionUid = nil}
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _basicAssetUid: String? = nil
+  fileprivate var _basicAssetPositionUid: String? = nil
 }
 
 ///Информация об облигации.
@@ -1104,10 +1266,10 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String = String()
 
-  ///Начало запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
+  ///Начало запрашиваемого периода по UTC. Фильтрация по `coupon_date` — дата выплаты купона.
   public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_from = newValue}
@@ -1117,7 +1279,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest {
   /// Clears the value of `from`. Subsequent reads from it will return its default value.
   public mutating func clearFrom() {self._from = nil}
 
-  ///Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация по coupon_date (дата выплаты купона)
+  ///Окончание запрашиваемого периода по UTC. Фильтрация по `coupon_date` — дата выплаты купона.
   public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_to = newValue}
@@ -1126,6 +1288,9 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest {
   public var hasTo: Bool {return self._to != nil}
   /// Clears the value of `to`. Subsequent reads from it will return its default value.
   public mutating func clearTo() {self._to = nil}
+
+  ///Идентификатор инструмента — `figi` или `instrument_uid`.
+  public var instrumentID: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -1148,13 +1313,318 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse {
   public init() {}
 }
 
+///События по облигации.
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Начало запрашиваемого периода по UTC.
+  public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_from = newValue}
+  }
+  /// Returns true if `from` has been explicitly set.
+  public var hasFrom: Bool {return self._from != nil}
+  /// Clears the value of `from`. Subsequent reads from it will return its default value.
+  public mutating func clearFrom() {self._from = nil}
+
+  ///Окончание запрашиваемого периода по UTC.
+  public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_to = newValue}
+  }
+  /// Returns true if `to` has been explicitly set.
+  public var hasTo: Bool {return self._to != nil}
+  /// Clears the value of `to`. Subsequent reads from it will return its default value.
+  public mutating func clearTo() {self._to = nil}
+
+  ///Идентификатор инструмента — `figi` или `instrument_uid`.
+  public var instrumentID: String = String()
+
+  ///Тип события
+  public var type: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest.EventType = .unspecified
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public enum EventType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
+
+    ///Неопределенное значение.
+    case unspecified // = 0
+
+    /// Купон.
+    case cpn // = 1
+
+    /// Опцион (оферта).
+    case call // = 2
+
+    /// Погашение.
+    case mty // = 3
+
+    /// Конвертация.
+    case conv // = 4
+    case UNRECOGNIZED(Int)
+
+    public init() {
+      self = .unspecified
+    }
+
+    public init?(rawValue: Int) {
+      switch rawValue {
+      case 0: self = .unspecified
+      case 1: self = .cpn
+      case 2: self = .call
+      case 3: self = .mty
+      case 4: self = .conv
+      default: self = .UNRECOGNIZED(rawValue)
+      }
+    }
+
+    public var rawValue: Int {
+      switch self {
+      case .unspecified: return 0
+      case .cpn: return 1
+      case .call: return 2
+      case .mty: return 3
+      case .conv: return 4
+      case .UNRECOGNIZED(let i): return i
+      }
+    }
+
+  }
+
+  public init() {}
+
+  fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
+#if swift(>=4.2)
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest.EventType: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest.EventType] = [
+    .unspecified,
+    .cpn,
+    .call,
+    .mty,
+    .conv,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
+///Объект передачи информации о событии облигации.
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var events: [Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse.BondEvent] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public struct BondEvent {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// Идентификатор инструмента.
+    public var instrumentID: String {
+      get {return _storage._instrumentID}
+      set {_uniqueStorage()._instrumentID = newValue}
+    }
+
+    /// Номер события для данного типа события.
+    public var eventNumber: Int32 {
+      get {return _storage._eventNumber}
+      set {_uniqueStorage()._eventNumber = newValue}
+    }
+
+    /// Дата события.
+    public var eventDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._eventDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._eventDate = newValue}
+    }
+    /// Returns true if `eventDate` has been explicitly set.
+    public var hasEventDate: Bool {return _storage._eventDate != nil}
+    /// Clears the value of `eventDate`. Subsequent reads from it will return its default value.
+    public mutating func clearEventDate() {_uniqueStorage()._eventDate = nil}
+
+    /// Тип события.
+    public var eventType: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest.EventType {
+      get {return _storage._eventType}
+      set {_uniqueStorage()._eventType = newValue}
+    }
+
+    /// Полное количество бумаг, задействованных в событии.
+    public var eventTotalVol: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _storage._eventTotalVol ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_uniqueStorage()._eventTotalVol = newValue}
+    }
+    /// Returns true if `eventTotalVol` has been explicitly set.
+    public var hasEventTotalVol: Bool {return _storage._eventTotalVol != nil}
+    /// Clears the value of `eventTotalVol`. Subsequent reads from it will return its default value.
+    public mutating func clearEventTotalVol() {_uniqueStorage()._eventTotalVol = nil}
+
+    /// Дата фиксации владельцев для участия в событии.
+    public var fixDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._fixDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._fixDate = newValue}
+    }
+    /// Returns true if `fixDate` has been explicitly set.
+    public var hasFixDate: Bool {return _storage._fixDate != nil}
+    /// Clears the value of `fixDate`. Subsequent reads from it will return its default value.
+    public mutating func clearFixDate() {_uniqueStorage()._fixDate = nil}
+
+    /// Дата определения даты или факта события.
+    public var rateDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._rateDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._rateDate = newValue}
+    }
+    /// Returns true if `rateDate` has been explicitly set.
+    public var hasRateDate: Bool {return _storage._rateDate != nil}
+    /// Clears the value of `rateDate`. Subsequent reads from it will return its default value.
+    public mutating func clearRateDate() {_uniqueStorage()._rateDate = nil}
+
+    /// Дата дефолта, если применимо.
+    public var defaultDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._defaultDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._defaultDate = newValue}
+    }
+    /// Returns true if `defaultDate` has been explicitly set.
+    public var hasDefaultDate: Bool {return _storage._defaultDate != nil}
+    /// Clears the value of `defaultDate`. Subsequent reads from it will return its default value.
+    public mutating func clearDefaultDate() {_uniqueStorage()._defaultDate = nil}
+
+    /// Дата реального исполнения обязательства.
+    public var realPayDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._realPayDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._realPayDate = newValue}
+    }
+    /// Returns true if `realPayDate` has been explicitly set.
+    public var hasRealPayDate: Bool {return _storage._realPayDate != nil}
+    /// Clears the value of `realPayDate`. Subsequent reads from it will return its default value.
+    public mutating func clearRealPayDate() {_uniqueStorage()._realPayDate = nil}
+
+    /// Дата выплаты.
+    public var payDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._payDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._payDate = newValue}
+    }
+    /// Returns true if `payDate` has been explicitly set.
+    public var hasPayDate: Bool {return _storage._payDate != nil}
+    /// Clears the value of `payDate`. Subsequent reads from it will return its default value.
+    public mutating func clearPayDate() {_uniqueStorage()._payDate = nil}
+
+    /// Выплата на одну облигацию.
+    public var payOneBond: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
+      get {return _storage._payOneBond ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
+      set {_uniqueStorage()._payOneBond = newValue}
+    }
+    /// Returns true if `payOneBond` has been explicitly set.
+    public var hasPayOneBond: Bool {return _storage._payOneBond != nil}
+    /// Clears the value of `payOneBond`. Subsequent reads from it will return its default value.
+    public mutating func clearPayOneBond() {_uniqueStorage()._payOneBond = nil}
+
+    /// Выплаты на все бумаги, задействованные в событии.
+    public var moneyFlowVal: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
+      get {return _storage._moneyFlowVal ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
+      set {_uniqueStorage()._moneyFlowVal = newValue}
+    }
+    /// Returns true if `moneyFlowVal` has been explicitly set.
+    public var hasMoneyFlowVal: Bool {return _storage._moneyFlowVal != nil}
+    /// Clears the value of `moneyFlowVal`. Subsequent reads from it will return its default value.
+    public mutating func clearMoneyFlowVal() {_uniqueStorage()._moneyFlowVal = nil}
+
+    /// Признак исполнения.
+    public var execution: String {
+      get {return _storage._execution}
+      set {_uniqueStorage()._execution = newValue}
+    }
+
+    /// Тип операции.
+    public var operationType: String {
+      get {return _storage._operationType}
+      set {_uniqueStorage()._operationType = newValue}
+    }
+
+    /// Стоимость операции — ставка купона, доля номинала, цена выкупа или коэффициент конвертации.
+    public var value: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _storage._value ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_uniqueStorage()._value = newValue}
+    }
+    /// Returns true if `value` has been explicitly set.
+    public var hasValue: Bool {return _storage._value != nil}
+    /// Clears the value of `value`. Subsequent reads from it will return its default value.
+    public mutating func clearValue() {_uniqueStorage()._value = nil}
+
+    /// Примечание.
+    public var note: String {
+      get {return _storage._note}
+      set {_uniqueStorage()._note = newValue}
+    }
+
+    /// ID выпуска бумаг, в который произведена конвертация (для конвертаций).
+    public var convertToFinToolID: String {
+      get {return _storage._convertToFinToolID}
+      set {_uniqueStorage()._convertToFinToolID = newValue}
+    }
+
+    /// Начало купонного периода.
+    public var couponStartDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._couponStartDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._couponStartDate = newValue}
+    }
+    /// Returns true if `couponStartDate` has been explicitly set.
+    public var hasCouponStartDate: Bool {return _storage._couponStartDate != nil}
+    /// Clears the value of `couponStartDate`. Subsequent reads from it will return its default value.
+    public mutating func clearCouponStartDate() {_uniqueStorage()._couponStartDate = nil}
+
+    /// Окончание купонного периода.
+    public var couponEndDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._couponEndDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._couponEndDate = newValue}
+    }
+    /// Returns true if `couponEndDate` has been explicitly set.
+    public var hasCouponEndDate: Bool {return _storage._couponEndDate != nil}
+    /// Clears the value of `couponEndDate`. Subsequent reads from it will return its default value.
+    public mutating func clearCouponEndDate() {_uniqueStorage()._couponEndDate = nil}
+
+    /// Купонный период.
+    public var couponPeriod: Int32 {
+      get {return _storage._couponPeriod}
+      set {_uniqueStorage()._couponPeriod = newValue}
+    }
+
+    /// Ставка купона, процентов годовых.
+    public var couponInterestRate: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _storage._couponInterestRate ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_uniqueStorage()._couponInterestRate = newValue}
+    }
+    /// Returns true if `couponInterestRate` has been explicitly set.
+    public var hasCouponInterestRate: Bool {return _storage._couponInterestRate != nil}
+    /// Clears the value of `couponInterestRate`. Subsequent reads from it will return its default value.
+    public mutating func clearCouponInterestRate() {_uniqueStorage()._couponInterestRate = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _storage = _StorageClass.defaultInstance
+  }
+
+  public init() {}
+}
+
 ///Объект передачи информации о купоне облигации.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_Coupon {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String = String()
 
   ///Дата выплаты купона.
@@ -1170,7 +1640,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Coupon {
   ///Номер купона.
   public var couponNumber: Int64 = 0
 
-  ///(Опционально) Дата фиксации реестра для выплаты купона.
+  ///Дата фиксации реестра для выплаты купона — опционально.
   public var fixDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _fixDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_fixDate = newValue}
@@ -1417,7 +1887,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
     set {_uniqueStorage()._tradingStatus = newValue}
   }
 
-  ///Реальная площадка исполнения расчётов (биржа). Допустимые значения: [REAL_EXCHANGE_MOEX, REAL_EXCHANGE_RTS]
+  ///Реальная площадка исполнения расчетов (биржа).
   public var realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange {
     get {return _storage._realExchange}
     set {_uniqueStorage()._realExchange = newValue}
@@ -1501,6 +1971,16 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
     set {_uniqueStorage()._sector = newValue}
   }
 
+  /// Информация о бренде.
+  public var brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData {
+    get {return _storage._brand ?? Tinkoff_Public_Invest_Api_Contract_V1_BrandData()}
+    set {_uniqueStorage()._brand = newValue}
+  }
+  /// Returns true if `brand` has been explicitly set.
+  public var hasBrand: Bool {return _storage._brand != nil}
+  /// Clears the value of `brand`. Subsequent reads from it will return its default value.
+  public mutating func clearBrand() {_uniqueStorage()._brand = nil}
+
   ///Количество бумаг в лоте.
   public var lot: Int32 {
     get {return _storage._lot}
@@ -1517,7 +1997,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
   /// Clears the value of `basicAssetSize`. Subsequent reads from it will return its default value.
   public mutating func clearBasicAssetSize() {_uniqueStorage()._basicAssetSize = nil}
 
-  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._klong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._klong = newValue}
@@ -1527,7 +2007,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
   /// Clears the value of `klong`. Subsequent reads from it will return its default value.
   public mutating func clearKlong() {_uniqueStorage()._klong = nil}
 
-  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var kshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._kshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._kshort = newValue}
@@ -1537,7 +2017,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
   /// Clears the value of `kshort`. Subsequent reads from it will return its default value.
   public mutating func clearKshort() {_uniqueStorage()._kshort = nil}
 
-  ///Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlong = newValue}
@@ -1547,7 +2027,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
   /// Clears the value of `dlong`. Subsequent reads from it will return its default value.
   public mutating func clearDlong() {_uniqueStorage()._dlong = nil}
 
-  ///Ставка риска начальной маржи для КСУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshort = newValue}
@@ -1557,7 +2037,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
   /// Clears the value of `dshort`. Subsequent reads from it will return its default value.
   public mutating func clearDshort() {_uniqueStorage()._dshort = nil}
 
-  ///Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlongMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlongMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlongMin = newValue}
@@ -1567,7 +2047,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
   /// Clears the value of `dlongMin`. Subsequent reads from it will return its default value.
   public mutating func clearDlongMin() {_uniqueStorage()._dlongMin = nil}
 
-  ///Ставка риска начальной маржи для КПУР шорт.  Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshortMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshortMin = newValue}
@@ -1596,6 +2076,26 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
   public var hasStrikePrice: Bool {return _storage._strikePrice != nil}
   /// Clears the value of `strikePrice`. Subsequent reads from it will return its default value.
   public mutating func clearStrikePrice() {_uniqueStorage()._strikePrice = nil}
+
+  ///Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dlongClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dlongClient = newValue}
+  }
+  /// Returns true if `dlongClient` has been explicitly set.
+  public var hasDlongClient: Bool {return _storage._dlongClient != nil}
+  /// Clears the value of `dlongClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDlongClient() {_uniqueStorage()._dlongClient = nil}
+
+  ///Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dshortClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dshortClient = newValue}
+  }
+  /// Returns true if `dshortClient` has been explicitly set.
+  public var hasDshortClient: Bool {return _storage._dshortClient != nil}
+  /// Clears the value of `dshortClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDshortClient() {_uniqueStorage()._dshortClient = nil}
 
   ///Дата истечения срока в формате UTC.
   public var expirationDate: SwiftProtobuf.Google_Protobuf_Timestamp {
@@ -1653,13 +2153,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
     set {_uniqueStorage()._shortEnabledFlag = newValue}
   }
 
-  ///Возможность покупки/продажи на ИИС.
+  ///Возможность покупки или продажи на ИИС.
   public var forIisFlag: Bool {
     get {return _storage._forIisFlag}
     set {_uniqueStorage()._forIisFlag = newValue}
   }
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool {
     get {return _storage._otcFlag}
     set {_uniqueStorage()._otcFlag = newValue}
@@ -1677,13 +2177,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
     set {_uniqueStorage()._sellAvailableFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным.
+  ///Флаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
@@ -1695,7 +2195,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Option {
     set {_uniqueStorage()._blockedTcaFlag = newValue}
   }
 
-  ///Параметр указывает на возможность торговать инструментом через API.
+  ///Возможность торговать инструментом через API.
   public var apiTradeAvailableFlag: Bool {
     get {return _storage._apiTradeAvailableFlag}
     set {_uniqueStorage()._apiTradeAvailableFlag = newValue}
@@ -1751,7 +2251,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String {
     get {return _storage._figi}
     set {_uniqueStorage()._figi = newValue}
@@ -1769,25 +2269,25 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._classCode = newValue}
   }
 
-  ///Isin-идентификатор инструмента.
+  ///ISIN-идентификатор инструмента.
   public var isin: String {
     get {return _storage._isin}
     set {_uniqueStorage()._isin = newValue}
   }
 
-  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
   public var lot: Int32 {
     get {return _storage._lot}
     set {_uniqueStorage()._lot = newValue}
   }
 
-  ///Валюта расчётов.
+  ///Валюта расчетов.
   public var currency: String {
     get {return _storage._currency}
     set {_uniqueStorage()._currency = newValue}
   }
 
-  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._klong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._klong = newValue}
@@ -1797,7 +2297,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `klong`. Subsequent reads from it will return its default value.
   public mutating func clearKlong() {_uniqueStorage()._klong = nil}
 
-  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var kshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._kshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._kshort = newValue}
@@ -1807,7 +2307,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `kshort`. Subsequent reads from it will return its default value.
   public mutating func clearKshort() {_uniqueStorage()._kshort = nil}
 
-  ///Ставка риска начальной маржи для КСУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlong = newValue}
@@ -1817,7 +2317,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `dlong`. Subsequent reads from it will return its default value.
   public mutating func clearDlong() {_uniqueStorage()._dlong = nil}
 
-  ///Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshort = newValue}
@@ -1827,7 +2327,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `dshort`. Subsequent reads from it will return its default value.
   public mutating func clearDshort() {_uniqueStorage()._dshort = nil}
 
-  /// Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  /// Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlongMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlongMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlongMin = newValue}
@@ -1837,7 +2337,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `dlongMin`. Subsequent reads from it will return its default value.
   public mutating func clearDlongMin() {_uniqueStorage()._dlongMin = nil}
 
-  ///Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshortMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshortMin = newValue}
@@ -1871,7 +2371,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._couponQuantityPerYear = newValue}
   }
 
-  ///Дата погашения облигации в часовом поясе UTC.
+  ///Дата погашения облигации по UTC.
   public var maturityDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._maturityDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._maturityDate = newValue}
@@ -1901,7 +2401,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `initialNominal`. Subsequent reads from it will return its default value.
   public mutating func clearInitialNominal() {_uniqueStorage()._initialNominal = nil}
 
-  ///Дата выпуска облигации в часовом поясе UTC.
+  ///Дата выпуска облигации по UTC.
   public var stateRegDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._stateRegDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._stateRegDate = newValue}
@@ -1911,7 +2411,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `stateRegDate`. Subsequent reads from it will return its default value.
   public mutating func clearStateRegDate() {_uniqueStorage()._stateRegDate = nil}
 
-  ///Дата размещения в часовом поясе UTC.
+  ///Дата размещения по UTC.
   public var placementDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._placementDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._placementDate = newValue}
@@ -1941,13 +2441,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
   /// Clears the value of `aciValue`. Subsequent reads from it will return its default value.
   public mutating func clearAciValue() {_uniqueStorage()._aciValue = nil}
 
-  ///Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Код страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRisk: String {
     get {return _storage._countryOfRisk}
     set {_uniqueStorage()._countryOfRisk = newValue}
   }
 
-  ///Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRiskName: String {
     get {return _storage._countryOfRiskName}
     set {_uniqueStorage()._countryOfRiskName = newValue}
@@ -1959,7 +2459,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._sector = newValue}
   }
 
-  ///Форма выпуска. Возможные значения: </br>**documentary** — документарная; </br>**non_documentary** — бездокументарная.
+  ///Форма выпуска. Возможные значения: <br/>**documentary** — документарная; <br/>**non_documentary** — бездокументарная.
   public var issueKind: String {
     get {return _storage._issueKind}
     set {_uniqueStorage()._issueKind = newValue}
@@ -1983,7 +2483,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._tradingStatus = newValue}
   }
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool {
     get {return _storage._otcFlag}
     set {_uniqueStorage()._otcFlag = newValue}
@@ -2041,7 +2541,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._uid = newValue}
   }
 
-  ///Реальная площадка исполнения расчётов. (биржа)
+  ///Реальная площадка исполнения расчетов. (биржа)
   public var realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange {
     get {return _storage._realExchange}
     set {_uniqueStorage()._realExchange = newValue}
@@ -2053,25 +2553,31 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._positionUid = newValue}
   }
 
+  ///Уникальный идентификатор актива.
+  public var assetUid: String {
+    get {return _storage._assetUid}
+    set {_uniqueStorage()._assetUid = newValue}
+  }
+
   ///Признак доступности для ИИС.
   public var forIisFlag: Bool {
     get {return _storage._forIisFlag}
     set {_uniqueStorage()._forIisFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным
+  ///Флаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
   }
 
-  ///Флаг заблокированного ТКС
+  ///Флаг заблокированного ТКС.
   public var blockedTcaFlag: Bool {
     get {return _storage._blockedTcaFlag}
     set {_uniqueStorage()._blockedTcaFlag = newValue}
@@ -2083,7 +2589,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._subordinatedFlag = newValue}
   }
 
-  ///Флаг достаточной ликвидности
+  ///Флаг достаточной ликвидности.
   public var liquidityFlag: Bool {
     get {return _storage._liquidityFlag}
     set {_uniqueStorage()._liquidityFlag = newValue}
@@ -2115,6 +2621,52 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Bond {
     set {_uniqueStorage()._riskLevel = newValue}
   }
 
+  /// Информация о бренде.
+  public var brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData {
+    get {return _storage._brand ?? Tinkoff_Public_Invest_Api_Contract_V1_BrandData()}
+    set {_uniqueStorage()._brand = newValue}
+  }
+  /// Returns true if `brand` has been explicitly set.
+  public var hasBrand: Bool {return _storage._brand != nil}
+  /// Clears the value of `brand`. Subsequent reads from it will return its default value.
+  public mutating func clearBrand() {_uniqueStorage()._brand = nil}
+
+  /// Тип облигации.
+  public var bondType: Tinkoff_Public_Invest_Api_Contract_V1_BondType {
+    get {return _storage._bondType}
+    set {_uniqueStorage()._bondType = newValue}
+  }
+
+  /// Дата погашения облигации.
+  public var callDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _storage._callDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_uniqueStorage()._callDate = newValue}
+  }
+  /// Returns true if `callDate` has been explicitly set.
+  public var hasCallDate: Bool {return _storage._callDate != nil}
+  /// Clears the value of `callDate`. Subsequent reads from it will return its default value.
+  public mutating func clearCallDate() {_uniqueStorage()._callDate = nil}
+
+  ///Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dlongClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dlongClient = newValue}
+  }
+  /// Returns true if `dlongClient` has been explicitly set.
+  public var hasDlongClient: Bool {return _storage._dlongClient != nil}
+  /// Clears the value of `dlongClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDlongClient() {_uniqueStorage()._dlongClient = nil}
+
+  ///Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dshortClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dshortClient = newValue}
+  }
+  /// Returns true if `dshortClient` has been explicitly set.
+  public var hasDshortClient: Bool {return _storage._dshortClient != nil}
+  /// Clears the value of `dshortClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDshortClient() {_uniqueStorage()._dshortClient = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -2128,7 +2680,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String {
     get {return _storage._figi}
     set {_uniqueStorage()._figi = newValue}
@@ -2146,25 +2698,25 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
     set {_uniqueStorage()._classCode = newValue}
   }
 
-  ///Isin-идентификатор инструмента.
+  ///ISIN-идентификатор инструмента.
   public var isin: String {
     get {return _storage._isin}
     set {_uniqueStorage()._isin = newValue}
   }
 
-  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
   public var lot: Int32 {
     get {return _storage._lot}
     set {_uniqueStorage()._lot = newValue}
   }
 
-  ///Валюта расчётов.
+  ///Валюта расчетов.
   public var currency: String {
     get {return _storage._currency}
     set {_uniqueStorage()._currency = newValue}
   }
 
-  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._klong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._klong = newValue}
@@ -2174,7 +2726,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   /// Clears the value of `klong`. Subsequent reads from it will return its default value.
   public mutating func clearKlong() {_uniqueStorage()._klong = nil}
 
-  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var kshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._kshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._kshort = newValue}
@@ -2184,7 +2736,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   /// Clears the value of `kshort`. Subsequent reads from it will return its default value.
   public mutating func clearKshort() {_uniqueStorage()._kshort = nil}
 
-  ///Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlong = newValue}
@@ -2194,7 +2746,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   /// Clears the value of `dlong`. Subsequent reads from it will return its default value.
   public mutating func clearDlong() {_uniqueStorage()._dlong = nil}
 
-  ///Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshort = newValue}
@@ -2204,7 +2756,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   /// Clears the value of `dshort`. Subsequent reads from it will return its default value.
   public mutating func clearDshort() {_uniqueStorage()._dshort = nil}
 
-  ///Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlongMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlongMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlongMin = newValue}
@@ -2214,7 +2766,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   /// Clears the value of `dlongMin`. Subsequent reads from it will return its default value.
   public mutating func clearDlongMin() {_uniqueStorage()._dlongMin = nil}
 
-  ///Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshortMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshortMin = newValue}
@@ -2236,7 +2788,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
     set {_uniqueStorage()._name = newValue}
   }
 
-  ///Tорговая площадка (секция биржи)
+  ///Tорговая площадка (секция биржи).
   public var exchange: String {
     get {return _storage._exchange}
     set {_uniqueStorage()._exchange = newValue}
@@ -2252,13 +2804,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   /// Clears the value of `nominal`. Subsequent reads from it will return its default value.
   public mutating func clearNominal() {_uniqueStorage()._nominal = nil}
 
-  ///Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Код страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRisk: String {
     get {return _storage._countryOfRisk}
     set {_uniqueStorage()._countryOfRisk = newValue}
   }
 
-  ///Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRiskName: String {
     get {return _storage._countryOfRiskName}
     set {_uniqueStorage()._countryOfRiskName = newValue}
@@ -2270,7 +2822,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
     set {_uniqueStorage()._tradingStatus = newValue}
   }
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool {
     get {return _storage._otcFlag}
     set {_uniqueStorage()._otcFlag = newValue}
@@ -2316,7 +2868,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
     set {_uniqueStorage()._uid = newValue}
   }
 
-  ///Реальная площадка исполнения расчётов (биржа).
+  ///Реальная площадка исполнения расчетов (биржа).
   public var realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange {
     get {return _storage._realExchange}
     set {_uniqueStorage()._realExchange = newValue}
@@ -2334,13 +2886,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
     set {_uniqueStorage()._forIisFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным.
+  ///Флаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
@@ -2372,6 +2924,36 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Currency {
   /// Clears the value of `first1DayCandleDate`. Subsequent reads from it will return its default value.
   public mutating func clearFirst1DayCandleDate() {_uniqueStorage()._first1DayCandleDate = nil}
 
+  /// Информация о бренде.
+  public var brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData {
+    get {return _storage._brand ?? Tinkoff_Public_Invest_Api_Contract_V1_BrandData()}
+    set {_uniqueStorage()._brand = newValue}
+  }
+  /// Returns true if `brand` has been explicitly set.
+  public var hasBrand: Bool {return _storage._brand != nil}
+  /// Clears the value of `brand`. Subsequent reads from it will return its default value.
+  public mutating func clearBrand() {_uniqueStorage()._brand = nil}
+
+  ///Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dlongClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dlongClient = newValue}
+  }
+  /// Returns true if `dlongClient` has been explicitly set.
+  public var hasDlongClient: Bool {return _storage._dlongClient != nil}
+  /// Clears the value of `dlongClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDlongClient() {_uniqueStorage()._dlongClient = nil}
+
+  ///Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dshortClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dshortClient = newValue}
+  }
+  /// Returns true if `dshortClient` has been explicitly set.
+  public var hasDshortClient: Bool {return _storage._dshortClient != nil}
+  /// Clears the value of `dshortClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDshortClient() {_uniqueStorage()._dshortClient = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -2385,7 +2967,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String {
     get {return _storage._figi}
     set {_uniqueStorage()._figi = newValue}
@@ -2403,25 +2985,25 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
     set {_uniqueStorage()._classCode = newValue}
   }
 
-  ///Isin-идентификатор инструмента.
+  ///ISIN-идентификатор инструмента.
   public var isin: String {
     get {return _storage._isin}
     set {_uniqueStorage()._isin = newValue}
   }
 
-  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
   public var lot: Int32 {
     get {return _storage._lot}
     set {_uniqueStorage()._lot = newValue}
   }
 
-  ///Валюта расчётов.
+  ///Валюта расчетов.
   public var currency: String {
     get {return _storage._currency}
     set {_uniqueStorage()._currency = newValue}
   }
 
-  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._klong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._klong = newValue}
@@ -2431,7 +3013,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `klong`. Subsequent reads from it will return its default value.
   public mutating func clearKlong() {_uniqueStorage()._klong = nil}
 
-  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var kshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._kshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._kshort = newValue}
@@ -2441,7 +3023,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `kshort`. Subsequent reads from it will return its default value.
   public mutating func clearKshort() {_uniqueStorage()._kshort = nil}
 
-  ///Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlong = newValue}
@@ -2451,7 +3033,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `dlong`. Subsequent reads from it will return its default value.
   public mutating func clearDlong() {_uniqueStorage()._dlong = nil}
 
-  ///Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshort = newValue}
@@ -2461,7 +3043,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `dshort`. Subsequent reads from it will return its default value.
   public mutating func clearDshort() {_uniqueStorage()._dshort = nil}
 
-  ///Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlongMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlongMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlongMin = newValue}
@@ -2471,7 +3053,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `dlongMin`. Subsequent reads from it will return its default value.
   public mutating func clearDlongMin() {_uniqueStorage()._dlongMin = nil}
 
-  ///Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshortMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshortMin = newValue}
@@ -2509,13 +3091,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `fixedCommission`. Subsequent reads from it will return its default value.
   public mutating func clearFixedCommission() {_uniqueStorage()._fixedCommission = nil}
 
-  ///Возможные значения: </br>**equity** — акции;</br>**fixed_income** — облигации;</br>**mixed_allocation** — смешанный;</br>**money_market** — денежный рынок;</br>**real_estate** — недвижимость;</br>**commodity** — товары;</br>**specialty** — специальный;</br>**private_equity** — private equity;</br>**alternative_investment** — альтернативные инвестиции.
+  ///Возможные значения: <br/>**equity** — акции;<br/>**fixed_income** — облигации;<br/>**mixed_allocation** — смешанный;<br/>**money_market** — денежный рынок;<br/>**real_estate** — недвижимость;<br/>**commodity** — товары;<br/>**specialty** — специальный;<br/>**private_equity** — private equity;<br/>**alternative_investment** — альтернативные инвестиции.
   public var focusType: String {
     get {return _storage._focusType}
     set {_uniqueStorage()._focusType = newValue}
   }
 
-  ///Дата выпуска в часовом поясе UTC.
+  ///Дата выпуска по UTC.
   public var releasedDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._releasedDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._releasedDate = newValue}
@@ -2525,7 +3107,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `releasedDate`. Subsequent reads from it will return its default value.
   public mutating func clearReleasedDate() {_uniqueStorage()._releasedDate = nil}
 
-  ///Количество акций фонда в обращении.
+  ///Количество паев фонда в обращении.
   public var numShares: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._numShares ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._numShares = newValue}
@@ -2535,13 +3117,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `numShares`. Subsequent reads from it will return its default value.
   public mutating func clearNumShares() {_uniqueStorage()._numShares = nil}
 
-  ///Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Код страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRisk: String {
     get {return _storage._countryOfRisk}
     set {_uniqueStorage()._countryOfRisk = newValue}
   }
 
-  ///Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRiskName: String {
     get {return _storage._countryOfRiskName}
     set {_uniqueStorage()._countryOfRiskName = newValue}
@@ -2565,7 +3147,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
     set {_uniqueStorage()._tradingStatus = newValue}
   }
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool {
     get {return _storage._otcFlag}
     set {_uniqueStorage()._otcFlag = newValue}
@@ -2605,7 +3187,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
     set {_uniqueStorage()._uid = newValue}
   }
 
-  ///Реальная площадка исполнения расчётов (биржа).
+  ///Реальная площадка исполнения расчетов (биржа).
   public var realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange {
     get {return _storage._realExchange}
     set {_uniqueStorage()._realExchange = newValue}
@@ -2617,19 +3199,31 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
     set {_uniqueStorage()._positionUid = newValue}
   }
 
+  ///Уникальный идентификатор актива.
+  public var assetUid: String {
+    get {return _storage._assetUid}
+    set {_uniqueStorage()._assetUid = newValue}
+  }
+
+  ///Тип площадки торговли.
+  public var instrumentExchange: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType {
+    get {return _storage._instrumentExchange}
+    set {_uniqueStorage()._instrumentExchange = newValue}
+  }
+
   ///Признак доступности для ИИС.
   public var forIisFlag: Bool {
     get {return _storage._forIisFlag}
     set {_uniqueStorage()._forIisFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным.
+  ///ФлагФлаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
@@ -2641,7 +3235,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
     set {_uniqueStorage()._blockedTcaFlag = newValue}
   }
 
-  ///Флаг достаточной ликвидности
+  ///Флаг достаточной ликвидности.
   public var liquidityFlag: Bool {
     get {return _storage._liquidityFlag}
     set {_uniqueStorage()._liquidityFlag = newValue}
@@ -2667,6 +3261,36 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Etf {
   /// Clears the value of `first1DayCandleDate`. Subsequent reads from it will return its default value.
   public mutating func clearFirst1DayCandleDate() {_uniqueStorage()._first1DayCandleDate = nil}
 
+  /// Информация о бренде.
+  public var brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData {
+    get {return _storage._brand ?? Tinkoff_Public_Invest_Api_Contract_V1_BrandData()}
+    set {_uniqueStorage()._brand = newValue}
+  }
+  /// Returns true if `brand` has been explicitly set.
+  public var hasBrand: Bool {return _storage._brand != nil}
+  /// Clears the value of `brand`. Subsequent reads from it will return its default value.
+  public mutating func clearBrand() {_uniqueStorage()._brand = nil}
+
+  ///Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dlongClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dlongClient = newValue}
+  }
+  /// Returns true if `dlongClient` has been explicitly set.
+  public var hasDlongClient: Bool {return _storage._dlongClient != nil}
+  /// Clears the value of `dlongClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDlongClient() {_uniqueStorage()._dlongClient = nil}
+
+  ///Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dshortClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dshortClient = newValue}
+  }
+  /// Returns true if `dshortClient` has been explicitly set.
+  public var hasDshortClient: Bool {return _storage._dshortClient != nil}
+  /// Clears the value of `dshortClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDshortClient() {_uniqueStorage()._dshortClient = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -2680,7 +3304,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String {
     get {return _storage._figi}
     set {_uniqueStorage()._figi = newValue}
@@ -2698,19 +3322,19 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
     set {_uniqueStorage()._classCode = newValue}
   }
 
-  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
   public var lot: Int32 {
     get {return _storage._lot}
     set {_uniqueStorage()._lot = newValue}
   }
 
-  ///Валюта расчётов.
+  ///Валюта расчетов.
   public var currency: String {
     get {return _storage._currency}
     set {_uniqueStorage()._currency = newValue}
   }
 
-  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._klong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._klong = newValue}
@@ -2720,7 +3344,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `klong`. Subsequent reads from it will return its default value.
   public mutating func clearKlong() {_uniqueStorage()._klong = nil}
 
-  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var kshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._kshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._kshort = newValue}
@@ -2730,7 +3354,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `kshort`. Subsequent reads from it will return its default value.
   public mutating func clearKshort() {_uniqueStorage()._kshort = nil}
 
-  ///Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlong = newValue}
@@ -2740,7 +3364,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `dlong`. Subsequent reads from it will return its default value.
   public mutating func clearDlong() {_uniqueStorage()._dlong = nil}
 
-  ///Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshort = newValue}
@@ -2750,7 +3374,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `dshort`. Subsequent reads from it will return its default value.
   public mutating func clearDshort() {_uniqueStorage()._dshort = nil}
 
-  ///Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlongMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlongMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlongMin = newValue}
@@ -2760,7 +3384,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `dlongMin`. Subsequent reads from it will return its default value.
   public mutating func clearDlongMin() {_uniqueStorage()._dlongMin = nil}
 
-  ///Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshortMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshortMin = newValue}
@@ -2788,7 +3412,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
     set {_uniqueStorage()._exchange = newValue}
   }
 
-  ///Дата начала обращения контракта в часовом поясе UTC.
+  ///Дата начала обращения контракта по UTC.
   public var firstTradeDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._firstTradeDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._firstTradeDate = newValue}
@@ -2798,7 +3422,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `firstTradeDate`. Subsequent reads from it will return its default value.
   public mutating func clearFirstTradeDate() {_uniqueStorage()._firstTradeDate = nil}
 
-  ///Дата в часовом поясе UTC, до которой возможно проведение операций с фьючерсом.
+  ///Дата по UTC, до которой возможно проведение операций с фьючерсом.
   public var lastTradeDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._lastTradeDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._lastTradeDate = newValue}
@@ -2808,13 +3432,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `lastTradeDate`. Subsequent reads from it will return its default value.
   public mutating func clearLastTradeDate() {_uniqueStorage()._lastTradeDate = nil}
 
-  ///Тип фьючерса. Возможные значения: </br>**physical_delivery** — физические поставки; </br>**cash_settlement** — денежный эквивалент.
+  ///Тип фьючерса. Возможные значения: <br/>**physical_delivery** — физические поставки; <br/>**cash_settlement** — денежный эквивалент.
   public var futuresType: String {
     get {return _storage._futuresType}
     set {_uniqueStorage()._futuresType = newValue}
   }
 
-  ///Тип актива. Возможные значения: </br>**commodity** — товар; </br>**currency** — валюта; </br>**security** — ценная бумага; </br>**index** — индекс.
+  ///Тип актива. Возможные значения: <br/>**commodity** — товар; <br/>**currency** — валюта; <br/>**security** — ценная бумага; <br/>**index** — индекс.
   public var assetType: String {
     get {return _storage._assetType}
     set {_uniqueStorage()._assetType = newValue}
@@ -2836,13 +3460,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `basicAssetSize`. Subsequent reads from it will return its default value.
   public mutating func clearBasicAssetSize() {_uniqueStorage()._basicAssetSize = nil}
 
-  ///Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Код страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRisk: String {
     get {return _storage._countryOfRisk}
     set {_uniqueStorage()._countryOfRisk = newValue}
   }
 
-  ///Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRiskName: String {
     get {return _storage._countryOfRiskName}
     set {_uniqueStorage()._countryOfRiskName = newValue}
@@ -2870,7 +3494,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
     set {_uniqueStorage()._tradingStatus = newValue}
   }
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool {
     get {return _storage._otcFlag}
     set {_uniqueStorage()._otcFlag = newValue}
@@ -2910,7 +3534,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
     set {_uniqueStorage()._uid = newValue}
   }
 
-  ///Реальная площадка исполнения расчётов (биржа).
+  ///Реальная площадка исполнения расчетов (биржа).
   public var realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange {
     get {return _storage._realExchange}
     set {_uniqueStorage()._realExchange = newValue}
@@ -2934,13 +3558,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
     set {_uniqueStorage()._forIisFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным.
+  ///Флаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
@@ -2972,6 +3596,66 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Future {
   /// Clears the value of `first1DayCandleDate`. Subsequent reads from it will return its default value.
   public mutating func clearFirst1DayCandleDate() {_uniqueStorage()._first1DayCandleDate = nil}
 
+  ///Гарантийное обеспечение при покупке.
+  public var initialMarginOnBuy: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
+    get {return _storage._initialMarginOnBuy ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
+    set {_uniqueStorage()._initialMarginOnBuy = newValue}
+  }
+  /// Returns true if `initialMarginOnBuy` has been explicitly set.
+  public var hasInitialMarginOnBuy: Bool {return _storage._initialMarginOnBuy != nil}
+  /// Clears the value of `initialMarginOnBuy`. Subsequent reads from it will return its default value.
+  public mutating func clearInitialMarginOnBuy() {_uniqueStorage()._initialMarginOnBuy = nil}
+
+  ///Гарантийное обеспечение при продаже.
+  public var initialMarginOnSell: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
+    get {return _storage._initialMarginOnSell ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
+    set {_uniqueStorage()._initialMarginOnSell = newValue}
+  }
+  /// Returns true if `initialMarginOnSell` has been explicitly set.
+  public var hasInitialMarginOnSell: Bool {return _storage._initialMarginOnSell != nil}
+  /// Clears the value of `initialMarginOnSell`. Subsequent reads from it will return its default value.
+  public mutating func clearInitialMarginOnSell() {_uniqueStorage()._initialMarginOnSell = nil}
+
+  ///Стоимость шага цены.
+  public var minPriceIncrementAmount: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._minPriceIncrementAmount ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._minPriceIncrementAmount = newValue}
+  }
+  /// Returns true if `minPriceIncrementAmount` has been explicitly set.
+  public var hasMinPriceIncrementAmount: Bool {return _storage._minPriceIncrementAmount != nil}
+  /// Clears the value of `minPriceIncrementAmount`. Subsequent reads from it will return its default value.
+  public mutating func clearMinPriceIncrementAmount() {_uniqueStorage()._minPriceIncrementAmount = nil}
+
+  /// Информация о бренде.
+  public var brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData {
+    get {return _storage._brand ?? Tinkoff_Public_Invest_Api_Contract_V1_BrandData()}
+    set {_uniqueStorage()._brand = newValue}
+  }
+  /// Returns true if `brand` has been explicitly set.
+  public var hasBrand: Bool {return _storage._brand != nil}
+  /// Clears the value of `brand`. Subsequent reads from it will return its default value.
+  public mutating func clearBrand() {_uniqueStorage()._brand = nil}
+
+  ///Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dlongClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dlongClient = newValue}
+  }
+  /// Returns true if `dlongClient` has been explicitly set.
+  public var hasDlongClient: Bool {return _storage._dlongClient != nil}
+  /// Clears the value of `dlongClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDlongClient() {_uniqueStorage()._dlongClient = nil}
+
+  ///Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dshortClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dshortClient = newValue}
+  }
+  /// Returns true if `dshortClient` has been explicitly set.
+  public var hasDshortClient: Bool {return _storage._dshortClient != nil}
+  /// Clears the value of `dshortClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDshortClient() {_uniqueStorage()._dshortClient = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -2985,7 +3669,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String {
     get {return _storage._figi}
     set {_uniqueStorage()._figi = newValue}
@@ -3003,25 +3687,25 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
     set {_uniqueStorage()._classCode = newValue}
   }
 
-  ///Isin-идентификатор инструмента.
+  ///ISIN-идентификатор инструмента.
   public var isin: String {
     get {return _storage._isin}
     set {_uniqueStorage()._isin = newValue}
   }
 
-  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot)
   public var lot: Int32 {
     get {return _storage._lot}
     set {_uniqueStorage()._lot = newValue}
   }
 
-  ///Валюта расчётов.
+  ///Валюта расчетов.
   public var currency: String {
     get {return _storage._currency}
     set {_uniqueStorage()._currency = newValue}
   }
 
-  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._klong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._klong = newValue}
@@ -3031,7 +3715,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   /// Clears the value of `klong`. Subsequent reads from it will return its default value.
   public mutating func clearKlong() {_uniqueStorage()._klong = nil}
 
-  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var kshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._kshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._kshort = newValue}
@@ -3041,7 +3725,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   /// Clears the value of `kshort`. Subsequent reads from it will return its default value.
   public mutating func clearKshort() {_uniqueStorage()._kshort = nil}
 
-  ///Ставка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlong = newValue}
@@ -3051,7 +3735,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   /// Clears the value of `dlong`. Subsequent reads from it will return its default value.
   public mutating func clearDlong() {_uniqueStorage()._dlong = nil}
 
-  ///Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshort = newValue}
@@ -3061,7 +3745,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   /// Clears the value of `dshort`. Subsequent reads from it will return its default value.
   public mutating func clearDshort() {_uniqueStorage()._dshort = nil}
 
-  ///Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlongMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlongMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlongMin = newValue}
@@ -3071,7 +3755,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   /// Clears the value of `dlongMin`. Subsequent reads from it will return its default value.
   public mutating func clearDlongMin() {_uniqueStorage()._dlongMin = nil}
 
-  ///Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshortMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshortMin = newValue}
@@ -3099,7 +3783,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
     set {_uniqueStorage()._exchange = newValue}
   }
 
-  ///Дата IPO акции в часовом поясе UTC.
+  ///Дата IPO акции по UTC.
   public var ipoDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._ipoDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._ipoDate = newValue}
@@ -3115,13 +3799,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
     set {_uniqueStorage()._issueSize = newValue}
   }
 
-  ///Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Код страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRisk: String {
     get {return _storage._countryOfRisk}
     set {_uniqueStorage()._countryOfRisk = newValue}
   }
 
-  ///Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRiskName: String {
     get {return _storage._countryOfRiskName}
     set {_uniqueStorage()._countryOfRiskName = newValue}
@@ -3155,7 +3839,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
     set {_uniqueStorage()._tradingStatus = newValue}
   }
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool {
     get {return _storage._otcFlag}
     set {_uniqueStorage()._otcFlag = newValue}
@@ -3179,7 +3863,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
     set {_uniqueStorage()._divYieldFlag = newValue}
   }
 
-  ///Тип акции. Возможные значения: [ShareType](https://tinkoff.github.io/investAPI/instruments#sharetype)
+  ///Тип акции. Возможные значения — `[ShareType](./instruments#sharetype)`.
   public var shareType: Tinkoff_Public_Invest_Api_Contract_V1_ShareType {
     get {return _storage._shareType}
     set {_uniqueStorage()._shareType = newValue}
@@ -3195,7 +3879,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   /// Clears the value of `minPriceIncrement`. Subsequent reads from it will return its default value.
   public mutating func clearMinPriceIncrement() {_uniqueStorage()._minPriceIncrement = nil}
 
-  ///Параметр указывает на возможность торговать инструментом через API.
+  ///Возможность торговать инструментом через API.
   public var apiTradeAvailableFlag: Bool {
     get {return _storage._apiTradeAvailableFlag}
     set {_uniqueStorage()._apiTradeAvailableFlag = newValue}
@@ -3207,7 +3891,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
     set {_uniqueStorage()._uid = newValue}
   }
 
-  ///Реальная площадка исполнения расчётов (биржа).
+  ///Реальная площадка исполнения расчетов (биржа).
   public var realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange {
     get {return _storage._realExchange}
     set {_uniqueStorage()._realExchange = newValue}
@@ -3219,31 +3903,43 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
     set {_uniqueStorage()._positionUid = newValue}
   }
 
+  ///Уникальный идентификатор актива.
+  public var assetUid: String {
+    get {return _storage._assetUid}
+    set {_uniqueStorage()._assetUid = newValue}
+  }
+
+  ///Тип площадки торговли.
+  public var instrumentExchange: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType {
+    get {return _storage._instrumentExchange}
+    set {_uniqueStorage()._instrumentExchange = newValue}
+  }
+
   ///Признак доступности для ИИС.
   public var forIisFlag: Bool {
     get {return _storage._forIisFlag}
     set {_uniqueStorage()._forIisFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным
+  ///Флаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
   }
 
-  ///Флаг заблокированного ТКС
+  ///Флаг заблокированного ТКС.
   public var blockedTcaFlag: Bool {
     get {return _storage._blockedTcaFlag}
     set {_uniqueStorage()._blockedTcaFlag = newValue}
   }
 
-  ///Флаг достаточной ликвидности
+  ///Флаг достаточной ликвидности.
   public var liquidityFlag: Bool {
     get {return _storage._liquidityFlag}
     set {_uniqueStorage()._liquidityFlag = newValue}
@@ -3269,6 +3965,36 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   /// Clears the value of `first1DayCandleDate`. Subsequent reads from it will return its default value.
   public mutating func clearFirst1DayCandleDate() {_uniqueStorage()._first1DayCandleDate = nil}
 
+  /// Информация о бренде.
+  public var brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData {
+    get {return _storage._brand ?? Tinkoff_Public_Invest_Api_Contract_V1_BrandData()}
+    set {_uniqueStorage()._brand = newValue}
+  }
+  /// Returns true if `brand` has been explicitly set.
+  public var hasBrand: Bool {return _storage._brand != nil}
+  /// Clears the value of `brand`. Subsequent reads from it will return its default value.
+  public mutating func clearBrand() {_uniqueStorage()._brand = nil}
+
+  ///Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dlongClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dlongClient = newValue}
+  }
+  /// Returns true if `dlongClient` has been explicitly set.
+  public var hasDlongClient: Bool {return _storage._dlongClient != nil}
+  /// Clears the value of `dlongClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDlongClient() {_uniqueStorage()._dlongClient = nil}
+
+  ///Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dshortClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dshortClient = newValue}
+  }
+  /// Returns true if `dshortClient` has been explicitly set.
+  public var hasDshortClient: Bool {return _storage._dshortClient != nil}
+  /// Clears the value of `dshortClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDshortClient() {_uniqueStorage()._dshortClient = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -3276,16 +4002,16 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Share {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
-///Запрос НКД по облигации
+///Запрос НКД по облигации.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String = String()
 
-  ///Начало запрашиваемого периода в часовом поясе UTC.
+  ///Начало запрашиваемого периода по UTC.
   public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_from = newValue}
@@ -3295,7 +4021,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest {
   /// Clears the value of `from`. Subsequent reads from it will return its default value.
   public mutating func clearFrom() {self._from = nil}
 
-  ///Окончание запрашиваемого периода в часовом поясе UTC.
+  ///Окончание запрашиваемого периода по UTC.
   public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_to = newValue}
@@ -3305,6 +4031,9 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest {
   /// Clears the value of `to`. Subsequent reads from it will return its default value.
   public mutating func clearTo() {self._to = nil}
 
+  ///Идентификатор инструмента — `figi` или `instrument_uid`.
+  public var instrumentID: String = String()
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -3313,7 +4042,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest {
   fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
-///НКД облигации
+///НКД облигации.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -3333,7 +4062,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AccruedInterest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Дата и время выплаты в часовом поясе UTC.
+  ///Дата и время выплаты по UTC.
   public var date: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _date ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_date = newValue}
@@ -3391,6 +4120,9 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest {
 
   /// Идентификатор инструмента.
   public var figi: String = String()
+
+  ///Идентификатор инструмента — `figi` или `instrument_uid`.
+  public var instrumentID: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -3482,7 +4214,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String {
     get {return _storage._figi}
     set {_uniqueStorage()._figi = newValue}
@@ -3500,25 +4232,25 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
     set {_uniqueStorage()._classCode = newValue}
   }
 
-  ///Isin-идентификатор инструмента.
+  ///ISIN-идентификатор инструмента.
   public var isin: String {
     get {return _storage._isin}
     set {_uniqueStorage()._isin = newValue}
   }
 
-  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру *lot*. Подробнее: [лот](https://tinkoff.github.io/investAPI/glossary#lot)
+  ///Лотность инструмента. Возможно совершение операций только на количества ценной бумаги, кратные параметру `lot`. [Подробнее](./glossary#lot).
   public var lot: Int32 {
     get {return _storage._lot}
     set {_uniqueStorage()._lot = newValue}
   }
 
-  ///Валюта расчётов.
+  ///Валюта расчетов.
   public var currency: String {
     get {return _storage._currency}
     set {_uniqueStorage()._currency = newValue}
   }
 
-  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска длинной позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._klong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._klong = newValue}
@@ -3528,7 +4260,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
   /// Clears the value of `klong`. Subsequent reads from it will return its default value.
   public mutating func clearKlong() {_uniqueStorage()._klong = nil}
 
-  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР). 1 – клиент с повышенным уровнем риска (КПУР)
+  ///Коэффициент ставки риска короткой позиции по клиенту. 2 – клиент со стандартным уровнем риска (КСУР); 1 – клиент с повышенным уровнем риска (КПУР).
   public var kshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._kshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._kshort = newValue}
@@ -3538,7 +4270,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
   /// Clears the value of `kshort`. Subsequent reads from it will return its default value.
   public mutating func clearKshort() {_uniqueStorage()._kshort = nil}
 
-  ///ССтавка риска начальной маржи для КСУР лонг.Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlong ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlong = newValue}
@@ -3548,7 +4280,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
   /// Clears the value of `dlong`. Subsequent reads from it will return its default value.
   public mutating func clearDlong() {_uniqueStorage()._dlong = nil}
 
-  ///Ставка риска начальной маржи для КСУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КСУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshort: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshort ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshort = newValue}
@@ -3558,7 +4290,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
   /// Clears the value of `dshort`. Subsequent reads from it will return its default value.
   public mutating func clearDshort() {_uniqueStorage()._dshort = nil}
 
-  ///Ставка риска начальной маржи для КПУР лонг. Подробнее: [ставка риска в лонг](https://help.tinkoff.ru/margin-trade/long/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР лонг. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dlongMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dlongMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dlongMin = newValue}
@@ -3568,7 +4300,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
   /// Clears the value of `dlongMin`. Subsequent reads from it will return its default value.
   public mutating func clearDlongMin() {_uniqueStorage()._dlongMin = nil}
 
-  ///Ставка риска начальной маржи для КПУР шорт. Подробнее: [ставка риска в шорт](https://help.tinkoff.ru/margin-trade/short/risk-rate/)
+  ///Ставка риска начальной маржи для КПУР шорт. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
   public var dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._dshortMin ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._dshortMin = newValue}
@@ -3596,13 +4328,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
     set {_uniqueStorage()._exchange = newValue}
   }
 
-  ///Код страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Код страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRisk: String {
     get {return _storage._countryOfRisk}
     set {_uniqueStorage()._countryOfRisk = newValue}
   }
 
-  ///Наименование страны риска, т.е. страны, в которой компания ведёт основной бизнес.
+  ///Наименование страны риска — то есть страны, в которой компания ведет основной бизнес.
   public var countryOfRiskName: String {
     get {return _storage._countryOfRiskName}
     set {_uniqueStorage()._countryOfRiskName = newValue}
@@ -3620,7 +4352,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
     set {_uniqueStorage()._tradingStatus = newValue}
   }
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool {
     get {return _storage._otcFlag}
     set {_uniqueStorage()._otcFlag = newValue}
@@ -3660,7 +4392,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
     set {_uniqueStorage()._uid = newValue}
   }
 
-  ///Реальная площадка исполнения расчётов (биржа).
+  ///Реальная площадка исполнения расчетов (биржа).
   public var realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange {
     get {return _storage._realExchange}
     set {_uniqueStorage()._realExchange = newValue}
@@ -3672,25 +4404,31 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
     set {_uniqueStorage()._positionUid = newValue}
   }
 
+  ///Уникальный идентификатор актива.
+  public var assetUid: String {
+    get {return _storage._assetUid}
+    set {_uniqueStorage()._assetUid = newValue}
+  }
+
   ///Признак доступности для ИИС.
   public var forIisFlag: Bool {
     get {return _storage._forIisFlag}
     set {_uniqueStorage()._forIisFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным
+  ///Флаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
   }
 
-  ///Флаг заблокированного ТКС
+  ///Флаг заблокированного ТКС.
   public var blockedTcaFlag: Bool {
     get {return _storage._blockedTcaFlag}
     set {_uniqueStorage()._blockedTcaFlag = newValue}
@@ -3722,6 +4460,36 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Instrument {
   /// Clears the value of `first1DayCandleDate`. Subsequent reads from it will return its default value.
   public mutating func clearFirst1DayCandleDate() {_uniqueStorage()._first1DayCandleDate = nil}
 
+  /// Информация о бренде.
+  public var brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData {
+    get {return _storage._brand ?? Tinkoff_Public_Invest_Api_Contract_V1_BrandData()}
+    set {_uniqueStorage()._brand = newValue}
+  }
+  /// Returns true if `brand` has been explicitly set.
+  public var hasBrand: Bool {return _storage._brand != nil}
+  /// Clears the value of `brand`. Subsequent reads from it will return its default value.
+  public mutating func clearBrand() {_uniqueStorage()._brand = nil}
+
+  ///Ставка риска в лонг с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dlongClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dlongClient = newValue}
+  }
+  /// Returns true if `dlongClient` has been explicitly set.
+  public var hasDlongClient: Bool {return _storage._dlongClient != nil}
+  /// Clears the value of `dlongClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDlongClient() {_uniqueStorage()._dlongClient = nil}
+
+  ///Ставка риска в шорт с учетом текущего уровня риска портфеля клиента. [Подробнее про ставки риска](https://www.tbank.ru/invest/help/brokerage/account/margin/about/#q5).
+  public var dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+    get {return _storage._dshortClient ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+    set {_uniqueStorage()._dshortClient = newValue}
+  }
+  /// Returns true if `dshortClient` has been explicitly set.
+  public var hasDshortClient: Bool {return _storage._dshortClient != nil}
+  /// Clears the value of `dshortClient`. Subsequent reads from it will return its default value.
+  public mutating func clearDshortClient() {_uniqueStorage()._dshortClient = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
@@ -3735,10 +4503,10 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String = String()
 
-  ///Начало запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
+  ///Начало запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
   public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_from = newValue}
@@ -3748,7 +4516,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest {
   /// Clears the value of `from`. Subsequent reads from it will return its default value.
   public mutating func clearFrom() {self._from = nil}
 
-  ///Окончание запрашиваемого периода в часовом поясе UTC. Фильтрация происходит по параметру *record_date* (дата фиксации реестра).
+  ///Окончание запрашиваемого периода по UTC. Фильтрация происходит по параметру `record_date` — дата фиксации реестра.
   public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_to = newValue}
@@ -3757,6 +4525,9 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest {
   public var hasTo: Bool {return self._to != nil}
   /// Clears the value of `to`. Subsequent reads from it will return its default value.
   public mutating func clearTo() {self._to = nil}
+
+  ///Идентификатор инструмента — `figi` или `instrument_uid`.
+  public var instrumentID: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
@@ -3795,7 +4566,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Dividend {
   /// Clears the value of `dividendNet`. Subsequent reads from it will return its default value.
   public mutating func clearDividendNet() {_uniqueStorage()._dividendNet = nil}
 
-  ///Дата фактических выплат в часовом поясе UTC.
+  ///Дата фактических выплат по UTC.
   public var paymentDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._paymentDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._paymentDate = newValue}
@@ -3805,7 +4576,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Dividend {
   /// Clears the value of `paymentDate`. Subsequent reads from it will return its default value.
   public mutating func clearPaymentDate() {_uniqueStorage()._paymentDate = nil}
 
-  ///Дата объявления дивидендов в часовом поясе UTC.
+  ///Дата объявления дивидендов по UTC.
   public var declaredDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._declaredDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._declaredDate = newValue}
@@ -3815,7 +4586,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Dividend {
   /// Clears the value of `declaredDate`. Subsequent reads from it will return its default value.
   public mutating func clearDeclaredDate() {_uniqueStorage()._declaredDate = nil}
 
-  ///Последний день (включительно) покупки для получения выплаты в часовом поясе UTC.
+  ///Последний день (включительно) покупки для получения выплаты по UTC.
   public var lastBuyDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._lastBuyDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._lastBuyDate = newValue}
@@ -3825,13 +4596,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Dividend {
   /// Clears the value of `lastBuyDate`. Subsequent reads from it will return its default value.
   public mutating func clearLastBuyDate() {_uniqueStorage()._lastBuyDate = nil}
 
-  ///Тип выплаты. Возможные значения: Regular Cash – регулярные выплаты, Cancelled – выплата отменена, Daily Accrual – ежедневное начисление, Return of Capital – возврат капитала, прочие типы выплат.
+  ///Тип выплаты. Возможные значения: `Regular Cash` – регулярные выплаты, `Cancelled` – выплата отменена, `Daily Accrual` – ежедневное начисление, `Return of Capital` – возврат капитала, прочие типы выплат.
   public var dividendType: String {
     get {return _storage._dividendType}
     set {_uniqueStorage()._dividendType = newValue}
   }
 
-  ///Дата фиксации реестра в часовом поясе UTC.
+  ///Дата фиксации реестра по UTC.
   public var recordDate: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._recordDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._recordDate = newValue}
@@ -3841,13 +4612,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Dividend {
   /// Clears the value of `recordDate`. Subsequent reads from it will return its default value.
   public mutating func clearRecordDate() {_uniqueStorage()._recordDate = nil}
 
-  ///Регулярность выплаты. Возможные значения: Annual – ежегодная, Semi-Anl – каждые полгода, прочие типы выплат.
+  ///Регулярность выплаты. Возможные значения: `Annual` – ежегодная, `Semi-Anl` – каждые полгода, прочие типы выплат.
   public var regularity: String {
     get {return _storage._regularity}
     set {_uniqueStorage()._regularity = newValue}
   }
 
-  ///Цена закрытия инструмента на момент ex_dividend_date.
+  ///Цена закрытия инструмента на момент `ex_dividend_date`.
   public var closePrice: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
     get {return _storage._closePrice ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
     set {_uniqueStorage()._closePrice = newValue}
@@ -3867,7 +4638,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Dividend {
   /// Clears the value of `yieldValue`. Subsequent reads from it will return its default value.
   public mutating func clearYieldValue() {_uniqueStorage()._yieldValue = nil}
 
-  ///Дата и время создания записи в часовом поясе UTC.
+  ///Дата и время создания записи по UTC.
   public var createdAt: SwiftProtobuf.Google_Protobuf_Timestamp {
     get {return _storage._createdAt ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
     set {_uniqueStorage()._createdAt = newValue}
@@ -3890,7 +4661,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///uid-идентификатор актива.
+  ///UID-идентификатор актива.
   public var id: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -3927,11 +4698,31 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  public var instrumentType: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType = .unspecified
+  public var instrumentType: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType {
+    get {return _instrumentType ?? .unspecified}
+    set {_instrumentType = newValue}
+  }
+  /// Returns true if `instrumentType` has been explicitly set.
+  public var hasInstrumentType: Bool {return self._instrumentType != nil}
+  /// Clears the value of `instrumentType`. Subsequent reads from it will return its default value.
+  public mutating func clearInstrumentType() {self._instrumentType = nil}
+
+  ///Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+  public var instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus {
+    get {return _instrumentStatus ?? .unspecified}
+    set {_instrumentStatus = newValue}
+  }
+  /// Returns true if `instrumentStatus` has been explicitly set.
+  public var hasInstrumentStatus: Bool {return self._instrumentStatus != nil}
+  /// Clears the value of `instrumentStatus`. Subsequent reads from it will return its default value.
+  public mutating func clearInstrumentStatus() {self._instrumentStatus = nil}
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _instrumentType: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType? = nil
+  fileprivate var _instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus? = nil
 }
 
 ///Список активов.
@@ -4004,7 +4795,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetFull {
     set {_uniqueStorage()._ext = newValue}
   }
 
-  ///Валюта. Обязательно и заполняется только для type = "ASSET_TYPE_CURRENCY".
+  ///Валюта. Обязательно и заполняется только для `type = ASSET_TYPE_CURRENCY`.
   public var currency: Tinkoff_Public_Invest_Api_Contract_V1_AssetCurrency {
     get {
       if case .currency(let v)? = _storage._ext {return v}
@@ -4013,7 +4804,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetFull {
     set {_uniqueStorage()._ext = .currency(newValue)}
   }
 
-  ///Ценная бумага. Обязательно и заполняется только для type = "ASSET_TYPE_SECURITY".
+  ///Ценная бумага. Обязательно и заполняется только для `type = ASSET_TYPE_SECURITY`.
   public var security: Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity {
     get {
       if case .security(let v)? = _storage._ext {return v}
@@ -4087,9 +4878,9 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetFull {
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public enum OneOf_Ext: Equatable {
-    ///Валюта. Обязательно и заполняется только для type = "ASSET_TYPE_CURRENCY".
+    ///Валюта. Обязательно и заполняется только для `type = ASSET_TYPE_CURRENCY`.
     case currency(Tinkoff_Public_Invest_Api_Contract_V1_AssetCurrency)
-    ///Ценная бумага. Обязательно и заполняется только для type = "ASSET_TYPE_SECURITY".
+    ///Ценная бумага. Обязательно и заполняется только для `type = ASSET_TYPE_SECURITY`.
     case security(Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity)
 
   #if !swift(>=4.1)
@@ -4171,7 +4962,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity {
 
   public var ext: Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity.OneOf_Ext? = nil
 
-  ///Акция. Заполняется только для акций (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = share).
+  ///Акция. Заполняется только для акций — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = share`.
   public var share: Tinkoff_Public_Invest_Api_Contract_V1_AssetShare {
     get {
       if case .share(let v)? = ext {return v}
@@ -4180,7 +4971,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity {
     set {ext = .share(newValue)}
   }
 
-  ///Облигация. Заполняется только для облигаций (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = bond).
+  ///Облигация. Заполняется только для облигаций — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = bond`.
   public var bond: Tinkoff_Public_Invest_Api_Contract_V1_AssetBond {
     get {
       if case .bond(let v)? = ext {return v}
@@ -4189,7 +4980,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity {
     set {ext = .bond(newValue)}
   }
 
-  ///Структурная нота. Заполняется только для структурных продуктов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = sp).
+  ///Структурная нота. Заполняется только для структурных продуктов — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = sp`.
   public var sp: Tinkoff_Public_Invest_Api_Contract_V1_AssetStructuredProduct {
     get {
       if case .sp(let v)? = ext {return v}
@@ -4198,7 +4989,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity {
     set {ext = .sp(newValue)}
   }
 
-  /// Фонд. Заполняется только для фондов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = etf).
+  /// Фонд. Заполняется только для фондов — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = etf`.
   public var etf: Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
     get {
       if case .etf(let v)? = ext {return v}
@@ -4207,7 +4998,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity {
     set {ext = .etf(newValue)}
   }
 
-  /// Клиринговый сертификат участия. Заполняется только для клиринговых сертификатов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = clearing_certificate).
+  /// Клиринговый сертификат участия. Заполняется только для клиринговых сертификатов — тип актива `asset.type = ASSET_TYPE_SECURITY` и security.type = `clearing_certificate`.
   public var clearingCertificate: Tinkoff_Public_Invest_Api_Contract_V1_AssetClearingCertificate {
     get {
       if case .clearingCertificate(let v)? = ext {return v}
@@ -4219,15 +5010,15 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetSecurity {
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public enum OneOf_Ext: Equatable {
-    ///Акция. Заполняется только для акций (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = share).
+    ///Акция. Заполняется только для акций — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = share`.
     case share(Tinkoff_Public_Invest_Api_Contract_V1_AssetShare)
-    ///Облигация. Заполняется только для облигаций (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = bond).
+    ///Облигация. Заполняется только для облигаций — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = bond`.
     case bond(Tinkoff_Public_Invest_Api_Contract_V1_AssetBond)
-    ///Структурная нота. Заполняется только для структурных продуктов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = sp).
+    ///Структурная нота. Заполняется только для структурных продуктов — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = sp`.
     case sp(Tinkoff_Public_Invest_Api_Contract_V1_AssetStructuredProduct)
-    /// Фонд. Заполняется только для фондов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = etf).
+    /// Фонд. Заполняется только для фондов — тип актива `asset.type = ASSET_TYPE_SECURITY` и `security.type = etf`.
     case etf(Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf)
-    /// Клиринговый сертификат участия. Заполняется только для клиринговых сертификатов (тип актива asset.type = "ASSET_TYPE_SECURITY" и security.type = clearing_certificate).
+    /// Клиринговый сертификат участия. Заполняется только для клиринговых сертификатов — тип актива `asset.type = ASSET_TYPE_SECURITY` и security.type = `clearing_certificate`.
     case clearingCertificate(Tinkoff_Public_Invest_Api_Contract_V1_AssetClearingCertificate)
 
   #if !swift(>=4.1)
@@ -4373,7 +5164,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetShare {
     set {_uniqueStorage()._represIsin = newValue}
   }
 
-  ///Объявленное количество шт.
+  ///Объявленное количество, шт.
   public var issueSizePlan: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._issueSizePlan ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._issueSizePlan = newValue}
@@ -4484,7 +5275,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetBond {
     set {_uniqueStorage()._collateralFlag = newValue}
   }
 
-  ///Признак показывает, что купоны облигации не облагаются налогом (для mass market).
+  ///Признак показывает, что купоны облигации не облагаются налогом — для mass market.
   public var taxFreeFlag: Bool {
     get {return _storage._taxFreeFlag}
     set {_uniqueStorage()._taxFreeFlag = newValue}
@@ -4554,7 +5345,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetBond {
   /// Clears the value of `placementPrice`. Subsequent reads from it will return its default value.
   public mutating func clearPlacementPrice() {_uniqueStorage()._placementPrice = nil}
 
-  ///Объявленное количество шт.
+  ///Объявленное количество, шт.
   public var issueSizePlan: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._issueSizePlan ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._issueSizePlan = newValue}
@@ -4623,7 +5414,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetStructuredProduct {
     set {_uniqueStorage()._basicAsset = newValue}
   }
 
-  ///Барьер сохранности (в процентах).
+  ///Барьер сохранности в процентах.
   public var safetyBarrier: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._safetyBarrier ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._safetyBarrier = newValue}
@@ -4643,7 +5434,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetStructuredProduct {
   /// Clears the value of `maturityDate`. Subsequent reads from it will return its default value.
   public mutating func clearMaturityDate() {_uniqueStorage()._maturityDate = nil}
 
-  ///Объявленное количество шт.
+  ///Объявленное количество, шт.
   public var issueSizePlan: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._issueSizePlan ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._issueSizePlan = newValue}
@@ -4692,7 +5483,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Суммарные расходы фонда (в %).
+  ///Суммарные расходы фонда в процентах.
   public var totalExpense: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._totalExpense ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._totalExpense = newValue}
@@ -4702,7 +5493,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
   /// Clears the value of `totalExpense`. Subsequent reads from it will return its default value.
   public mutating func clearTotalExpense() {_uniqueStorage()._totalExpense = nil}
 
-  ///Барьерная ставка доходности после которой фонд имеет право на perfomance fee (в процентах).
+  ///Барьерная ставка доходности, после которой фонд имеет право на perfomance fee — в процентах.
   public var hurdleRate: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._hurdleRate ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._hurdleRate = newValue}
@@ -4712,7 +5503,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
   /// Clears the value of `hurdleRate`. Subsequent reads from it will return its default value.
   public mutating func clearHurdleRate() {_uniqueStorage()._hurdleRate = nil}
 
-  ///Комиссия за успешные результаты фонда (в процентах).
+  ///Комиссия за успешные результаты фонда в процентах.
   public var performanceFee: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._performanceFee ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._performanceFee = newValue}
@@ -4722,7 +5513,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
   /// Clears the value of `performanceFee`. Subsequent reads from it will return its default value.
   public mutating func clearPerformanceFee() {_uniqueStorage()._performanceFee = nil}
 
-  ///Фиксированная комиссия за управление (в процентах).
+  ///Фиксированная комиссия за управление в процентах.
   public var fixedCommission: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._fixedCommission ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._fixedCommission = newValue}
@@ -4744,7 +5535,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
     set {_uniqueStorage()._watermarkFlag = newValue}
   }
 
-  ///Премия (надбавка к цене) при покупке доли в фонде (в процентах).
+  ///Премия (надбавка к цене) при покупке доли в фонде — в процентах.
   public var buyPremium: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._buyPremium ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._buyPremium = newValue}
@@ -4754,7 +5545,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
   /// Clears the value of `buyPremium`. Subsequent reads from it will return its default value.
   public mutating func clearBuyPremium() {_uniqueStorage()._buyPremium = nil}
 
-  ///Ставка дисконта (вычет из цены) при продаже доли в фонде (в процентах).
+  ///Ставка дисконта (вычет из цены) при продаже доли в фонде — в процентах.
   public var sellDiscount: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._sellDiscount ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._sellDiscount = newValue}
@@ -4844,7 +5635,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
     set {_uniqueStorage()._primaryIndexCompany = newValue}
   }
 
-  ///Срок восстановления индекса (после просадки).
+  ///Срок восстановления индекса после просадки.
   public var indexRecoveryPeriod: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._indexRecoveryPeriod ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._indexRecoveryPeriod = newValue}
@@ -4866,7 +5657,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
     set {_uniqueStorage()._divYieldFlag = newValue}
   }
 
-  ///Комиссия на покрытие расходов фонда (в процентах).
+  ///Комиссия на покрытие расходов фонда в процентах.
   public var expenseCommission: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._expenseCommission ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._expenseCommission = newValue}
@@ -4876,7 +5667,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetEtf {
   /// Clears the value of `expenseCommission`. Subsequent reads from it will return its default value.
   public mutating func clearExpenseCommission() {_uniqueStorage()._expenseCommission = nil}
 
-  ///Ошибка следования за индексом (в процентах).
+  ///Ошибка следования за индексом в процентах.
   public var primaryIndexTrackingError: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
     get {return _storage._primaryIndexTrackingError ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
     set {_uniqueStorage()._primaryIndexTrackingError = newValue}
@@ -4965,7 +5756,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_Brand {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///uid идентификатор бренда.
+  ///UID-идентификатор бренда.
   public var uid: String = String()
 
   ///Наименование бренда.
@@ -5000,10 +5791,10 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetInstrument {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///uid идентификатор инструмента.
+  ///UID-идентификатор инструмента.
   public var uid: String = String()
 
-  ///figi идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String = String()
 
   ///Тип инструмента.
@@ -5021,7 +5812,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_AssetInstrument {
   ///Тип инструмента.
   public var instrumentKind: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType = .unspecified
 
-  ///id позиции.
+  ///ID позиции.
   public var positionUid: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -5038,7 +5829,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentLink {
   ///Тип связи.
   public var type: String = String()
 
-  ///uid идентификатор связанного инструмента.
+  ///UID-идентификатор связанного инструмента.
   public var instrumentUid: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -5052,23 +5843,47 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  ///Уникальный идентификатор группы.
+  public var groupID: String {
+    get {return _groupID ?? String()}
+    set {_groupID = newValue}
+  }
+  /// Returns true if `groupID` has been explicitly set.
+  public var hasGroupID: Bool {return self._groupID != nil}
+  /// Clears the value of `groupID`. Subsequent reads from it will return its default value.
+  public mutating func clearGroupID() {self._groupID = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _groupID: String? = nil
 }
 
-///В ответ передаётся список избранных инструментов в качестве массива.
+///В ответ передается список избранных инструментов в качестве массива.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Массив инструментов
+  ///Массив инструментов.
   public var favoriteInstruments: [Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument] = []
+
+  ///Уникальный идентификатор группы.
+  public var groupID: String {
+    get {return _groupID ?? String()}
+    set {_groupID = newValue}
+  }
+  /// Returns true if `groupID` has been explicitly set.
+  public var hasGroupID: Bool {return self._groupID != nil}
+  /// Clears the value of `groupID`. Subsequent reads from it will return its default value.
+  public mutating func clearGroupID() {self._groupID = nil}
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _groupID: String? = nil
 }
 
 ///Массив избранных инструментов.
@@ -5077,7 +5892,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
+  ///FIGI-идентификатор инструмента.
   public var figi: String = String()
 
   ///Тикер инструмента.
@@ -5086,16 +5901,22 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument {
   ///Класс-код инструмента.
   public var classCode: String = String()
 
-  ///Isin-идентификатор инструмента.
+  ///ISIN-идентификатор инструмента.
   public var isin: String = String()
 
   ///Тип инструмента.
   public var instrumentType: String = String()
 
-  ///Признак внебиржевой ценной бумаги.
+  ///Название инструмента.
+  public var name: String = String()
+
+  ///Уникальный идентификатор инструмента.
+  public var uid: String = String()
+
+  ///Флаг, используемый ранее для определения внебиржевых инструментов. На данный момент не используется для торгуемых через API инструментов. Может использоваться как фильтр для операций, совершавшихся некоторое время назад на ОТС площадке.
   public var otcFlag: Bool = false
 
-  ///Параметр указывает на возможность торговать инструментом через API.
+  ///Возможность торговать инструментом через API.
   public var apiTradeAvailableFlag: Bool = false
 
   ///Тип инструмента.
@@ -5118,9 +5939,21 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest {
   ///Тип действия со списком.
   public var actionType: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesActionType = .unspecified
 
+  ///Уникальный идентификатор группы.
+  public var groupID: String {
+    get {return _groupID ?? String()}
+    set {_groupID = newValue}
+  }
+  /// Returns true if `groupID` has been explicitly set.
+  public var hasGroupID: Bool {return self._groupID != nil}
+  /// Clears the value of `groupID`. Subsequent reads from it will return its default value.
+  public mutating func clearGroupID() {self._groupID = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _groupID: String? = nil
 }
 
 ///Массив инструментов для редактирования списка избранных инструментов.
@@ -5129,12 +5962,24 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequestInstrume
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Figi-идентификатор инструмента.
-  public var figi: String = String()
+  ///FIGI-идентификатор инструмента.
+  public var figi: String {
+    get {return _figi ?? String()}
+    set {_figi = newValue}
+  }
+  /// Returns true if `figi` has been explicitly set.
+  public var hasFigi: Bool {return self._figi != nil}
+  /// Clears the value of `figi`. Subsequent reads from it will return its default value.
+  public mutating func clearFigi() {self._figi = nil}
+
+  ///Идентификатор инструмента — `figi` или `instrument_uid`.
+  public var instrumentID: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _figi: String? = nil
 }
 
 ///Результат редактирования списка избранных инструментов.
@@ -5143,10 +5988,153 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Массив инструментов
+  ///Массив инструментов.
   public var favoriteInstruments: [Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument] = []
 
+  ///Уникальный идентификатор группы.
+  public var groupID: String {
+    get {return _groupID ?? String()}
+    set {_groupID = newValue}
+  }
+  /// Returns true if `groupID` has been explicitly set.
+  public var hasGroupID: Bool {return self._groupID != nil}
+  /// Clears the value of `groupID`. Subsequent reads from it will return its default value.
+  public mutating func clearGroupID() {self._groupID = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _groupID: String? = nil
+}
+
+///Запрос создания новой группы избранных инструментов.
+public struct Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Название группы, не более 255 символов.
+  public var groupName: String = String()
+
+  ///Цвет группы. Принимает значения в HEX-формате, от "000000" до "FFFFFF"
+  public var groupColor: String = String()
+
+  ///Описание
+  public var note: String {
+    get {return _note ?? String()}
+    set {_note = newValue}
+  }
+  /// Returns true if `note` has been explicitly set.
+  public var hasNote: Bool {return self._note != nil}
+  /// Clears the value of `note`. Subsequent reads from it will return its default value.
+  public mutating func clearNote() {self._note = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _note: String? = nil
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Уникальный идентификатор группы.
+  public var groupID: String = String()
+
+  ///Название группы.
+  public var groupName: String = String()
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Уникальный идентификатор группы.
+  public var groupID: String = String()
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Массив идентификаторов инструментов. Принимает значение `figi` или `instrument_uid`. Если в группе будет хотя бы один из инструментов массива, то в ответе у группы вернется признак `containsInstrument = true`.
+  public var instrumentID: [String] = []
+
+  ///Массив идентификаторов групп, которые необходимо исключить из ответа.
+  public var excludedGroupID: [String] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Массив групп избранных списков инструментов.
+  public var groups: [Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse.FavoriteGroup] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public struct FavoriteGroup {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    ///Уникальный идентификатор группы.
+    public var groupID: String = String()
+
+    ///Название группы.
+    public var groupName: String = String()
+
+    ///Цвет группы в HEX-формате.
+    public var color: String = String()
+
+    ///Количество инструментов в группе.
+    public var size: Int32 = 0
+
+    ///Признак наличия в группе хотя бы одного инструмента из запроса.
+    public var containsInstrument: Bool {
+      get {return _containsInstrument ?? false}
+      set {_containsInstrument = newValue}
+    }
+    /// Returns true if `containsInstrument` has been explicitly set.
+    public var hasContainsInstrument: Bool {return self._containsInstrument != nil}
+    /// Clears the value of `containsInstrument`. Subsequent reads from it will return its default value.
+    public mutating func clearContainsInstrument() {self._containsInstrument = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _containsInstrument: Bool? = nil
+  }
 
   public init() {}
 }
@@ -5176,6 +6164,72 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse {
   public init() {}
 }
 
+///Запрос справочника индексов и товаров
+public struct Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+///Справочник индексов и товаров
+public struct Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Массив инструментов.
+  public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_IndicativeResponse] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+///Индикатив
+public struct Tinkoff_Public_Invest_Api_Contract_V1_IndicativeResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// FIGI-идентификатор инструмента.
+  public var figi: String = String()
+
+  /// Тикер инструмента.
+  public var ticker: String = String()
+
+  /// Класс-код инструмента.
+  public var classCode: String = String()
+
+  /// Валюта расчетов.
+  public var currency: String = String()
+
+  ///Тип инструмента.
+  public var instrumentKind: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType = .unspecified
+
+  /// Название инструмента.
+  public var name: String = String()
+
+  /// Tорговая площадка (секция биржи).
+  public var exchange: String = String()
+
+  /// Уникальный идентификатор инструмента.
+  public var uid: String = String()
+
+  /// Признак доступности для покупки.
+  public var buyAvailableFlag: Bool = false
+
+  /// Признак доступности для продажи.
+  public var sellAvailableFlag: Bool = false
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
 ///Данные о стране.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_CountryResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -5185,7 +6239,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_CountryResponse {
   ///Двухбуквенный код страны.
   public var alfaTwo: String = String()
 
-  ///Трёхбуквенный код страны.
+  ///Трехбуквенный код страны.
   public var alfaThree: String = String()
 
   ///Наименование страны.
@@ -5209,14 +6263,31 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest {
   public var query: String = String()
 
   ///Фильтр по типу инструмента.
-  public var instrumentKind: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType = .unspecified
+  public var instrumentKind: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType {
+    get {return _instrumentKind ?? .unspecified}
+    set {_instrumentKind = newValue}
+  }
+  /// Returns true if `instrumentKind` has been explicitly set.
+  public var hasInstrumentKind: Bool {return self._instrumentKind != nil}
+  /// Clears the value of `instrumentKind`. Subsequent reads from it will return its default value.
+  public mutating func clearInstrumentKind() {self._instrumentKind = nil}
 
   ///Фильтр для отображения только торговых инструментов.
-  public var apiTradeAvailableFlag: Bool = false
+  public var apiTradeAvailableFlag: Bool {
+    get {return _apiTradeAvailableFlag ?? false}
+    set {_apiTradeAvailableFlag = newValue}
+  }
+  /// Returns true if `apiTradeAvailableFlag` has been explicitly set.
+  public var hasApiTradeAvailableFlag: Bool {return self._apiTradeAvailableFlag != nil}
+  /// Clears the value of `apiTradeAvailableFlag`. Subsequent reads from it will return its default value.
+  public mutating func clearApiTradeAvailableFlag() {self._apiTradeAvailableFlag = nil}
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _instrumentKind: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType? = nil
+  fileprivate var _apiTradeAvailableFlag: Bool? = nil
 }
 
 ///Результат поиска инструментов.
@@ -5239,13 +6310,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Isin инструмента.
+  ///ISIN инструмента.
   public var isin: String {
     get {return _storage._isin}
     set {_uniqueStorage()._isin = newValue}
   }
 
-  ///Figi инструмента.
+  ///FIGI инструмента.
   public var figi: String {
     get {return _storage._figi}
     set {_uniqueStorage()._figi = newValue}
@@ -5293,7 +6364,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort {
     set {_uniqueStorage()._instrumentKind = newValue}
   }
 
-  ///Параметр указывает на возможность торговать инструментом через API.
+  ///Возможность торговать инструментом через API.
   public var apiTradeAvailableFlag: Bool {
     get {return _storage._apiTradeAvailableFlag}
     set {_uniqueStorage()._apiTradeAvailableFlag = newValue}
@@ -5325,22 +6396,28 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort {
   /// Clears the value of `first1DayCandleDate`. Subsequent reads from it will return its default value.
   public mutating func clearFirst1DayCandleDate() {_uniqueStorage()._first1DayCandleDate = nil}
 
-  ///Флаг отображающий доступность торговли инструментом только для квалифицированных инвесторов.
+  ///Флаг, отображающий доступность торговли инструментом только для квалифицированных инвесторов.
   public var forQualInvestorFlag: Bool {
     get {return _storage._forQualInvestorFlag}
     set {_uniqueStorage()._forQualInvestorFlag = newValue}
   }
 
-  ///Флаг отображающий доступность торговли инструментом по выходным
+  ///Флаг, отображающий доступность торговли инструментом по выходным.
   public var weekendFlag: Bool {
     get {return _storage._weekendFlag}
     set {_uniqueStorage()._weekendFlag = newValue}
   }
 
-  ///Флаг заблокированного ТКС
+  ///Флаг заблокированного ТКС.
   public var blockedTcaFlag: Bool {
     get {return _storage._blockedTcaFlag}
     set {_uniqueStorage()._blockedTcaFlag = newValue}
+  }
+
+  ///Количество бумаг в лоте.
+  public var lot: Int32 {
+    get {return _storage._lot}
+    set {_uniqueStorage()._lot = newValue}
   }
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -5356,9 +6433,21 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  ///Настройки пагинации.
+  public var paging: Tinkoff_Public_Invest_Api_Contract_V1_Page {
+    get {return _paging ?? Tinkoff_Public_Invest_Api_Contract_V1_Page()}
+    set {_paging = newValue}
+  }
+  /// Returns true if `paging` has been explicitly set.
+  public var hasPaging: Bool {return self._paging != nil}
+  /// Clears the value of `paging`. Subsequent reads from it will return its default value.
+  public mutating func clearPaging() {self._paging = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _paging: Tinkoff_Public_Invest_Api_Contract_V1_Page? = nil
 }
 
 ///Запрос бренда.
@@ -5367,7 +6456,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest {
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Uid-идентификатор бренда.
+  ///UID-идентификатор бренда.
   public var id: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -5384,9 +6473,1092 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse {
   ///Массив брендов.
   public var brands: [Tinkoff_Public_Invest_Api_Contract_V1_Brand] = []
 
+  ///Данные по пагинации.
+  public var paging: Tinkoff_Public_Invest_Api_Contract_V1_PageResponse {
+    get {return _paging ?? Tinkoff_Public_Invest_Api_Contract_V1_PageResponse()}
+    set {_paging = newValue}
+  }
+  /// Returns true if `paging` has been explicitly set.
+  public var hasPaging: Bool {return self._paging != nil}
+  /// Clears the value of `paging`. Subsequent reads from it will return its default value.
+  public mutating func clearPaging() {self._paging = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _paging: Tinkoff_Public_Invest_Api_Contract_V1_PageResponse? = nil
+}
+
+///Запрос фундаментальных показателей
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Массив идентификаторов активов, не более 100 шт.
+  public var assets: [String] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+///Фундаментальные показатели
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var fundamentals: [Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse.StatisticResponse] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  ///Фундаментальные показатели по активу
+  public struct StatisticResponse {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    ///Идентификатор актива.
+    public var assetUid: String {
+      get {return _storage._assetUid}
+      set {_uniqueStorage()._assetUid = newValue}
+    }
+
+    ///Валюта.
+    public var currency: String {
+      get {return _storage._currency}
+      set {_uniqueStorage()._currency = newValue}
+    }
+
+    ///Рыночная капитализация.
+    public var marketCapitalization: Double {
+      get {return _storage._marketCapitalization}
+      set {_uniqueStorage()._marketCapitalization = newValue}
+    }
+
+    ///Максимум за год.
+    public var highPriceLast52Weeks: Double {
+      get {return _storage._highPriceLast52Weeks}
+      set {_uniqueStorage()._highPriceLast52Weeks = newValue}
+    }
+
+    ///Минимум за год.
+    public var lowPriceLast52Weeks: Double {
+      get {return _storage._lowPriceLast52Weeks}
+      set {_uniqueStorage()._lowPriceLast52Weeks = newValue}
+    }
+
+    ///Средний объем торгов за 10 дней.
+    public var averageDailyVolumeLast10Days: Double {
+      get {return _storage._averageDailyVolumeLast10Days}
+      set {_uniqueStorage()._averageDailyVolumeLast10Days = newValue}
+    }
+
+    ///Средний объем торгов за месяц.
+    public var averageDailyVolumeLast4Weeks: Double {
+      get {return _storage._averageDailyVolumeLast4Weeks}
+      set {_uniqueStorage()._averageDailyVolumeLast4Weeks = newValue}
+    }
+
+    public var beta: Double {
+      get {return _storage._beta}
+      set {_uniqueStorage()._beta = newValue}
+    }
+
+    ///Доля акций в свободном обращении.
+    public var freeFloat: Double {
+      get {return _storage._freeFloat}
+      set {_uniqueStorage()._freeFloat = newValue}
+    }
+
+    ///Процент форвардной дивидендной доходности по отношению к цене акций.
+    public var forwardAnnualDividendYield: Double {
+      get {return _storage._forwardAnnualDividendYield}
+      set {_uniqueStorage()._forwardAnnualDividendYield = newValue}
+    }
+
+    ///Количество акций в обращении.
+    public var sharesOutstanding: Double {
+      get {return _storage._sharesOutstanding}
+      set {_uniqueStorage()._sharesOutstanding = newValue}
+    }
+
+    ///Выручка.
+    public var revenueTtm: Double {
+      get {return _storage._revenueTtm}
+      set {_uniqueStorage()._revenueTtm = newValue}
+    }
+
+    ///EBITDA — прибыль до вычета процентов, налогов, износа и амортизации.
+    public var ebitdaTtm: Double {
+      get {return _storage._ebitdaTtm}
+      set {_uniqueStorage()._ebitdaTtm = newValue}
+    }
+
+    ///Чистая прибыль.
+    public var netIncomeTtm: Double {
+      get {return _storage._netIncomeTtm}
+      set {_uniqueStorage()._netIncomeTtm = newValue}
+    }
+
+    ///EPS — величина чистой прибыли компании, которая приходится на каждую обыкновенную акцию.
+    public var epsTtm: Double {
+      get {return _storage._epsTtm}
+      set {_uniqueStorage()._epsTtm = newValue}
+    }
+
+    ///EPS компании с допущением, что все конвертируемые ценные бумаги компании были сконвертированы в обыкновенные акции.
+    public var dilutedEpsTtm: Double {
+      get {return _storage._dilutedEpsTtm}
+      set {_uniqueStorage()._dilutedEpsTtm = newValue}
+    }
+
+    ///Свободный денежный поток.
+    public var freeCashFlowTtm: Double {
+      get {return _storage._freeCashFlowTtm}
+      set {_uniqueStorage()._freeCashFlowTtm = newValue}
+    }
+
+    ///Среднегодовой  рocт выручки за 5 лет.
+    public var fiveYearAnnualRevenueGrowthRate: Double {
+      get {return _storage._fiveYearAnnualRevenueGrowthRate}
+      set {_uniqueStorage()._fiveYearAnnualRevenueGrowthRate = newValue}
+    }
+
+    ///Среднегодовой  рocт выручки за 3 года.
+    public var threeYearAnnualRevenueGrowthRate: Double {
+      get {return _storage._threeYearAnnualRevenueGrowthRate}
+      set {_uniqueStorage()._threeYearAnnualRevenueGrowthRate = newValue}
+    }
+
+    ///Соотношение рыночной капитализации компании к ее чистой прибыли.
+    public var peRatioTtm: Double {
+      get {return _storage._peRatioTtm}
+      set {_uniqueStorage()._peRatioTtm = newValue}
+    }
+
+    ///Соотношение рыночной капитализации компании к ее выручке.
+    public var priceToSalesTtm: Double {
+      get {return _storage._priceToSalesTtm}
+      set {_uniqueStorage()._priceToSalesTtm = newValue}
+    }
+
+    ///Соотношение рыночной капитализации компании к ее балансовой стоимости.
+    public var priceToBookTtm: Double {
+      get {return _storage._priceToBookTtm}
+      set {_uniqueStorage()._priceToBookTtm = newValue}
+    }
+
+    ///Соотношение рыночной капитализации компании к ее свободному денежному потоку.
+    public var priceToFreeCashFlowTtm: Double {
+      get {return _storage._priceToFreeCashFlowTtm}
+      set {_uniqueStorage()._priceToFreeCashFlowTtm = newValue}
+    }
+
+    ///Рыночная стоимость компании.
+    public var totalEnterpriseValueMrq: Double {
+      get {return _storage._totalEnterpriseValueMrq}
+      set {_uniqueStorage()._totalEnterpriseValueMrq = newValue}
+    }
+
+    ///Соотношение EV и EBITDA.
+    public var evToEbitdaMrq: Double {
+      get {return _storage._evToEbitdaMrq}
+      set {_uniqueStorage()._evToEbitdaMrq = newValue}
+    }
+
+    ///Маржа чистой прибыли.
+    public var netMarginMrq: Double {
+      get {return _storage._netMarginMrq}
+      set {_uniqueStorage()._netMarginMrq = newValue}
+    }
+
+    ///Рентабельность чистой прибыли.
+    public var netInterestMarginMrq: Double {
+      get {return _storage._netInterestMarginMrq}
+      set {_uniqueStorage()._netInterestMarginMrq = newValue}
+    }
+
+    ///Рентабельность собственного капитала.
+    public var roe: Double {
+      get {return _storage._roe}
+      set {_uniqueStorage()._roe = newValue}
+    }
+
+    ///Рентабельность активов.
+    public var roa: Double {
+      get {return _storage._roa}
+      set {_uniqueStorage()._roa = newValue}
+    }
+
+    ///Рентабельность активов.
+    public var roic: Double {
+      get {return _storage._roic}
+      set {_uniqueStorage()._roic = newValue}
+    }
+
+    ///Сумма краткосрочных и долгосрочных обязательств компании.
+    public var totalDebtMrq: Double {
+      get {return _storage._totalDebtMrq}
+      set {_uniqueStorage()._totalDebtMrq = newValue}
+    }
+
+    ///Соотношение долга к собственному капиталу.
+    public var totalDebtToEquityMrq: Double {
+      get {return _storage._totalDebtToEquityMrq}
+      set {_uniqueStorage()._totalDebtToEquityMrq = newValue}
+    }
+
+    ///Total Debt/EBITDA.
+    public var totalDebtToEbitdaMrq: Double {
+      get {return _storage._totalDebtToEbitdaMrq}
+      set {_uniqueStorage()._totalDebtToEbitdaMrq = newValue}
+    }
+
+    ///Отношение свободногоо кэша к стоимости.
+    public var freeCashFlowToPrice: Double {
+      get {return _storage._freeCashFlowToPrice}
+      set {_uniqueStorage()._freeCashFlowToPrice = newValue}
+    }
+
+    ///Отношение чистого долга к EBITDA.
+    public var netDebtToEbitda: Double {
+      get {return _storage._netDebtToEbitda}
+      set {_uniqueStorage()._netDebtToEbitda = newValue}
+    }
+
+    ///Коэффициент текущей ликвидности.
+    public var currentRatioMrq: Double {
+      get {return _storage._currentRatioMrq}
+      set {_uniqueStorage()._currentRatioMrq = newValue}
+    }
+
+    ///Коэффициент покрытия фиксированных платежей — FCCR.
+    public var fixedChargeCoverageRatioFy: Double {
+      get {return _storage._fixedChargeCoverageRatioFy}
+      set {_uniqueStorage()._fixedChargeCoverageRatioFy = newValue}
+    }
+
+    ///Дивидендная доходность за 12 месяцев.
+    public var dividendYieldDailyTtm: Double {
+      get {return _storage._dividendYieldDailyTtm}
+      set {_uniqueStorage()._dividendYieldDailyTtm = newValue}
+    }
+
+    ///Выплаченные дивиденды за 12 месяцев.
+    public var dividendRateTtm: Double {
+      get {return _storage._dividendRateTtm}
+      set {_uniqueStorage()._dividendRateTtm = newValue}
+    }
+
+    ///Значение дивидендов на акцию.
+    public var dividendsPerShare: Double {
+      get {return _storage._dividendsPerShare}
+      set {_uniqueStorage()._dividendsPerShare = newValue}
+    }
+
+    ///Средняя дивидендная доходность за 5 лет.
+    public var fiveYearsAverageDividendYield: Double {
+      get {return _storage._fiveYearsAverageDividendYield}
+      set {_uniqueStorage()._fiveYearsAverageDividendYield = newValue}
+    }
+
+    ///Среднегодовой рост дивидендов за 5 лет.
+    public var fiveYearAnnualDividendGrowthRate: Double {
+      get {return _storage._fiveYearAnnualDividendGrowthRate}
+      set {_uniqueStorage()._fiveYearAnnualDividendGrowthRate = newValue}
+    }
+
+    ///Процент чистой прибыли, уходящий на выплату дивидендов.
+    public var dividendPayoutRatioFy: Double {
+      get {return _storage._dividendPayoutRatioFy}
+      set {_uniqueStorage()._dividendPayoutRatioFy = newValue}
+    }
+
+    ///Деньги, потраченные на обратный выкуп акций.
+    public var buyBackTtm: Double {
+      get {return _storage._buyBackTtm}
+      set {_uniqueStorage()._buyBackTtm = newValue}
+    }
+
+    ///Рост выручки за 1 год.
+    public var oneYearAnnualRevenueGrowthRate: Double {
+      get {return _storage._oneYearAnnualRevenueGrowthRate}
+      set {_uniqueStorage()._oneYearAnnualRevenueGrowthRate = newValue}
+    }
+
+    ///Код страны.
+    public var domicileIndicatorCode: String {
+      get {return _storage._domicileIndicatorCode}
+      set {_uniqueStorage()._domicileIndicatorCode = newValue}
+    }
+
+    ///Соотношение депозитарной расписки к акциям.
+    public var adrToCommonShareRatio: Double {
+      get {return _storage._adrToCommonShareRatio}
+      set {_uniqueStorage()._adrToCommonShareRatio = newValue}
+    }
+
+    ///Количество сотрудников.
+    public var numberOfEmployees: Double {
+      get {return _storage._numberOfEmployees}
+      set {_uniqueStorage()._numberOfEmployees = newValue}
+    }
+
+    public var exDividendDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._exDividendDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._exDividendDate = newValue}
+    }
+    /// Returns true if `exDividendDate` has been explicitly set.
+    public var hasExDividendDate: Bool {return _storage._exDividendDate != nil}
+    /// Clears the value of `exDividendDate`. Subsequent reads from it will return its default value.
+    public mutating func clearExDividendDate() {_uniqueStorage()._exDividendDate = nil}
+
+    ///Начало фискального периода.
+    public var fiscalPeriodStartDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._fiscalPeriodStartDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._fiscalPeriodStartDate = newValue}
+    }
+    /// Returns true if `fiscalPeriodStartDate` has been explicitly set.
+    public var hasFiscalPeriodStartDate: Bool {return _storage._fiscalPeriodStartDate != nil}
+    /// Clears the value of `fiscalPeriodStartDate`. Subsequent reads from it will return its default value.
+    public mutating func clearFiscalPeriodStartDate() {_uniqueStorage()._fiscalPeriodStartDate = nil}
+
+    ///Окончание фискального периода.
+    public var fiscalPeriodEndDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._fiscalPeriodEndDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._fiscalPeriodEndDate = newValue}
+    }
+    /// Returns true if `fiscalPeriodEndDate` has been explicitly set.
+    public var hasFiscalPeriodEndDate: Bool {return _storage._fiscalPeriodEndDate != nil}
+    /// Clears the value of `fiscalPeriodEndDate`. Subsequent reads from it will return its default value.
+    public mutating func clearFiscalPeriodEndDate() {_uniqueStorage()._fiscalPeriodEndDate = nil}
+
+    ///Изменение общего дохода за 5 лет.
+    public var revenueChangeFiveYears: Double {
+      get {return _storage._revenueChangeFiveYears}
+      set {_uniqueStorage()._revenueChangeFiveYears = newValue}
+    }
+
+    ///Изменение EPS за 5 лет.
+    public var epsChangeFiveYears: Double {
+      get {return _storage._epsChangeFiveYears}
+      set {_uniqueStorage()._epsChangeFiveYears = newValue}
+    }
+
+    ///Изменение EBIDTA за 5 лет.
+    public var ebitdaChangeFiveYears: Double {
+      get {return _storage._ebitdaChangeFiveYears}
+      set {_uniqueStorage()._ebitdaChangeFiveYears = newValue}
+    }
+
+    ///Изменение общей задолжности за 5 лет.
+    public var totalDebtChangeFiveYears: Double {
+      get {return _storage._totalDebtChangeFiveYears}
+      set {_uniqueStorage()._totalDebtChangeFiveYears = newValue}
+    }
+
+    ///Отношение EV к выручке.
+    public var evToSales: Double {
+      get {return _storage._evToSales}
+      set {_uniqueStorage()._evToSales = newValue}
+    }
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _storage = _StorageClass.defaultInstance
+  }
+
+  public init() {}
+}
+
+///Запрос отчетов эмитентов
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Идентификатор инструмента в формате UID.
+  public var instrumentID: String = String()
+
+  ///Начало запрашиваемого периода по UTC.
+  public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_from = newValue}
+  }
+  /// Returns true if `from` has been explicitly set.
+  public var hasFrom: Bool {return self._from != nil}
+  /// Clears the value of `from`. Subsequent reads from it will return its default value.
+  public mutating func clearFrom() {self._from = nil}
+
+  ///Окончание запрашиваемого периода по UTC.
+  public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
+    get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+    set {_to = newValue}
+  }
+  /// Returns true if `to` has been explicitly set.
+  public var hasTo: Bool {return self._to != nil}
+  /// Clears the value of `to`. Subsequent reads from it will return its default value.
+  public mutating func clearTo() {self._to = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+}
+
+///Отчеты эмитентов
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Массив событий по облигации.
+  public var events: [Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.GetAssetReportsEvent] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public enum AssetReportPeriodType: SwiftProtobuf.Enum {
+    public typealias RawValue = Int
+
+    /// Не указан.
+    case periodTypeUnspecified // = 0
+
+    /// Квартальный.
+    case periodTypeQuarter // = 1
+
+    /// Полугодовой.
+    case periodTypeSemiannual // = 2
+
+    /// Годовой.
+    case periodTypeAnnual // = 3
+    case UNRECOGNIZED(Int)
+
+    public init() {
+      self = .periodTypeUnspecified
+    }
+
+    public init?(rawValue: Int) {
+      switch rawValue {
+      case 0: self = .periodTypeUnspecified
+      case 1: self = .periodTypeQuarter
+      case 2: self = .periodTypeSemiannual
+      case 3: self = .periodTypeAnnual
+      default: self = .UNRECOGNIZED(rawValue)
+      }
+    }
+
+    public var rawValue: Int {
+      switch self {
+      case .periodTypeUnspecified: return 0
+      case .periodTypeQuarter: return 1
+      case .periodTypeSemiannual: return 2
+      case .periodTypeAnnual: return 3
+      case .UNRECOGNIZED(let i): return i
+      }
+    }
+
+  }
+
+  ///Отчет
+  public struct GetAssetReportsEvent {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// Идентификатор инструмента.
+    public var instrumentID: String = String()
+
+    /// Дата публикации отчета.
+    public var reportDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _reportDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_reportDate = newValue}
+    }
+    /// Returns true if `reportDate` has been explicitly set.
+    public var hasReportDate: Bool {return self._reportDate != nil}
+    /// Clears the value of `reportDate`. Subsequent reads from it will return its default value.
+    public mutating func clearReportDate() {self._reportDate = nil}
+
+    /// Год периода отчета.
+    public var periodYear: Int32 = 0
+
+    /// Номер периода.
+    public var periodNum: Int32 = 0
+
+    /// Тип отчета.
+    public var periodType: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.AssetReportPeriodType = .periodTypeUnspecified
+
+    /// Дата создания записи.
+    public var createdAt: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _createdAt ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_createdAt = newValue}
+    }
+    /// Returns true if `createdAt` has been explicitly set.
+    public var hasCreatedAt: Bool {return self._createdAt != nil}
+    /// Clears the value of `createdAt`. Subsequent reads from it will return its default value.
+    public mutating func clearCreatedAt() {self._createdAt = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _reportDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _createdAt: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  }
+
+  public init() {}
+}
+
+#if swift(>=4.2)
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.AssetReportPeriodType: CaseIterable {
+  // The compiler won't synthesize support with the UNRECOGNIZED case.
+  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.AssetReportPeriodType] = [
+    .periodTypeUnspecified,
+    .periodTypeQuarter,
+    .periodTypeSemiannual,
+    .periodTypeAnnual,
+  ]
+}
+
+#endif  // swift(>=4.2)
+
+///Запрос консенсус-прогнозов
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Настройки пагинации.
+  public var paging: Tinkoff_Public_Invest_Api_Contract_V1_Page {
+    get {return _paging ?? Tinkoff_Public_Invest_Api_Contract_V1_Page()}
+    set {_paging = newValue}
+  }
+  /// Returns true if `paging` has been explicitly set.
+  public var hasPaging: Bool {return self._paging != nil}
+  /// Clears the value of `paging`. Subsequent reads from it will return its default value.
+  public mutating func clearPaging() {self._paging = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+
+  fileprivate var _paging: Tinkoff_Public_Invest_Api_Contract_V1_Page? = nil
+}
+
+///Консенсус-прогнозы
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Массив прогнозов.
+  public var items: [Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse.ConsensusForecastsItem] = []
+
+  ///Данные по пагинации.
+  public var page: Tinkoff_Public_Invest_Api_Contract_V1_PageResponse {
+    get {return _page ?? Tinkoff_Public_Invest_Api_Contract_V1_PageResponse()}
+    set {_page = newValue}
+  }
+  /// Returns true if `page` has been explicitly set.
+  public var hasPage: Bool {return self._page != nil}
+  /// Clears the value of `page`. Subsequent reads from it will return its default value.
+  public mutating func clearPage() {self._page = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  ///Прогноз
+  public struct ConsensusForecastsItem {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// UID-идентификатор.
+    public var uid: String {
+      get {return _storage._uid}
+      set {_uniqueStorage()._uid = newValue}
+    }
+
+    /// UID-идентификатор актива.
+    public var assetUid: String {
+      get {return _storage._assetUid}
+      set {_uniqueStorage()._assetUid = newValue}
+    }
+
+    /// Дата и время создания записи.
+    public var createdAt: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._createdAt ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._createdAt = newValue}
+    }
+    /// Returns true if `createdAt` has been explicitly set.
+    public var hasCreatedAt: Bool {return _storage._createdAt != nil}
+    /// Clears the value of `createdAt`. Subsequent reads from it will return its default value.
+    public mutating func clearCreatedAt() {_uniqueStorage()._createdAt = nil}
+
+    /// Целевая цена на 12 месяцев.
+    public var bestTargetPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _storage._bestTargetPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_uniqueStorage()._bestTargetPrice = newValue}
+    }
+    /// Returns true if `bestTargetPrice` has been explicitly set.
+    public var hasBestTargetPrice: Bool {return _storage._bestTargetPrice != nil}
+    /// Clears the value of `bestTargetPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearBestTargetPrice() {_uniqueStorage()._bestTargetPrice = nil}
+
+    /// Минимальная прогнозная цена.
+    public var bestTargetLow: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _storage._bestTargetLow ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_uniqueStorage()._bestTargetLow = newValue}
+    }
+    /// Returns true if `bestTargetLow` has been explicitly set.
+    public var hasBestTargetLow: Bool {return _storage._bestTargetLow != nil}
+    /// Clears the value of `bestTargetLow`. Subsequent reads from it will return its default value.
+    public mutating func clearBestTargetLow() {_uniqueStorage()._bestTargetLow = nil}
+
+    /// Максимальная прогнозная цена.
+    public var bestTargetHigh: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _storage._bestTargetHigh ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_uniqueStorage()._bestTargetHigh = newValue}
+    }
+    /// Returns true if `bestTargetHigh` has been explicitly set.
+    public var hasBestTargetHigh: Bool {return _storage._bestTargetHigh != nil}
+    /// Clears the value of `bestTargetHigh`. Subsequent reads from it will return its default value.
+    public mutating func clearBestTargetHigh() {_uniqueStorage()._bestTargetHigh = nil}
+
+    /// Количество аналитиков рекомендующих покупать.
+    public var totalBuyRecommend: Int32 {
+      get {return _storage._totalBuyRecommend}
+      set {_uniqueStorage()._totalBuyRecommend = newValue}
+    }
+
+    /// Количество аналитиков рекомендующих держать.
+    public var totalHoldRecommend: Int32 {
+      get {return _storage._totalHoldRecommend}
+      set {_uniqueStorage()._totalHoldRecommend = newValue}
+    }
+
+    /// Количество аналитиков рекомендующих продавать.
+    public var totalSellRecommend: Int32 {
+      get {return _storage._totalSellRecommend}
+      set {_uniqueStorage()._totalSellRecommend = newValue}
+    }
+
+    /// Валюта прогнозов инструмента.
+    public var currency: String {
+      get {return _storage._currency}
+      set {_uniqueStorage()._currency = newValue}
+    }
+
+    /// Консенсус-прогноз.
+    public var consensus: Tinkoff_Public_Invest_Api_Contract_V1_Recommendation {
+      get {return _storage._consensus}
+      set {_uniqueStorage()._consensus = newValue}
+    }
+
+    /// Дата прогноза.
+    public var prognosisDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _storage._prognosisDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_uniqueStorage()._prognosisDate = newValue}
+    }
+    /// Returns true if `prognosisDate` has been explicitly set.
+    public var hasPrognosisDate: Bool {return _storage._prognosisDate != nil}
+    /// Clears the value of `prognosisDate`. Subsequent reads from it will return its default value.
+    public mutating func clearPrognosisDate() {_uniqueStorage()._prognosisDate = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _storage = _StorageClass.defaultInstance
+  }
+
+  public init() {}
+
+  fileprivate var _page: Tinkoff_Public_Invest_Api_Contract_V1_PageResponse? = nil
+}
+
+///Запрос прогнозов инвестдомов.
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Идентификатор инструмента.
+  public var instrumentID: String = String()
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+///Прогнозы инвестдомов по инструменту.
+public struct Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Массив прогнозов.
+  public var targets: [Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.TargetItem] {
+    get {return _storage._targets}
+    set {_uniqueStorage()._targets = newValue}
+  }
+
+  /// Согласованный прогноз.
+  public var consensus: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.ConsensusItem {
+    get {return _storage._consensus ?? Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.ConsensusItem()}
+    set {_uniqueStorage()._consensus = newValue}
+  }
+  /// Returns true if `consensus` has been explicitly set.
+  public var hasConsensus: Bool {return _storage._consensus != nil}
+  /// Clears the value of `consensus`. Subsequent reads from it will return its default value.
+  public mutating func clearConsensus() {_uniqueStorage()._consensus = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  ///Прогноз
+  public struct TargetItem {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// Уникальный идентификатор инструмента.
+    public var uid: String = String()
+
+    /// Тикер инструмента.
+    public var ticker: String = String()
+
+    /// Название компании, давшей прогноз.
+    public var company: String = String()
+
+    /// Прогноз.
+    public var recommendation: Tinkoff_Public_Invest_Api_Contract_V1_Recommendation = .unspecified
+
+    ///Дата прогноза.
+    public var recommendationDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _recommendationDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_recommendationDate = newValue}
+    }
+    /// Returns true if `recommendationDate` has been explicitly set.
+    public var hasRecommendationDate: Bool {return self._recommendationDate != nil}
+    /// Clears the value of `recommendationDate`. Subsequent reads from it will return its default value.
+    public mutating func clearRecommendationDate() {self._recommendationDate = nil}
+
+    /// Валюта.
+    public var currency: String = String()
+
+    /// Текущая цена.
+    public var currentPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _currentPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_currentPrice = newValue}
+    }
+    /// Returns true if `currentPrice` has been explicitly set.
+    public var hasCurrentPrice: Bool {return self._currentPrice != nil}
+    /// Clears the value of `currentPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearCurrentPrice() {self._currentPrice = nil}
+
+    /// Прогнозируемая цена.
+    public var targetPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _targetPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_targetPrice = newValue}
+    }
+    /// Returns true if `targetPrice` has been explicitly set.
+    public var hasTargetPrice: Bool {return self._targetPrice != nil}
+    /// Clears the value of `targetPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearTargetPrice() {self._targetPrice = nil}
+
+    /// Изменение цены.
+    public var priceChange: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _priceChange ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_priceChange = newValue}
+    }
+    /// Returns true if `priceChange` has been explicitly set.
+    public var hasPriceChange: Bool {return self._priceChange != nil}
+    /// Clears the value of `priceChange`. Subsequent reads from it will return its default value.
+    public mutating func clearPriceChange() {self._priceChange = nil}
+
+    /// Относительное изменение цены.
+    public var priceChangeRel: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _priceChangeRel ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_priceChangeRel = newValue}
+    }
+    /// Returns true if `priceChangeRel` has been explicitly set.
+    public var hasPriceChangeRel: Bool {return self._priceChangeRel != nil}
+    /// Clears the value of `priceChangeRel`. Subsequent reads from it will return its default value.
+    public mutating func clearPriceChangeRel() {self._priceChangeRel = nil}
+
+    /// Наименование инструмента.
+    public var showName: String = String()
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _recommendationDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _currentPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _targetPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _priceChange: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _priceChangeRel: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+  }
+
+  ///Консенсус-прогноз.
+  public struct ConsensusItem {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// Уникальный идентификатор инструмента.
+    public var uid: String = String()
+
+    /// Тикер инструмента.
+    public var ticker: String = String()
+
+    /// Прогноз.
+    public var recommendation: Tinkoff_Public_Invest_Api_Contract_V1_Recommendation = .unspecified
+
+    /// Валюта.
+    public var currency: String = String()
+
+    /// Текущая цена.
+    public var currentPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _currentPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_currentPrice = newValue}
+    }
+    /// Returns true if `currentPrice` has been explicitly set.
+    public var hasCurrentPrice: Bool {return self._currentPrice != nil}
+    /// Clears the value of `currentPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearCurrentPrice() {self._currentPrice = nil}
+
+    /// Прогнозируемая цена.
+    public var consensus: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _consensus ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_consensus = newValue}
+    }
+    /// Returns true if `consensus` has been explicitly set.
+    public var hasConsensus: Bool {return self._consensus != nil}
+    /// Clears the value of `consensus`. Subsequent reads from it will return its default value.
+    public mutating func clearConsensus() {self._consensus = nil}
+
+    /// Минимальная цена прогноза.
+    public var minTarget: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _minTarget ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_minTarget = newValue}
+    }
+    /// Returns true if `minTarget` has been explicitly set.
+    public var hasMinTarget: Bool {return self._minTarget != nil}
+    /// Clears the value of `minTarget`. Subsequent reads from it will return its default value.
+    public mutating func clearMinTarget() {self._minTarget = nil}
+
+    /// Максимальная цена прогноза.
+    public var maxTarget: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _maxTarget ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_maxTarget = newValue}
+    }
+    /// Returns true if `maxTarget` has been explicitly set.
+    public var hasMaxTarget: Bool {return self._maxTarget != nil}
+    /// Clears the value of `maxTarget`. Subsequent reads from it will return its default value.
+    public mutating func clearMaxTarget() {self._maxTarget = nil}
+
+    /// Изменение цены.
+    public var priceChange: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _priceChange ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_priceChange = newValue}
+    }
+    /// Returns true if `priceChange` has been explicitly set.
+    public var hasPriceChange: Bool {return self._priceChange != nil}
+    /// Clears the value of `priceChange`. Subsequent reads from it will return its default value.
+    public mutating func clearPriceChange() {self._priceChange = nil}
+
+    /// Относительное изменение цены.
+    public var priceChangeRel: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _priceChangeRel ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_priceChangeRel = newValue}
+    }
+    /// Returns true if `priceChangeRel` has been explicitly set.
+    public var hasPriceChangeRel: Bool {return self._priceChangeRel != nil}
+    /// Clears the value of `priceChangeRel`. Subsequent reads from it will return its default value.
+    public mutating func clearPriceChangeRel() {self._priceChangeRel = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _currentPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _consensus: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _minTarget: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _maxTarget: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _priceChange: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _priceChangeRel: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+  }
+
+  public init() {}
+
+  fileprivate var _storage = _StorageClass.defaultInstance
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  /// Идентификаторы инструментов.
+  public var instrumentID: [String] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var instrumentRiskRates: [Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRateResult] = []
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public struct RiskRateResult {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    public var instrumentUid: String = String()
+
+    /// Ставка риска пользователя  в шорт
+    public var shortRiskRate: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate {
+      get {return _shortRiskRate ?? Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate()}
+      set {_shortRiskRate = newValue}
+    }
+    /// Returns true if `shortRiskRate` has been explicitly set.
+    public var hasShortRiskRate: Bool {return self._shortRiskRate != nil}
+    /// Clears the value of `shortRiskRate`. Subsequent reads from it will return its default value.
+    public mutating func clearShortRiskRate() {self._shortRiskRate = nil}
+
+    /// Ставка риска пользователя в лонг
+    public var longRiskRate: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate {
+      get {return _longRiskRate ?? Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate()}
+      set {_longRiskRate = newValue}
+    }
+    /// Returns true if `longRiskRate` has been explicitly set.
+    public var hasLongRiskRate: Bool {return self._longRiskRate != nil}
+    /// Clears the value of `longRiskRate`. Subsequent reads from it will return its default value.
+    public mutating func clearLongRiskRate() {self._longRiskRate = nil}
+
+    ///Доступные ставки риска в шорт
+    public var shortRiskRates: [Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate] = []
+
+    ///Доступные ставки риска в лонг
+    public var longRiskRates: [Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate] = []
+
+    /// Ошибка.
+    public var error: String {
+      get {return _error ?? String()}
+      set {_error = newValue}
+    }
+    /// Returns true if `error` has been explicitly set.
+    public var hasError: Bool {return self._error != nil}
+    /// Clears the value of `error`. Subsequent reads from it will return its default value.
+    public mutating func clearError() {self._error = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _shortRiskRate: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate? = nil
+    fileprivate var _longRiskRate: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate? = nil
+    fileprivate var _error: String? = nil
+  }
+
+  public struct RiskRate {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// Категория риска.
+    public var riskLevelCode: String = String()
+
+    /// Значение ставки риска.
+    public var value: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+      get {return _value ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+      set {_value = newValue}
+    }
+    /// Returns true if `value` has been explicitly set.
+    public var hasValue: Bool {return self._value != nil}
+    /// Clears the value of `value`. Subsequent reads from it will return its default value.
+    public mutating func clearValue() {self._value = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _value: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+  }
+
+  public init() {}
+}
+
+public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  ///Название интервала.
+  public var type: String = String()
+
+  ///Интервал.
+  public var interval: Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.TimeInterval {
+    get {return _interval ?? Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.TimeInterval()}
+    set {_interval = newValue}
+  }
+  /// Returns true if `interval` has been explicitly set.
+  public var hasInterval: Bool {return self._interval != nil}
+  /// Clears the value of `interval`. Subsequent reads from it will return its default value.
+  public mutating func clearInterval() {self._interval = nil}
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public struct TimeInterval {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+
+    /// Время начала интервала.
+    public var startTs: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _startTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_startTs = newValue}
+    }
+    /// Returns true if `startTs` has been explicitly set.
+    public var hasStartTs: Bool {return self._startTs != nil}
+    /// Clears the value of `startTs`. Subsequent reads from it will return its default value.
+    public mutating func clearStartTs() {self._startTs = nil}
+
+    /// Время окончания интервала.
+    public var endTs: SwiftProtobuf.Google_Protobuf_Timestamp {
+      get {return _endTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+      set {_endTs = newValue}
+    }
+    /// Returns true if `endTs` has been explicitly set.
+    public var hasEndTs: Bool {return self._endTs != nil}
+    /// Clears the value of `endTs`. Subsequent reads from it will return its default value.
+    public mutating func clearEndTs() {self._endTs = nil}
+
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+    public init() {}
+
+    fileprivate var _startTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _endTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+  }
+
+  public init() {}
+
+  fileprivate var _interval: Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.TimeInterval? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -5396,13 +7568,15 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OptionPaymentType: @unchecked Se
 extension Tinkoff_Public_Invest_Api_Contract_V1_OptionStyle: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_OptionSettlementType: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentIdType: @unchecked Sendable {}
-extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_ShareType: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_AssetType: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_StructuredProductType: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesActionType: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_Recommendation: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_RiskLevel: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_BondType: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedule: @unchecked Sendable {}
@@ -5414,6 +7588,10 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_BondResponse: @unchecked Sendabl
 extension Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest.EventType: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse.BondEvent: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_Coupon: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse: @unchecked Sendable {}
@@ -5465,8 +7643,18 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument: @unchecked S
 extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequestInstrument: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse.FavoriteGroup: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_IndicativeResponse: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_CountryResponse: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse: @unchecked Sendable {}
@@ -5474,6 +7662,26 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: @unchecked Send
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest: @unchecked Sendable {}
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse.StatisticResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.AssetReportPeriodType: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.GetAssetReportsEvent: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse.ConsensusForecastsItem: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.TargetItem: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.ConsensusItem: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRateResult: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval: @unchecked Sendable {}
+extension Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.TimeInterval: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
@@ -5535,14 +7743,6 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentIdType: SwiftProtobuf.
   ]
 }
 
-extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "INSTRUMENT_STATUS_UNSPECIFIED"),
-    1: .same(proto: "INSTRUMENT_STATUS_BASE"),
-    2: .same(proto: "INSTRUMENT_STATUS_ALL"),
-  ]
-}
-
 extension Tinkoff_Public_Invest_Api_Contract_V1_ShareType: SwiftProtobuf._ProtoNameProviding {
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     0: .same(proto: "SHARE_TYPE_UNSPECIFIED"),
@@ -5589,6 +7789,16 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_RealExchange: SwiftProtobuf._Pro
     1: .same(proto: "REAL_EXCHANGE_MOEX"),
     2: .same(proto: "REAL_EXCHANGE_RTS"),
     3: .same(proto: "REAL_EXCHANGE_OTC"),
+    4: .same(proto: "REAL_EXCHANGE_DEALER"),
+  ]
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_Recommendation: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "RECOMMENDATION_UNSPECIFIED"),
+    1: .same(proto: "RECOMMENDATION_BUY"),
+    2: .same(proto: "RECOMMENDATION_HOLD"),
+    3: .same(proto: "RECOMMENDATION_SELL"),
   ]
 }
 
@@ -5598,6 +7808,20 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_RiskLevel: SwiftProtobuf._ProtoN
     1: .same(proto: "RISK_LEVEL_LOW"),
     2: .same(proto: "RISK_LEVEL_MODERATE"),
     3: .same(proto: "RISK_LEVEL_HIGH"),
+  ]
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_BondType: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "BOND_TYPE_UNSPECIFIED"),
+    1: .same(proto: "BOND_TYPE_REPLACED"),
+  ]
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "INSTRUMENT_EXCHANGE_UNSPECIFIED"),
+    1: .same(proto: "INSTRUMENT_EXCHANGE_DEALER"),
   ]
 }
 
@@ -5615,7 +7839,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest: SwiftPr
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.exchange) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self._exchange) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
       default: break
@@ -5628,9 +7852,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest: SwiftPr
     // allocates stack space for every if/case branch local when no optimizations
     // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
     // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.exchange.isEmpty {
-      try visitor.visitSingularStringField(value: self.exchange, fieldNumber: 1)
-    }
+    try { if let v = self._exchange {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+    } }()
     try { if let v = self._from {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
     } }()
@@ -5641,7 +7865,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest: SwiftPr
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest) -> Bool {
-    if lhs.exchange != rhs.exchange {return false}
+    if lhs._exchange != rhs._exchange {return false}
     if lhs._from != rhs._from {return false}
     if lhs._to != rhs._to {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
@@ -5737,6 +7961,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingDay: SwiftProtobuf.Messag
     15: .standard(proto: "premarket_end_time"),
     16: .standard(proto: "closing_auction_start_time"),
     17: .standard(proto: "opening_auction_end_time"),
+    18: .same(proto: "intervals"),
   ]
 
   fileprivate class _StorageClass {
@@ -5755,6 +7980,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingDay: SwiftProtobuf.Messag
     var _premarketEndTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _closingAuctionStartTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _openingAuctionEndTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _intervals: [Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval] = []
 
     static let defaultInstance = _StorageClass()
 
@@ -5776,6 +8002,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingDay: SwiftProtobuf.Messag
       _premarketEndTime = source._premarketEndTime
       _closingAuctionStartTime = source._closingAuctionStartTime
       _openingAuctionEndTime = source._openingAuctionEndTime
+      _intervals = source._intervals
     }
   }
 
@@ -5809,6 +8036,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingDay: SwiftProtobuf.Messag
         case 15: try { try decoder.decodeSingularMessageField(value: &_storage._premarketEndTime) }()
         case 16: try { try decoder.decodeSingularMessageField(value: &_storage._closingAuctionStartTime) }()
         case 17: try { try decoder.decodeSingularMessageField(value: &_storage._openingAuctionEndTime) }()
+        case 18: try { try decoder.decodeRepeatedMessageField(value: &_storage._intervals) }()
         default: break
         }
       }
@@ -5866,6 +8094,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingDay: SwiftProtobuf.Messag
       try { if let v = _storage._openingAuctionEndTime {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 17)
       } }()
+      if !_storage._intervals.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._intervals, fieldNumber: 18)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -5890,6 +8121,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_TradingDay: SwiftProtobuf.Messag
         if _storage._premarketEndTime != rhs_storage._premarketEndTime {return false}
         if _storage._closingAuctionStartTime != rhs_storage._closingAuctionStartTime {return false}
         if _storage._openingAuctionEndTime != rhs_storage._openingAuctionEndTime {return false}
+        if _storage._intervals != rhs_storage._intervals {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -5914,7 +8146,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest: SwiftProtobuf
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularEnumField(value: &self.idType) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.classCode) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self._classCode) }()
       case 3: try { try decoder.decodeSingularStringField(value: &self.id) }()
       default: break
       }
@@ -5922,12 +8154,16 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest: SwiftProtobuf
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if self.idType != .instrumentIDUnspecified {
       try visitor.visitSingularEnumField(value: self.idType, fieldNumber: 1)
     }
-    if !self.classCode.isEmpty {
-      try visitor.visitSingularStringField(value: self.classCode, fieldNumber: 2)
-    }
+    try { if let v = self._classCode {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 2)
+    } }()
     if !self.id.isEmpty {
       try visitor.visitSingularStringField(value: self.id, fieldNumber: 3)
     }
@@ -5936,7 +8172,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest: SwiftProtobuf
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest) -> Bool {
     if lhs.idType != rhs.idType {return false}
-    if lhs.classCode != rhs.classCode {return false}
+    if lhs._classCode != rhs._classCode {return false}
     if lhs.id != rhs.id {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
@@ -5947,6 +8183,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest: SwiftProtobu
   public static let protoMessageName: String = _protobuf_package + ".InstrumentsRequest"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "instrument_status"),
+    2: .standard(proto: "instrument_exchange"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -5955,21 +8192,30 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest: SwiftProtobu
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.instrumentStatus) }()
+      case 1: try { try decoder.decodeSingularEnumField(value: &self._instrumentStatus) }()
+      case 2: try { try decoder.decodeSingularEnumField(value: &self._instrumentExchange) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.instrumentStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.instrumentStatus, fieldNumber: 1)
-    }
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._instrumentStatus {
+      try visitor.visitSingularEnumField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._instrumentExchange {
+      try visitor.visitSingularEnumField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest) -> Bool {
-    if lhs.instrumentStatus != rhs.instrumentStatus {return false}
+    if lhs._instrumentStatus != rhs._instrumentStatus {return false}
+    if lhs._instrumentExchange != rhs._instrumentExchange {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -5988,26 +8234,30 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest: SwiftProto
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.basicAssetUid) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.basicAssetPositionUid) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self._basicAssetUid) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self._basicAssetPositionUid) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.basicAssetUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.basicAssetUid, fieldNumber: 1)
-    }
-    if !self.basicAssetPositionUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.basicAssetPositionUid, fieldNumber: 2)
-    }
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._basicAssetUid {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._basicAssetPositionUid {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest) -> Bool {
-    if lhs.basicAssetUid != rhs.basicAssetUid {return false}
-    if lhs.basicAssetPositionUid != rhs.basicAssetPositionUid {return false}
+    if lhs._basicAssetUid != rhs._basicAssetUid {return false}
+    if lhs._basicAssetPositionUid != rhs._basicAssetPositionUid {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -6087,6 +8337,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest: SwiftProt
     1: .same(proto: "figi"),
     2: .same(proto: "from"),
     3: .same(proto: "to"),
+    4: .standard(proto: "instrument_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -6098,6 +8349,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest: SwiftProt
       case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
       default: break
       }
     }
@@ -6117,6 +8369,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest: SwiftProt
     try { if let v = self._to {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
     } }()
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -6124,6 +8379,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest: SwiftProt
     if lhs.figi != rhs.figi {return false}
     if lhs._from != rhs._from {return false}
     if lhs._to != rhs._to {return false}
+    if lhs.instrumentID != rhs.instrumentID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -6156,6 +8412,330 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse: SwiftPro
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse) -> Bool {
     if lhs.events != rhs.events {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetBondEventsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    2: .same(proto: "from"),
+    3: .same(proto: "to"),
+    4: .standard(proto: "instrument_id"),
+    5: .same(proto: "type"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+      case 5: try { try decoder.decodeSingularEnumField(value: &self.type) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._from {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._to {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 4)
+    }
+    if self.type != .unspecified {
+      try visitor.visitSingularEnumField(value: self.type, fieldNumber: 5)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest) -> Bool {
+    if lhs._from != rhs._from {return false}
+    if lhs._to != rhs._to {return false}
+    if lhs.instrumentID != rhs.instrumentID {return false}
+    if lhs.type != rhs.type {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest.EventType: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "EVENT_TYPE_UNSPECIFIED"),
+    1: .same(proto: "EVENT_TYPE_CPN"),
+    2: .same(proto: "EVENT_TYPE_CALL"),
+    3: .same(proto: "EVENT_TYPE_MTY"),
+    4: .same(proto: "EVENT_TYPE_CONV"),
+  ]
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetBondEventsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "events"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.events) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.events.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.events, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse) -> Bool {
+    if lhs.events != rhs.events {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse.BondEvent: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse.protoMessageName + ".BondEvent"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    2: .standard(proto: "instrument_id"),
+    3: .standard(proto: "event_number"),
+    4: .standard(proto: "event_date"),
+    5: .standard(proto: "event_type"),
+    6: .standard(proto: "event_total_vol"),
+    7: .standard(proto: "fix_date"),
+    8: .standard(proto: "rate_date"),
+    9: .standard(proto: "default_date"),
+    10: .standard(proto: "real_pay_date"),
+    11: .standard(proto: "pay_date"),
+    12: .standard(proto: "pay_one_bond"),
+    13: .standard(proto: "money_flow_val"),
+    14: .same(proto: "execution"),
+    15: .standard(proto: "operation_type"),
+    16: .same(proto: "value"),
+    17: .same(proto: "note"),
+    18: .standard(proto: "convert_to_fin_tool_id"),
+    19: .standard(proto: "coupon_start_date"),
+    20: .standard(proto: "coupon_end_date"),
+    21: .standard(proto: "coupon_period"),
+    22: .standard(proto: "coupon_interest_rate"),
+  ]
+
+  fileprivate class _StorageClass {
+    var _instrumentID: String = String()
+    var _eventNumber: Int32 = 0
+    var _eventDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _eventType: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest.EventType = .unspecified
+    var _eventTotalVol: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _fixDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _rateDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _defaultDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _realPayDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _payDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _payOneBond: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
+    var _moneyFlowVal: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
+    var _execution: String = String()
+    var _operationType: String = String()
+    var _value: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _note: String = String()
+    var _convertToFinToolID: String = String()
+    var _couponStartDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _couponEndDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _couponPeriod: Int32 = 0
+    var _couponInterestRate: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+
+    static let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _instrumentID = source._instrumentID
+      _eventNumber = source._eventNumber
+      _eventDate = source._eventDate
+      _eventType = source._eventType
+      _eventTotalVol = source._eventTotalVol
+      _fixDate = source._fixDate
+      _rateDate = source._rateDate
+      _defaultDate = source._defaultDate
+      _realPayDate = source._realPayDate
+      _payDate = source._payDate
+      _payOneBond = source._payOneBond
+      _moneyFlowVal = source._moneyFlowVal
+      _execution = source._execution
+      _operationType = source._operationType
+      _value = source._value
+      _note = source._note
+      _convertToFinToolID = source._convertToFinToolID
+      _couponStartDate = source._couponStartDate
+      _couponEndDate = source._couponEndDate
+      _couponPeriod = source._couponPeriod
+      _couponInterestRate = source._couponInterestRate
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 2: try { try decoder.decodeSingularStringField(value: &_storage._instrumentID) }()
+        case 3: try { try decoder.decodeSingularInt32Field(value: &_storage._eventNumber) }()
+        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._eventDate) }()
+        case 5: try { try decoder.decodeSingularEnumField(value: &_storage._eventType) }()
+        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._eventTotalVol) }()
+        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._fixDate) }()
+        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._rateDate) }()
+        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._defaultDate) }()
+        case 10: try { try decoder.decodeSingularMessageField(value: &_storage._realPayDate) }()
+        case 11: try { try decoder.decodeSingularMessageField(value: &_storage._payDate) }()
+        case 12: try { try decoder.decodeSingularMessageField(value: &_storage._payOneBond) }()
+        case 13: try { try decoder.decodeSingularMessageField(value: &_storage._moneyFlowVal) }()
+        case 14: try { try decoder.decodeSingularStringField(value: &_storage._execution) }()
+        case 15: try { try decoder.decodeSingularStringField(value: &_storage._operationType) }()
+        case 16: try { try decoder.decodeSingularMessageField(value: &_storage._value) }()
+        case 17: try { try decoder.decodeSingularStringField(value: &_storage._note) }()
+        case 18: try { try decoder.decodeSingularStringField(value: &_storage._convertToFinToolID) }()
+        case 19: try { try decoder.decodeSingularMessageField(value: &_storage._couponStartDate) }()
+        case 20: try { try decoder.decodeSingularMessageField(value: &_storage._couponEndDate) }()
+        case 21: try { try decoder.decodeSingularInt32Field(value: &_storage._couponPeriod) }()
+        case 22: try { try decoder.decodeSingularMessageField(value: &_storage._couponInterestRate) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if !_storage._instrumentID.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._instrumentID, fieldNumber: 2)
+      }
+      if _storage._eventNumber != 0 {
+        try visitor.visitSingularInt32Field(value: _storage._eventNumber, fieldNumber: 3)
+      }
+      try { if let v = _storage._eventDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+      } }()
+      if _storage._eventType != .unspecified {
+        try visitor.visitSingularEnumField(value: _storage._eventType, fieldNumber: 5)
+      }
+      try { if let v = _storage._eventTotalVol {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+      } }()
+      try { if let v = _storage._fixDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+      } }()
+      try { if let v = _storage._rateDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+      } }()
+      try { if let v = _storage._defaultDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+      } }()
+      try { if let v = _storage._realPayDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
+      } }()
+      try { if let v = _storage._payDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+      } }()
+      try { if let v = _storage._payOneBond {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 12)
+      } }()
+      try { if let v = _storage._moneyFlowVal {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 13)
+      } }()
+      if !_storage._execution.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._execution, fieldNumber: 14)
+      }
+      if !_storage._operationType.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._operationType, fieldNumber: 15)
+      }
+      try { if let v = _storage._value {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 16)
+      } }()
+      if !_storage._note.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._note, fieldNumber: 17)
+      }
+      if !_storage._convertToFinToolID.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._convertToFinToolID, fieldNumber: 18)
+      }
+      try { if let v = _storage._couponStartDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 19)
+      } }()
+      try { if let v = _storage._couponEndDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 20)
+      } }()
+      if _storage._couponPeriod != 0 {
+        try visitor.visitSingularInt32Field(value: _storage._couponPeriod, fieldNumber: 21)
+      }
+      try { if let v = _storage._couponInterestRate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 22)
+      } }()
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse.BondEvent, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse.BondEvent) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._instrumentID != rhs_storage._instrumentID {return false}
+        if _storage._eventNumber != rhs_storage._eventNumber {return false}
+        if _storage._eventDate != rhs_storage._eventDate {return false}
+        if _storage._eventType != rhs_storage._eventType {return false}
+        if _storage._eventTotalVol != rhs_storage._eventTotalVol {return false}
+        if _storage._fixDate != rhs_storage._fixDate {return false}
+        if _storage._rateDate != rhs_storage._rateDate {return false}
+        if _storage._defaultDate != rhs_storage._defaultDate {return false}
+        if _storage._realPayDate != rhs_storage._realPayDate {return false}
+        if _storage._payDate != rhs_storage._payDate {return false}
+        if _storage._payOneBond != rhs_storage._payOneBond {return false}
+        if _storage._moneyFlowVal != rhs_storage._moneyFlowVal {return false}
+        if _storage._execution != rhs_storage._execution {return false}
+        if _storage._operationType != rhs_storage._operationType {return false}
+        if _storage._value != rhs_storage._value {return false}
+        if _storage._note != rhs_storage._note {return false}
+        if _storage._convertToFinToolID != rhs_storage._convertToFinToolID {return false}
+        if _storage._couponStartDate != rhs_storage._couponStartDate {return false}
+        if _storage._couponEndDate != rhs_storage._couponEndDate {return false}
+        if _storage._couponPeriod != rhs_storage._couponPeriod {return false}
+        if _storage._couponInterestRate != rhs_storage._couponInterestRate {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -6540,6 +9120,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
     151: .standard(proto: "country_of_risk"),
     152: .standard(proto: "country_of_risk_name"),
     161: .same(proto: "sector"),
+    162: .same(proto: "brand"),
     201: .same(proto: "lot"),
     211: .standard(proto: "basic_asset_size"),
     221: .same(proto: "klong"),
@@ -6550,6 +9131,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
     226: .standard(proto: "dshort_min"),
     231: .standard(proto: "min_price_increment"),
     241: .standard(proto: "strike_price"),
+    290: .standard(proto: "dlong_client"),
+    291: .standard(proto: "dshort_client"),
     301: .standard(proto: "expiration_date"),
     311: .standard(proto: "first_trade_date"),
     312: .standard(proto: "last_trade_date"),
@@ -6587,6 +9170,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
     var _countryOfRisk: String = String()
     var _countryOfRiskName: String = String()
     var _sector: String = String()
+    var _brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData? = nil
     var _lot: Int32 = 0
     var _basicAssetSize: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
     var _klong: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
@@ -6597,6 +9181,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
     var _dshortMin: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
     var _minPriceIncrement: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
     var _strikePrice: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
+    var _dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
     var _expirationDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _firstTradeDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _lastTradeDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
@@ -6637,6 +9223,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
       _countryOfRisk = source._countryOfRisk
       _countryOfRiskName = source._countryOfRiskName
       _sector = source._sector
+      _brand = source._brand
       _lot = source._lot
       _basicAssetSize = source._basicAssetSize
       _klong = source._klong
@@ -6647,6 +9234,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
       _dshortMin = source._dshortMin
       _minPriceIncrement = source._minPriceIncrement
       _strikePrice = source._strikePrice
+      _dlongClient = source._dlongClient
+      _dshortClient = source._dshortClient
       _expirationDate = source._expirationDate
       _firstTradeDate = source._firstTradeDate
       _lastTradeDate = source._lastTradeDate
@@ -6699,6 +9288,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
         case 151: try { try decoder.decodeSingularStringField(value: &_storage._countryOfRisk) }()
         case 152: try { try decoder.decodeSingularStringField(value: &_storage._countryOfRiskName) }()
         case 161: try { try decoder.decodeSingularStringField(value: &_storage._sector) }()
+        case 162: try { try decoder.decodeSingularMessageField(value: &_storage._brand) }()
         case 201: try { try decoder.decodeSingularInt32Field(value: &_storage._lot) }()
         case 211: try { try decoder.decodeSingularMessageField(value: &_storage._basicAssetSize) }()
         case 221: try { try decoder.decodeSingularMessageField(value: &_storage._klong) }()
@@ -6709,6 +9299,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
         case 226: try { try decoder.decodeSingularMessageField(value: &_storage._dshortMin) }()
         case 231: try { try decoder.decodeSingularMessageField(value: &_storage._minPriceIncrement) }()
         case 241: try { try decoder.decodeSingularMessageField(value: &_storage._strikePrice) }()
+        case 290: try { try decoder.decodeSingularMessageField(value: &_storage._dlongClient) }()
+        case 291: try { try decoder.decodeSingularMessageField(value: &_storage._dshortClient) }()
         case 301: try { try decoder.decodeSingularMessageField(value: &_storage._expirationDate) }()
         case 311: try { try decoder.decodeSingularMessageField(value: &_storage._firstTradeDate) }()
         case 312: try { try decoder.decodeSingularMessageField(value: &_storage._lastTradeDate) }()
@@ -6795,6 +9387,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
       if !_storage._sector.isEmpty {
         try visitor.visitSingularStringField(value: _storage._sector, fieldNumber: 161)
       }
+      try { if let v = _storage._brand {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 162)
+      } }()
       if _storage._lot != 0 {
         try visitor.visitSingularInt32Field(value: _storage._lot, fieldNumber: 201)
       }
@@ -6824,6 +9419,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
       } }()
       try { if let v = _storage._strikePrice {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 241)
+      } }()
+      try { if let v = _storage._dlongClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 290)
+      } }()
+      try { if let v = _storage._dshortClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 291)
       } }()
       try { if let v = _storage._expirationDate {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 301)
@@ -6896,6 +9497,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
         if _storage._countryOfRisk != rhs_storage._countryOfRisk {return false}
         if _storage._countryOfRiskName != rhs_storage._countryOfRiskName {return false}
         if _storage._sector != rhs_storage._sector {return false}
+        if _storage._brand != rhs_storage._brand {return false}
         if _storage._lot != rhs_storage._lot {return false}
         if _storage._basicAssetSize != rhs_storage._basicAssetSize {return false}
         if _storage._klong != rhs_storage._klong {return false}
@@ -6906,6 +9508,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Option: SwiftProtobuf.Message, S
         if _storage._dshortMin != rhs_storage._dshortMin {return false}
         if _storage._minPriceIncrement != rhs_storage._minPriceIncrement {return false}
         if _storage._strikePrice != rhs_storage._strikePrice {return false}
+        if _storage._dlongClient != rhs_storage._dlongClient {return false}
+        if _storage._dshortClient != rhs_storage._dshortClient {return false}
         if _storage._expirationDate != rhs_storage._expirationDate {return false}
         if _storage._firstTradeDate != rhs_storage._firstTradeDate {return false}
         if _storage._lastTradeDate != rhs_storage._lastTradeDate {return false}
@@ -7041,6 +9645,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
     40: .same(proto: "uid"),
     41: .standard(proto: "real_exchange"),
     42: .standard(proto: "position_uid"),
+    43: .standard(proto: "asset_uid"),
     51: .standard(proto: "for_iis_flag"),
     52: .standard(proto: "for_qual_investor_flag"),
     53: .standard(proto: "weekend_flag"),
@@ -7050,6 +9655,11 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
     61: .standard(proto: "first_1min_candle_date"),
     62: .standard(proto: "first_1day_candle_date"),
     63: .standard(proto: "risk_level"),
+    64: .same(proto: "brand"),
+    65: .standard(proto: "bond_type"),
+    69: .standard(proto: "call_date"),
+    90: .standard(proto: "dlong_client"),
+    91: .standard(proto: "dshort_client"),
   ]
 
   fileprivate class _StorageClass {
@@ -7094,6 +9704,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
     var _uid: String = String()
     var _realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange = .unspecified
     var _positionUid: String = String()
+    var _assetUid: String = String()
     var _forIisFlag: Bool = false
     var _forQualInvestorFlag: Bool = false
     var _weekendFlag: Bool = false
@@ -7103,6 +9714,11 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
     var _first1MinCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _first1DayCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _riskLevel: Tinkoff_Public_Invest_Api_Contract_V1_RiskLevel = .unspecified
+    var _brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData? = nil
+    var _bondType: Tinkoff_Public_Invest_Api_Contract_V1_BondType = .unspecified
+    var _callDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -7150,6 +9766,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
       _uid = source._uid
       _realExchange = source._realExchange
       _positionUid = source._positionUid
+      _assetUid = source._assetUid
       _forIisFlag = source._forIisFlag
       _forQualInvestorFlag = source._forQualInvestorFlag
       _weekendFlag = source._weekendFlag
@@ -7159,6 +9776,11 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
       _first1MinCandleDate = source._first1MinCandleDate
       _first1DayCandleDate = source._first1DayCandleDate
       _riskLevel = source._riskLevel
+      _brand = source._brand
+      _bondType = source._bondType
+      _callDate = source._callDate
+      _dlongClient = source._dlongClient
+      _dshortClient = source._dshortClient
     }
   }
 
@@ -7218,6 +9840,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
         case 40: try { try decoder.decodeSingularStringField(value: &_storage._uid) }()
         case 41: try { try decoder.decodeSingularEnumField(value: &_storage._realExchange) }()
         case 42: try { try decoder.decodeSingularStringField(value: &_storage._positionUid) }()
+        case 43: try { try decoder.decodeSingularStringField(value: &_storage._assetUid) }()
         case 51: try { try decoder.decodeSingularBoolField(value: &_storage._forIisFlag) }()
         case 52: try { try decoder.decodeSingularBoolField(value: &_storage._forQualInvestorFlag) }()
         case 53: try { try decoder.decodeSingularBoolField(value: &_storage._weekendFlag) }()
@@ -7227,6 +9850,11 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
         case 61: try { try decoder.decodeSingularMessageField(value: &_storage._first1MinCandleDate) }()
         case 62: try { try decoder.decodeSingularMessageField(value: &_storage._first1DayCandleDate) }()
         case 63: try { try decoder.decodeSingularEnumField(value: &_storage._riskLevel) }()
+        case 64: try { try decoder.decodeSingularMessageField(value: &_storage._brand) }()
+        case 65: try { try decoder.decodeSingularEnumField(value: &_storage._bondType) }()
+        case 69: try { try decoder.decodeSingularMessageField(value: &_storage._callDate) }()
+        case 90: try { try decoder.decodeSingularMessageField(value: &_storage._dlongClient) }()
+        case 91: try { try decoder.decodeSingularMessageField(value: &_storage._dshortClient) }()
         default: break
         }
       }
@@ -7362,6 +9990,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
       if !_storage._positionUid.isEmpty {
         try visitor.visitSingularStringField(value: _storage._positionUid, fieldNumber: 42)
       }
+      if !_storage._assetUid.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._assetUid, fieldNumber: 43)
+      }
       if _storage._forIisFlag != false {
         try visitor.visitSingularBoolField(value: _storage._forIisFlag, fieldNumber: 51)
       }
@@ -7389,6 +10020,21 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
       if _storage._riskLevel != .unspecified {
         try visitor.visitSingularEnumField(value: _storage._riskLevel, fieldNumber: 63)
       }
+      try { if let v = _storage._brand {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 64)
+      } }()
+      if _storage._bondType != .unspecified {
+        try visitor.visitSingularEnumField(value: _storage._bondType, fieldNumber: 65)
+      }
+      try { if let v = _storage._callDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 69)
+      } }()
+      try { if let v = _storage._dlongClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 90)
+      } }()
+      try { if let v = _storage._dshortClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 91)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -7439,6 +10085,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
         if _storage._uid != rhs_storage._uid {return false}
         if _storage._realExchange != rhs_storage._realExchange {return false}
         if _storage._positionUid != rhs_storage._positionUid {return false}
+        if _storage._assetUid != rhs_storage._assetUid {return false}
         if _storage._forIisFlag != rhs_storage._forIisFlag {return false}
         if _storage._forQualInvestorFlag != rhs_storage._forQualInvestorFlag {return false}
         if _storage._weekendFlag != rhs_storage._weekendFlag {return false}
@@ -7448,6 +10095,11 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Bond: SwiftProtobuf.Message, Swi
         if _storage._first1MinCandleDate != rhs_storage._first1MinCandleDate {return false}
         if _storage._first1DayCandleDate != rhs_storage._first1DayCandleDate {return false}
         if _storage._riskLevel != rhs_storage._riskLevel {return false}
+        if _storage._brand != rhs_storage._brand {return false}
+        if _storage._bondType != rhs_storage._bondType {return false}
+        if _storage._callDate != rhs_storage._callDate {return false}
+        if _storage._dlongClient != rhs_storage._dlongClient {return false}
+        if _storage._dshortClient != rhs_storage._dshortClient {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -7494,6 +10146,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Currency: SwiftProtobuf.Message,
     54: .standard(proto: "blocked_tca_flag"),
     56: .standard(proto: "first_1min_candle_date"),
     57: .standard(proto: "first_1day_candle_date"),
+    60: .same(proto: "brand"),
+    90: .standard(proto: "dlong_client"),
+    91: .standard(proto: "dshort_client"),
   ]
 
   fileprivate class _StorageClass {
@@ -7531,6 +10186,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Currency: SwiftProtobuf.Message,
     var _blockedTcaFlag: Bool = false
     var _first1MinCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _first1DayCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData? = nil
+    var _dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -7571,6 +10229,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Currency: SwiftProtobuf.Message,
       _blockedTcaFlag = source._blockedTcaFlag
       _first1MinCandleDate = source._first1MinCandleDate
       _first1DayCandleDate = source._first1DayCandleDate
+      _brand = source._brand
+      _dlongClient = source._dlongClient
+      _dshortClient = source._dshortClient
     }
   }
 
@@ -7623,6 +10284,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Currency: SwiftProtobuf.Message,
         case 54: try { try decoder.decodeSingularBoolField(value: &_storage._blockedTcaFlag) }()
         case 56: try { try decoder.decodeSingularMessageField(value: &_storage._first1MinCandleDate) }()
         case 57: try { try decoder.decodeSingularMessageField(value: &_storage._first1DayCandleDate) }()
+        case 60: try { try decoder.decodeSingularMessageField(value: &_storage._brand) }()
+        case 90: try { try decoder.decodeSingularMessageField(value: &_storage._dlongClient) }()
+        case 91: try { try decoder.decodeSingularMessageField(value: &_storage._dshortClient) }()
         default: break
         }
       }
@@ -7737,6 +10401,15 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Currency: SwiftProtobuf.Message,
       try { if let v = _storage._first1DayCandleDate {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 57)
       } }()
+      try { if let v = _storage._brand {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 60)
+      } }()
+      try { if let v = _storage._dlongClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 90)
+      } }()
+      try { if let v = _storage._dshortClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 91)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -7780,6 +10453,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Currency: SwiftProtobuf.Message,
         if _storage._blockedTcaFlag != rhs_storage._blockedTcaFlag {return false}
         if _storage._first1MinCandleDate != rhs_storage._first1MinCandleDate {return false}
         if _storage._first1DayCandleDate != rhs_storage._first1DayCandleDate {return false}
+        if _storage._brand != rhs_storage._brand {return false}
+        if _storage._dlongClient != rhs_storage._dlongClient {return false}
+        if _storage._dshortClient != rhs_storage._dshortClient {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -7824,6 +10500,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
     31: .same(proto: "uid"),
     32: .standard(proto: "real_exchange"),
     33: .standard(proto: "position_uid"),
+    34: .standard(proto: "asset_uid"),
+    35: .standard(proto: "instrument_exchange"),
     41: .standard(proto: "for_iis_flag"),
     42: .standard(proto: "for_qual_investor_flag"),
     43: .standard(proto: "weekend_flag"),
@@ -7831,6 +10509,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
     45: .standard(proto: "liquidity_flag"),
     56: .standard(proto: "first_1min_candle_date"),
     57: .standard(proto: "first_1day_candle_date"),
+    60: .same(proto: "brand"),
+    90: .standard(proto: "dlong_client"),
+    91: .standard(proto: "dshort_client"),
   ]
 
   fileprivate class _StorageClass {
@@ -7866,6 +10547,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
     var _uid: String = String()
     var _realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange = .unspecified
     var _positionUid: String = String()
+    var _assetUid: String = String()
+    var _instrumentExchange: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType = .instrumentExchangeUnspecified
     var _forIisFlag: Bool = false
     var _forQualInvestorFlag: Bool = false
     var _weekendFlag: Bool = false
@@ -7873,6 +10556,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
     var _liquidityFlag: Bool = false
     var _first1MinCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _first1DayCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData? = nil
+    var _dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -7911,6 +10597,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
       _uid = source._uid
       _realExchange = source._realExchange
       _positionUid = source._positionUid
+      _assetUid = source._assetUid
+      _instrumentExchange = source._instrumentExchange
       _forIisFlag = source._forIisFlag
       _forQualInvestorFlag = source._forQualInvestorFlag
       _weekendFlag = source._weekendFlag
@@ -7918,6 +10606,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
       _liquidityFlag = source._liquidityFlag
       _first1MinCandleDate = source._first1MinCandleDate
       _first1DayCandleDate = source._first1DayCandleDate
+      _brand = source._brand
+      _dlongClient = source._dlongClient
+      _dshortClient = source._dshortClient
     }
   }
 
@@ -7968,6 +10659,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
         case 31: try { try decoder.decodeSingularStringField(value: &_storage._uid) }()
         case 32: try { try decoder.decodeSingularEnumField(value: &_storage._realExchange) }()
         case 33: try { try decoder.decodeSingularStringField(value: &_storage._positionUid) }()
+        case 34: try { try decoder.decodeSingularStringField(value: &_storage._assetUid) }()
+        case 35: try { try decoder.decodeSingularEnumField(value: &_storage._instrumentExchange) }()
         case 41: try { try decoder.decodeSingularBoolField(value: &_storage._forIisFlag) }()
         case 42: try { try decoder.decodeSingularBoolField(value: &_storage._forQualInvestorFlag) }()
         case 43: try { try decoder.decodeSingularBoolField(value: &_storage._weekendFlag) }()
@@ -7975,6 +10668,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
         case 45: try { try decoder.decodeSingularBoolField(value: &_storage._liquidityFlag) }()
         case 56: try { try decoder.decodeSingularMessageField(value: &_storage._first1MinCandleDate) }()
         case 57: try { try decoder.decodeSingularMessageField(value: &_storage._first1DayCandleDate) }()
+        case 60: try { try decoder.decodeSingularMessageField(value: &_storage._brand) }()
+        case 90: try { try decoder.decodeSingularMessageField(value: &_storage._dlongClient) }()
+        case 91: try { try decoder.decodeSingularMessageField(value: &_storage._dshortClient) }()
         default: break
         }
       }
@@ -8083,6 +10779,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
       if !_storage._positionUid.isEmpty {
         try visitor.visitSingularStringField(value: _storage._positionUid, fieldNumber: 33)
       }
+      if !_storage._assetUid.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._assetUid, fieldNumber: 34)
+      }
+      if _storage._instrumentExchange != .instrumentExchangeUnspecified {
+        try visitor.visitSingularEnumField(value: _storage._instrumentExchange, fieldNumber: 35)
+      }
       if _storage._forIisFlag != false {
         try visitor.visitSingularBoolField(value: _storage._forIisFlag, fieldNumber: 41)
       }
@@ -8103,6 +10805,15 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
       } }()
       try { if let v = _storage._first1DayCandleDate {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 57)
+      } }()
+      try { if let v = _storage._brand {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 60)
+      } }()
+      try { if let v = _storage._dlongClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 90)
+      } }()
+      try { if let v = _storage._dshortClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 91)
       } }()
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -8145,6 +10856,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
         if _storage._uid != rhs_storage._uid {return false}
         if _storage._realExchange != rhs_storage._realExchange {return false}
         if _storage._positionUid != rhs_storage._positionUid {return false}
+        if _storage._assetUid != rhs_storage._assetUid {return false}
+        if _storage._instrumentExchange != rhs_storage._instrumentExchange {return false}
         if _storage._forIisFlag != rhs_storage._forIisFlag {return false}
         if _storage._forQualInvestorFlag != rhs_storage._forQualInvestorFlag {return false}
         if _storage._weekendFlag != rhs_storage._weekendFlag {return false}
@@ -8152,6 +10865,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Etf: SwiftProtobuf.Message, Swif
         if _storage._liquidityFlag != rhs_storage._liquidityFlag {return false}
         if _storage._first1MinCandleDate != rhs_storage._first1MinCandleDate {return false}
         if _storage._first1DayCandleDate != rhs_storage._first1DayCandleDate {return false}
+        if _storage._brand != rhs_storage._brand {return false}
+        if _storage._dlongClient != rhs_storage._dlongClient {return false}
+        if _storage._dshortClient != rhs_storage._dshortClient {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -8204,6 +10920,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Future: SwiftProtobuf.Message, S
     44: .standard(proto: "blocked_tca_flag"),
     56: .standard(proto: "first_1min_candle_date"),
     57: .standard(proto: "first_1day_candle_date"),
+    61: .standard(proto: "initial_margin_on_buy"),
+    62: .standard(proto: "initial_margin_on_sell"),
+    63: .standard(proto: "min_price_increment_amount"),
+    64: .same(proto: "brand"),
+    90: .standard(proto: "dlong_client"),
+    91: .standard(proto: "dshort_client"),
   ]
 
   fileprivate class _StorageClass {
@@ -8247,6 +10969,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Future: SwiftProtobuf.Message, S
     var _blockedTcaFlag: Bool = false
     var _first1MinCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _first1DayCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _initialMarginOnBuy: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
+    var _initialMarginOnSell: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
+    var _minPriceIncrementAmount: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData? = nil
+    var _dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -8293,6 +11021,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Future: SwiftProtobuf.Message, S
       _blockedTcaFlag = source._blockedTcaFlag
       _first1MinCandleDate = source._first1MinCandleDate
       _first1DayCandleDate = source._first1DayCandleDate
+      _initialMarginOnBuy = source._initialMarginOnBuy
+      _initialMarginOnSell = source._initialMarginOnSell
+      _minPriceIncrementAmount = source._minPriceIncrementAmount
+      _brand = source._brand
+      _dlongClient = source._dlongClient
+      _dshortClient = source._dshortClient
     }
   }
 
@@ -8351,6 +11085,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Future: SwiftProtobuf.Message, S
         case 44: try { try decoder.decodeSingularBoolField(value: &_storage._blockedTcaFlag) }()
         case 56: try { try decoder.decodeSingularMessageField(value: &_storage._first1MinCandleDate) }()
         case 57: try { try decoder.decodeSingularMessageField(value: &_storage._first1DayCandleDate) }()
+        case 61: try { try decoder.decodeSingularMessageField(value: &_storage._initialMarginOnBuy) }()
+        case 62: try { try decoder.decodeSingularMessageField(value: &_storage._initialMarginOnSell) }()
+        case 63: try { try decoder.decodeSingularMessageField(value: &_storage._minPriceIncrementAmount) }()
+        case 64: try { try decoder.decodeSingularMessageField(value: &_storage._brand) }()
+        case 90: try { try decoder.decodeSingularMessageField(value: &_storage._dlongClient) }()
+        case 91: try { try decoder.decodeSingularMessageField(value: &_storage._dshortClient) }()
         default: break
         }
       }
@@ -8483,6 +11223,24 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Future: SwiftProtobuf.Message, S
       try { if let v = _storage._first1DayCandleDate {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 57)
       } }()
+      try { if let v = _storage._initialMarginOnBuy {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 61)
+      } }()
+      try { if let v = _storage._initialMarginOnSell {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 62)
+      } }()
+      try { if let v = _storage._minPriceIncrementAmount {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 63)
+      } }()
+      try { if let v = _storage._brand {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 64)
+      } }()
+      try { if let v = _storage._dlongClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 90)
+      } }()
+      try { if let v = _storage._dshortClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 91)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -8532,6 +11290,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Future: SwiftProtobuf.Message, S
         if _storage._blockedTcaFlag != rhs_storage._blockedTcaFlag {return false}
         if _storage._first1MinCandleDate != rhs_storage._first1MinCandleDate {return false}
         if _storage._first1DayCandleDate != rhs_storage._first1DayCandleDate {return false}
+        if _storage._initialMarginOnBuy != rhs_storage._initialMarginOnBuy {return false}
+        if _storage._initialMarginOnSell != rhs_storage._initialMarginOnSell {return false}
+        if _storage._minPriceIncrementAmount != rhs_storage._minPriceIncrementAmount {return false}
+        if _storage._brand != rhs_storage._brand {return false}
+        if _storage._dlongClient != rhs_storage._dlongClient {return false}
+        if _storage._dshortClient != rhs_storage._dshortClient {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -8577,6 +11341,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
     33: .same(proto: "uid"),
     34: .standard(proto: "real_exchange"),
     35: .standard(proto: "position_uid"),
+    36: .standard(proto: "asset_uid"),
+    37: .standard(proto: "instrument_exchange"),
     46: .standard(proto: "for_iis_flag"),
     47: .standard(proto: "for_qual_investor_flag"),
     48: .standard(proto: "weekend_flag"),
@@ -8584,6 +11350,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
     50: .standard(proto: "liquidity_flag"),
     56: .standard(proto: "first_1min_candle_date"),
     57: .standard(proto: "first_1day_candle_date"),
+    60: .same(proto: "brand"),
+    90: .standard(proto: "dlong_client"),
+    91: .standard(proto: "dshort_client"),
   ]
 
   fileprivate class _StorageClass {
@@ -8620,6 +11389,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
     var _uid: String = String()
     var _realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange = .unspecified
     var _positionUid: String = String()
+    var _assetUid: String = String()
+    var _instrumentExchange: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentExchangeType = .instrumentExchangeUnspecified
     var _forIisFlag: Bool = false
     var _forQualInvestorFlag: Bool = false
     var _weekendFlag: Bool = false
@@ -8627,6 +11398,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
     var _liquidityFlag: Bool = false
     var _first1MinCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _first1DayCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData? = nil
+    var _dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -8666,6 +11440,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
       _uid = source._uid
       _realExchange = source._realExchange
       _positionUid = source._positionUid
+      _assetUid = source._assetUid
+      _instrumentExchange = source._instrumentExchange
       _forIisFlag = source._forIisFlag
       _forQualInvestorFlag = source._forQualInvestorFlag
       _weekendFlag = source._weekendFlag
@@ -8673,6 +11449,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
       _liquidityFlag = source._liquidityFlag
       _first1MinCandleDate = source._first1MinCandleDate
       _first1DayCandleDate = source._first1DayCandleDate
+      _brand = source._brand
+      _dlongClient = source._dlongClient
+      _dshortClient = source._dshortClient
     }
   }
 
@@ -8724,6 +11503,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
         case 33: try { try decoder.decodeSingularStringField(value: &_storage._uid) }()
         case 34: try { try decoder.decodeSingularEnumField(value: &_storage._realExchange) }()
         case 35: try { try decoder.decodeSingularStringField(value: &_storage._positionUid) }()
+        case 36: try { try decoder.decodeSingularStringField(value: &_storage._assetUid) }()
+        case 37: try { try decoder.decodeSingularEnumField(value: &_storage._instrumentExchange) }()
         case 46: try { try decoder.decodeSingularBoolField(value: &_storage._forIisFlag) }()
         case 47: try { try decoder.decodeSingularBoolField(value: &_storage._forQualInvestorFlag) }()
         case 48: try { try decoder.decodeSingularBoolField(value: &_storage._weekendFlag) }()
@@ -8731,6 +11512,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
         case 50: try { try decoder.decodeSingularBoolField(value: &_storage._liquidityFlag) }()
         case 56: try { try decoder.decodeSingularMessageField(value: &_storage._first1MinCandleDate) }()
         case 57: try { try decoder.decodeSingularMessageField(value: &_storage._first1DayCandleDate) }()
+        case 60: try { try decoder.decodeSingularMessageField(value: &_storage._brand) }()
+        case 90: try { try decoder.decodeSingularMessageField(value: &_storage._dlongClient) }()
+        case 91: try { try decoder.decodeSingularMessageField(value: &_storage._dshortClient) }()
         default: break
         }
       }
@@ -8842,6 +11626,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
       if !_storage._positionUid.isEmpty {
         try visitor.visitSingularStringField(value: _storage._positionUid, fieldNumber: 35)
       }
+      if !_storage._assetUid.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._assetUid, fieldNumber: 36)
+      }
+      if _storage._instrumentExchange != .instrumentExchangeUnspecified {
+        try visitor.visitSingularEnumField(value: _storage._instrumentExchange, fieldNumber: 37)
+      }
       if _storage._forIisFlag != false {
         try visitor.visitSingularBoolField(value: _storage._forIisFlag, fieldNumber: 46)
       }
@@ -8862,6 +11652,15 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
       } }()
       try { if let v = _storage._first1DayCandleDate {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 57)
+      } }()
+      try { if let v = _storage._brand {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 60)
+      } }()
+      try { if let v = _storage._dlongClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 90)
+      } }()
+      try { if let v = _storage._dshortClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 91)
       } }()
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -8905,6 +11704,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
         if _storage._uid != rhs_storage._uid {return false}
         if _storage._realExchange != rhs_storage._realExchange {return false}
         if _storage._positionUid != rhs_storage._positionUid {return false}
+        if _storage._assetUid != rhs_storage._assetUid {return false}
+        if _storage._instrumentExchange != rhs_storage._instrumentExchange {return false}
         if _storage._forIisFlag != rhs_storage._forIisFlag {return false}
         if _storage._forQualInvestorFlag != rhs_storage._forQualInvestorFlag {return false}
         if _storage._weekendFlag != rhs_storage._weekendFlag {return false}
@@ -8912,6 +11713,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Share: SwiftProtobuf.Message, Sw
         if _storage._liquidityFlag != rhs_storage._liquidityFlag {return false}
         if _storage._first1MinCandleDate != rhs_storage._first1MinCandleDate {return false}
         if _storage._first1DayCandleDate != rhs_storage._first1DayCandleDate {return false}
+        if _storage._brand != rhs_storage._brand {return false}
+        if _storage._dlongClient != rhs_storage._dlongClient {return false}
+        if _storage._dshortClient != rhs_storage._dshortClient {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -8927,6 +11731,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest: Swif
     1: .same(proto: "figi"),
     2: .same(proto: "from"),
     3: .same(proto: "to"),
+    4: .standard(proto: "instrument_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -8938,6 +11743,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest: Swif
       case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
       default: break
       }
     }
@@ -8957,6 +11763,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest: Swif
     try { if let v = self._to {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
     } }()
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -8964,6 +11773,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest: Swif
     if lhs.figi != rhs.figi {return false}
     if lhs._from != rhs._from {return false}
     if lhs._to != rhs._to {return false}
+    if lhs.instrumentID != rhs.instrumentID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -9059,6 +11869,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest: SwiftPr
   public static let protoMessageName: String = _protobuf_package + ".GetFuturesMarginRequest"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "figi"),
+    4: .standard(proto: "instrument_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -9068,6 +11879,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest: SwiftPr
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
       default: break
       }
     }
@@ -9077,11 +11889,15 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest: SwiftPr
     if !self.figi.isEmpty {
       try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
     }
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest) -> Bool {
     if lhs.figi != rhs.figi {return false}
+    if lhs.instrumentID != rhs.instrumentID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -9207,6 +12023,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
     25: .same(proto: "uid"),
     26: .standard(proto: "real_exchange"),
     27: .standard(proto: "position_uid"),
+    28: .standard(proto: "asset_uid"),
     36: .standard(proto: "for_iis_flag"),
     37: .standard(proto: "for_qual_investor_flag"),
     38: .standard(proto: "weekend_flag"),
@@ -9214,6 +12031,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
     40: .standard(proto: "instrument_kind"),
     56: .standard(proto: "first_1min_candle_date"),
     57: .standard(proto: "first_1day_candle_date"),
+    60: .same(proto: "brand"),
+    490: .standard(proto: "dlong_client"),
+    491: .standard(proto: "dshort_client"),
   ]
 
   fileprivate class _StorageClass {
@@ -9244,6 +12064,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
     var _uid: String = String()
     var _realExchange: Tinkoff_Public_Invest_Api_Contract_V1_RealExchange = .unspecified
     var _positionUid: String = String()
+    var _assetUid: String = String()
     var _forIisFlag: Bool = false
     var _forQualInvestorFlag: Bool = false
     var _weekendFlag: Bool = false
@@ -9251,6 +12072,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
     var _instrumentKind: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentType = .unspecified
     var _first1MinCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
     var _first1DayCandleDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _brand: Tinkoff_Public_Invest_Api_Contract_V1_BrandData? = nil
+    var _dlongClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _dshortClient: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -9284,6 +12108,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
       _uid = source._uid
       _realExchange = source._realExchange
       _positionUid = source._positionUid
+      _assetUid = source._assetUid
       _forIisFlag = source._forIisFlag
       _forQualInvestorFlag = source._forQualInvestorFlag
       _weekendFlag = source._weekendFlag
@@ -9291,6 +12116,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
       _instrumentKind = source._instrumentKind
       _first1MinCandleDate = source._first1MinCandleDate
       _first1DayCandleDate = source._first1DayCandleDate
+      _brand = source._brand
+      _dlongClient = source._dlongClient
+      _dshortClient = source._dshortClient
     }
   }
 
@@ -9336,6 +12164,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
         case 25: try { try decoder.decodeSingularStringField(value: &_storage._uid) }()
         case 26: try { try decoder.decodeSingularEnumField(value: &_storage._realExchange) }()
         case 27: try { try decoder.decodeSingularStringField(value: &_storage._positionUid) }()
+        case 28: try { try decoder.decodeSingularStringField(value: &_storage._assetUid) }()
         case 36: try { try decoder.decodeSingularBoolField(value: &_storage._forIisFlag) }()
         case 37: try { try decoder.decodeSingularBoolField(value: &_storage._forQualInvestorFlag) }()
         case 38: try { try decoder.decodeSingularBoolField(value: &_storage._weekendFlag) }()
@@ -9343,6 +12172,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
         case 40: try { try decoder.decodeSingularEnumField(value: &_storage._instrumentKind) }()
         case 56: try { try decoder.decodeSingularMessageField(value: &_storage._first1MinCandleDate) }()
         case 57: try { try decoder.decodeSingularMessageField(value: &_storage._first1DayCandleDate) }()
+        case 60: try { try decoder.decodeSingularMessageField(value: &_storage._brand) }()
+        case 490: try { try decoder.decodeSingularMessageField(value: &_storage._dlongClient) }()
+        case 491: try { try decoder.decodeSingularMessageField(value: &_storage._dshortClient) }()
         default: break
         }
       }
@@ -9436,6 +12268,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
       if !_storage._positionUid.isEmpty {
         try visitor.visitSingularStringField(value: _storage._positionUid, fieldNumber: 27)
       }
+      if !_storage._assetUid.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._assetUid, fieldNumber: 28)
+      }
       if _storage._forIisFlag != false {
         try visitor.visitSingularBoolField(value: _storage._forIisFlag, fieldNumber: 36)
       }
@@ -9456,6 +12291,15 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
       } }()
       try { if let v = _storage._first1DayCandleDate {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 57)
+      } }()
+      try { if let v = _storage._brand {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 60)
+      } }()
+      try { if let v = _storage._dlongClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 490)
+      } }()
+      try { if let v = _storage._dshortClient {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 491)
       } }()
     }
     try unknownFields.traverse(visitor: &visitor)
@@ -9493,6 +12337,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
         if _storage._uid != rhs_storage._uid {return false}
         if _storage._realExchange != rhs_storage._realExchange {return false}
         if _storage._positionUid != rhs_storage._positionUid {return false}
+        if _storage._assetUid != rhs_storage._assetUid {return false}
         if _storage._forIisFlag != rhs_storage._forIisFlag {return false}
         if _storage._forQualInvestorFlag != rhs_storage._forQualInvestorFlag {return false}
         if _storage._weekendFlag != rhs_storage._weekendFlag {return false}
@@ -9500,6 +12345,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_Instrument: SwiftProtobuf.Messag
         if _storage._instrumentKind != rhs_storage._instrumentKind {return false}
         if _storage._first1MinCandleDate != rhs_storage._first1MinCandleDate {return false}
         if _storage._first1DayCandleDate != rhs_storage._first1DayCandleDate {return false}
+        if _storage._brand != rhs_storage._brand {return false}
+        if _storage._dlongClient != rhs_storage._dlongClient {return false}
+        if _storage._dshortClient != rhs_storage._dshortClient {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -9515,6 +12363,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest: SwiftProtob
     1: .same(proto: "figi"),
     2: .same(proto: "from"),
     3: .same(proto: "to"),
+    4: .standard(proto: "instrument_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -9526,6 +12375,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest: SwiftProtob
       case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
       case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
       case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
       default: break
       }
     }
@@ -9545,6 +12395,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest: SwiftProtob
     try { if let v = self._to {
       try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
     } }()
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 4)
+    }
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -9552,6 +12405,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest: SwiftProtob
     if lhs.figi != rhs.figi {return false}
     if lhs._from != rhs._from {return false}
     if lhs._to != rhs._to {return false}
+    if lhs.instrumentID != rhs.instrumentID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -9801,6 +12655,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest: SwiftProtobuf.Mes
   public static let protoMessageName: String = _protobuf_package + ".AssetsRequest"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "instrument_type"),
+    2: .standard(proto: "instrument_status"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -9809,21 +12664,30 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest: SwiftProtobuf.Mes
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.instrumentType) }()
+      case 1: try { try decoder.decodeSingularEnumField(value: &self._instrumentType) }()
+      case 2: try { try decoder.decodeSingularEnumField(value: &self._instrumentStatus) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.instrumentType != .unspecified {
-      try visitor.visitSingularEnumField(value: self.instrumentType, fieldNumber: 1)
-    }
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._instrumentType {
+      try visitor.visitSingularEnumField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._instrumentStatus {
+      try visitor.visitSingularEnumField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest) -> Bool {
-    if lhs.instrumentType != rhs.instrumentType {return false}
+    if lhs._instrumentType != rhs._instrumentType {return false}
+    if lhs._instrumentStatus != rhs._instrumentStatus {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11425,18 +14289,35 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentLink: SwiftProtobuf.Me
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = _protobuf_package + ".GetFavoritesRequest"
-  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_id"),
+  ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self._groupID) }()
+      default: break
+      }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._groupID {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest) -> Bool {
+    if lhs._groupID != rhs._groupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11446,6 +14327,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse: SwiftProto
   public static let protoMessageName: String = _protobuf_package + ".GetFavoritesResponse"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "favorite_instruments"),
+    2: .standard(proto: "group_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -11455,20 +14337,29 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse: SwiftProto
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedMessageField(value: &self.favoriteInstruments) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self._groupID) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.favoriteInstruments.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.favoriteInstruments, fieldNumber: 1)
     }
+    try { if let v = self._groupID {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse) -> Bool {
     if lhs.favoriteInstruments != rhs.favoriteInstruments {return false}
+    if lhs._groupID != rhs._groupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11482,6 +14373,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument: SwiftProtobu
     3: .standard(proto: "class_code"),
     4: .same(proto: "isin"),
     11: .standard(proto: "instrument_type"),
+    12: .same(proto: "name"),
+    13: .same(proto: "uid"),
     16: .standard(proto: "otc_flag"),
     17: .standard(proto: "api_trade_available_flag"),
     18: .standard(proto: "instrument_kind"),
@@ -11498,6 +14391,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument: SwiftProtobu
       case 3: try { try decoder.decodeSingularStringField(value: &self.classCode) }()
       case 4: try { try decoder.decodeSingularStringField(value: &self.isin) }()
       case 11: try { try decoder.decodeSingularStringField(value: &self.instrumentType) }()
+      case 12: try { try decoder.decodeSingularStringField(value: &self.name) }()
+      case 13: try { try decoder.decodeSingularStringField(value: &self.uid) }()
       case 16: try { try decoder.decodeSingularBoolField(value: &self.otcFlag) }()
       case 17: try { try decoder.decodeSingularBoolField(value: &self.apiTradeAvailableFlag) }()
       case 18: try { try decoder.decodeSingularEnumField(value: &self.instrumentKind) }()
@@ -11522,6 +14417,12 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument: SwiftProtobu
     if !self.instrumentType.isEmpty {
       try visitor.visitSingularStringField(value: self.instrumentType, fieldNumber: 11)
     }
+    if !self.name.isEmpty {
+      try visitor.visitSingularStringField(value: self.name, fieldNumber: 12)
+    }
+    if !self.uid.isEmpty {
+      try visitor.visitSingularStringField(value: self.uid, fieldNumber: 13)
+    }
     if self.otcFlag != false {
       try visitor.visitSingularBoolField(value: self.otcFlag, fieldNumber: 16)
     }
@@ -11540,6 +14441,8 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_FavoriteInstrument: SwiftProtobu
     if lhs.classCode != rhs.classCode {return false}
     if lhs.isin != rhs.isin {return false}
     if lhs.instrumentType != rhs.instrumentType {return false}
+    if lhs.name != rhs.name {return false}
+    if lhs.uid != rhs.uid {return false}
     if lhs.otcFlag != rhs.otcFlag {return false}
     if lhs.apiTradeAvailableFlag != rhs.apiTradeAvailableFlag {return false}
     if lhs.instrumentKind != rhs.instrumentKind {return false}
@@ -11553,6 +14456,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest: SwiftProto
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "instruments"),
     6: .standard(proto: "action_type"),
+    7: .standard(proto: "group_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -11563,24 +14467,33 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest: SwiftProto
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
       case 6: try { try decoder.decodeSingularEnumField(value: &self.actionType) }()
+      case 7: try { try decoder.decodeSingularStringField(value: &self._groupID) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.instruments.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 1)
     }
     if self.actionType != .unspecified {
       try visitor.visitSingularEnumField(value: self.actionType, fieldNumber: 6)
     }
+    try { if let v = self._groupID {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 7)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest) -> Bool {
     if lhs.instruments != rhs.instruments {return false}
     if lhs.actionType != rhs.actionType {return false}
+    if lhs._groupID != rhs._groupID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11590,6 +14503,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequestInstrument: 
   public static let protoMessageName: String = _protobuf_package + ".EditFavoritesRequestInstrument"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "figi"),
+    2: .standard(proto: "instrument_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -11598,21 +14512,30 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequestInstrument: 
       // allocates stack space for every case branch when no optimizations are
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+      case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._figi {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+    } }()
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 2)
     }
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequestInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequestInstrument) -> Bool {
-    if lhs.figi != rhs.figi {return false}
+    if lhs._figi != rhs._figi {return false}
+    if lhs.instrumentID != rhs.instrumentID {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11622,6 +14545,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse: SwiftProt
   public static let protoMessageName: String = _protobuf_package + ".EditFavoritesResponse"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "favorite_instruments"),
+    2: .standard(proto: "group_id"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -11631,20 +14555,296 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse: SwiftProt
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedMessageField(value: &self.favoriteInstruments) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self._groupID) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.favoriteInstruments.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.favoriteInstruments, fieldNumber: 1)
     }
+    try { if let v = self._groupID {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse) -> Bool {
     if lhs.favoriteInstruments != rhs.favoriteInstruments {return false}
+    if lhs._groupID != rhs._groupID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".CreateFavoriteGroupRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_name"),
+    2: .standard(proto: "group_color"),
+    3: .same(proto: "note"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.groupName) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.groupColor) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self._note) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.groupName.isEmpty {
+      try visitor.visitSingularStringField(value: self.groupName, fieldNumber: 1)
+    }
+    if !self.groupColor.isEmpty {
+      try visitor.visitSingularStringField(value: self.groupColor, fieldNumber: 2)
+    }
+    try { if let v = self._note {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 3)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest) -> Bool {
+    if lhs.groupName != rhs.groupName {return false}
+    if lhs.groupColor != rhs.groupColor {return false}
+    if lhs._note != rhs._note {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".CreateFavoriteGroupResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_id"),
+    2: .standard(proto: "group_name"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.groupID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.groupName) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.groupID.isEmpty {
+      try visitor.visitSingularStringField(value: self.groupID, fieldNumber: 1)
+    }
+    if !self.groupName.isEmpty {
+      try visitor.visitSingularStringField(value: self.groupName, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse) -> Bool {
+    if lhs.groupID != rhs.groupID {return false}
+    if lhs.groupName != rhs.groupName {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".DeleteFavoriteGroupRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_id"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.groupID) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.groupID.isEmpty {
+      try visitor.visitSingularStringField(value: self.groupID, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest) -> Bool {
+    if lhs.groupID != rhs.groupID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".DeleteFavoriteGroupResponse"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetFavoriteGroupsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "instrument_id"),
+    2: .standard(proto: "excluded_group_id"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.instrumentID) }()
+      case 2: try { try decoder.decodeRepeatedStringField(value: &self.excludedGroupID) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.instrumentID.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.instrumentID, fieldNumber: 1)
+    }
+    if !self.excludedGroupID.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.excludedGroupID, fieldNumber: 2)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest) -> Bool {
+    if lhs.instrumentID != rhs.instrumentID {return false}
+    if lhs.excludedGroupID != rhs.excludedGroupID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetFavoriteGroupsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "groups"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.groups) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.groups.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.groups, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse) -> Bool {
+    if lhs.groups != rhs.groups {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse.FavoriteGroup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse.protoMessageName + ".FavoriteGroup"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "group_id"),
+    2: .standard(proto: "group_name"),
+    3: .same(proto: "color"),
+    4: .same(proto: "size"),
+    5: .standard(proto: "contains_instrument"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.groupID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.groupName) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.color) }()
+      case 4: try { try decoder.decodeSingularInt32Field(value: &self.size) }()
+      case 5: try { try decoder.decodeSingularBoolField(value: &self._containsInstrument) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.groupID.isEmpty {
+      try visitor.visitSingularStringField(value: self.groupID, fieldNumber: 1)
+    }
+    if !self.groupName.isEmpty {
+      try visitor.visitSingularStringField(value: self.groupName, fieldNumber: 2)
+    }
+    if !self.color.isEmpty {
+      try visitor.visitSingularStringField(value: self.color, fieldNumber: 3)
+    }
+    if self.size != 0 {
+      try visitor.visitSingularInt32Field(value: self.size, fieldNumber: 4)
+    }
+    try { if let v = self._containsInstrument {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 5)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse.FavoriteGroup, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse.FavoriteGroup) -> Bool {
+    if lhs.groupID != rhs.groupID {return false}
+    if lhs.groupName != rhs.groupName {return false}
+    if lhs.color != rhs.color {return false}
+    if lhs.size != rhs.size {return false}
+    if lhs._containsInstrument != rhs._containsInstrument {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11696,6 +14896,143 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse: SwiftProto
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse) -> Bool {
     if lhs.countries != rhs.countries {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".IndicativesRequest"
+  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let _ = try decoder.nextFieldNumber() {
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest) -> Bool {
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".IndicativesResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "instruments"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.instruments.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse) -> Bool {
+    if lhs.instruments != rhs.instruments {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_IndicativeResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".IndicativeResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "figi"),
+    2: .same(proto: "ticker"),
+    3: .standard(proto: "class_code"),
+    4: .same(proto: "currency"),
+    10: .standard(proto: "instrument_kind"),
+    12: .same(proto: "name"),
+    13: .same(proto: "exchange"),
+    14: .same(proto: "uid"),
+    404: .standard(proto: "buy_available_flag"),
+    405: .standard(proto: "sell_available_flag"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.ticker) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.classCode) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.currency) }()
+      case 10: try { try decoder.decodeSingularEnumField(value: &self.instrumentKind) }()
+      case 12: try { try decoder.decodeSingularStringField(value: &self.name) }()
+      case 13: try { try decoder.decodeSingularStringField(value: &self.exchange) }()
+      case 14: try { try decoder.decodeSingularStringField(value: &self.uid) }()
+      case 404: try { try decoder.decodeSingularBoolField(value: &self.buyAvailableFlag) }()
+      case 405: try { try decoder.decodeSingularBoolField(value: &self.sellAvailableFlag) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.figi.isEmpty {
+      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    }
+    if !self.ticker.isEmpty {
+      try visitor.visitSingularStringField(value: self.ticker, fieldNumber: 2)
+    }
+    if !self.classCode.isEmpty {
+      try visitor.visitSingularStringField(value: self.classCode, fieldNumber: 3)
+    }
+    if !self.currency.isEmpty {
+      try visitor.visitSingularStringField(value: self.currency, fieldNumber: 4)
+    }
+    if self.instrumentKind != .unspecified {
+      try visitor.visitSingularEnumField(value: self.instrumentKind, fieldNumber: 10)
+    }
+    if !self.name.isEmpty {
+      try visitor.visitSingularStringField(value: self.name, fieldNumber: 12)
+    }
+    if !self.exchange.isEmpty {
+      try visitor.visitSingularStringField(value: self.exchange, fieldNumber: 13)
+    }
+    if !self.uid.isEmpty {
+      try visitor.visitSingularStringField(value: self.uid, fieldNumber: 14)
+    }
+    if self.buyAvailableFlag != false {
+      try visitor.visitSingularBoolField(value: self.buyAvailableFlag, fieldNumber: 404)
+    }
+    if self.sellAvailableFlag != false {
+      try visitor.visitSingularBoolField(value: self.sellAvailableFlag, fieldNumber: 405)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_IndicativeResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_IndicativeResponse) -> Bool {
+    if lhs.figi != rhs.figi {return false}
+    if lhs.ticker != rhs.ticker {return false}
+    if lhs.classCode != rhs.classCode {return false}
+    if lhs.currency != rhs.currency {return false}
+    if lhs.instrumentKind != rhs.instrumentKind {return false}
+    if lhs.name != rhs.name {return false}
+    if lhs.exchange != rhs.exchange {return false}
+    if lhs.uid != rhs.uid {return false}
+    if lhs.buyAvailableFlag != rhs.buyAvailableFlag {return false}
+    if lhs.sellAvailableFlag != rhs.sellAvailableFlag {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11766,30 +15103,34 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest: SwiftProt
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeSingularStringField(value: &self.query) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.instrumentKind) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.apiTradeAvailableFlag) }()
+      case 2: try { try decoder.decodeSingularEnumField(value: &self._instrumentKind) }()
+      case 3: try { try decoder.decodeSingularBoolField(value: &self._apiTradeAvailableFlag) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.query.isEmpty {
       try visitor.visitSingularStringField(value: self.query, fieldNumber: 1)
     }
-    if self.instrumentKind != .unspecified {
-      try visitor.visitSingularEnumField(value: self.instrumentKind, fieldNumber: 2)
-    }
-    if self.apiTradeAvailableFlag != false {
-      try visitor.visitSingularBoolField(value: self.apiTradeAvailableFlag, fieldNumber: 3)
-    }
+    try { if let v = self._instrumentKind {
+      try visitor.visitSingularEnumField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._apiTradeAvailableFlag {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 3)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest) -> Bool {
     if lhs.query != rhs.query {return false}
-    if lhs.instrumentKind != rhs.instrumentKind {return false}
-    if lhs.apiTradeAvailableFlag != rhs.apiTradeAvailableFlag {return false}
+    if lhs._instrumentKind != rhs._instrumentKind {return false}
+    if lhs._apiTradeAvailableFlag != rhs._apiTradeAvailableFlag {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -11846,6 +15187,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: SwiftProtobuf.M
     28: .standard(proto: "for_qual_investor_flag"),
     29: .standard(proto: "weekend_flag"),
     30: .standard(proto: "blocked_tca_flag"),
+    31: .same(proto: "lot"),
   ]
 
   fileprivate class _StorageClass {
@@ -11865,6 +15207,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: SwiftProtobuf.M
     var _forQualInvestorFlag: Bool = false
     var _weekendFlag: Bool = false
     var _blockedTcaFlag: Bool = false
+    var _lot: Int32 = 0
 
     static let defaultInstance = _StorageClass()
 
@@ -11887,6 +15230,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: SwiftProtobuf.M
       _forQualInvestorFlag = source._forQualInvestorFlag
       _weekendFlag = source._weekendFlag
       _blockedTcaFlag = source._blockedTcaFlag
+      _lot = source._lot
     }
   }
 
@@ -11921,6 +15265,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: SwiftProtobuf.M
         case 28: try { try decoder.decodeSingularBoolField(value: &_storage._forQualInvestorFlag) }()
         case 29: try { try decoder.decodeSingularBoolField(value: &_storage._weekendFlag) }()
         case 30: try { try decoder.decodeSingularBoolField(value: &_storage._blockedTcaFlag) }()
+        case 31: try { try decoder.decodeSingularInt32Field(value: &_storage._lot) }()
         default: break
         }
       }
@@ -11981,6 +15326,9 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: SwiftProtobuf.M
       if _storage._blockedTcaFlag != false {
         try visitor.visitSingularBoolField(value: _storage._blockedTcaFlag, fieldNumber: 30)
       }
+      if _storage._lot != 0 {
+        try visitor.visitSingularInt32Field(value: _storage._lot, fieldNumber: 31)
+      }
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -12006,6 +15354,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: SwiftProtobuf.M
         if _storage._forQualInvestorFlag != rhs_storage._forQualInvestorFlag {return false}
         if _storage._weekendFlag != rhs_storage._weekendFlag {return false}
         if _storage._blockedTcaFlag != rhs_storage._blockedTcaFlag {return false}
+        if _storage._lot != rhs_storage._lot {return false}
         return true
       }
       if !storagesAreEqual {return false}
@@ -12017,18 +15366,35 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentShort: SwiftProtobuf.M
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = _protobuf_package + ".GetBrandsRequest"
-  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "paging"),
+  ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._paging) }()
+      default: break
+      }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._paging {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest) -> Bool {
+    if lhs._paging != rhs._paging {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -12070,6 +15436,7 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse: SwiftProtobuf
   public static let protoMessageName: String = _protobuf_package + ".GetBrandsResponse"
   public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .same(proto: "brands"),
+    2: .same(proto: "paging"),
   ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
@@ -12079,20 +15446,1540 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse: SwiftProtobuf
       // enabled. https://github.com/apple/swift-protobuf/issues/1034
       switch fieldNumber {
       case 1: try { try decoder.decodeRepeatedMessageField(value: &self.brands) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._paging) }()
       default: break
       }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
     if !self.brands.isEmpty {
       try visitor.visitRepeatedMessageField(value: self.brands, fieldNumber: 1)
     }
+    try { if let v = self._paging {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse) -> Bool {
     if lhs.brands != rhs.brands {return false}
+    if lhs._paging != rhs._paging {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetAssetFundamentalsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "assets"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.assets) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.assets.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.assets, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest) -> Bool {
+    if lhs.assets != rhs.assets {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetAssetFundamentalsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "fundamentals"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.fundamentals) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.fundamentals.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.fundamentals, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse) -> Bool {
+    if lhs.fundamentals != rhs.fundamentals {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse.StatisticResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse.protoMessageName + ".StatisticResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "asset_uid"),
+    2: .same(proto: "currency"),
+    3: .standard(proto: "market_capitalization"),
+    4: .standard(proto: "high_price_last_52_weeks"),
+    5: .standard(proto: "low_price_last_52_weeks"),
+    6: .standard(proto: "average_daily_volume_last_10_days"),
+    7: .standard(proto: "average_daily_volume_last_4_weeks"),
+    8: .same(proto: "beta"),
+    9: .standard(proto: "free_float"),
+    10: .standard(proto: "forward_annual_dividend_yield"),
+    11: .standard(proto: "shares_outstanding"),
+    12: .standard(proto: "revenue_ttm"),
+    13: .standard(proto: "ebitda_ttm"),
+    14: .standard(proto: "net_income_ttm"),
+    15: .standard(proto: "eps_ttm"),
+    16: .standard(proto: "diluted_eps_ttm"),
+    17: .standard(proto: "free_cash_flow_ttm"),
+    18: .standard(proto: "five_year_annual_revenue_growth_rate"),
+    19: .standard(proto: "three_year_annual_revenue_growth_rate"),
+    20: .standard(proto: "pe_ratio_ttm"),
+    21: .standard(proto: "price_to_sales_ttm"),
+    22: .standard(proto: "price_to_book_ttm"),
+    23: .standard(proto: "price_to_free_cash_flow_ttm"),
+    24: .standard(proto: "total_enterprise_value_mrq"),
+    25: .standard(proto: "ev_to_ebitda_mrq"),
+    26: .standard(proto: "net_margin_mrq"),
+    27: .standard(proto: "net_interest_margin_mrq"),
+    28: .same(proto: "roe"),
+    29: .same(proto: "roa"),
+    30: .same(proto: "roic"),
+    31: .standard(proto: "total_debt_mrq"),
+    32: .standard(proto: "total_debt_to_equity_mrq"),
+    33: .standard(proto: "total_debt_to_ebitda_mrq"),
+    34: .standard(proto: "free_cash_flow_to_price"),
+    35: .standard(proto: "net_debt_to_ebitda"),
+    36: .standard(proto: "current_ratio_mrq"),
+    37: .standard(proto: "fixed_charge_coverage_ratio_fy"),
+    38: .standard(proto: "dividend_yield_daily_ttm"),
+    39: .standard(proto: "dividend_rate_ttm"),
+    40: .standard(proto: "dividends_per_share"),
+    41: .standard(proto: "five_years_average_dividend_yield"),
+    42: .standard(proto: "five_year_annual_dividend_growth_rate"),
+    43: .standard(proto: "dividend_payout_ratio_fy"),
+    44: .standard(proto: "buy_back_ttm"),
+    45: .standard(proto: "one_year_annual_revenue_growth_rate"),
+    46: .standard(proto: "domicile_indicator_code"),
+    47: .standard(proto: "adr_to_common_share_ratio"),
+    48: .standard(proto: "number_of_employees"),
+    49: .standard(proto: "ex_dividend_date"),
+    50: .standard(proto: "fiscal_period_start_date"),
+    51: .standard(proto: "fiscal_period_end_date"),
+    53: .standard(proto: "revenue_change_five_years"),
+    54: .standard(proto: "eps_change_five_years"),
+    55: .standard(proto: "ebitda_change_five_years"),
+    56: .standard(proto: "total_debt_change_five_years"),
+    57: .standard(proto: "ev_to_sales"),
+  ]
+
+  fileprivate class _StorageClass {
+    var _assetUid: String = String()
+    var _currency: String = String()
+    var _marketCapitalization: Double = 0
+    var _highPriceLast52Weeks: Double = 0
+    var _lowPriceLast52Weeks: Double = 0
+    var _averageDailyVolumeLast10Days: Double = 0
+    var _averageDailyVolumeLast4Weeks: Double = 0
+    var _beta: Double = 0
+    var _freeFloat: Double = 0
+    var _forwardAnnualDividendYield: Double = 0
+    var _sharesOutstanding: Double = 0
+    var _revenueTtm: Double = 0
+    var _ebitdaTtm: Double = 0
+    var _netIncomeTtm: Double = 0
+    var _epsTtm: Double = 0
+    var _dilutedEpsTtm: Double = 0
+    var _freeCashFlowTtm: Double = 0
+    var _fiveYearAnnualRevenueGrowthRate: Double = 0
+    var _threeYearAnnualRevenueGrowthRate: Double = 0
+    var _peRatioTtm: Double = 0
+    var _priceToSalesTtm: Double = 0
+    var _priceToBookTtm: Double = 0
+    var _priceToFreeCashFlowTtm: Double = 0
+    var _totalEnterpriseValueMrq: Double = 0
+    var _evToEbitdaMrq: Double = 0
+    var _netMarginMrq: Double = 0
+    var _netInterestMarginMrq: Double = 0
+    var _roe: Double = 0
+    var _roa: Double = 0
+    var _roic: Double = 0
+    var _totalDebtMrq: Double = 0
+    var _totalDebtToEquityMrq: Double = 0
+    var _totalDebtToEbitdaMrq: Double = 0
+    var _freeCashFlowToPrice: Double = 0
+    var _netDebtToEbitda: Double = 0
+    var _currentRatioMrq: Double = 0
+    var _fixedChargeCoverageRatioFy: Double = 0
+    var _dividendYieldDailyTtm: Double = 0
+    var _dividendRateTtm: Double = 0
+    var _dividendsPerShare: Double = 0
+    var _fiveYearsAverageDividendYield: Double = 0
+    var _fiveYearAnnualDividendGrowthRate: Double = 0
+    var _dividendPayoutRatioFy: Double = 0
+    var _buyBackTtm: Double = 0
+    var _oneYearAnnualRevenueGrowthRate: Double = 0
+    var _domicileIndicatorCode: String = String()
+    var _adrToCommonShareRatio: Double = 0
+    var _numberOfEmployees: Double = 0
+    var _exDividendDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _fiscalPeriodStartDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _fiscalPeriodEndDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _revenueChangeFiveYears: Double = 0
+    var _epsChangeFiveYears: Double = 0
+    var _ebitdaChangeFiveYears: Double = 0
+    var _totalDebtChangeFiveYears: Double = 0
+    var _evToSales: Double = 0
+
+    static let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _assetUid = source._assetUid
+      _currency = source._currency
+      _marketCapitalization = source._marketCapitalization
+      _highPriceLast52Weeks = source._highPriceLast52Weeks
+      _lowPriceLast52Weeks = source._lowPriceLast52Weeks
+      _averageDailyVolumeLast10Days = source._averageDailyVolumeLast10Days
+      _averageDailyVolumeLast4Weeks = source._averageDailyVolumeLast4Weeks
+      _beta = source._beta
+      _freeFloat = source._freeFloat
+      _forwardAnnualDividendYield = source._forwardAnnualDividendYield
+      _sharesOutstanding = source._sharesOutstanding
+      _revenueTtm = source._revenueTtm
+      _ebitdaTtm = source._ebitdaTtm
+      _netIncomeTtm = source._netIncomeTtm
+      _epsTtm = source._epsTtm
+      _dilutedEpsTtm = source._dilutedEpsTtm
+      _freeCashFlowTtm = source._freeCashFlowTtm
+      _fiveYearAnnualRevenueGrowthRate = source._fiveYearAnnualRevenueGrowthRate
+      _threeYearAnnualRevenueGrowthRate = source._threeYearAnnualRevenueGrowthRate
+      _peRatioTtm = source._peRatioTtm
+      _priceToSalesTtm = source._priceToSalesTtm
+      _priceToBookTtm = source._priceToBookTtm
+      _priceToFreeCashFlowTtm = source._priceToFreeCashFlowTtm
+      _totalEnterpriseValueMrq = source._totalEnterpriseValueMrq
+      _evToEbitdaMrq = source._evToEbitdaMrq
+      _netMarginMrq = source._netMarginMrq
+      _netInterestMarginMrq = source._netInterestMarginMrq
+      _roe = source._roe
+      _roa = source._roa
+      _roic = source._roic
+      _totalDebtMrq = source._totalDebtMrq
+      _totalDebtToEquityMrq = source._totalDebtToEquityMrq
+      _totalDebtToEbitdaMrq = source._totalDebtToEbitdaMrq
+      _freeCashFlowToPrice = source._freeCashFlowToPrice
+      _netDebtToEbitda = source._netDebtToEbitda
+      _currentRatioMrq = source._currentRatioMrq
+      _fixedChargeCoverageRatioFy = source._fixedChargeCoverageRatioFy
+      _dividendYieldDailyTtm = source._dividendYieldDailyTtm
+      _dividendRateTtm = source._dividendRateTtm
+      _dividendsPerShare = source._dividendsPerShare
+      _fiveYearsAverageDividendYield = source._fiveYearsAverageDividendYield
+      _fiveYearAnnualDividendGrowthRate = source._fiveYearAnnualDividendGrowthRate
+      _dividendPayoutRatioFy = source._dividendPayoutRatioFy
+      _buyBackTtm = source._buyBackTtm
+      _oneYearAnnualRevenueGrowthRate = source._oneYearAnnualRevenueGrowthRate
+      _domicileIndicatorCode = source._domicileIndicatorCode
+      _adrToCommonShareRatio = source._adrToCommonShareRatio
+      _numberOfEmployees = source._numberOfEmployees
+      _exDividendDate = source._exDividendDate
+      _fiscalPeriodStartDate = source._fiscalPeriodStartDate
+      _fiscalPeriodEndDate = source._fiscalPeriodEndDate
+      _revenueChangeFiveYears = source._revenueChangeFiveYears
+      _epsChangeFiveYears = source._epsChangeFiveYears
+      _ebitdaChangeFiveYears = source._ebitdaChangeFiveYears
+      _totalDebtChangeFiveYears = source._totalDebtChangeFiveYears
+      _evToSales = source._evToSales
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularStringField(value: &_storage._assetUid) }()
+        case 2: try { try decoder.decodeSingularStringField(value: &_storage._currency) }()
+        case 3: try { try decoder.decodeSingularDoubleField(value: &_storage._marketCapitalization) }()
+        case 4: try { try decoder.decodeSingularDoubleField(value: &_storage._highPriceLast52Weeks) }()
+        case 5: try { try decoder.decodeSingularDoubleField(value: &_storage._lowPriceLast52Weeks) }()
+        case 6: try { try decoder.decodeSingularDoubleField(value: &_storage._averageDailyVolumeLast10Days) }()
+        case 7: try { try decoder.decodeSingularDoubleField(value: &_storage._averageDailyVolumeLast4Weeks) }()
+        case 8: try { try decoder.decodeSingularDoubleField(value: &_storage._beta) }()
+        case 9: try { try decoder.decodeSingularDoubleField(value: &_storage._freeFloat) }()
+        case 10: try { try decoder.decodeSingularDoubleField(value: &_storage._forwardAnnualDividendYield) }()
+        case 11: try { try decoder.decodeSingularDoubleField(value: &_storage._sharesOutstanding) }()
+        case 12: try { try decoder.decodeSingularDoubleField(value: &_storage._revenueTtm) }()
+        case 13: try { try decoder.decodeSingularDoubleField(value: &_storage._ebitdaTtm) }()
+        case 14: try { try decoder.decodeSingularDoubleField(value: &_storage._netIncomeTtm) }()
+        case 15: try { try decoder.decodeSingularDoubleField(value: &_storage._epsTtm) }()
+        case 16: try { try decoder.decodeSingularDoubleField(value: &_storage._dilutedEpsTtm) }()
+        case 17: try { try decoder.decodeSingularDoubleField(value: &_storage._freeCashFlowTtm) }()
+        case 18: try { try decoder.decodeSingularDoubleField(value: &_storage._fiveYearAnnualRevenueGrowthRate) }()
+        case 19: try { try decoder.decodeSingularDoubleField(value: &_storage._threeYearAnnualRevenueGrowthRate) }()
+        case 20: try { try decoder.decodeSingularDoubleField(value: &_storage._peRatioTtm) }()
+        case 21: try { try decoder.decodeSingularDoubleField(value: &_storage._priceToSalesTtm) }()
+        case 22: try { try decoder.decodeSingularDoubleField(value: &_storage._priceToBookTtm) }()
+        case 23: try { try decoder.decodeSingularDoubleField(value: &_storage._priceToFreeCashFlowTtm) }()
+        case 24: try { try decoder.decodeSingularDoubleField(value: &_storage._totalEnterpriseValueMrq) }()
+        case 25: try { try decoder.decodeSingularDoubleField(value: &_storage._evToEbitdaMrq) }()
+        case 26: try { try decoder.decodeSingularDoubleField(value: &_storage._netMarginMrq) }()
+        case 27: try { try decoder.decodeSingularDoubleField(value: &_storage._netInterestMarginMrq) }()
+        case 28: try { try decoder.decodeSingularDoubleField(value: &_storage._roe) }()
+        case 29: try { try decoder.decodeSingularDoubleField(value: &_storage._roa) }()
+        case 30: try { try decoder.decodeSingularDoubleField(value: &_storage._roic) }()
+        case 31: try { try decoder.decodeSingularDoubleField(value: &_storage._totalDebtMrq) }()
+        case 32: try { try decoder.decodeSingularDoubleField(value: &_storage._totalDebtToEquityMrq) }()
+        case 33: try { try decoder.decodeSingularDoubleField(value: &_storage._totalDebtToEbitdaMrq) }()
+        case 34: try { try decoder.decodeSingularDoubleField(value: &_storage._freeCashFlowToPrice) }()
+        case 35: try { try decoder.decodeSingularDoubleField(value: &_storage._netDebtToEbitda) }()
+        case 36: try { try decoder.decodeSingularDoubleField(value: &_storage._currentRatioMrq) }()
+        case 37: try { try decoder.decodeSingularDoubleField(value: &_storage._fixedChargeCoverageRatioFy) }()
+        case 38: try { try decoder.decodeSingularDoubleField(value: &_storage._dividendYieldDailyTtm) }()
+        case 39: try { try decoder.decodeSingularDoubleField(value: &_storage._dividendRateTtm) }()
+        case 40: try { try decoder.decodeSingularDoubleField(value: &_storage._dividendsPerShare) }()
+        case 41: try { try decoder.decodeSingularDoubleField(value: &_storage._fiveYearsAverageDividendYield) }()
+        case 42: try { try decoder.decodeSingularDoubleField(value: &_storage._fiveYearAnnualDividendGrowthRate) }()
+        case 43: try { try decoder.decodeSingularDoubleField(value: &_storage._dividendPayoutRatioFy) }()
+        case 44: try { try decoder.decodeSingularDoubleField(value: &_storage._buyBackTtm) }()
+        case 45: try { try decoder.decodeSingularDoubleField(value: &_storage._oneYearAnnualRevenueGrowthRate) }()
+        case 46: try { try decoder.decodeSingularStringField(value: &_storage._domicileIndicatorCode) }()
+        case 47: try { try decoder.decodeSingularDoubleField(value: &_storage._adrToCommonShareRatio) }()
+        case 48: try { try decoder.decodeSingularDoubleField(value: &_storage._numberOfEmployees) }()
+        case 49: try { try decoder.decodeSingularMessageField(value: &_storage._exDividendDate) }()
+        case 50: try { try decoder.decodeSingularMessageField(value: &_storage._fiscalPeriodStartDate) }()
+        case 51: try { try decoder.decodeSingularMessageField(value: &_storage._fiscalPeriodEndDate) }()
+        case 53: try { try decoder.decodeSingularDoubleField(value: &_storage._revenueChangeFiveYears) }()
+        case 54: try { try decoder.decodeSingularDoubleField(value: &_storage._epsChangeFiveYears) }()
+        case 55: try { try decoder.decodeSingularDoubleField(value: &_storage._ebitdaChangeFiveYears) }()
+        case 56: try { try decoder.decodeSingularDoubleField(value: &_storage._totalDebtChangeFiveYears) }()
+        case 57: try { try decoder.decodeSingularDoubleField(value: &_storage._evToSales) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if !_storage._assetUid.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._assetUid, fieldNumber: 1)
+      }
+      if !_storage._currency.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._currency, fieldNumber: 2)
+      }
+      if _storage._marketCapitalization != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._marketCapitalization, fieldNumber: 3)
+      }
+      if _storage._highPriceLast52Weeks != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._highPriceLast52Weeks, fieldNumber: 4)
+      }
+      if _storage._lowPriceLast52Weeks != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._lowPriceLast52Weeks, fieldNumber: 5)
+      }
+      if _storage._averageDailyVolumeLast10Days != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._averageDailyVolumeLast10Days, fieldNumber: 6)
+      }
+      if _storage._averageDailyVolumeLast4Weeks != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._averageDailyVolumeLast4Weeks, fieldNumber: 7)
+      }
+      if _storage._beta != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._beta, fieldNumber: 8)
+      }
+      if _storage._freeFloat != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._freeFloat, fieldNumber: 9)
+      }
+      if _storage._forwardAnnualDividendYield != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._forwardAnnualDividendYield, fieldNumber: 10)
+      }
+      if _storage._sharesOutstanding != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._sharesOutstanding, fieldNumber: 11)
+      }
+      if _storage._revenueTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._revenueTtm, fieldNumber: 12)
+      }
+      if _storage._ebitdaTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._ebitdaTtm, fieldNumber: 13)
+      }
+      if _storage._netIncomeTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._netIncomeTtm, fieldNumber: 14)
+      }
+      if _storage._epsTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._epsTtm, fieldNumber: 15)
+      }
+      if _storage._dilutedEpsTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._dilutedEpsTtm, fieldNumber: 16)
+      }
+      if _storage._freeCashFlowTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._freeCashFlowTtm, fieldNumber: 17)
+      }
+      if _storage._fiveYearAnnualRevenueGrowthRate != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._fiveYearAnnualRevenueGrowthRate, fieldNumber: 18)
+      }
+      if _storage._threeYearAnnualRevenueGrowthRate != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._threeYearAnnualRevenueGrowthRate, fieldNumber: 19)
+      }
+      if _storage._peRatioTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._peRatioTtm, fieldNumber: 20)
+      }
+      if _storage._priceToSalesTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._priceToSalesTtm, fieldNumber: 21)
+      }
+      if _storage._priceToBookTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._priceToBookTtm, fieldNumber: 22)
+      }
+      if _storage._priceToFreeCashFlowTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._priceToFreeCashFlowTtm, fieldNumber: 23)
+      }
+      if _storage._totalEnterpriseValueMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._totalEnterpriseValueMrq, fieldNumber: 24)
+      }
+      if _storage._evToEbitdaMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._evToEbitdaMrq, fieldNumber: 25)
+      }
+      if _storage._netMarginMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._netMarginMrq, fieldNumber: 26)
+      }
+      if _storage._netInterestMarginMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._netInterestMarginMrq, fieldNumber: 27)
+      }
+      if _storage._roe != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._roe, fieldNumber: 28)
+      }
+      if _storage._roa != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._roa, fieldNumber: 29)
+      }
+      if _storage._roic != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._roic, fieldNumber: 30)
+      }
+      if _storage._totalDebtMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._totalDebtMrq, fieldNumber: 31)
+      }
+      if _storage._totalDebtToEquityMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._totalDebtToEquityMrq, fieldNumber: 32)
+      }
+      if _storage._totalDebtToEbitdaMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._totalDebtToEbitdaMrq, fieldNumber: 33)
+      }
+      if _storage._freeCashFlowToPrice != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._freeCashFlowToPrice, fieldNumber: 34)
+      }
+      if _storage._netDebtToEbitda != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._netDebtToEbitda, fieldNumber: 35)
+      }
+      if _storage._currentRatioMrq != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._currentRatioMrq, fieldNumber: 36)
+      }
+      if _storage._fixedChargeCoverageRatioFy != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._fixedChargeCoverageRatioFy, fieldNumber: 37)
+      }
+      if _storage._dividendYieldDailyTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._dividendYieldDailyTtm, fieldNumber: 38)
+      }
+      if _storage._dividendRateTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._dividendRateTtm, fieldNumber: 39)
+      }
+      if _storage._dividendsPerShare != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._dividendsPerShare, fieldNumber: 40)
+      }
+      if _storage._fiveYearsAverageDividendYield != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._fiveYearsAverageDividendYield, fieldNumber: 41)
+      }
+      if _storage._fiveYearAnnualDividendGrowthRate != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._fiveYearAnnualDividendGrowthRate, fieldNumber: 42)
+      }
+      if _storage._dividendPayoutRatioFy != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._dividendPayoutRatioFy, fieldNumber: 43)
+      }
+      if _storage._buyBackTtm != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._buyBackTtm, fieldNumber: 44)
+      }
+      if _storage._oneYearAnnualRevenueGrowthRate != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._oneYearAnnualRevenueGrowthRate, fieldNumber: 45)
+      }
+      if !_storage._domicileIndicatorCode.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._domicileIndicatorCode, fieldNumber: 46)
+      }
+      if _storage._adrToCommonShareRatio != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._adrToCommonShareRatio, fieldNumber: 47)
+      }
+      if _storage._numberOfEmployees != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._numberOfEmployees, fieldNumber: 48)
+      }
+      try { if let v = _storage._exDividendDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 49)
+      } }()
+      try { if let v = _storage._fiscalPeriodStartDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 50)
+      } }()
+      try { if let v = _storage._fiscalPeriodEndDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 51)
+      } }()
+      if _storage._revenueChangeFiveYears != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._revenueChangeFiveYears, fieldNumber: 53)
+      }
+      if _storage._epsChangeFiveYears != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._epsChangeFiveYears, fieldNumber: 54)
+      }
+      if _storage._ebitdaChangeFiveYears != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._ebitdaChangeFiveYears, fieldNumber: 55)
+      }
+      if _storage._totalDebtChangeFiveYears != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._totalDebtChangeFiveYears, fieldNumber: 56)
+      }
+      if _storage._evToSales != 0 {
+        try visitor.visitSingularDoubleField(value: _storage._evToSales, fieldNumber: 57)
+      }
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse.StatisticResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse.StatisticResponse) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._assetUid != rhs_storage._assetUid {return false}
+        if _storage._currency != rhs_storage._currency {return false}
+        if _storage._marketCapitalization != rhs_storage._marketCapitalization {return false}
+        if _storage._highPriceLast52Weeks != rhs_storage._highPriceLast52Weeks {return false}
+        if _storage._lowPriceLast52Weeks != rhs_storage._lowPriceLast52Weeks {return false}
+        if _storage._averageDailyVolumeLast10Days != rhs_storage._averageDailyVolumeLast10Days {return false}
+        if _storage._averageDailyVolumeLast4Weeks != rhs_storage._averageDailyVolumeLast4Weeks {return false}
+        if _storage._beta != rhs_storage._beta {return false}
+        if _storage._freeFloat != rhs_storage._freeFloat {return false}
+        if _storage._forwardAnnualDividendYield != rhs_storage._forwardAnnualDividendYield {return false}
+        if _storage._sharesOutstanding != rhs_storage._sharesOutstanding {return false}
+        if _storage._revenueTtm != rhs_storage._revenueTtm {return false}
+        if _storage._ebitdaTtm != rhs_storage._ebitdaTtm {return false}
+        if _storage._netIncomeTtm != rhs_storage._netIncomeTtm {return false}
+        if _storage._epsTtm != rhs_storage._epsTtm {return false}
+        if _storage._dilutedEpsTtm != rhs_storage._dilutedEpsTtm {return false}
+        if _storage._freeCashFlowTtm != rhs_storage._freeCashFlowTtm {return false}
+        if _storage._fiveYearAnnualRevenueGrowthRate != rhs_storage._fiveYearAnnualRevenueGrowthRate {return false}
+        if _storage._threeYearAnnualRevenueGrowthRate != rhs_storage._threeYearAnnualRevenueGrowthRate {return false}
+        if _storage._peRatioTtm != rhs_storage._peRatioTtm {return false}
+        if _storage._priceToSalesTtm != rhs_storage._priceToSalesTtm {return false}
+        if _storage._priceToBookTtm != rhs_storage._priceToBookTtm {return false}
+        if _storage._priceToFreeCashFlowTtm != rhs_storage._priceToFreeCashFlowTtm {return false}
+        if _storage._totalEnterpriseValueMrq != rhs_storage._totalEnterpriseValueMrq {return false}
+        if _storage._evToEbitdaMrq != rhs_storage._evToEbitdaMrq {return false}
+        if _storage._netMarginMrq != rhs_storage._netMarginMrq {return false}
+        if _storage._netInterestMarginMrq != rhs_storage._netInterestMarginMrq {return false}
+        if _storage._roe != rhs_storage._roe {return false}
+        if _storage._roa != rhs_storage._roa {return false}
+        if _storage._roic != rhs_storage._roic {return false}
+        if _storage._totalDebtMrq != rhs_storage._totalDebtMrq {return false}
+        if _storage._totalDebtToEquityMrq != rhs_storage._totalDebtToEquityMrq {return false}
+        if _storage._totalDebtToEbitdaMrq != rhs_storage._totalDebtToEbitdaMrq {return false}
+        if _storage._freeCashFlowToPrice != rhs_storage._freeCashFlowToPrice {return false}
+        if _storage._netDebtToEbitda != rhs_storage._netDebtToEbitda {return false}
+        if _storage._currentRatioMrq != rhs_storage._currentRatioMrq {return false}
+        if _storage._fixedChargeCoverageRatioFy != rhs_storage._fixedChargeCoverageRatioFy {return false}
+        if _storage._dividendYieldDailyTtm != rhs_storage._dividendYieldDailyTtm {return false}
+        if _storage._dividendRateTtm != rhs_storage._dividendRateTtm {return false}
+        if _storage._dividendsPerShare != rhs_storage._dividendsPerShare {return false}
+        if _storage._fiveYearsAverageDividendYield != rhs_storage._fiveYearsAverageDividendYield {return false}
+        if _storage._fiveYearAnnualDividendGrowthRate != rhs_storage._fiveYearAnnualDividendGrowthRate {return false}
+        if _storage._dividendPayoutRatioFy != rhs_storage._dividendPayoutRatioFy {return false}
+        if _storage._buyBackTtm != rhs_storage._buyBackTtm {return false}
+        if _storage._oneYearAnnualRevenueGrowthRate != rhs_storage._oneYearAnnualRevenueGrowthRate {return false}
+        if _storage._domicileIndicatorCode != rhs_storage._domicileIndicatorCode {return false}
+        if _storage._adrToCommonShareRatio != rhs_storage._adrToCommonShareRatio {return false}
+        if _storage._numberOfEmployees != rhs_storage._numberOfEmployees {return false}
+        if _storage._exDividendDate != rhs_storage._exDividendDate {return false}
+        if _storage._fiscalPeriodStartDate != rhs_storage._fiscalPeriodStartDate {return false}
+        if _storage._fiscalPeriodEndDate != rhs_storage._fiscalPeriodEndDate {return false}
+        if _storage._revenueChangeFiveYears != rhs_storage._revenueChangeFiveYears {return false}
+        if _storage._epsChangeFiveYears != rhs_storage._epsChangeFiveYears {return false}
+        if _storage._ebitdaChangeFiveYears != rhs_storage._ebitdaChangeFiveYears {return false}
+        if _storage._totalDebtChangeFiveYears != rhs_storage._totalDebtChangeFiveYears {return false}
+        if _storage._evToSales != rhs_storage._evToSales {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetAssetReportsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "instrument_id"),
+    2: .same(proto: "from"),
+    3: .same(proto: "to"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 1)
+    }
+    try { if let v = self._from {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._to {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest) -> Bool {
+    if lhs.instrumentID != rhs.instrumentID {return false}
+    if lhs._from != rhs._from {return false}
+    if lhs._to != rhs._to {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetAssetReportsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "events"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.events) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.events.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.events, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse) -> Bool {
+    if lhs.events != rhs.events {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.AssetReportPeriodType: SwiftProtobuf._ProtoNameProviding {
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    0: .same(proto: "PERIOD_TYPE_UNSPECIFIED"),
+    1: .same(proto: "PERIOD_TYPE_QUARTER"),
+    2: .same(proto: "PERIOD_TYPE_SEMIANNUAL"),
+    3: .same(proto: "PERIOD_TYPE_ANNUAL"),
+  ]
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.GetAssetReportsEvent: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.protoMessageName + ".GetAssetReportsEvent"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "instrument_id"),
+    2: .standard(proto: "report_date"),
+    3: .standard(proto: "period_year"),
+    4: .standard(proto: "period_num"),
+    5: .standard(proto: "period_type"),
+    6: .standard(proto: "created_at"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._reportDate) }()
+      case 3: try { try decoder.decodeSingularInt32Field(value: &self.periodYear) }()
+      case 4: try { try decoder.decodeSingularInt32Field(value: &self.periodNum) }()
+      case 5: try { try decoder.decodeSingularEnumField(value: &self.periodType) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._createdAt) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 1)
+    }
+    try { if let v = self._reportDate {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    if self.periodYear != 0 {
+      try visitor.visitSingularInt32Field(value: self.periodYear, fieldNumber: 3)
+    }
+    if self.periodNum != 0 {
+      try visitor.visitSingularInt32Field(value: self.periodNum, fieldNumber: 4)
+    }
+    if self.periodType != .periodTypeUnspecified {
+      try visitor.visitSingularEnumField(value: self.periodType, fieldNumber: 5)
+    }
+    try { if let v = self._createdAt {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.GetAssetReportsEvent, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse.GetAssetReportsEvent) -> Bool {
+    if lhs.instrumentID != rhs.instrumentID {return false}
+    if lhs._reportDate != rhs._reportDate {return false}
+    if lhs.periodYear != rhs.periodYear {return false}
+    if lhs.periodNum != rhs.periodNum {return false}
+    if lhs.periodType != rhs.periodType {return false}
+    if lhs._createdAt != rhs._createdAt {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetConsensusForecastsRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "paging"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._paging) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._paging {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest) -> Bool {
+    if lhs._paging != rhs._paging {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetConsensusForecastsResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "items"),
+    2: .same(proto: "page"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.items) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._page) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.items.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.items, fieldNumber: 1)
+    }
+    try { if let v = self._page {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse) -> Bool {
+    if lhs.items != rhs.items {return false}
+    if lhs._page != rhs._page {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse.ConsensusForecastsItem: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse.protoMessageName + ".ConsensusForecastsItem"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "uid"),
+    2: .standard(proto: "asset_uid"),
+    3: .standard(proto: "created_at"),
+    4: .standard(proto: "best_target_price"),
+    5: .standard(proto: "best_target_low"),
+    6: .standard(proto: "best_target_high"),
+    7: .standard(proto: "total_buy_recommend"),
+    8: .standard(proto: "total_hold_recommend"),
+    9: .standard(proto: "total_sell_recommend"),
+    10: .same(proto: "currency"),
+    11: .same(proto: "consensus"),
+    12: .standard(proto: "prognosis_date"),
+  ]
+
+  fileprivate class _StorageClass {
+    var _uid: String = String()
+    var _assetUid: String = String()
+    var _createdAt: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    var _bestTargetPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _bestTargetLow: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _bestTargetHigh: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    var _totalBuyRecommend: Int32 = 0
+    var _totalHoldRecommend: Int32 = 0
+    var _totalSellRecommend: Int32 = 0
+    var _currency: String = String()
+    var _consensus: Tinkoff_Public_Invest_Api_Contract_V1_Recommendation = .unspecified
+    var _prognosisDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+
+    static let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _uid = source._uid
+      _assetUid = source._assetUid
+      _createdAt = source._createdAt
+      _bestTargetPrice = source._bestTargetPrice
+      _bestTargetLow = source._bestTargetLow
+      _bestTargetHigh = source._bestTargetHigh
+      _totalBuyRecommend = source._totalBuyRecommend
+      _totalHoldRecommend = source._totalHoldRecommend
+      _totalSellRecommend = source._totalSellRecommend
+      _currency = source._currency
+      _consensus = source._consensus
+      _prognosisDate = source._prognosisDate
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeSingularStringField(value: &_storage._uid) }()
+        case 2: try { try decoder.decodeSingularStringField(value: &_storage._assetUid) }()
+        case 3: try { try decoder.decodeSingularMessageField(value: &_storage._createdAt) }()
+        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._bestTargetPrice) }()
+        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._bestTargetLow) }()
+        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._bestTargetHigh) }()
+        case 7: try { try decoder.decodeSingularInt32Field(value: &_storage._totalBuyRecommend) }()
+        case 8: try { try decoder.decodeSingularInt32Field(value: &_storage._totalHoldRecommend) }()
+        case 9: try { try decoder.decodeSingularInt32Field(value: &_storage._totalSellRecommend) }()
+        case 10: try { try decoder.decodeSingularStringField(value: &_storage._currency) }()
+        case 11: try { try decoder.decodeSingularEnumField(value: &_storage._consensus) }()
+        case 12: try { try decoder.decodeSingularMessageField(value: &_storage._prognosisDate) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if !_storage._uid.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._uid, fieldNumber: 1)
+      }
+      if !_storage._assetUid.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._assetUid, fieldNumber: 2)
+      }
+      try { if let v = _storage._createdAt {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+      } }()
+      try { if let v = _storage._bestTargetPrice {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+      } }()
+      try { if let v = _storage._bestTargetLow {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+      } }()
+      try { if let v = _storage._bestTargetHigh {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+      } }()
+      if _storage._totalBuyRecommend != 0 {
+        try visitor.visitSingularInt32Field(value: _storage._totalBuyRecommend, fieldNumber: 7)
+      }
+      if _storage._totalHoldRecommend != 0 {
+        try visitor.visitSingularInt32Field(value: _storage._totalHoldRecommend, fieldNumber: 8)
+      }
+      if _storage._totalSellRecommend != 0 {
+        try visitor.visitSingularInt32Field(value: _storage._totalSellRecommend, fieldNumber: 9)
+      }
+      if !_storage._currency.isEmpty {
+        try visitor.visitSingularStringField(value: _storage._currency, fieldNumber: 10)
+      }
+      if _storage._consensus != .unspecified {
+        try visitor.visitSingularEnumField(value: _storage._consensus, fieldNumber: 11)
+      }
+      try { if let v = _storage._prognosisDate {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 12)
+      } }()
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse.ConsensusForecastsItem, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse.ConsensusForecastsItem) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._uid != rhs_storage._uid {return false}
+        if _storage._assetUid != rhs_storage._assetUid {return false}
+        if _storage._createdAt != rhs_storage._createdAt {return false}
+        if _storage._bestTargetPrice != rhs_storage._bestTargetPrice {return false}
+        if _storage._bestTargetLow != rhs_storage._bestTargetLow {return false}
+        if _storage._bestTargetHigh != rhs_storage._bestTargetHigh {return false}
+        if _storage._totalBuyRecommend != rhs_storage._totalBuyRecommend {return false}
+        if _storage._totalHoldRecommend != rhs_storage._totalHoldRecommend {return false}
+        if _storage._totalSellRecommend != rhs_storage._totalSellRecommend {return false}
+        if _storage._currency != rhs_storage._currency {return false}
+        if _storage._consensus != rhs_storage._consensus {return false}
+        if _storage._prognosisDate != rhs_storage._prognosisDate {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetForecastRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "instrument_id"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.instrumentID.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest) -> Bool {
+    if lhs.instrumentID != rhs.instrumentID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".GetForecastResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "targets"),
+    2: .same(proto: "consensus"),
+  ]
+
+  fileprivate class _StorageClass {
+    var _targets: [Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.TargetItem] = []
+    var _consensus: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.ConsensusItem? = nil
+
+    static let defaultInstance = _StorageClass()
+
+    private init() {}
+
+    init(copying source: _StorageClass) {
+      _targets = source._targets
+      _consensus = source._consensus
+    }
+  }
+
+  fileprivate mutating func _uniqueStorage() -> _StorageClass {
+    if !isKnownUniquelyReferenced(&_storage) {
+      _storage = _StorageClass(copying: _storage)
+    }
+    return _storage
+  }
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    _ = _uniqueStorage()
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      while let fieldNumber = try decoder.nextFieldNumber() {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every case branch when no optimizations are
+        // enabled. https://github.com/apple/swift-protobuf/issues/1034
+        switch fieldNumber {
+        case 1: try { try decoder.decodeRepeatedMessageField(value: &_storage._targets) }()
+        case 2: try { try decoder.decodeSingularMessageField(value: &_storage._consensus) }()
+        default: break
+        }
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every if/case branch local when no optimizations
+      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+      // https://github.com/apple/swift-protobuf/issues/1182
+      if !_storage._targets.isEmpty {
+        try visitor.visitRepeatedMessageField(value: _storage._targets, fieldNumber: 1)
+      }
+      try { if let v = _storage._consensus {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+      } }()
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse) -> Bool {
+    if lhs._storage !== rhs._storage {
+      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+        let _storage = _args.0
+        let rhs_storage = _args.1
+        if _storage._targets != rhs_storage._targets {return false}
+        if _storage._consensus != rhs_storage._consensus {return false}
+        return true
+      }
+      if !storagesAreEqual {return false}
+    }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.TargetItem: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.protoMessageName + ".TargetItem"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "uid"),
+    2: .same(proto: "ticker"),
+    3: .same(proto: "company"),
+    4: .same(proto: "recommendation"),
+    5: .standard(proto: "recommendation_date"),
+    6: .same(proto: "currency"),
+    7: .standard(proto: "current_price"),
+    8: .standard(proto: "target_price"),
+    9: .standard(proto: "price_change"),
+    10: .standard(proto: "price_change_rel"),
+    11: .standard(proto: "show_name"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.uid) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.ticker) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.company) }()
+      case 4: try { try decoder.decodeSingularEnumField(value: &self.recommendation) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._recommendationDate) }()
+      case 6: try { try decoder.decodeSingularStringField(value: &self.currency) }()
+      case 7: try { try decoder.decodeSingularMessageField(value: &self._currentPrice) }()
+      case 8: try { try decoder.decodeSingularMessageField(value: &self._targetPrice) }()
+      case 9: try { try decoder.decodeSingularMessageField(value: &self._priceChange) }()
+      case 10: try { try decoder.decodeSingularMessageField(value: &self._priceChangeRel) }()
+      case 11: try { try decoder.decodeSingularStringField(value: &self.showName) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.uid.isEmpty {
+      try visitor.visitSingularStringField(value: self.uid, fieldNumber: 1)
+    }
+    if !self.ticker.isEmpty {
+      try visitor.visitSingularStringField(value: self.ticker, fieldNumber: 2)
+    }
+    if !self.company.isEmpty {
+      try visitor.visitSingularStringField(value: self.company, fieldNumber: 3)
+    }
+    if self.recommendation != .unspecified {
+      try visitor.visitSingularEnumField(value: self.recommendation, fieldNumber: 4)
+    }
+    try { if let v = self._recommendationDate {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
+    if !self.currency.isEmpty {
+      try visitor.visitSingularStringField(value: self.currency, fieldNumber: 6)
+    }
+    try { if let v = self._currentPrice {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+    } }()
+    try { if let v = self._targetPrice {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+    } }()
+    try { if let v = self._priceChange {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+    } }()
+    try { if let v = self._priceChangeRel {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
+    } }()
+    if !self.showName.isEmpty {
+      try visitor.visitSingularStringField(value: self.showName, fieldNumber: 11)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.TargetItem, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.TargetItem) -> Bool {
+    if lhs.uid != rhs.uid {return false}
+    if lhs.ticker != rhs.ticker {return false}
+    if lhs.company != rhs.company {return false}
+    if lhs.recommendation != rhs.recommendation {return false}
+    if lhs._recommendationDate != rhs._recommendationDate {return false}
+    if lhs.currency != rhs.currency {return false}
+    if lhs._currentPrice != rhs._currentPrice {return false}
+    if lhs._targetPrice != rhs._targetPrice {return false}
+    if lhs._priceChange != rhs._priceChange {return false}
+    if lhs._priceChangeRel != rhs._priceChangeRel {return false}
+    if lhs.showName != rhs.showName {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.ConsensusItem: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.protoMessageName + ".ConsensusItem"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "uid"),
+    2: .same(proto: "ticker"),
+    3: .same(proto: "recommendation"),
+    4: .same(proto: "currency"),
+    5: .standard(proto: "current_price"),
+    6: .same(proto: "consensus"),
+    7: .standard(proto: "min_target"),
+    8: .standard(proto: "max_target"),
+    9: .standard(proto: "price_change"),
+    10: .standard(proto: "price_change_rel"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.uid) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.ticker) }()
+      case 3: try { try decoder.decodeSingularEnumField(value: &self.recommendation) }()
+      case 4: try { try decoder.decodeSingularStringField(value: &self.currency) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._currentPrice) }()
+      case 6: try { try decoder.decodeSingularMessageField(value: &self._consensus) }()
+      case 7: try { try decoder.decodeSingularMessageField(value: &self._minTarget) }()
+      case 8: try { try decoder.decodeSingularMessageField(value: &self._maxTarget) }()
+      case 9: try { try decoder.decodeSingularMessageField(value: &self._priceChange) }()
+      case 10: try { try decoder.decodeSingularMessageField(value: &self._priceChangeRel) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.uid.isEmpty {
+      try visitor.visitSingularStringField(value: self.uid, fieldNumber: 1)
+    }
+    if !self.ticker.isEmpty {
+      try visitor.visitSingularStringField(value: self.ticker, fieldNumber: 2)
+    }
+    if self.recommendation != .unspecified {
+      try visitor.visitSingularEnumField(value: self.recommendation, fieldNumber: 3)
+    }
+    if !self.currency.isEmpty {
+      try visitor.visitSingularStringField(value: self.currency, fieldNumber: 4)
+    }
+    try { if let v = self._currentPrice {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
+    try { if let v = self._consensus {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+    } }()
+    try { if let v = self._minTarget {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+    } }()
+    try { if let v = self._maxTarget {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+    } }()
+    try { if let v = self._priceChange {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+    } }()
+    try { if let v = self._priceChangeRel {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.ConsensusItem, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse.ConsensusItem) -> Bool {
+    if lhs.uid != rhs.uid {return false}
+    if lhs.ticker != rhs.ticker {return false}
+    if lhs.recommendation != rhs.recommendation {return false}
+    if lhs.currency != rhs.currency {return false}
+    if lhs._currentPrice != rhs._currentPrice {return false}
+    if lhs._consensus != rhs._consensus {return false}
+    if lhs._minTarget != rhs._minTarget {return false}
+    if lhs._maxTarget != rhs._maxTarget {return false}
+    if lhs._priceChange != rhs._priceChange {return false}
+    if lhs._priceChangeRel != rhs._priceChangeRel {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".RiskRatesRequest"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "instrument_id"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedStringField(value: &self.instrumentID) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.instrumentID.isEmpty {
+      try visitor.visitRepeatedStringField(value: self.instrumentID, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest) -> Bool {
+    if lhs.instrumentID != rhs.instrumentID {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".RiskRatesResponse"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "instrument_risk_rates"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.instrumentRiskRates) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.instrumentRiskRates.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.instrumentRiskRates, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse) -> Bool {
+    if lhs.instrumentRiskRates != rhs.instrumentRiskRates {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRateResult: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.protoMessageName + ".RiskRateResult"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "instrument_uid"),
+    2: .standard(proto: "short_risk_rate"),
+    3: .standard(proto: "long_risk_rate"),
+    5: .standard(proto: "short_risk_rates"),
+    6: .standard(proto: "long_risk_rates"),
+    9: .same(proto: "error"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._shortRiskRate) }()
+      case 3: try { try decoder.decodeSingularMessageField(value: &self._longRiskRate) }()
+      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.shortRiskRates) }()
+      case 6: try { try decoder.decodeRepeatedMessageField(value: &self.longRiskRates) }()
+      case 9: try { try decoder.decodeSingularStringField(value: &self._error) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.instrumentUid.isEmpty {
+      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 1)
+    }
+    try { if let v = self._shortRiskRate {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try { if let v = self._longRiskRate {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+    } }()
+    if !self.shortRiskRates.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.shortRiskRates, fieldNumber: 5)
+    }
+    if !self.longRiskRates.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.longRiskRates, fieldNumber: 6)
+    }
+    try { if let v = self._error {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 9)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRateResult, rhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRateResult) -> Bool {
+    if lhs.instrumentUid != rhs.instrumentUid {return false}
+    if lhs._shortRiskRate != rhs._shortRiskRate {return false}
+    if lhs._longRiskRate != rhs._longRiskRate {return false}
+    if lhs.shortRiskRates != rhs.shortRiskRates {return false}
+    if lhs.longRiskRates != rhs.longRiskRates {return false}
+    if lhs._error != rhs._error {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.protoMessageName + ".RiskRate"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    2: .standard(proto: "risk_level_code"),
+    5: .same(proto: "value"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 2: try { try decoder.decodeSingularStringField(value: &self.riskLevelCode) }()
+      case 5: try { try decoder.decodeSingularMessageField(value: &self._value) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.riskLevelCode.isEmpty {
+      try visitor.visitSingularStringField(value: self.riskLevelCode, fieldNumber: 2)
+    }
+    try { if let v = self._value {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate, rhs: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse.RiskRate) -> Bool {
+    if lhs.riskLevelCode != rhs.riskLevelCode {return false}
+    if lhs._value != rhs._value {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".TradingInterval"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "type"),
+    2: .same(proto: "interval"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.type) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._interval) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    if !self.type.isEmpty {
+      try visitor.visitSingularStringField(value: self.type, fieldNumber: 1)
+    }
+    try { if let v = self._interval {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval) -> Bool {
+    if lhs.type != rhs.type {return false}
+    if lhs._interval != rhs._interval {return false}
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.TimeInterval: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.protoMessageName + ".TimeInterval"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "start_ts"),
+    2: .standard(proto: "end_ts"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularMessageField(value: &self._startTs) }()
+      case 2: try { try decoder.decodeSingularMessageField(value: &self._endTs) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._startTs {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+    } }()
+    try { if let v = self._endTs {
+      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+    } }()
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.TimeInterval, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingInterval.TimeInterval) -> Bool {
+    if lhs._startTs != rhs._startTs {return false}
+    if lhs._endTs != rhs._endTs {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

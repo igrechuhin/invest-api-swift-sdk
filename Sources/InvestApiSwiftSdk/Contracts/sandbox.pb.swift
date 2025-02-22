@@ -20,24 +20,36 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-///Запрос открытия счёта в песочнице.
+///Запрос открытия счета в песочнице.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OpenSandboxAccountRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
+  /// Название счета
+  public var name: String {
+    get {return _name ?? String()}
+    set {_name = newValue}
+  }
+  /// Returns true if `name` has been explicitly set.
+  public var hasName: Bool {return self._name != nil}
+  /// Clears the value of `name`. Subsequent reads from it will return its default value.
+  public mutating func clearName() {self._name = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
+
+  fileprivate var _name: String? = nil
 }
 
-///Номер открытого счёта в песочнице.
+///Номер открытого счета в песочнице.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OpenSandboxAccountResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Номер счёта
+  ///Номер счета
   public var accountID: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -45,13 +57,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_OpenSandboxAccountResponse {
   public init() {}
 }
 
-///Запрос закрытия счёта в песочнице.
+///Запрос закрытия счета в песочнице.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_CloseSandboxAccountRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Номер счёта
+  ///Номер счета
   public var accountID: String = String()
 
   public var unknownFields = SwiftProtobuf.UnknownStorage()
@@ -59,7 +71,7 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_CloseSandboxAccountRequest {
   public init() {}
 }
 
-///Результат закрытия счёта в песочнице.
+///Результат закрытия счета в песочнице.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_CloseSandboxAccountResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
@@ -70,16 +82,16 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_CloseSandboxAccountResponse 
   public init() {}
 }
 
-///Запрос пополнения счёта в песочнице.
+///Запрос пополнения счета в песочнице.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SandboxPayInRequest {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Номер счёта
+  ///Номер счета
   public var accountID: String = String()
 
-  ///Сумма пополнения счёта в рублях
+  ///Сумма пополнения счета в рублях
   public var amount: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
     get {return _amount ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
     set {_amount = newValue}
@@ -96,13 +108,13 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_SandboxPayInRequest {
   fileprivate var _amount: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
 }
 
-///Результат пополнения счёта, текущий баланс.
+///Результат пополнения счета, текущий баланс.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SandboxPayInResponse {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
 
-  ///Текущий баланс счёта
+  ///Текущий баланс счета
   public var balance: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
     get {return _balance ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
     set {_balance = newValue}
@@ -134,18 +146,35 @@ fileprivate let _protobuf_package = "tinkoff.public.invest.api.contract.v1"
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OpenSandboxAccountRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   public static let protoMessageName: String = _protobuf_package + ".OpenSandboxAccountRequest"
-  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "name"),
+  ]
 
   public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self._name) }()
+      default: break
+      }
     }
   }
 
   public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    // The use of inline closures is to circumvent an issue where the compiler
+    // allocates stack space for every if/case branch local when no optimizations
+    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+    // https://github.com/apple/swift-protobuf/issues/1182
+    try { if let v = self._name {
+      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
   public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_OpenSandboxAccountRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_OpenSandboxAccountRequest) -> Bool {
+    if lhs._name != rhs._name {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

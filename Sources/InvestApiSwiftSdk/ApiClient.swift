@@ -2,6 +2,11 @@ import NIOCore
 
 /// Протокол для взаимодействия с Tinkoff API
 public protocol ApiClient {
+    associatedtype UsersService: SandboxUsersService
+    
+    /// Сервис предоставления справочной информации о пользователе.
+    var user: UsersService { get }
+
     /// Сервис предоставления справочной информации о ценных бумагах.
     var instruments: InstrumentsService { get }
     

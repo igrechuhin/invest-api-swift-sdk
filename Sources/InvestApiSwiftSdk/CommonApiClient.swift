@@ -1,9 +1,7 @@
 import NIOCore
 
 /// Протокол для взаимодействия с Tinkoff API (основной канал).
-public protocol CommonApiClient: ApiClient {
-    /// Сервис предоставления справочной информации о пользователе.
-    var user: CommonUsersService { get }
+public protocol CommonApiClient: ApiClient where UsersService: CommonUsersService {
     
     /// Сервис получения информации об операциях по счёту.
     var operations: OperationsService { get }
@@ -96,7 +94,7 @@ public extension CommonApiClient {
 internal final class CommonInvestApiClient: CommonApiClient {
     private let connection: ApiConnection
     
-    let user: CommonUsersService
+    let user: GrpcUsersService
     let instruments: InstrumentsService
     let operations: OperationsService
     let operationsStream: OperationsStreamService

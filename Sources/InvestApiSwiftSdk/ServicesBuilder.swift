@@ -19,7 +19,7 @@ internal class ServicesBuilder {
         return GrpcSandboxService(client)
     }
     
-    func makeUsersService() -> CommonUsersService  {
+    func makeUsersService() -> GrpcUsersService  {
         let client = UsersServiceClient(
             channel: self.channel,
             defaultCallOptions: self.callOptions

@@ -1,13 +1,10 @@
 import NIOCore
 
 /// Протокол для взаимодействия с Tinkoff API (канал песочницы).
-public protocol SandboxApiClient: ApiClient {
+public protocol SandboxApiClient: ApiClient where UsersService: SandboxUsersService {
     /// Сервис для работы со счетами песочницы.
     var sandbox: SandboxService { get }
-    
-    /// Сервис предоставления справочной информации о пользователе.
-    var user: SandboxUsersService { get }
-    
+
     /// Отправляет запрос к Tinkoff API.
     ///
     /// ```
@@ -91,7 +88,7 @@ internal final class SandboxInvestApiClient: SandboxApiClient {
     private let connection: ApiConnection
     
     let sandbox: SandboxService
-    let user: SandboxUsersService
+    let user: GrpcUsersService
     let instruments: InstrumentsService
     let operationsStream: OperationsStreamService
     let marketData: MarketDataService

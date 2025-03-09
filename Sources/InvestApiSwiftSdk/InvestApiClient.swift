@@ -20,7 +20,7 @@ public final class InvestApiClient {
         appName: String = Constants.appName,
         host: String = Constants.sandboxHost,
         port: Int = Constants.port
-    ) throws -> SandboxApiClient {
+    ) throws -> any SandboxApiClient {
         guard !token.isEmpty, !host.isEmpty, port != 0 else {
             throw InvestApiError.invalidInitializationData
         }
@@ -45,7 +45,7 @@ public final class InvestApiClient {
         appName: String = Constants.appName,
         host: String = Constants.commonHost,
         port: Int = Constants.port
-    ) throws -> CommonApiClient {
+    ) throws -> any CommonApiClient {
         guard !token.isEmpty, !host.isEmpty, port != 0 else {
             throw InvestApiError.invalidInitializationData
         }

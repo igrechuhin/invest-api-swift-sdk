@@ -1,30 +1,15 @@
 import NIOCore
 
 /// Протокол для взаимодействия с Tinkoff API (основной канал).
-public protocol CommonApiClient {
+public protocol CommonApiClient: ApiClient {
     /// Сервис предоставления справочной информации о пользователе.
     var user: CommonUsersService { get }
     
-    /// Сервис предоставления справочной информации о ценных бумагах.
-    var instruments: InstrumentsService { get }
-    
     /// Сервис получения информации об операциях по счёту.
     var operations: OperationsService { get }
-    
-    /// Сервис получения информации о позициях и доходности портфеля в реальном времени.
-    var operationsStream: OperationsStreamService { get }
-    
-    /// Сервис котировок.
-    var marketData: MarketDataService { get }
-    
-    /// Сервис получения биржевой информации в реальном времени.
-    var marketDataStream: MarketDataStreamService { get }
-    
+
     /// Сервис работы с торговыми поручениями.
     var orders: OrdersService { get }
-    
-    /// Сервис получения информации о торговых поручениях в реальном времени.
-    var ordersStream: OrdersStreamService { get }
     
     /// Сервис работы со стоп-заявками.
     var stopOrders: StopOrdersService { get }

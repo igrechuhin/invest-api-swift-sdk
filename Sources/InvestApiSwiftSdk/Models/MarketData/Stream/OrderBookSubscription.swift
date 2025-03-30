@@ -1,5 +1,5 @@
 /// Статус подписки на стакан.
-public protocol OrderBookSubscription {
+public protocol OrderBookSubscription: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

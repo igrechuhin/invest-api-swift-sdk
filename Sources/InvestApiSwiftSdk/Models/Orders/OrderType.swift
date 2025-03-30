@@ -1,5 +1,5 @@
 /// Тип заявки.
-public enum OrderType: Int, Codable {
+public enum OrderType: Int, Codable, Sendable {
     /// Значение не указано.
     case unspecified
     

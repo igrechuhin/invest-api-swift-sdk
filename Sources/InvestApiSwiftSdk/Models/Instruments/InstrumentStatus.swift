@@ -1,5 +1,5 @@
 /// Статус запрашиваемых инструментов.
-public enum InstrumentStatus: Int, Codable {
+public enum InstrumentStatus: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

@@ -1,5 +1,5 @@
 /// Статус подписки на торговый статус.
-public protocol InfoSubscription {
+public protocol InfoSubscription: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

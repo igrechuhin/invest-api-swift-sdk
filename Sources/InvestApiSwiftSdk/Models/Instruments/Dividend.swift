@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о выплате дивиденда.
-public protocol Dividend {
+public protocol Dividend: Sendable {
     /// Величина дивиденда на 1 ценную бумагу (включая валюту).
     var dividendNet: MoneyValue { get }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Объект содержащий информацию о купоне облигации.
-public protocol Coupon {
+public protocol Coupon: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

@@ -1,5 +1,5 @@
 /// Тип заявки.
-public enum StopOrderType: Int, Codable {
+public enum StopOrderType: Int, Codable, Sendable {
     /// Значение не указано.
     case unspecified
     

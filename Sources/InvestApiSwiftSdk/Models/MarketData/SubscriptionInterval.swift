@@ -1,5 +1,5 @@
 /// Интервал свечи.
-public enum SubscriptionInterval: Int, Codable {
+public enum SubscriptionInterval: Int, Codable, Sendable {
     /// Интервал не определён.
     case unspecified
     

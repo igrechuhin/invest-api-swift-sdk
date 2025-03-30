@@ -1,5 +1,5 @@
 /// Результат подписки.
-public protocol OrderBooksSubscriptionResult {
+public protocol OrderBooksSubscriptionResult: Sendable {
     /// Уникальный идентификатор запроса.
     var trackingId: String { get }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с информацией о стакане.
-public protocol OrderBookPayload: StreamData where StreamDataType == OrderBook {
+public protocol OrderBookPayload: StreamData, Sendable where StreamDataType == OrderBook {
     /// Время поступления сообщения.
     var time: Date { get }
     

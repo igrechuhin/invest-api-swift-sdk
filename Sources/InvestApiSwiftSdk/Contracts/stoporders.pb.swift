@@ -16,932 +16,932 @@ import SwiftProtobuf
 // Please ensure that you are building against the same version of the API
 // that was used to generate this file.
 fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAPIVersionCheck {
-  struct _2: SwiftProtobuf.ProtobufAPIVersion_2 {}
-  typealias Version = _2
+    struct _2: SwiftProtobuf.ProtobufAPIVersion_2 {}
+    typealias Version = _2
 }
 
 ///Направление сделки стоп-заявки.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case unspecified // = 0
-
-  ///Покупка.
-  case buy // = 1
-
-  ///Продажа.
-  case sell // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .buy
-    case 2: self = .sell
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case unspecified // = 0
+    
+    ///Покупка.
+    case buy // = 1
+    
+    ///Продажа.
+    case sell // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .buy: return 1
-    case .sell: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .buy
+        case 2: self = .sell
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .buy: return 1
+        case .sell: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection] = [
-    .unspecified,
-    .buy,
-    .sell,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection] = [
+        .unspecified,
+        .buy,
+        .sell,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Тип экспирации стоп-заявке.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case unspecified // = 0
-
-  ///Действительно до отмены.
-  case goodTillCancel // = 1
-
-  ///Действительно до даты снятия.
-  case goodTillDate // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .goodTillCancel
-    case 2: self = .goodTillDate
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case unspecified // = 0
+    
+    ///Действительно до отмены.
+    case goodTillCancel // = 1
+    
+    ///Действительно до даты снятия.
+    case goodTillDate // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .goodTillCancel: return 1
-    case .goodTillDate: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .goodTillCancel
+        case 2: self = .goodTillDate
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .goodTillCancel: return 1
+        case .goodTillDate: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType] = [
-    .unspecified,
-    .goodTillCancel,
-    .goodTillDate,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType] = [
+        .unspecified,
+        .goodTillCancel,
+        .goodTillDate,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Тип стоп-заявки.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case unspecified // = 0
-
-  ///`Take-profit`-заявка.
-  case takeProfit // = 1
-
-  ///`Stop-loss`-заявка.
-  case stopLoss // = 2
-
-  ///`Stop-limit`-заявка.
-  case stopLimit // = 3
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .takeProfit
-    case 2: self = .stopLoss
-    case 3: self = .stopLimit
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case unspecified // = 0
+    
+    ///`Take-profit`-заявка.
+    case takeProfit // = 1
+    
+    ///`Stop-loss`-заявка.
+    case stopLoss // = 2
+    
+    ///`Stop-limit`-заявка.
+    case stopLimit // = 3
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .takeProfit: return 1
-    case .stopLoss: return 2
-    case .stopLimit: return 3
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .takeProfit
+        case 2: self = .stopLoss
+        case 3: self = .stopLimit
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .takeProfit: return 1
+        case .stopLoss: return 2
+        case .stopLimit: return 3
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType] = [
-    .unspecified,
-    .takeProfit,
-    .stopLoss,
-    .stopLimit,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType] = [
+        .unspecified,
+        .takeProfit,
+        .stopLoss,
+        .stopLimit,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Статус стоп-заяки.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case stopOrderStatusUnspecified // = 0
-
-  ///Все заявки.
-  case stopOrderStatusAll // = 1
-
-  ///Активные заявки.
-  case stopOrderStatusActive // = 2
-
-  ///Исполненные заявки.
-  case stopOrderStatusExecuted // = 3
-
-  ///Отмененные заявки.
-  case stopOrderStatusCanceled // = 4
-
-  ///Истекшие заявки.
-  case stopOrderStatusExpired // = 5
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .stopOrderStatusUnspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .stopOrderStatusUnspecified
-    case 1: self = .stopOrderStatusAll
-    case 2: self = .stopOrderStatusActive
-    case 3: self = .stopOrderStatusExecuted
-    case 4: self = .stopOrderStatusCanceled
-    case 5: self = .stopOrderStatusExpired
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case stopOrderStatusUnspecified // = 0
+    
+    ///Все заявки.
+    case stopOrderStatusAll // = 1
+    
+    ///Активные заявки.
+    case stopOrderStatusActive // = 2
+    
+    ///Исполненные заявки.
+    case stopOrderStatusExecuted // = 3
+    
+    ///Отмененные заявки.
+    case stopOrderStatusCanceled // = 4
+    
+    ///Истекшие заявки.
+    case stopOrderStatusExpired // = 5
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .stopOrderStatusUnspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .stopOrderStatusUnspecified: return 0
-    case .stopOrderStatusAll: return 1
-    case .stopOrderStatusActive: return 2
-    case .stopOrderStatusExecuted: return 3
-    case .stopOrderStatusCanceled: return 4
-    case .stopOrderStatusExpired: return 5
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .stopOrderStatusUnspecified
+        case 1: self = .stopOrderStatusAll
+        case 2: self = .stopOrderStatusActive
+        case 3: self = .stopOrderStatusExecuted
+        case 4: self = .stopOrderStatusCanceled
+        case 5: self = .stopOrderStatusExpired
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .stopOrderStatusUnspecified: return 0
+        case .stopOrderStatusAll: return 1
+        case .stopOrderStatusActive: return 2
+        case .stopOrderStatusExecuted: return 3
+        case .stopOrderStatusCanceled: return 4
+        case .stopOrderStatusExpired: return 5
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption] = [
-    .stopOrderStatusUnspecified,
-    .stopOrderStatusAll,
-    .stopOrderStatusActive,
-    .stopOrderStatusExecuted,
-    .stopOrderStatusCanceled,
-    .stopOrderStatusExpired,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption] = [
+        .stopOrderStatusUnspecified,
+        .stopOrderStatusAll,
+        .stopOrderStatusActive,
+        .stopOrderStatusExecuted,
+        .stopOrderStatusCanceled,
+        .stopOrderStatusExpired,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Тип выставляемой заявки.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case unspecified // = 0
-
-  ///Заявка по рыночной цене.
-  case market // = 1
-
-  ///Лимитная заявка.
-  case limit // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .market
-    case 2: self = .limit
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case unspecified // = 0
+    
+    ///Заявка по рыночной цене.
+    case market // = 1
+    
+    ///Лимитная заявка.
+    case limit // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .market: return 1
-    case .limit: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .market
+        case 2: self = .limit
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .market: return 1
+        case .limit: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType] = [
-    .unspecified,
-    .market,
-    .limit,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType] = [
+        .unspecified,
+        .market,
+        .limit,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Тип TakeProfit-заявки.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case unspecified // = 0
-
-  ///Обычная заявка, значение по умолчанию.
-  case regular // = 1
-
-  ///Трейлинг-стоп.
-  case trailing // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .regular
-    case 2: self = .trailing
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case unspecified // = 0
+    
+    ///Обычная заявка, значение по умолчанию.
+    case regular // = 1
+    
+    ///Трейлинг-стоп.
+    case trailing // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .regular: return 1
-    case .trailing: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .regular
+        case 2: self = .trailing
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .regular: return 1
+        case .trailing: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType] = [
-    .unspecified,
-    .regular,
-    .trailing,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType] = [
+        .unspecified,
+        .regular,
+        .trailing,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Тип параметров значений трейлинг-стопа.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case trailingValueUnspecified // = 0
-
-  ///Абсолютное значение в единицах цены.
-  case trailingValueAbsolute // = 1
-
-  ///Относительное значение в процентах.
-  case trailingValueRelative // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .trailingValueUnspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .trailingValueUnspecified
-    case 1: self = .trailingValueAbsolute
-    case 2: self = .trailingValueRelative
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case trailingValueUnspecified // = 0
+    
+    ///Абсолютное значение в единицах цены.
+    case trailingValueAbsolute // = 1
+    
+    ///Относительное значение в процентах.
+    case trailingValueRelative // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .trailingValueUnspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .trailingValueUnspecified: return 0
-    case .trailingValueAbsolute: return 1
-    case .trailingValueRelative: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .trailingValueUnspecified
+        case 1: self = .trailingValueAbsolute
+        case 2: self = .trailingValueRelative
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .trailingValueUnspecified: return 0
+        case .trailingValueAbsolute: return 1
+        case .trailingValueRelative: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType] = [
-    .trailingValueUnspecified,
-    .trailingValueAbsolute,
-    .trailingValueRelative,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType] = [
+        .trailingValueUnspecified,
+        .trailingValueAbsolute,
+        .trailingValueRelative,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Статус трейлинг-стопа.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_TrailingStopStatus: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Значение не указано.
-  case trailingStopUnspecified // = 0
-
-  ///Активный.
-  case trailingStopActive // = 1
-
-  ///Активированный.
-  case trailingStopActivated // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .trailingStopUnspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .trailingStopUnspecified
-    case 1: self = .trailingStopActive
-    case 2: self = .trailingStopActivated
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Значение не указано.
+    case trailingStopUnspecified // = 0
+    
+    ///Активный.
+    case trailingStopActive // = 1
+    
+    ///Активированный.
+    case trailingStopActivated // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .trailingStopUnspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .trailingStopUnspecified: return 0
-    case .trailingStopActive: return 1
-    case .trailingStopActivated: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .trailingStopUnspecified
+        case 1: self = .trailingStopActive
+        case 2: self = .trailingStopActivated
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .trailingStopUnspecified: return 0
+        case .trailingStopActive: return 1
+        case .trailingStopActivated: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TrailingStopStatus: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TrailingStopStatus] = [
-    .trailingStopUnspecified,
-    .trailingStopActive,
-    .trailingStopActivated,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TrailingStopStatus] = [
+        .trailingStopUnspecified,
+        .trailingStopActive,
+        .trailingStopActivated,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Запрос выставления стоп-заявки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: String {
-    get {return _storage._figi ?? String()}
-    set {_uniqueStorage()._figi = newValue}
-  }
-  /// Returns true if `figi` has been explicitly set.
-  public var hasFigi: Bool {return _storage._figi != nil}
-  /// Clears the value of `figi`. Subsequent reads from it will return its default value.
-  public mutating func clearFigi() {_uniqueStorage()._figi = nil}
-
-  ///Количество лотов.
-  public var quantity: Int64 {
-    get {return _storage._quantity}
-    set {_uniqueStorage()._quantity = newValue}
-  }
-
-  ///Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
-  public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._price = newValue}
-  }
-  /// Returns true if `price` has been explicitly set.
-  public var hasPrice: Bool {return _storage._price != nil}
-  /// Clears the value of `price`. Subsequent reads from it will return its default value.
-  public mutating func clearPrice() {_uniqueStorage()._price = nil}
-
-  ///Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
-  public var stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._stopPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._stopPrice = newValue}
-  }
-  /// Returns true if `stopPrice` has been explicitly set.
-  public var hasStopPrice: Bool {return _storage._stopPrice != nil}
-  /// Clears the value of `stopPrice`. Subsequent reads from it will return its default value.
-  public mutating func clearStopPrice() {_uniqueStorage()._stopPrice = nil}
-
-  ///Направление операции.
-  public var direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection {
-    get {return _storage._direction}
-    set {_uniqueStorage()._direction = newValue}
-  }
-
-  ///Номер счета.
-  public var accountID: String {
-    get {return _storage._accountID}
-    set {_uniqueStorage()._accountID = newValue}
-  }
-
-  ///Тип экспирации заявки.
-  public var expirationType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType {
-    get {return _storage._expirationType}
-    set {_uniqueStorage()._expirationType = newValue}
-  }
-
-  ///Тип заявки.
-  public var stopOrderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType {
-    get {return _storage._stopOrderType}
-    set {_uniqueStorage()._stopOrderType = newValue}
-  }
-
-  ///Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
-  public var expireDate: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._expireDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._expireDate = newValue}
-  }
-  /// Returns true if `expireDate` has been explicitly set.
-  public var hasExpireDate: Bool {return _storage._expireDate != nil}
-  /// Clears the value of `expireDate`. Subsequent reads from it will return its default value.
-  public mutating func clearExpireDate() {_uniqueStorage()._expireDate = nil}
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String {
-    get {return _storage._instrumentID}
-    set {_uniqueStorage()._instrumentID = newValue}
-  }
-
-  ///Тип дочерней биржевой заявки.
-  public var exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType {
-    get {return _storage._exchangeOrderType}
-    set {_uniqueStorage()._exchangeOrderType = newValue}
-  }
-
-  ///Подтип стоп-заявки — `TakeProfit`.
-  public var takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType {
-    get {return _storage._takeProfitType}
-    set {_uniqueStorage()._takeProfitType = newValue}
-  }
-
-  ///Массив с параметрами трейлинг-стопа.
-  public var trailingData: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData {
-    get {return _storage._trailingData ?? Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData()}
-    set {_uniqueStorage()._trailingData = newValue}
-  }
-  /// Returns true if `trailingData` has been explicitly set.
-  public var hasTrailingData: Bool {return _storage._trailingData != nil}
-  /// Clears the value of `trailingData`. Subsequent reads from it will return its default value.
-  public mutating func clearTrailingData() {_uniqueStorage()._trailingData = nil}
-
-  ///Тип цены.
-  public var priceType: Tinkoff_Public_Invest_Api_Contract_V1_PriceType {
-    get {return _storage._priceType}
-    set {_uniqueStorage()._priceType = newValue}
-  }
-
-  ///Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
-  public var orderID: String {
-    get {return _storage._orderID}
-    set {_uniqueStorage()._orderID = newValue}
-  }
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public struct TrailingData {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
-
-    ///Отступ.
-    public var indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _indent ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_indent = newValue}
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: String {
+        get {return _storage._figi ?? String()}
+        set {_uniqueStorage()._figi = newValue}
     }
-    /// Returns true if `indent` has been explicitly set.
-    public var hasIndent: Bool {return self._indent != nil}
-    /// Clears the value of `indent`. Subsequent reads from it will return its default value.
-    public mutating func clearIndent() {self._indent = nil}
-
-    ///Тип величины отступа.
-    public var indentType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
-
-    ///Размер защитного спреда.
-    public var spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _spread ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_spread = newValue}
+    /// Returns true if `figi` has been explicitly set.
+    public var hasFigi: Bool {return _storage._figi != nil}
+    /// Clears the value of `figi`. Subsequent reads from it will return its default value.
+    public mutating func clearFigi() {_uniqueStorage()._figi = nil}
+    
+    ///Количество лотов.
+    public var quantity: Int64 {
+        get {return _storage._quantity}
+        set {_uniqueStorage()._quantity = newValue}
     }
-    /// Returns true if `spread` has been explicitly set.
-    public var hasSpread: Bool {return self._spread != nil}
-    /// Clears the value of `spread`. Subsequent reads from it will return its default value.
-    public mutating func clearSpread() {self._spread = nil}
-
-    ///Тип величины защитного спреда.
-    public var spreadType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
-
+    
+    ///Цена за 1 инструмент биржевой заявки, которая будет выставлена при срабатывании по достижению `stop_price`. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+    public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._price = newValue}
+    }
+    /// Returns true if `price` has been explicitly set.
+    public var hasPrice: Bool {return _storage._price != nil}
+    /// Clears the value of `price`. Subsequent reads from it will return its default value.
+    public mutating func clearPrice() {_uniqueStorage()._price = nil}
+    
+    ///Стоп-цена заявки за 1 инструмент. При достижении стоп-цены происходит активация стоп-заявки, в результате чего выставляется биржевая заявка. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+    public var stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._stopPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._stopPrice = newValue}
+    }
+    /// Returns true if `stopPrice` has been explicitly set.
+    public var hasStopPrice: Bool {return _storage._stopPrice != nil}
+    /// Clears the value of `stopPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearStopPrice() {_uniqueStorage()._stopPrice = nil}
+    
+    ///Направление операции.
+    public var direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection {
+        get {return _storage._direction}
+        set {_uniqueStorage()._direction = newValue}
+    }
+    
+    ///Номер счета.
+    public var accountID: String {
+        get {return _storage._accountID}
+        set {_uniqueStorage()._accountID = newValue}
+    }
+    
+    ///Тип экспирации заявки.
+    public var expirationType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType {
+        get {return _storage._expirationType}
+        set {_uniqueStorage()._expirationType = newValue}
+    }
+    
+    ///Тип заявки.
+    public var stopOrderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType {
+        get {return _storage._stopOrderType}
+        set {_uniqueStorage()._stopOrderType = newValue}
+    }
+    
+    ///Дата и время окончания действия стоп-заявки по UTC. Для `ExpirationType = GoodTillDate` заполнение обязательно, для `GoodTillCancel` игнорируется.
+    public var expireDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._expireDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._expireDate = newValue}
+    }
+    /// Returns true if `expireDate` has been explicitly set.
+    public var hasExpireDate: Bool {return _storage._expireDate != nil}
+    /// Clears the value of `expireDate`. Subsequent reads from it will return its default value.
+    public mutating func clearExpireDate() {_uniqueStorage()._expireDate = nil}
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String {
+        get {return _storage._instrumentID}
+        set {_uniqueStorage()._instrumentID = newValue}
+    }
+    
+    ///Тип дочерней биржевой заявки.
+    public var exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType {
+        get {return _storage._exchangeOrderType}
+        set {_uniqueStorage()._exchangeOrderType = newValue}
+    }
+    
+    ///Подтип стоп-заявки — `TakeProfit`.
+    public var takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType {
+        get {return _storage._takeProfitType}
+        set {_uniqueStorage()._takeProfitType = newValue}
+    }
+    
+    ///Массив с параметрами трейлинг-стопа.
+    public var trailingData: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData {
+        get {return _storage._trailingData ?? Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData()}
+        set {_uniqueStorage()._trailingData = newValue}
+    }
+    /// Returns true if `trailingData` has been explicitly set.
+    public var hasTrailingData: Bool {return _storage._trailingData != nil}
+    /// Clears the value of `trailingData`. Subsequent reads from it will return its default value.
+    public mutating func clearTrailingData() {_uniqueStorage()._trailingData = nil}
+    
+    ///Тип цены.
+    public var priceType: Tinkoff_Public_Invest_Api_Contract_V1_PriceType {
+        get {return _storage._priceType}
+        set {_uniqueStorage()._priceType = newValue}
+    }
+    
+    ///Идентификатор запроса выставления поручения для целей идемпотентности в формате `UID`. Максимальная длина — 36 символов.
+    public var orderID: String {
+        get {return _storage._orderID}
+        set {_uniqueStorage()._orderID = newValue}
+    }
+    
     public var unknownFields = SwiftProtobuf.UnknownStorage()
-
+    
+    public struct TrailingData {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+        
+        ///Отступ.
+        public var indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _indent ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_indent = newValue}
+        }
+        /// Returns true if `indent` has been explicitly set.
+        public var hasIndent: Bool {return self._indent != nil}
+        /// Clears the value of `indent`. Subsequent reads from it will return its default value.
+        public mutating func clearIndent() {self._indent = nil}
+        
+        ///Тип величины отступа.
+        public var indentType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
+        
+        ///Размер защитного спреда.
+        public var spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _spread ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_spread = newValue}
+        }
+        /// Returns true if `spread` has been explicitly set.
+        public var hasSpread: Bool {return self._spread != nil}
+        /// Clears the value of `spread`. Subsequent reads from it will return its default value.
+        public mutating func clearSpread() {self._spread = nil}
+        
+        ///Тип величины защитного спреда.
+        public var spreadType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
+        
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+        
+        public init() {}
+        
+        fileprivate var _indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    }
+    
     public init() {}
-
-    fileprivate var _indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  }
-
-  public init() {}
-
-  fileprivate var _storage = _StorageClass.defaultInstance
+    
+    fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 ///Результат выставления стоп-заявки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Уникальный идентификатор стоп-заявки.
-  public var stopOrderID: String = String()
-
-  ///Идентификатор ключа идемпотентности, переданный клиентом, в формате `UID`. Максимальная длина 36 — символов.
-  public var orderRequestID: String = String()
-
-  ///Метадата.
-  public var responseMetadata: Tinkoff_Public_Invest_Api_Contract_V1_ResponseMetadata {
-    get {return _responseMetadata ?? Tinkoff_Public_Invest_Api_Contract_V1_ResponseMetadata()}
-    set {_responseMetadata = newValue}
-  }
-  /// Returns true if `responseMetadata` has been explicitly set.
-  public var hasResponseMetadata: Bool {return self._responseMetadata != nil}
-  /// Clears the value of `responseMetadata`. Subsequent reads from it will return its default value.
-  public mutating func clearResponseMetadata() {self._responseMetadata = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _responseMetadata: Tinkoff_Public_Invest_Api_Contract_V1_ResponseMetadata? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Уникальный идентификатор стоп-заявки.
+    public var stopOrderID: String = String()
+    
+    ///Идентификатор ключа идемпотентности, переданный клиентом, в формате `UID`. Максимальная длина 36 — символов.
+    public var orderRequestID: String = String()
+    
+    ///Метадата.
+    public var responseMetadata: Tinkoff_Public_Invest_Api_Contract_V1_ResponseMetadata {
+        get {return _responseMetadata ?? Tinkoff_Public_Invest_Api_Contract_V1_ResponseMetadata()}
+        set {_responseMetadata = newValue}
+    }
+    /// Returns true if `responseMetadata` has been explicitly set.
+    public var hasResponseMetadata: Bool {return self._responseMetadata != nil}
+    /// Clears the value of `responseMetadata`. Subsequent reads from it will return its default value.
+    public mutating func clearResponseMetadata() {self._responseMetadata = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _responseMetadata: Tinkoff_Public_Invest_Api_Contract_V1_ResponseMetadata? = nil
 }
 
 ///Запрос получения списка активных стоп-заявок.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Идентификатор счета клиента.
-  public var accountID: String = String()
-
-  ///Статус заявок.
-  public var status: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption = .stopOrderStatusUnspecified
-
-  ///Левая граница.
-  public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_from = newValue}
-  }
-  /// Returns true if `from` has been explicitly set.
-  public var hasFrom: Bool {return self._from != nil}
-  /// Clears the value of `from`. Subsequent reads from it will return its default value.
-  public mutating func clearFrom() {self._from = nil}
-
-  ///Правая граница.
-  public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_to = newValue}
-  }
-  /// Returns true if `to` has been explicitly set.
-  public var hasTo: Bool {return self._to != nil}
-  /// Clears the value of `to`. Subsequent reads from it will return its default value.
-  public mutating func clearTo() {self._to = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Идентификатор счета клиента.
+    public var accountID: String = String()
+    
+    ///Статус заявок.
+    public var status: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption = .stopOrderStatusUnspecified
+    
+    ///Левая граница.
+    public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_from = newValue}
+    }
+    /// Returns true if `from` has been explicitly set.
+    public var hasFrom: Bool {return self._from != nil}
+    /// Clears the value of `from`. Subsequent reads from it will return its default value.
+    public mutating func clearFrom() {self._from = nil}
+    
+    ///Правая граница.
+    public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_to = newValue}
+    }
+    /// Returns true if `to` has been explicitly set.
+    public var hasTo: Bool {return self._to != nil}
+    /// Clears the value of `to`. Subsequent reads from it will return its default value.
+    public mutating func clearTo() {self._to = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 ///Список активных стоп-заявок.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив стоп-заявок по счету.
-  public var stopOrders: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrder] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Массив стоп-заявок по счету.
+    public var stopOrders: [Tinkoff_Public_Invest_Api_Contract_V1_StopOrder] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос отмены выставленной стоп-заявки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Идентификатор счета клиента.
-  public var accountID: String = String()
-
-  ///Уникальный идентификатор стоп-заявки.
-  public var stopOrderID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Идентификатор счета клиента.
+    public var accountID: String = String()
+    
+    ///Уникальный идентификатор стоп-заявки.
+    public var stopOrderID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Результат отмены выставленной стоп-заявки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Время отмены заявки по UTC.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return self._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {self._time = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Время отмены заявки по UTC.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return self._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {self._time = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 ///Информация о стоп-заявке.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_StopOrder {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Уникальный идентификатор стоп-заявки.
-  public var stopOrderID: String {
-    get {return _storage._stopOrderID}
-    set {_uniqueStorage()._stopOrderID = newValue}
-  }
-
-  ///Запрошено лотов.
-  public var lotsRequested: Int64 {
-    get {return _storage._lotsRequested}
-    set {_uniqueStorage()._lotsRequested = newValue}
-  }
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String {
-    get {return _storage._figi}
-    set {_uniqueStorage()._figi = newValue}
-  }
-
-  ///Направление операции.
-  public var direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection {
-    get {return _storage._direction}
-    set {_uniqueStorage()._direction = newValue}
-  }
-
-  ///Валюта стоп-заявки.
-  public var currency: String {
-    get {return _storage._currency}
-    set {_uniqueStorage()._currency = newValue}
-  }
-
-  ///Тип стоп-заявки.
-  public var orderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType {
-    get {return _storage._orderType}
-    set {_uniqueStorage()._orderType = newValue}
-  }
-
-  ///Дата и время выставления заявки по UTC.
-  public var createDate: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._createDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._createDate = newValue}
-  }
-  /// Returns true if `createDate` has been explicitly set.
-  public var hasCreateDate: Bool {return _storage._createDate != nil}
-  /// Clears the value of `createDate`. Subsequent reads from it will return its default value.
-  public mutating func clearCreateDate() {_uniqueStorage()._createDate = nil}
-
-  ///Дата и время конвертации стоп-заявки в биржевую по UTC.
-  public var activationDateTime: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._activationDateTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._activationDateTime = newValue}
-  }
-  /// Returns true if `activationDateTime` has been explicitly set.
-  public var hasActivationDateTime: Bool {return _storage._activationDateTime != nil}
-  /// Clears the value of `activationDateTime`. Subsequent reads from it will return its default value.
-  public mutating func clearActivationDateTime() {_uniqueStorage()._activationDateTime = nil}
-
-  ///Дата и время снятия заявки по UTC.
-  public var expirationTime: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._expirationTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._expirationTime = newValue}
-  }
-  /// Returns true if `expirationTime` has been explicitly set.
-  public var hasExpirationTime: Bool {return _storage._expirationTime != nil}
-  /// Clears the value of `expirationTime`. Subsequent reads from it will return its default value.
-  public mutating func clearExpirationTime() {_uniqueStorage()._expirationTime = nil}
-
-  ///Цена заявки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
-  public var price: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
-    get {return _storage._price ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
-    set {_uniqueStorage()._price = newValue}
-  }
-  /// Returns true if `price` has been explicitly set.
-  public var hasPrice: Bool {return _storage._price != nil}
-  /// Clears the value of `price`. Subsequent reads from it will return its default value.
-  public mutating func clearPrice() {_uniqueStorage()._price = nil}
-
-  ///Цена активации стоп-заявки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
-  public var stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
-    get {return _storage._stopPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
-    set {_uniqueStorage()._stopPrice = newValue}
-  }
-  /// Returns true if `stopPrice` has been explicitly set.
-  public var hasStopPrice: Bool {return _storage._stopPrice != nil}
-  /// Clears the value of `stopPrice`. Subsequent reads from it will return its default value.
-  public mutating func clearStopPrice() {_uniqueStorage()._stopPrice = nil}
-
-  ///`instrument_uid`-идентификатор инструмента.
-  public var instrumentUid: String {
-    get {return _storage._instrumentUid}
-    set {_uniqueStorage()._instrumentUid = newValue}
-  }
-
-  ///Подтип стоп-заявки — `TakeProfit`.
-  public var takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType {
-    get {return _storage._takeProfitType}
-    set {_uniqueStorage()._takeProfitType = newValue}
-  }
-
-  ///Параметры трейлинг-стопа.
-  public var trailingData: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData {
-    get {return _storage._trailingData ?? Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData()}
-    set {_uniqueStorage()._trailingData = newValue}
-  }
-  /// Returns true if `trailingData` has been explicitly set.
-  public var hasTrailingData: Bool {return _storage._trailingData != nil}
-  /// Clears the value of `trailingData`. Subsequent reads from it will return its default value.
-  public mutating func clearTrailingData() {_uniqueStorage()._trailingData = nil}
-
-  ///Статус заявки.
-  public var status: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption {
-    get {return _storage._status}
-    set {_uniqueStorage()._status = newValue}
-  }
-
-  ///Тип дочерней биржевой заявки для тейкпрофита.
-  public var exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType {
-    get {return _storage._exchangeOrderType}
-    set {_uniqueStorage()._exchangeOrderType = newValue}
-  }
-
-  ///Идентификатор биржевой заявки.
-  public var exchangeOrderID: String {
-    get {return _storage._exchangeOrderID ?? String()}
-    set {_uniqueStorage()._exchangeOrderID = newValue}
-  }
-  /// Returns true if `exchangeOrderID` has been explicitly set.
-  public var hasExchangeOrderID: Bool {return _storage._exchangeOrderID != nil}
-  /// Clears the value of `exchangeOrderID`. Subsequent reads from it will return its default value.
-  public mutating func clearExchangeOrderID() {_uniqueStorage()._exchangeOrderID = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public struct TrailingData {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
-
-    ///Отступ.
-    public var indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _indent ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_indent = newValue}
+    
+    ///Уникальный идентификатор стоп-заявки.
+    public var stopOrderID: String {
+        get {return _storage._stopOrderID}
+        set {_uniqueStorage()._stopOrderID = newValue}
     }
-    /// Returns true if `indent` has been explicitly set.
-    public var hasIndent: Bool {return self._indent != nil}
-    /// Clears the value of `indent`. Subsequent reads from it will return its default value.
-    public mutating func clearIndent() {self._indent = nil}
-
-    ///Тип величины отступа.
-    public var indentType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
-
-    ///Размер защитного спреда.
-    public var spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _spread ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_spread = newValue}
+    
+    ///Запрошено лотов.
+    public var lotsRequested: Int64 {
+        get {return _storage._lotsRequested}
+        set {_uniqueStorage()._lotsRequested = newValue}
     }
-    /// Returns true if `spread` has been explicitly set.
-    public var hasSpread: Bool {return self._spread != nil}
-    /// Clears the value of `spread`. Subsequent reads from it will return its default value.
-    public mutating func clearSpread() {self._spread = nil}
-
-    ///Тип величины защитного спреда.
-    public var spreadType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
-
-    ///Статус трейлинг-стопа.
-    public var status: Tinkoff_Public_Invest_Api_Contract_V1_TrailingStopStatus = .trailingStopUnspecified
-
-    ///Цена исполнения.
-    public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_price = newValue}
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String {
+        get {return _storage._figi}
+        set {_uniqueStorage()._figi = newValue}
+    }
+    
+    ///Направление операции.
+    public var direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection {
+        get {return _storage._direction}
+        set {_uniqueStorage()._direction = newValue}
+    }
+    
+    ///Валюта стоп-заявки.
+    public var currency: String {
+        get {return _storage._currency}
+        set {_uniqueStorage()._currency = newValue}
+    }
+    
+    ///Тип стоп-заявки.
+    public var orderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType {
+        get {return _storage._orderType}
+        set {_uniqueStorage()._orderType = newValue}
+    }
+    
+    ///Дата и время выставления заявки по UTC.
+    public var createDate: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._createDate ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._createDate = newValue}
+    }
+    /// Returns true if `createDate` has been explicitly set.
+    public var hasCreateDate: Bool {return _storage._createDate != nil}
+    /// Clears the value of `createDate`. Subsequent reads from it will return its default value.
+    public mutating func clearCreateDate() {_uniqueStorage()._createDate = nil}
+    
+    ///Дата и время конвертации стоп-заявки в биржевую по UTC.
+    public var activationDateTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._activationDateTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._activationDateTime = newValue}
+    }
+    /// Returns true if `activationDateTime` has been explicitly set.
+    public var hasActivationDateTime: Bool {return _storage._activationDateTime != nil}
+    /// Clears the value of `activationDateTime`. Subsequent reads from it will return its default value.
+    public mutating func clearActivationDateTime() {_uniqueStorage()._activationDateTime = nil}
+    
+    ///Дата и время снятия заявки по UTC.
+    public var expirationTime: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._expirationTime ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._expirationTime = newValue}
+    }
+    /// Returns true if `expirationTime` has been explicitly set.
+    public var hasExpirationTime: Bool {return _storage._expirationTime != nil}
+    /// Clears the value of `expirationTime`. Subsequent reads from it will return its default value.
+    public mutating func clearExpirationTime() {_uniqueStorage()._expirationTime = nil}
+    
+    ///Цена заявки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+    public var price: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
+        get {return _storage._price ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
+        set {_uniqueStorage()._price = newValue}
     }
     /// Returns true if `price` has been explicitly set.
-    public var hasPrice: Bool {return self._price != nil}
+    public var hasPrice: Bool {return _storage._price != nil}
     /// Clears the value of `price`. Subsequent reads from it will return its default value.
-    public mutating func clearPrice() {self._price = nil}
-
-    ///Локальный экстремум.
-    public var extr: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _extr ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_extr = newValue}
+    public mutating func clearPrice() {_uniqueStorage()._price = nil}
+    
+    ///Цена активации стоп-заявки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента.
+    public var stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
+        get {return _storage._stopPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue()}
+        set {_uniqueStorage()._stopPrice = newValue}
     }
-    /// Returns true if `extr` has been explicitly set.
-    public var hasExtr: Bool {return self._extr != nil}
-    /// Clears the value of `extr`. Subsequent reads from it will return its default value.
-    public mutating func clearExtr() {self._extr = nil}
-
+    /// Returns true if `stopPrice` has been explicitly set.
+    public var hasStopPrice: Bool {return _storage._stopPrice != nil}
+    /// Clears the value of `stopPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearStopPrice() {_uniqueStorage()._stopPrice = nil}
+    
+    ///`instrument_uid`-идентификатор инструмента.
+    public var instrumentUid: String {
+        get {return _storage._instrumentUid}
+        set {_uniqueStorage()._instrumentUid = newValue}
+    }
+    
+    ///Подтип стоп-заявки — `TakeProfit`.
+    public var takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType {
+        get {return _storage._takeProfitType}
+        set {_uniqueStorage()._takeProfitType = newValue}
+    }
+    
+    ///Параметры трейлинг-стопа.
+    public var trailingData: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData {
+        get {return _storage._trailingData ?? Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData()}
+        set {_uniqueStorage()._trailingData = newValue}
+    }
+    /// Returns true if `trailingData` has been explicitly set.
+    public var hasTrailingData: Bool {return _storage._trailingData != nil}
+    /// Clears the value of `trailingData`. Subsequent reads from it will return its default value.
+    public mutating func clearTrailingData() {_uniqueStorage()._trailingData = nil}
+    
+    ///Статус заявки.
+    public var status: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption {
+        get {return _storage._status}
+        set {_uniqueStorage()._status = newValue}
+    }
+    
+    ///Тип дочерней биржевой заявки для тейкпрофита.
+    public var exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType {
+        get {return _storage._exchangeOrderType}
+        set {_uniqueStorage()._exchangeOrderType = newValue}
+    }
+    
+    ///Идентификатор биржевой заявки.
+    public var exchangeOrderID: String {
+        get {return _storage._exchangeOrderID ?? String()}
+        set {_uniqueStorage()._exchangeOrderID = newValue}
+    }
+    /// Returns true if `exchangeOrderID` has been explicitly set.
+    public var hasExchangeOrderID: Bool {return _storage._exchangeOrderID != nil}
+    /// Clears the value of `exchangeOrderID`. Subsequent reads from it will return its default value.
+    public mutating func clearExchangeOrderID() {_uniqueStorage()._exchangeOrderID = nil}
+    
     public var unknownFields = SwiftProtobuf.UnknownStorage()
-
+    
+    public struct TrailingData {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+        
+        ///Отступ.
+        public var indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _indent ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_indent = newValue}
+        }
+        /// Returns true if `indent` has been explicitly set.
+        public var hasIndent: Bool {return self._indent != nil}
+        /// Clears the value of `indent`. Subsequent reads from it will return its default value.
+        public mutating func clearIndent() {self._indent = nil}
+        
+        ///Тип величины отступа.
+        public var indentType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
+        
+        ///Размер защитного спреда.
+        public var spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _spread ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_spread = newValue}
+        }
+        /// Returns true if `spread` has been explicitly set.
+        public var hasSpread: Bool {return self._spread != nil}
+        /// Clears the value of `spread`. Subsequent reads from it will return its default value.
+        public mutating func clearSpread() {self._spread = nil}
+        
+        ///Тип величины защитного спреда.
+        public var spreadType: Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType = .trailingValueUnspecified
+        
+        ///Статус трейлинг-стопа.
+        public var status: Tinkoff_Public_Invest_Api_Contract_V1_TrailingStopStatus = .trailingStopUnspecified
+        
+        ///Цена исполнения.
+        public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_price = newValue}
+        }
+        /// Returns true if `price` has been explicitly set.
+        public var hasPrice: Bool {return self._price != nil}
+        /// Clears the value of `price`. Subsequent reads from it will return its default value.
+        public mutating func clearPrice() {self._price = nil}
+        
+        ///Локальный экстремум.
+        public var extr: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _extr ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_extr = newValue}
+        }
+        /// Returns true if `extr` has been explicitly set.
+        public var hasExtr: Bool {return self._extr != nil}
+        /// Clears the value of `extr`. Subsequent reads from it will return its default value.
+        public mutating func clearExtr() {self._extr = nil}
+        
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+        
+        public init() {}
+        
+        fileprivate var _indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _extr: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    }
+    
     public init() {}
-
-    fileprivate var _indent: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _spread: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _extr: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  }
-
-  public init() {}
-
-  fileprivate var _storage = _StorageClass.defaultInstance
+    
+    fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -969,779 +969,779 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData: @uncheck
 fileprivate let _protobuf_package = "tinkoff.public.invest.api.contract.v1"
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "STOP_ORDER_DIRECTION_UNSPECIFIED"),
-    1: .same(proto: "STOP_ORDER_DIRECTION_BUY"),
-    2: .same(proto: "STOP_ORDER_DIRECTION_SELL"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "STOP_ORDER_DIRECTION_UNSPECIFIED"),
+        1: .same(proto: "STOP_ORDER_DIRECTION_BUY"),
+        2: .same(proto: "STOP_ORDER_DIRECTION_SELL"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "STOP_ORDER_EXPIRATION_TYPE_UNSPECIFIED"),
-    1: .same(proto: "STOP_ORDER_EXPIRATION_TYPE_GOOD_TILL_CANCEL"),
-    2: .same(proto: "STOP_ORDER_EXPIRATION_TYPE_GOOD_TILL_DATE"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "STOP_ORDER_EXPIRATION_TYPE_UNSPECIFIED"),
+        1: .same(proto: "STOP_ORDER_EXPIRATION_TYPE_GOOD_TILL_CANCEL"),
+        2: .same(proto: "STOP_ORDER_EXPIRATION_TYPE_GOOD_TILL_DATE"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "STOP_ORDER_TYPE_UNSPECIFIED"),
-    1: .same(proto: "STOP_ORDER_TYPE_TAKE_PROFIT"),
-    2: .same(proto: "STOP_ORDER_TYPE_STOP_LOSS"),
-    3: .same(proto: "STOP_ORDER_TYPE_STOP_LIMIT"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "STOP_ORDER_TYPE_UNSPECIFIED"),
+        1: .same(proto: "STOP_ORDER_TYPE_TAKE_PROFIT"),
+        2: .same(proto: "STOP_ORDER_TYPE_STOP_LOSS"),
+        3: .same(proto: "STOP_ORDER_TYPE_STOP_LIMIT"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "STOP_ORDER_STATUS_UNSPECIFIED"),
-    1: .same(proto: "STOP_ORDER_STATUS_ALL"),
-    2: .same(proto: "STOP_ORDER_STATUS_ACTIVE"),
-    3: .same(proto: "STOP_ORDER_STATUS_EXECUTED"),
-    4: .same(proto: "STOP_ORDER_STATUS_CANCELED"),
-    5: .same(proto: "STOP_ORDER_STATUS_EXPIRED"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "STOP_ORDER_STATUS_UNSPECIFIED"),
+        1: .same(proto: "STOP_ORDER_STATUS_ALL"),
+        2: .same(proto: "STOP_ORDER_STATUS_ACTIVE"),
+        3: .same(proto: "STOP_ORDER_STATUS_EXECUTED"),
+        4: .same(proto: "STOP_ORDER_STATUS_CANCELED"),
+        5: .same(proto: "STOP_ORDER_STATUS_EXPIRED"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "EXCHANGE_ORDER_TYPE_UNSPECIFIED"),
-    1: .same(proto: "EXCHANGE_ORDER_TYPE_MARKET"),
-    2: .same(proto: "EXCHANGE_ORDER_TYPE_LIMIT"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "EXCHANGE_ORDER_TYPE_UNSPECIFIED"),
+        1: .same(proto: "EXCHANGE_ORDER_TYPE_MARKET"),
+        2: .same(proto: "EXCHANGE_ORDER_TYPE_LIMIT"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "TAKE_PROFIT_TYPE_UNSPECIFIED"),
-    1: .same(proto: "TAKE_PROFIT_TYPE_REGULAR"),
-    2: .same(proto: "TAKE_PROFIT_TYPE_TRAILING"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "TAKE_PROFIT_TYPE_UNSPECIFIED"),
+        1: .same(proto: "TAKE_PROFIT_TYPE_REGULAR"),
+        2: .same(proto: "TAKE_PROFIT_TYPE_TRAILING"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TrailingValueType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "TRAILING_VALUE_UNSPECIFIED"),
-    1: .same(proto: "TRAILING_VALUE_ABSOLUTE"),
-    2: .same(proto: "TRAILING_VALUE_RELATIVE"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "TRAILING_VALUE_UNSPECIFIED"),
+        1: .same(proto: "TRAILING_VALUE_ABSOLUTE"),
+        2: .same(proto: "TRAILING_VALUE_RELATIVE"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TrailingStopStatus: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "TRAILING_STOP_UNSPECIFIED"),
-    1: .same(proto: "TRAILING_STOP_ACTIVE"),
-    2: .same(proto: "TRAILING_STOP_ACTIVATED"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "TRAILING_STOP_UNSPECIFIED"),
+        1: .same(proto: "TRAILING_STOP_ACTIVE"),
+        2: .same(proto: "TRAILING_STOP_ACTIVATED"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".PostStopOrderRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "quantity"),
-    3: .same(proto: "price"),
-    4: .standard(proto: "stop_price"),
-    5: .same(proto: "direction"),
-    6: .standard(proto: "account_id"),
-    7: .standard(proto: "expiration_type"),
-    8: .standard(proto: "stop_order_type"),
-    9: .standard(proto: "expire_date"),
-    10: .standard(proto: "instrument_id"),
-    11: .standard(proto: "exchange_order_type"),
-    12: .standard(proto: "take_profit_type"),
-    13: .standard(proto: "trailing_data"),
-    14: .standard(proto: "price_type"),
-    15: .standard(proto: "order_id"),
-  ]
-
-  fileprivate class _StorageClass {
-    var _figi: String? = nil
-    var _quantity: Int64 = 0
-    var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection = .unspecified
-    var _accountID: String = String()
-    var _expirationType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType = .unspecified
-    var _stopOrderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType = .unspecified
-    var _expireDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _instrumentID: String = String()
-    var _exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType = .unspecified
-    var _takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType = .unspecified
-    var _trailingData: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData? = nil
-    var _priceType: Tinkoff_Public_Invest_Api_Contract_V1_PriceType = .unspecified
-    var _orderID: String = String()
-
-    static let defaultInstance = _StorageClass()
-
-    private init() {}
-
-    init(copying source: _StorageClass) {
-      _figi = source._figi
-      _quantity = source._quantity
-      _price = source._price
-      _stopPrice = source._stopPrice
-      _direction = source._direction
-      _accountID = source._accountID
-      _expirationType = source._expirationType
-      _stopOrderType = source._stopOrderType
-      _expireDate = source._expireDate
-      _instrumentID = source._instrumentID
-      _exchangeOrderType = source._exchangeOrderType
-      _takeProfitType = source._takeProfitType
-      _trailingData = source._trailingData
-      _priceType = source._priceType
-      _orderID = source._orderID
-    }
-  }
-
-  fileprivate mutating func _uniqueStorage() -> _StorageClass {
-    if !isKnownUniquelyReferenced(&_storage) {
-      _storage = _StorageClass(copying: _storage)
-    }
-    return _storage
-  }
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    _ = _uniqueStorage()
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      while let fieldNumber = try decoder.nextFieldNumber() {
-        // The use of inline closures is to circumvent an issue where the compiler
-        // allocates stack space for every case branch when no optimizations are
-        // enabled. https://github.com/apple/swift-protobuf/issues/1034
-        switch fieldNumber {
-        case 1: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
-        case 2: try { try decoder.decodeSingularInt64Field(value: &_storage._quantity) }()
-        case 3: try { try decoder.decodeSingularMessageField(value: &_storage._price) }()
-        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._stopPrice) }()
-        case 5: try { try decoder.decodeSingularEnumField(value: &_storage._direction) }()
-        case 6: try { try decoder.decodeSingularStringField(value: &_storage._accountID) }()
-        case 7: try { try decoder.decodeSingularEnumField(value: &_storage._expirationType) }()
-        case 8: try { try decoder.decodeSingularEnumField(value: &_storage._stopOrderType) }()
-        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._expireDate) }()
-        case 10: try { try decoder.decodeSingularStringField(value: &_storage._instrumentID) }()
-        case 11: try { try decoder.decodeSingularEnumField(value: &_storage._exchangeOrderType) }()
-        case 12: try { try decoder.decodeSingularEnumField(value: &_storage._takeProfitType) }()
-        case 13: try { try decoder.decodeSingularMessageField(value: &_storage._trailingData) }()
-        case 14: try { try decoder.decodeSingularEnumField(value: &_storage._priceType) }()
-        case 15: try { try decoder.decodeSingularStringField(value: &_storage._orderID) }()
-        default: break
+    public static let protoMessageName: String = _protobuf_package + ".PostStopOrderRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "quantity"),
+        3: .same(proto: "price"),
+        4: .standard(proto: "stop_price"),
+        5: .same(proto: "direction"),
+        6: .standard(proto: "account_id"),
+        7: .standard(proto: "expiration_type"),
+        8: .standard(proto: "stop_order_type"),
+        9: .standard(proto: "expire_date"),
+        10: .standard(proto: "instrument_id"),
+        11: .standard(proto: "exchange_order_type"),
+        12: .standard(proto: "take_profit_type"),
+        13: .standard(proto: "trailing_data"),
+        14: .standard(proto: "price_type"),
+        15: .standard(proto: "order_id"),
+    ]
+    
+    fileprivate class _StorageClass: @unchecked Sendable {
+        var _figi: String? = nil
+        var _quantity: Int64 = 0
+        var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection = .unspecified
+        var _accountID: String = String()
+        var _expirationType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderExpirationType = .unspecified
+        var _stopOrderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType = .unspecified
+        var _expireDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _instrumentID: String = String()
+        var _exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType = .unspecified
+        var _takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType = .unspecified
+        var _trailingData: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData? = nil
+        var _priceType: Tinkoff_Public_Invest_Api_Contract_V1_PriceType = .unspecified
+        var _orderID: String = String()
+        
+        static let defaultInstance = _StorageClass()
+        
+        private init() {}
+        
+        init(copying source: _StorageClass) {
+            _figi = source._figi
+            _quantity = source._quantity
+            _price = source._price
+            _stopPrice = source._stopPrice
+            _direction = source._direction
+            _accountID = source._accountID
+            _expirationType = source._expirationType
+            _stopOrderType = source._stopOrderType
+            _expireDate = source._expireDate
+            _instrumentID = source._instrumentID
+            _exchangeOrderType = source._exchangeOrderType
+            _takeProfitType = source._takeProfitType
+            _trailingData = source._trailingData
+            _priceType = source._priceType
+            _orderID = source._orderID
         }
-      }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every if/case branch local when no optimizations
-      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-      // https://github.com/apple/swift-protobuf/issues/1182
-      try { if let v = _storage._figi {
-        try visitor.visitSingularStringField(value: v, fieldNumber: 1)
-      } }()
-      if _storage._quantity != 0 {
-        try visitor.visitSingularInt64Field(value: _storage._quantity, fieldNumber: 2)
-      }
-      try { if let v = _storage._price {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-      } }()
-      try { if let v = _storage._stopPrice {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-      } }()
-      if _storage._direction != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._direction, fieldNumber: 5)
-      }
-      if !_storage._accountID.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._accountID, fieldNumber: 6)
-      }
-      if _storage._expirationType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._expirationType, fieldNumber: 7)
-      }
-      if _storage._stopOrderType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._stopOrderType, fieldNumber: 8)
-      }
-      try { if let v = _storage._expireDate {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
-      } }()
-      if !_storage._instrumentID.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._instrumentID, fieldNumber: 10)
-      }
-      if _storage._exchangeOrderType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._exchangeOrderType, fieldNumber: 11)
-      }
-      if _storage._takeProfitType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._takeProfitType, fieldNumber: 12)
-      }
-      try { if let v = _storage._trailingData {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 13)
-      } }()
-      if _storage._priceType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._priceType, fieldNumber: 14)
-      }
-      if !_storage._orderID.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._orderID, fieldNumber: 15)
-      }
+    
+    fileprivate mutating func _uniqueStorage() -> _StorageClass {
+        if !isKnownUniquelyReferenced(&_storage) {
+            _storage = _StorageClass(copying: _storage)
+        }
+        return _storage
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest) -> Bool {
-    if lhs._storage !== rhs._storage {
-      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
-        let _storage = _args.0
-        let rhs_storage = _args.1
-        if _storage._figi != rhs_storage._figi {return false}
-        if _storage._quantity != rhs_storage._quantity {return false}
-        if _storage._price != rhs_storage._price {return false}
-        if _storage._stopPrice != rhs_storage._stopPrice {return false}
-        if _storage._direction != rhs_storage._direction {return false}
-        if _storage._accountID != rhs_storage._accountID {return false}
-        if _storage._expirationType != rhs_storage._expirationType {return false}
-        if _storage._stopOrderType != rhs_storage._stopOrderType {return false}
-        if _storage._expireDate != rhs_storage._expireDate {return false}
-        if _storage._instrumentID != rhs_storage._instrumentID {return false}
-        if _storage._exchangeOrderType != rhs_storage._exchangeOrderType {return false}
-        if _storage._takeProfitType != rhs_storage._takeProfitType {return false}
-        if _storage._trailingData != rhs_storage._trailingData {return false}
-        if _storage._priceType != rhs_storage._priceType {return false}
-        if _storage._orderID != rhs_storage._orderID {return false}
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        _ = _uniqueStorage()
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            while let fieldNumber = try decoder.nextFieldNumber() {
+                // The use of inline closures is to circumvent an issue where the compiler
+                // allocates stack space for every case branch when no optimizations are
+                // enabled. https://github.com/apple/swift-protobuf/issues/1034
+                switch fieldNumber {
+                case 1: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
+                case 2: try { try decoder.decodeSingularInt64Field(value: &_storage._quantity) }()
+                case 3: try { try decoder.decodeSingularMessageField(value: &_storage._price) }()
+                case 4: try { try decoder.decodeSingularMessageField(value: &_storage._stopPrice) }()
+                case 5: try { try decoder.decodeSingularEnumField(value: &_storage._direction) }()
+                case 6: try { try decoder.decodeSingularStringField(value: &_storage._accountID) }()
+                case 7: try { try decoder.decodeSingularEnumField(value: &_storage._expirationType) }()
+                case 8: try { try decoder.decodeSingularEnumField(value: &_storage._stopOrderType) }()
+                case 9: try { try decoder.decodeSingularMessageField(value: &_storage._expireDate) }()
+                case 10: try { try decoder.decodeSingularStringField(value: &_storage._instrumentID) }()
+                case 11: try { try decoder.decodeSingularEnumField(value: &_storage._exchangeOrderType) }()
+                case 12: try { try decoder.decodeSingularEnumField(value: &_storage._takeProfitType) }()
+                case 13: try { try decoder.decodeSingularMessageField(value: &_storage._trailingData) }()
+                case 14: try { try decoder.decodeSingularEnumField(value: &_storage._priceType) }()
+                case 15: try { try decoder.decodeSingularStringField(value: &_storage._orderID) }()
+                default: break
+                }
+            }
+        }
+    }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every if/case branch local when no optimizations
+            // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+            // https://github.com/apple/swift-protobuf/issues/1182
+            try { if let v = _storage._figi {
+                try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+            } }()
+            if _storage._quantity != 0 {
+                try visitor.visitSingularInt64Field(value: _storage._quantity, fieldNumber: 2)
+            }
+            try { if let v = _storage._price {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+            } }()
+            try { if let v = _storage._stopPrice {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+            } }()
+            if _storage._direction != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._direction, fieldNumber: 5)
+            }
+            if !_storage._accountID.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._accountID, fieldNumber: 6)
+            }
+            if _storage._expirationType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._expirationType, fieldNumber: 7)
+            }
+            if _storage._stopOrderType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._stopOrderType, fieldNumber: 8)
+            }
+            try { if let v = _storage._expireDate {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+            } }()
+            if !_storage._instrumentID.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._instrumentID, fieldNumber: 10)
+            }
+            if _storage._exchangeOrderType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._exchangeOrderType, fieldNumber: 11)
+            }
+            if _storage._takeProfitType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._takeProfitType, fieldNumber: 12)
+            }
+            try { if let v = _storage._trailingData {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 13)
+            } }()
+            if _storage._priceType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._priceType, fieldNumber: 14)
+            }
+            if !_storage._orderID.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._orderID, fieldNumber: 15)
+            }
+        }
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest) -> Bool {
+        if lhs._storage !== rhs._storage {
+            let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+                let _storage = _args.0
+                let rhs_storage = _args.1
+                if _storage._figi != rhs_storage._figi {return false}
+                if _storage._quantity != rhs_storage._quantity {return false}
+                if _storage._price != rhs_storage._price {return false}
+                if _storage._stopPrice != rhs_storage._stopPrice {return false}
+                if _storage._direction != rhs_storage._direction {return false}
+                if _storage._accountID != rhs_storage._accountID {return false}
+                if _storage._expirationType != rhs_storage._expirationType {return false}
+                if _storage._stopOrderType != rhs_storage._stopOrderType {return false}
+                if _storage._expireDate != rhs_storage._expireDate {return false}
+                if _storage._instrumentID != rhs_storage._instrumentID {return false}
+                if _storage._exchangeOrderType != rhs_storage._exchangeOrderType {return false}
+                if _storage._takeProfitType != rhs_storage._takeProfitType {return false}
+                if _storage._trailingData != rhs_storage._trailingData {return false}
+                if _storage._priceType != rhs_storage._priceType {return false}
+                if _storage._orderID != rhs_storage._orderID {return false}
+                return true
+            }
+            if !storagesAreEqual {return false}
+        }
+        if lhs.unknownFields != rhs.unknownFields {return false}
         return true
-      }
-      if !storagesAreEqual {return false}
     }
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.protoMessageName + ".TrailingData"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "indent"),
-    2: .standard(proto: "indent_type"),
-    3: .same(proto: "spread"),
-    4: .standard(proto: "spread_type"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._indent) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.indentType) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._spread) }()
-      case 4: try { try decoder.decodeSingularEnumField(value: &self.spreadType) }()
-      default: break
-      }
+    public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.protoMessageName + ".TrailingData"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "indent"),
+        2: .standard(proto: "indent_type"),
+        3: .same(proto: "spread"),
+        4: .standard(proto: "spread_type"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._indent) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.indentType) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._spread) }()
+            case 4: try { try decoder.decodeSingularEnumField(value: &self.spreadType) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._indent {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    if self.indentType != .trailingValueUnspecified {
-      try visitor.visitSingularEnumField(value: self.indentType, fieldNumber: 2)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._indent {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        if self.indentType != .trailingValueUnspecified {
+            try visitor.visitSingularEnumField(value: self.indentType, fieldNumber: 2)
+        }
+        try { if let v = self._spread {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        if self.spreadType != .trailingValueUnspecified {
+            try visitor.visitSingularEnumField(value: self.spreadType, fieldNumber: 4)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try { if let v = self._spread {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    if self.spreadType != .trailingValueUnspecified {
-      try visitor.visitSingularEnumField(value: self.spreadType, fieldNumber: 4)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData, rhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData) -> Bool {
+        if lhs._indent != rhs._indent {return false}
+        if lhs.indentType != rhs.indentType {return false}
+        if lhs._spread != rhs._spread {return false}
+        if lhs.spreadType != rhs.spreadType {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData, rhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderRequest.TrailingData) -> Bool {
-    if lhs._indent != rhs._indent {return false}
-    if lhs.indentType != rhs.indentType {return false}
-    if lhs._spread != rhs._spread {return false}
-    if lhs.spreadType != rhs.spreadType {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".PostStopOrderResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "stop_order_id"),
-    2: .standard(proto: "order_request_id"),
-    254: .standard(proto: "response_metadata"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.stopOrderID) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.orderRequestID) }()
-      case 254: try { try decoder.decodeSingularMessageField(value: &self._responseMetadata) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".PostStopOrderResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "stop_order_id"),
+        2: .standard(proto: "order_request_id"),
+        254: .standard(proto: "response_metadata"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.stopOrderID) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self.orderRequestID) }()
+            case 254: try { try decoder.decodeSingularMessageField(value: &self._responseMetadata) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.stopOrderID.isEmpty {
-      try visitor.visitSingularStringField(value: self.stopOrderID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.stopOrderID.isEmpty {
+            try visitor.visitSingularStringField(value: self.stopOrderID, fieldNumber: 1)
+        }
+        if !self.orderRequestID.isEmpty {
+            try visitor.visitSingularStringField(value: self.orderRequestID, fieldNumber: 2)
+        }
+        try { if let v = self._responseMetadata {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 254)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.orderRequestID.isEmpty {
-      try visitor.visitSingularStringField(value: self.orderRequestID, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderResponse) -> Bool {
+        if lhs.stopOrderID != rhs.stopOrderID {return false}
+        if lhs.orderRequestID != rhs.orderRequestID {return false}
+        if lhs._responseMetadata != rhs._responseMetadata {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try { if let v = self._responseMetadata {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 254)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_PostStopOrderResponse) -> Bool {
-    if lhs.stopOrderID != rhs.stopOrderID {return false}
-    if lhs.orderRequestID != rhs.orderRequestID {return false}
-    if lhs._responseMetadata != rhs._responseMetadata {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetStopOrdersRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "account_id"),
-    2: .same(proto: "status"),
-    3: .same(proto: "from"),
-    4: .same(proto: "to"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.accountID) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.status) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._from) }()
-      case 4: try { try decoder.decodeSingularMessageField(value: &self._to) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetStopOrdersRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "account_id"),
+        2: .same(proto: "status"),
+        3: .same(proto: "from"),
+        4: .same(proto: "to"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.accountID) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.status) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._from) }()
+            case 4: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.accountID.isEmpty {
-      try visitor.visitSingularStringField(value: self.accountID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.accountID.isEmpty {
+            try visitor.visitSingularStringField(value: self.accountID, fieldNumber: 1)
+        }
+        if self.status != .stopOrderStatusUnspecified {
+            try visitor.visitSingularEnumField(value: self.status, fieldNumber: 2)
+        }
+        try { if let v = self._from {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        try { if let v = self._to {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.status != .stopOrderStatusUnspecified {
-      try visitor.visitSingularEnumField(value: self.status, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersRequest) -> Bool {
+        if lhs.accountID != rhs.accountID {return false}
+        if lhs.status != rhs.status {return false}
+        if lhs._from != rhs._from {return false}
+        if lhs._to != rhs._to {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try { if let v = self._from {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    try { if let v = self._to {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersRequest) -> Bool {
-    if lhs.accountID != rhs.accountID {return false}
-    if lhs.status != rhs.status {return false}
-    if lhs._from != rhs._from {return false}
-    if lhs._to != rhs._to {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetStopOrdersResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "stop_orders"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.stopOrders) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetStopOrdersResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "stop_orders"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.stopOrders) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.stopOrders.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.stopOrders, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.stopOrders.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.stopOrders, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersResponse) -> Bool {
-    if lhs.stopOrders != rhs.stopOrders {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetStopOrdersResponse) -> Bool {
+        if lhs.stopOrders != rhs.stopOrders {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".CancelStopOrderRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "account_id"),
-    2: .standard(proto: "stop_order_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.accountID) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.stopOrderID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".CancelStopOrderRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "account_id"),
+        2: .standard(proto: "stop_order_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.accountID) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self.stopOrderID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.accountID.isEmpty {
-      try visitor.visitSingularStringField(value: self.accountID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.accountID.isEmpty {
+            try visitor.visitSingularStringField(value: self.accountID, fieldNumber: 1)
+        }
+        if !self.stopOrderID.isEmpty {
+            try visitor.visitSingularStringField(value: self.stopOrderID, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.stopOrderID.isEmpty {
-      try visitor.visitSingularStringField(value: self.stopOrderID, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderRequest) -> Bool {
+        if lhs.accountID != rhs.accountID {return false}
+        if lhs.stopOrderID != rhs.stopOrderID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderRequest) -> Bool {
-    if lhs.accountID != rhs.accountID {return false}
-    if lhs.stopOrderID != rhs.stopOrderID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".CancelStopOrderResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "time"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._time) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".CancelStopOrderResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "time"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._time {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderResponse) -> Bool {
-    if lhs._time != rhs._time {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._time {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CancelStopOrderResponse) -> Bool {
+        if lhs._time != rhs._time {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrder: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".StopOrder"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "stop_order_id"),
-    2: .standard(proto: "lots_requested"),
-    3: .same(proto: "figi"),
-    4: .same(proto: "direction"),
-    5: .same(proto: "currency"),
-    6: .standard(proto: "order_type"),
-    7: .standard(proto: "create_date"),
-    8: .standard(proto: "activation_date_time"),
-    9: .standard(proto: "expiration_time"),
-    10: .same(proto: "price"),
-    11: .standard(proto: "stop_price"),
-    12: .standard(proto: "instrument_uid"),
-    13: .standard(proto: "take_profit_type"),
-    14: .standard(proto: "trailing_data"),
-    15: .same(proto: "status"),
-    16: .standard(proto: "exchange_order_type"),
-    17: .standard(proto: "exchange_order_id"),
-  ]
-
-  fileprivate class _StorageClass {
-    var _stopOrderID: String = String()
-    var _lotsRequested: Int64 = 0
-    var _figi: String = String()
-    var _direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection = .unspecified
-    var _currency: String = String()
-    var _orderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType = .unspecified
-    var _createDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _activationDateTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _expirationTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _price: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
-    var _stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
-    var _instrumentUid: String = String()
-    var _takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType = .unspecified
-    var _trailingData: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData? = nil
-    var _status: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption = .stopOrderStatusUnspecified
-    var _exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType = .unspecified
-    var _exchangeOrderID: String? = nil
-
-    static let defaultInstance = _StorageClass()
-
-    private init() {}
-
-    init(copying source: _StorageClass) {
-      _stopOrderID = source._stopOrderID
-      _lotsRequested = source._lotsRequested
-      _figi = source._figi
-      _direction = source._direction
-      _currency = source._currency
-      _orderType = source._orderType
-      _createDate = source._createDate
-      _activationDateTime = source._activationDateTime
-      _expirationTime = source._expirationTime
-      _price = source._price
-      _stopPrice = source._stopPrice
-      _instrumentUid = source._instrumentUid
-      _takeProfitType = source._takeProfitType
-      _trailingData = source._trailingData
-      _status = source._status
-      _exchangeOrderType = source._exchangeOrderType
-      _exchangeOrderID = source._exchangeOrderID
-    }
-  }
-
-  fileprivate mutating func _uniqueStorage() -> _StorageClass {
-    if !isKnownUniquelyReferenced(&_storage) {
-      _storage = _StorageClass(copying: _storage)
-    }
-    return _storage
-  }
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    _ = _uniqueStorage()
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      while let fieldNumber = try decoder.nextFieldNumber() {
-        // The use of inline closures is to circumvent an issue where the compiler
-        // allocates stack space for every case branch when no optimizations are
-        // enabled. https://github.com/apple/swift-protobuf/issues/1034
-        switch fieldNumber {
-        case 1: try { try decoder.decodeSingularStringField(value: &_storage._stopOrderID) }()
-        case 2: try { try decoder.decodeSingularInt64Field(value: &_storage._lotsRequested) }()
-        case 3: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
-        case 4: try { try decoder.decodeSingularEnumField(value: &_storage._direction) }()
-        case 5: try { try decoder.decodeSingularStringField(value: &_storage._currency) }()
-        case 6: try { try decoder.decodeSingularEnumField(value: &_storage._orderType) }()
-        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._createDate) }()
-        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._activationDateTime) }()
-        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._expirationTime) }()
-        case 10: try { try decoder.decodeSingularMessageField(value: &_storage._price) }()
-        case 11: try { try decoder.decodeSingularMessageField(value: &_storage._stopPrice) }()
-        case 12: try { try decoder.decodeSingularStringField(value: &_storage._instrumentUid) }()
-        case 13: try { try decoder.decodeSingularEnumField(value: &_storage._takeProfitType) }()
-        case 14: try { try decoder.decodeSingularMessageField(value: &_storage._trailingData) }()
-        case 15: try { try decoder.decodeSingularEnumField(value: &_storage._status) }()
-        case 16: try { try decoder.decodeSingularEnumField(value: &_storage._exchangeOrderType) }()
-        case 17: try { try decoder.decodeSingularStringField(value: &_storage._exchangeOrderID) }()
-        default: break
+    public static let protoMessageName: String = _protobuf_package + ".StopOrder"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "stop_order_id"),
+        2: .standard(proto: "lots_requested"),
+        3: .same(proto: "figi"),
+        4: .same(proto: "direction"),
+        5: .same(proto: "currency"),
+        6: .standard(proto: "order_type"),
+        7: .standard(proto: "create_date"),
+        8: .standard(proto: "activation_date_time"),
+        9: .standard(proto: "expiration_time"),
+        10: .same(proto: "price"),
+        11: .standard(proto: "stop_price"),
+        12: .standard(proto: "instrument_uid"),
+        13: .standard(proto: "take_profit_type"),
+        14: .standard(proto: "trailing_data"),
+        15: .same(proto: "status"),
+        16: .standard(proto: "exchange_order_type"),
+        17: .standard(proto: "exchange_order_id"),
+    ]
+    
+    fileprivate class _StorageClass: @unchecked Sendable {
+        var _stopOrderID: String = String()
+        var _lotsRequested: Int64 = 0
+        var _figi: String = String()
+        var _direction: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderDirection = .unspecified
+        var _currency: String = String()
+        var _orderType: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderType = .unspecified
+        var _createDate: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _activationDateTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _expirationTime: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _price: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
+        var _stopPrice: Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue? = nil
+        var _instrumentUid: String = String()
+        var _takeProfitType: Tinkoff_Public_Invest_Api_Contract_V1_TakeProfitType = .unspecified
+        var _trailingData: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData? = nil
+        var _status: Tinkoff_Public_Invest_Api_Contract_V1_StopOrderStatusOption = .stopOrderStatusUnspecified
+        var _exchangeOrderType: Tinkoff_Public_Invest_Api_Contract_V1_ExchangeOrderType = .unspecified
+        var _exchangeOrderID: String? = nil
+        
+        static let defaultInstance = _StorageClass()
+        
+        private init() {}
+        
+        init(copying source: _StorageClass) {
+            _stopOrderID = source._stopOrderID
+            _lotsRequested = source._lotsRequested
+            _figi = source._figi
+            _direction = source._direction
+            _currency = source._currency
+            _orderType = source._orderType
+            _createDate = source._createDate
+            _activationDateTime = source._activationDateTime
+            _expirationTime = source._expirationTime
+            _price = source._price
+            _stopPrice = source._stopPrice
+            _instrumentUid = source._instrumentUid
+            _takeProfitType = source._takeProfitType
+            _trailingData = source._trailingData
+            _status = source._status
+            _exchangeOrderType = source._exchangeOrderType
+            _exchangeOrderID = source._exchangeOrderID
         }
-      }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every if/case branch local when no optimizations
-      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-      // https://github.com/apple/swift-protobuf/issues/1182
-      if !_storage._stopOrderID.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._stopOrderID, fieldNumber: 1)
-      }
-      if _storage._lotsRequested != 0 {
-        try visitor.visitSingularInt64Field(value: _storage._lotsRequested, fieldNumber: 2)
-      }
-      if !_storage._figi.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._figi, fieldNumber: 3)
-      }
-      if _storage._direction != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._direction, fieldNumber: 4)
-      }
-      if !_storage._currency.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._currency, fieldNumber: 5)
-      }
-      if _storage._orderType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._orderType, fieldNumber: 6)
-      }
-      try { if let v = _storage._createDate {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
-      } }()
-      try { if let v = _storage._activationDateTime {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-      } }()
-      try { if let v = _storage._expirationTime {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
-      } }()
-      try { if let v = _storage._price {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
-      } }()
-      try { if let v = _storage._stopPrice {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
-      } }()
-      if !_storage._instrumentUid.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._instrumentUid, fieldNumber: 12)
-      }
-      if _storage._takeProfitType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._takeProfitType, fieldNumber: 13)
-      }
-      try { if let v = _storage._trailingData {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
-      } }()
-      if _storage._status != .stopOrderStatusUnspecified {
-        try visitor.visitSingularEnumField(value: _storage._status, fieldNumber: 15)
-      }
-      if _storage._exchangeOrderType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._exchangeOrderType, fieldNumber: 16)
-      }
-      try { if let v = _storage._exchangeOrderID {
-        try visitor.visitSingularStringField(value: v, fieldNumber: 17)
-      } }()
+    
+    fileprivate mutating func _uniqueStorage() -> _StorageClass {
+        if !isKnownUniquelyReferenced(&_storage) {
+            _storage = _StorageClass(copying: _storage)
+        }
+        return _storage
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder, rhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder) -> Bool {
-    if lhs._storage !== rhs._storage {
-      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
-        let _storage = _args.0
-        let rhs_storage = _args.1
-        if _storage._stopOrderID != rhs_storage._stopOrderID {return false}
-        if _storage._lotsRequested != rhs_storage._lotsRequested {return false}
-        if _storage._figi != rhs_storage._figi {return false}
-        if _storage._direction != rhs_storage._direction {return false}
-        if _storage._currency != rhs_storage._currency {return false}
-        if _storage._orderType != rhs_storage._orderType {return false}
-        if _storage._createDate != rhs_storage._createDate {return false}
-        if _storage._activationDateTime != rhs_storage._activationDateTime {return false}
-        if _storage._expirationTime != rhs_storage._expirationTime {return false}
-        if _storage._price != rhs_storage._price {return false}
-        if _storage._stopPrice != rhs_storage._stopPrice {return false}
-        if _storage._instrumentUid != rhs_storage._instrumentUid {return false}
-        if _storage._takeProfitType != rhs_storage._takeProfitType {return false}
-        if _storage._trailingData != rhs_storage._trailingData {return false}
-        if _storage._status != rhs_storage._status {return false}
-        if _storage._exchangeOrderType != rhs_storage._exchangeOrderType {return false}
-        if _storage._exchangeOrderID != rhs_storage._exchangeOrderID {return false}
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        _ = _uniqueStorage()
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            while let fieldNumber = try decoder.nextFieldNumber() {
+                // The use of inline closures is to circumvent an issue where the compiler
+                // allocates stack space for every case branch when no optimizations are
+                // enabled. https://github.com/apple/swift-protobuf/issues/1034
+                switch fieldNumber {
+                case 1: try { try decoder.decodeSingularStringField(value: &_storage._stopOrderID) }()
+                case 2: try { try decoder.decodeSingularInt64Field(value: &_storage._lotsRequested) }()
+                case 3: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
+                case 4: try { try decoder.decodeSingularEnumField(value: &_storage._direction) }()
+                case 5: try { try decoder.decodeSingularStringField(value: &_storage._currency) }()
+                case 6: try { try decoder.decodeSingularEnumField(value: &_storage._orderType) }()
+                case 7: try { try decoder.decodeSingularMessageField(value: &_storage._createDate) }()
+                case 8: try { try decoder.decodeSingularMessageField(value: &_storage._activationDateTime) }()
+                case 9: try { try decoder.decodeSingularMessageField(value: &_storage._expirationTime) }()
+                case 10: try { try decoder.decodeSingularMessageField(value: &_storage._price) }()
+                case 11: try { try decoder.decodeSingularMessageField(value: &_storage._stopPrice) }()
+                case 12: try { try decoder.decodeSingularStringField(value: &_storage._instrumentUid) }()
+                case 13: try { try decoder.decodeSingularEnumField(value: &_storage._takeProfitType) }()
+                case 14: try { try decoder.decodeSingularMessageField(value: &_storage._trailingData) }()
+                case 15: try { try decoder.decodeSingularEnumField(value: &_storage._status) }()
+                case 16: try { try decoder.decodeSingularEnumField(value: &_storage._exchangeOrderType) }()
+                case 17: try { try decoder.decodeSingularStringField(value: &_storage._exchangeOrderID) }()
+                default: break
+                }
+            }
+        }
+    }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every if/case branch local when no optimizations
+            // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+            // https://github.com/apple/swift-protobuf/issues/1182
+            if !_storage._stopOrderID.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._stopOrderID, fieldNumber: 1)
+            }
+            if _storage._lotsRequested != 0 {
+                try visitor.visitSingularInt64Field(value: _storage._lotsRequested, fieldNumber: 2)
+            }
+            if !_storage._figi.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._figi, fieldNumber: 3)
+            }
+            if _storage._direction != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._direction, fieldNumber: 4)
+            }
+            if !_storage._currency.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._currency, fieldNumber: 5)
+            }
+            if _storage._orderType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._orderType, fieldNumber: 6)
+            }
+            try { if let v = _storage._createDate {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+            } }()
+            try { if let v = _storage._activationDateTime {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+            } }()
+            try { if let v = _storage._expirationTime {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+            } }()
+            try { if let v = _storage._price {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
+            } }()
+            try { if let v = _storage._stopPrice {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+            } }()
+            if !_storage._instrumentUid.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._instrumentUid, fieldNumber: 12)
+            }
+            if _storage._takeProfitType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._takeProfitType, fieldNumber: 13)
+            }
+            try { if let v = _storage._trailingData {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 14)
+            } }()
+            if _storage._status != .stopOrderStatusUnspecified {
+                try visitor.visitSingularEnumField(value: _storage._status, fieldNumber: 15)
+            }
+            if _storage._exchangeOrderType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._exchangeOrderType, fieldNumber: 16)
+            }
+            try { if let v = _storage._exchangeOrderID {
+                try visitor.visitSingularStringField(value: v, fieldNumber: 17)
+            } }()
+        }
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder, rhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder) -> Bool {
+        if lhs._storage !== rhs._storage {
+            let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+                let _storage = _args.0
+                let rhs_storage = _args.1
+                if _storage._stopOrderID != rhs_storage._stopOrderID {return false}
+                if _storage._lotsRequested != rhs_storage._lotsRequested {return false}
+                if _storage._figi != rhs_storage._figi {return false}
+                if _storage._direction != rhs_storage._direction {return false}
+                if _storage._currency != rhs_storage._currency {return false}
+                if _storage._orderType != rhs_storage._orderType {return false}
+                if _storage._createDate != rhs_storage._createDate {return false}
+                if _storage._activationDateTime != rhs_storage._activationDateTime {return false}
+                if _storage._expirationTime != rhs_storage._expirationTime {return false}
+                if _storage._price != rhs_storage._price {return false}
+                if _storage._stopPrice != rhs_storage._stopPrice {return false}
+                if _storage._instrumentUid != rhs_storage._instrumentUid {return false}
+                if _storage._takeProfitType != rhs_storage._takeProfitType {return false}
+                if _storage._trailingData != rhs_storage._trailingData {return false}
+                if _storage._status != rhs_storage._status {return false}
+                if _storage._exchangeOrderType != rhs_storage._exchangeOrderType {return false}
+                if _storage._exchangeOrderID != rhs_storage._exchangeOrderID {return false}
+                return true
+            }
+            if !storagesAreEqual {return false}
+        }
+        if lhs.unknownFields != rhs.unknownFields {return false}
         return true
-      }
-      if !storagesAreEqual {return false}
     }
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.protoMessageName + ".TrailingData"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "indent"),
-    2: .standard(proto: "indent_type"),
-    3: .same(proto: "spread"),
-    4: .standard(proto: "spread_type"),
-    5: .same(proto: "status"),
-    7: .same(proto: "price"),
-    8: .same(proto: "extr"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._indent) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.indentType) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._spread) }()
-      case 4: try { try decoder.decodeSingularEnumField(value: &self.spreadType) }()
-      case 5: try { try decoder.decodeSingularEnumField(value: &self.status) }()
-      case 7: try { try decoder.decodeSingularMessageField(value: &self._price) }()
-      case 8: try { try decoder.decodeSingularMessageField(value: &self._extr) }()
-      default: break
-      }
+    public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.protoMessageName + ".TrailingData"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "indent"),
+        2: .standard(proto: "indent_type"),
+        3: .same(proto: "spread"),
+        4: .standard(proto: "spread_type"),
+        5: .same(proto: "status"),
+        7: .same(proto: "price"),
+        8: .same(proto: "extr"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._indent) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.indentType) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._spread) }()
+            case 4: try { try decoder.decodeSingularEnumField(value: &self.spreadType) }()
+            case 5: try { try decoder.decodeSingularEnumField(value: &self.status) }()
+            case 7: try { try decoder.decodeSingularMessageField(value: &self._price) }()
+            case 8: try { try decoder.decodeSingularMessageField(value: &self._extr) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._indent {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    if self.indentType != .trailingValueUnspecified {
-      try visitor.visitSingularEnumField(value: self.indentType, fieldNumber: 2)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._indent {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        if self.indentType != .trailingValueUnspecified {
+            try visitor.visitSingularEnumField(value: self.indentType, fieldNumber: 2)
+        }
+        try { if let v = self._spread {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        if self.spreadType != .trailingValueUnspecified {
+            try visitor.visitSingularEnumField(value: self.spreadType, fieldNumber: 4)
+        }
+        if self.status != .trailingStopUnspecified {
+            try visitor.visitSingularEnumField(value: self.status, fieldNumber: 5)
+        }
+        try { if let v = self._price {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+        } }()
+        try { if let v = self._extr {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try { if let v = self._spread {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    if self.spreadType != .trailingValueUnspecified {
-      try visitor.visitSingularEnumField(value: self.spreadType, fieldNumber: 4)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData, rhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData) -> Bool {
+        if lhs._indent != rhs._indent {return false}
+        if lhs.indentType != rhs.indentType {return false}
+        if lhs._spread != rhs._spread {return false}
+        if lhs.spreadType != rhs.spreadType {return false}
+        if lhs.status != rhs.status {return false}
+        if lhs._price != rhs._price {return false}
+        if lhs._extr != rhs._extr {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.status != .trailingStopUnspecified {
-      try visitor.visitSingularEnumField(value: self.status, fieldNumber: 5)
-    }
-    try { if let v = self._price {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
-    } }()
-    try { if let v = self._extr {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData, rhs: Tinkoff_Public_Invest_Api_Contract_V1_StopOrder.TrailingData) -> Bool {
-    if lhs._indent != rhs._indent {return false}
-    if lhs.indentType != rhs.indentType {return false}
-    if lhs._spread != rhs._spread {return false}
-    if lhs.spreadType != rhs.spreadType {return false}
-    if lhs.status != rhs.status {return false}
-    if lhs._price != rhs._price {return false}
-    if lhs._extr != rhs._extr {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }

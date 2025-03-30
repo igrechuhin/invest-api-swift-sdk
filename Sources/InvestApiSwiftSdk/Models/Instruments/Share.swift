@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация об акции.
-public protocol Share {
+public protocol Share: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

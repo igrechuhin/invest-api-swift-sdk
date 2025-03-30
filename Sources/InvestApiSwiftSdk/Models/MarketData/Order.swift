@@ -1,5 +1,5 @@
 /// Ордер на покупку / продажу инструмента.
-public protocol Order {
+public protocol Order: Sendable {
     /// Цена за 1 инструмент.
     var price: Quotation { get }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с результатами подписки на потоки торговых статусов.
-public protocol InfoSubscriptionPayload: StreamData where StreamDataType == InfoSubscriptionResult {
+public protocol InfoSubscriptionPayload: StreamData, Sendable where StreamDataType == InfoSubscriptionResult {
     /// Время поступления сообщения.
     var time: Date { get }
     

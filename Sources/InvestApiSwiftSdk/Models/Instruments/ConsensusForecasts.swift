@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol ConsensusForecasts {
+public protocol ConsensusForecasts: Sendable {
     /// UID-идентификатор.
     var uid: String { get }
 

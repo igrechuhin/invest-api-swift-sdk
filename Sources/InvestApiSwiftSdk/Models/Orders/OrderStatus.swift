@@ -1,5 +1,5 @@
 /// Текущий статус биржевой заявки (поручения).
-public enum OrderStatus: Int, Codable {
+public enum OrderStatus: Int, Codable, Sendable {
     /// Значение не указано.
     case unspecified
     

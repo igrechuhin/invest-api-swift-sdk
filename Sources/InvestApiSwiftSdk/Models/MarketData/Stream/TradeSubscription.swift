@@ -1,5 +1,5 @@
 /// Статус подписки на поток обезличенных сделок.
-public protocol TradeSubscription {
+public protocol TradeSubscription: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

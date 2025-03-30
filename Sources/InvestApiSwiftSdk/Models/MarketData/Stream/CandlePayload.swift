@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение со свечой.
-public protocol CandlePayload: StreamData where StreamDataType == Candle {
+public protocol CandlePayload: StreamData, Sendable where StreamDataType == Candle {
     /// Время поступления сообщения.
     var time: Date { get }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Элемент брокерского отчёта.
-public protocol BrokerReportItem {
+public protocol BrokerReportItem: Sendable {
     /// Номер сделки.
     var tradeId: String { get }
     

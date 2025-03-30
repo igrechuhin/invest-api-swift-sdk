@@ -1,5 +1,5 @@
 /// Тип структурной ноты.
-public enum StructuredProductType: Int, Codable {
+public enum StructuredProductType: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

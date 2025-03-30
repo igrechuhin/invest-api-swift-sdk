@@ -16,2986 +16,2986 @@ import SwiftProtobuf
 // Please ensure that you are building against the same version of the API
 // that was used to generate this file.
 fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAPIVersionCheck {
-  struct _2: SwiftProtobuf.ProtobufAPIVersion_2 {}
-  typealias Version = _2
+    struct _2: SwiftProtobuf.ProtobufAPIVersion_2 {}
+    typealias Version = _2
 }
 
 ///Тип операции со списком подписок.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Статус подписки не определен.
-  case unspecified // = 0
-
-  ///Подписаться.
-  case subscribe // = 1
-
-  ///Отписаться.
-  case unsubscribe // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .subscribe
-    case 2: self = .unsubscribe
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Статус подписки не определен.
+    case unspecified // = 0
+    
+    ///Подписаться.
+    case subscribe // = 1
+    
+    ///Отписаться.
+    case unsubscribe // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .subscribe: return 1
-    case .unsubscribe: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .subscribe
+        case 2: self = .unsubscribe
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .subscribe: return 1
+        case .unsubscribe: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction] = [
-    .unspecified,
-    .subscribe,
-    .unsubscribe,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction] = [
+        .unspecified,
+        .subscribe,
+        .unsubscribe,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Интервал свечи.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Интервал свечи не определен.
-  case unspecified // = 0
-
-  ///Минутные свечи.
-  case oneMinute // = 1
-
-  ///Пятиминутные свечи.
-  case fiveMinutes // = 2
-
-  ///Пятнадцатиминутные свечи.
-  case fifteenMinutes // = 3
-
-  ///Часовые свечи.
-  case oneHour // = 4
-
-  ///Дневные свечи.
-  case oneDay // = 5
-
-  ///Двухминутные свечи.
-  case subscriptionInterval2Min // = 6
-
-  ///Трехминутные свечи.
-  case subscriptionInterval3Min // = 7
-
-  ///Десятиминутные свечи.
-  case subscriptionInterval10Min // = 8
-
-  ///Тридцатиминутные свечи.
-  case subscriptionInterval30Min // = 9
-
-  ///Двухчасовые свечи.
-  case subscriptionInterval2Hour // = 10
-
-  ///Четырехчасовые свечи.
-  case subscriptionInterval4Hour // = 11
-
-  ///Недельные свечи.
-  case week // = 12
-
-  ///Месячные свечи.
-  case month // = 13
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .oneMinute
-    case 2: self = .fiveMinutes
-    case 3: self = .fifteenMinutes
-    case 4: self = .oneHour
-    case 5: self = .oneDay
-    case 6: self = .subscriptionInterval2Min
-    case 7: self = .subscriptionInterval3Min
-    case 8: self = .subscriptionInterval10Min
-    case 9: self = .subscriptionInterval30Min
-    case 10: self = .subscriptionInterval2Hour
-    case 11: self = .subscriptionInterval4Hour
-    case 12: self = .week
-    case 13: self = .month
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Интервал свечи не определен.
+    case unspecified // = 0
+    
+    ///Минутные свечи.
+    case oneMinute // = 1
+    
+    ///Пятиминутные свечи.
+    case fiveMinutes // = 2
+    
+    ///Пятнадцатиминутные свечи.
+    case fifteenMinutes // = 3
+    
+    ///Часовые свечи.
+    case oneHour // = 4
+    
+    ///Дневные свечи.
+    case oneDay // = 5
+    
+    ///Двухминутные свечи.
+    case subscriptionInterval2Min // = 6
+    
+    ///Трехминутные свечи.
+    case subscriptionInterval3Min // = 7
+    
+    ///Десятиминутные свечи.
+    case subscriptionInterval10Min // = 8
+    
+    ///Тридцатиминутные свечи.
+    case subscriptionInterval30Min // = 9
+    
+    ///Двухчасовые свечи.
+    case subscriptionInterval2Hour // = 10
+    
+    ///Четырехчасовые свечи.
+    case subscriptionInterval4Hour // = 11
+    
+    ///Недельные свечи.
+    case week // = 12
+    
+    ///Месячные свечи.
+    case month // = 13
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .oneMinute: return 1
-    case .fiveMinutes: return 2
-    case .fifteenMinutes: return 3
-    case .oneHour: return 4
-    case .oneDay: return 5
-    case .subscriptionInterval2Min: return 6
-    case .subscriptionInterval3Min: return 7
-    case .subscriptionInterval10Min: return 8
-    case .subscriptionInterval30Min: return 9
-    case .subscriptionInterval2Hour: return 10
-    case .subscriptionInterval4Hour: return 11
-    case .week: return 12
-    case .month: return 13
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .oneMinute
+        case 2: self = .fiveMinutes
+        case 3: self = .fifteenMinutes
+        case 4: self = .oneHour
+        case 5: self = .oneDay
+        case 6: self = .subscriptionInterval2Min
+        case 7: self = .subscriptionInterval3Min
+        case 8: self = .subscriptionInterval10Min
+        case 9: self = .subscriptionInterval30Min
+        case 10: self = .subscriptionInterval2Hour
+        case 11: self = .subscriptionInterval4Hour
+        case 12: self = .week
+        case 13: self = .month
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .oneMinute: return 1
+        case .fiveMinutes: return 2
+        case .fifteenMinutes: return 3
+        case .oneHour: return 4
+        case .oneDay: return 5
+        case .subscriptionInterval2Min: return 6
+        case .subscriptionInterval3Min: return 7
+        case .subscriptionInterval10Min: return 8
+        case .subscriptionInterval30Min: return 9
+        case .subscriptionInterval2Hour: return 10
+        case .subscriptionInterval4Hour: return 11
+        case .week: return 12
+        case .month: return 13
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval] = [
-    .unspecified,
-    .oneMinute,
-    .fiveMinutes,
-    .fifteenMinutes,
-    .oneHour,
-    .oneDay,
-    .subscriptionInterval2Min,
-    .subscriptionInterval3Min,
-    .subscriptionInterval10Min,
-    .subscriptionInterval30Min,
-    .subscriptionInterval2Hour,
-    .subscriptionInterval4Hour,
-    .week,
-    .month,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval] = [
+        .unspecified,
+        .oneMinute,
+        .fiveMinutes,
+        .fifteenMinutes,
+        .oneHour,
+        .oneDay,
+        .subscriptionInterval2Min,
+        .subscriptionInterval3Min,
+        .subscriptionInterval10Min,
+        .subscriptionInterval30Min,
+        .subscriptionInterval2Hour,
+        .subscriptionInterval4Hour,
+        .week,
+        .month,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Результат подписки.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Статус подписки не определен.
-  case unspecified // = 0
-
-  ///Успешно.
-  case success // = 1
-
-  ///Инструмент не найден.
-  case instrumentNotFound // = 2
-
-  ///Некорректный статус подписки. [Список возможных значений](./marketdata#subscriptionaction).
-  case subscriptionActionIsInvalid // = 3
-
-  ///Некорректная глубина стакана. Доступные значения — 1, 10, 20, 30, 40, 50.
-  case depthIsInvalid // = 4
-
-  ///Некорректный интервал свечей. [Список возможных значений](./marketdata#subscriptioninterval).
-  case intervalIsInvalid // = 5
-
-  ///Превышен лимит на общее количество подписок в рамках стрима. [Лимитная политика](./limits/).
-  case limitIsExceeded // = 6
-
-  ///Внутренняя ошибка сервиса.
-  case internalError // = 7
-
-  ///Превышен лимит на количество запросов на подписки в течение установленного отрезка времени.
-  case tooManyRequests // = 8
-
-  /// Активная подписка не найдена. Ошибка может возникнуть только при отписке от несуществующей подписки.
-  case subscriptionNotFound // = 9
-
-  ///Указан некорректный источник.
-  case sourceIsInvalid // = 10
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .success
-    case 2: self = .instrumentNotFound
-    case 3: self = .subscriptionActionIsInvalid
-    case 4: self = .depthIsInvalid
-    case 5: self = .intervalIsInvalid
-    case 6: self = .limitIsExceeded
-    case 7: self = .internalError
-    case 8: self = .tooManyRequests
-    case 9: self = .subscriptionNotFound
-    case 10: self = .sourceIsInvalid
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Статус подписки не определен.
+    case unspecified // = 0
+    
+    ///Успешно.
+    case success // = 1
+    
+    ///Инструмент не найден.
+    case instrumentNotFound // = 2
+    
+    ///Некорректный статус подписки. [Список возможных значений](./marketdata#subscriptionaction).
+    case subscriptionActionIsInvalid // = 3
+    
+    ///Некорректная глубина стакана. Доступные значения — 1, 10, 20, 30, 40, 50.
+    case depthIsInvalid // = 4
+    
+    ///Некорректный интервал свечей. [Список возможных значений](./marketdata#subscriptioninterval).
+    case intervalIsInvalid // = 5
+    
+    ///Превышен лимит на общее количество подписок в рамках стрима. [Лимитная политика](./limits/).
+    case limitIsExceeded // = 6
+    
+    ///Внутренняя ошибка сервиса.
+    case internalError // = 7
+    
+    ///Превышен лимит на количество запросов на подписки в течение установленного отрезка времени.
+    case tooManyRequests // = 8
+    
+    /// Активная подписка не найдена. Ошибка может возникнуть только при отписке от несуществующей подписки.
+    case subscriptionNotFound // = 9
+    
+    ///Указан некорректный источник.
+    case sourceIsInvalid // = 10
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .success: return 1
-    case .instrumentNotFound: return 2
-    case .subscriptionActionIsInvalid: return 3
-    case .depthIsInvalid: return 4
-    case .intervalIsInvalid: return 5
-    case .limitIsExceeded: return 6
-    case .internalError: return 7
-    case .tooManyRequests: return 8
-    case .subscriptionNotFound: return 9
-    case .sourceIsInvalid: return 10
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .success
+        case 2: self = .instrumentNotFound
+        case 3: self = .subscriptionActionIsInvalid
+        case 4: self = .depthIsInvalid
+        case 5: self = .intervalIsInvalid
+        case 6: self = .limitIsExceeded
+        case 7: self = .internalError
+        case 8: self = .tooManyRequests
+        case 9: self = .subscriptionNotFound
+        case 10: self = .sourceIsInvalid
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .success: return 1
+        case .instrumentNotFound: return 2
+        case .subscriptionActionIsInvalid: return 3
+        case .depthIsInvalid: return 4
+        case .intervalIsInvalid: return 5
+        case .limitIsExceeded: return 6
+        case .internalError: return 7
+        case .tooManyRequests: return 8
+        case .subscriptionNotFound: return 9
+        case .sourceIsInvalid: return 10
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus] = [
-    .unspecified,
-    .success,
-    .instrumentNotFound,
-    .subscriptionActionIsInvalid,
-    .depthIsInvalid,
-    .intervalIsInvalid,
-    .limitIsExceeded,
-    .internalError,
-    .tooManyRequests,
-    .subscriptionNotFound,
-    .sourceIsInvalid,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus] = [
+        .unspecified,
+        .success,
+        .instrumentNotFound,
+        .subscriptionActionIsInvalid,
+        .depthIsInvalid,
+        .intervalIsInvalid,
+        .limitIsExceeded,
+        .internalError,
+        .tooManyRequests,
+        .subscriptionNotFound,
+        .sourceIsInvalid,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Типы источников сделок.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Тип источника сделки не определён.
-  case tradeSourceUnspecified // = 0
-
-  /// Биржевые сделки.
-  case tradeSourceExchange // = 1
-
-  /// Сделки дилера.
-  case tradeSourceDealer // = 2
-
-  /// Все сделки.
-  case tradeSourceAll // = 3
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .tradeSourceUnspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .tradeSourceUnspecified
-    case 1: self = .tradeSourceExchange
-    case 2: self = .tradeSourceDealer
-    case 3: self = .tradeSourceAll
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Тип источника сделки не определён.
+    case tradeSourceUnspecified // = 0
+    
+    /// Биржевые сделки.
+    case tradeSourceExchange // = 1
+    
+    /// Сделки дилера.
+    case tradeSourceDealer // = 2
+    
+    /// Все сделки.
+    case tradeSourceAll // = 3
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .tradeSourceUnspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .tradeSourceUnspecified: return 0
-    case .tradeSourceExchange: return 1
-    case .tradeSourceDealer: return 2
-    case .tradeSourceAll: return 3
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .tradeSourceUnspecified
+        case 1: self = .tradeSourceExchange
+        case 2: self = .tradeSourceDealer
+        case 3: self = .tradeSourceAll
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .tradeSourceUnspecified: return 0
+        case .tradeSourceExchange: return 1
+        case .tradeSourceDealer: return 2
+        case .tradeSourceAll: return 3
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType] = [
-    .tradeSourceUnspecified,
-    .tradeSourceExchange,
-    .tradeSourceDealer,
-    .tradeSourceAll,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType] = [
+        .tradeSourceUnspecified,
+        .tradeSourceExchange,
+        .tradeSourceDealer,
+        .tradeSourceAll,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Направление сделки.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_TradeDirection: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Направление сделки не определено.
-  case unspecified // = 0
-
-  ///Покупка.
-  case buy // = 1
-
-  ///Продажа.
-  case sell // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .buy
-    case 2: self = .sell
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Направление сделки не определено.
+    case unspecified // = 0
+    
+    ///Покупка.
+    case buy // = 1
+    
+    ///Продажа.
+    case sell // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .buy: return 1
-    case .sell: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .buy
+        case 2: self = .sell
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .buy: return 1
+        case .sell: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradeDirection: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TradeDirection] = [
-    .unspecified,
-    .buy,
-    .sell,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_TradeDirection] = [
+        .unspecified,
+        .buy,
+        .sell,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Интервал свечей. Максимальное значение интервала приведено ориентировочно, может отличаться в большую сторону в зависимости от параметров запроса.
 public enum Tinkoff_Public_Invest_Api_Contract_V1_CandleInterval: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Интервал не определен.
-  case unspecified // = 0
-
-  ///От 1 минуты до 1 дня. Максимальное значение `limit` — 2400.
-  case candleInterval1Min // = 1
-
-  ///От 5 минут до недели. Максимальное значение `limit` — 2400.
-  case candleInterval5Min // = 2
-
-  ///От 15 минут до 3 недель. Максимальное значение `limit` — 2400.
-  case candleInterval15Min // = 3
-
-  ///От 1 часа до 3 месяцев. Максимальное значение `limit` — 2400.
-  case hour // = 4
-
-  ///От 1 дня до 6 лет. Максимальное значение `limit` — 2400.
-  case day // = 5
-
-  ///От 2 минут до 1 дня. Максимальное значение `limit` — 1200.
-  case candleInterval2Min // = 6
-
-  ///От 3 минут до 1 дня. Максимальное значение `limit` — 750.
-  case candleInterval3Min // = 7
-
-  ///От 10 минут до недели. Максимальное значение `limit` — 1200.
-  case candleInterval10Min // = 8
-
-  ///От 30 минут до 3 недель. Максимальное значение `limit` — 1200.
-  case candleInterval30Min // = 9
-
-  ///От 2 часов до 3 месяцев. Максимальное значение `limit` — 2400.
-  case candleInterval2Hour // = 10
-
-  ///От 4 часов до 3 месяцев. Максимальное значение `limit` — 700.
-  case candleInterval4Hour // = 11
-
-  ///От 1 недели до 5 лет. Максимальное значение `limit` — 300.
-  case week // = 12
-
-  ///От 1 месяца до 10 лет. Максимальное значение `limit` — 120.
-  case month // = 13
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .candleInterval1Min
-    case 2: self = .candleInterval5Min
-    case 3: self = .candleInterval15Min
-    case 4: self = .hour
-    case 5: self = .day
-    case 6: self = .candleInterval2Min
-    case 7: self = .candleInterval3Min
-    case 8: self = .candleInterval10Min
-    case 9: self = .candleInterval30Min
-    case 10: self = .candleInterval2Hour
-    case 11: self = .candleInterval4Hour
-    case 12: self = .week
-    case 13: self = .month
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Интервал не определен.
+    case unspecified // = 0
+    
+    ///От 1 минуты до 1 дня. Максимальное значение `limit` — 2400.
+    case candleInterval1Min // = 1
+    
+    ///От 5 минут до недели. Максимальное значение `limit` — 2400.
+    case candleInterval5Min // = 2
+    
+    ///От 15 минут до 3 недель. Максимальное значение `limit` — 2400.
+    case candleInterval15Min // = 3
+    
+    ///От 1 часа до 3 месяцев. Максимальное значение `limit` — 2400.
+    case hour // = 4
+    
+    ///От 1 дня до 6 лет. Максимальное значение `limit` — 2400.
+    case day // = 5
+    
+    ///От 2 минут до 1 дня. Максимальное значение `limit` — 1200.
+    case candleInterval2Min // = 6
+    
+    ///От 3 минут до 1 дня. Максимальное значение `limit` — 750.
+    case candleInterval3Min // = 7
+    
+    ///От 10 минут до недели. Максимальное значение `limit` — 1200.
+    case candleInterval10Min // = 8
+    
+    ///От 30 минут до 3 недель. Максимальное значение `limit` — 1200.
+    case candleInterval30Min // = 9
+    
+    ///От 2 часов до 3 месяцев. Максимальное значение `limit` — 2400.
+    case candleInterval2Hour // = 10
+    
+    ///От 4 часов до 3 месяцев. Максимальное значение `limit` — 700.
+    case candleInterval4Hour // = 11
+    
+    ///От 1 недели до 5 лет. Максимальное значение `limit` — 300.
+    case week // = 12
+    
+    ///От 1 месяца до 10 лет. Максимальное значение `limit` — 120.
+    case month // = 13
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .candleInterval1Min: return 1
-    case .candleInterval5Min: return 2
-    case .candleInterval15Min: return 3
-    case .hour: return 4
-    case .day: return 5
-    case .candleInterval2Min: return 6
-    case .candleInterval3Min: return 7
-    case .candleInterval10Min: return 8
-    case .candleInterval30Min: return 9
-    case .candleInterval2Hour: return 10
-    case .candleInterval4Hour: return 11
-    case .week: return 12
-    case .month: return 13
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .candleInterval1Min
+        case 2: self = .candleInterval5Min
+        case 3: self = .candleInterval15Min
+        case 4: self = .hour
+        case 5: self = .day
+        case 6: self = .candleInterval2Min
+        case 7: self = .candleInterval3Min
+        case 8: self = .candleInterval10Min
+        case 9: self = .candleInterval30Min
+        case 10: self = .candleInterval2Hour
+        case 11: self = .candleInterval4Hour
+        case 12: self = .week
+        case 13: self = .month
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .candleInterval1Min: return 1
+        case .candleInterval5Min: return 2
+        case .candleInterval15Min: return 3
+        case .hour: return 4
+        case .day: return 5
+        case .candleInterval2Min: return 6
+        case .candleInterval3Min: return 7
+        case .candleInterval10Min: return 8
+        case .candleInterval30Min: return 9
+        case .candleInterval2Hour: return 10
+        case .candleInterval4Hour: return 11
+        case .week: return 12
+        case .month: return 13
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CandleInterval: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_CandleInterval] = [
-    .unspecified,
-    .candleInterval1Min,
-    .candleInterval5Min,
-    .candleInterval15Min,
-    .hour,
-    .day,
-    .candleInterval2Min,
-    .candleInterval3Min,
-    .candleInterval10Min,
-    .candleInterval30Min,
-    .candleInterval2Hour,
-    .candleInterval4Hour,
-    .week,
-    .month,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_CandleInterval] = [
+        .unspecified,
+        .candleInterval1Min,
+        .candleInterval5Min,
+        .candleInterval15Min,
+        .hour,
+        .day,
+        .candleInterval2Min,
+        .candleInterval3Min,
+        .candleInterval10Min,
+        .candleInterval30Min,
+        .candleInterval2Hour,
+        .candleInterval4Hour,
+        .week,
+        .month,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 public enum Tinkoff_Public_Invest_Api_Contract_V1_CandleSource: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Источник свечей не определен.
-  case unspecified // = 0
-
-  ///Биржевые свечи.
-  case exchange // = 1
-
-  ///Свечи  дилера в результате торговли по выходным.
-  case dealerWeekend // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .exchange
-    case 2: self = .dealerWeekend
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Источник свечей не определен.
+    case unspecified // = 0
+    
+    ///Биржевые свечи.
+    case exchange // = 1
+    
+    ///Свечи  дилера в результате торговли по выходным.
+    case dealerWeekend // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .exchange: return 1
-    case .dealerWeekend: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .exchange
+        case 2: self = .dealerWeekend
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .exchange: return 1
+        case .dealerWeekend: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CandleSource: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_CandleSource] = [
-    .unspecified,
-    .exchange,
-    .dealerWeekend,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_CandleSource] = [
+        .unspecified,
+        .exchange,
+        .dealerWeekend,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 public enum Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Не определен.
-  case unspecified // = 0
-
-  ///Биржевой стакан.
-  case exchange // = 1
-
-  ///Стакан дилера.
-  case dealer // = 2
-
-  ///Стакан биржевой и дилера.
-  case all // = 3
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .unspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .unspecified
-    case 1: self = .exchange
-    case 2: self = .dealer
-    case 3: self = .all
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Не определен.
+    case unspecified // = 0
+    
+    ///Биржевой стакан.
+    case exchange // = 1
+    
+    ///Стакан дилера.
+    case dealer // = 2
+    
+    ///Стакан биржевой и дилера.
+    case all // = 3
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .unspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .unspecified: return 0
-    case .exchange: return 1
-    case .dealer: return 2
-    case .all: return 3
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .unspecified
+        case 1: self = .exchange
+        case 2: self = .dealer
+        case 3: self = .all
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .unspecified: return 0
+        case .exchange: return 1
+        case .dealer: return 2
+        case .all: return 3
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType] = [
-    .unspecified,
-    .exchange,
-    .dealer,
-    .all,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType] = [
+        .unspecified,
+        .exchange,
+        .dealer,
+        .all,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Тип последней цены
 public enum Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType: SwiftProtobuf.Enum {
-  public typealias RawValue = Int
-
-  ///Не определен.
-  case lastPriceUnspecified // = 0
-
-  /// Цена биржи.
-  case lastPriceExchange // = 1
-
-  /// Цена дилера
-  case lastPriceDealer // = 2
-  case UNRECOGNIZED(Int)
-
-  public init() {
-    self = .lastPriceUnspecified
-  }
-
-  public init?(rawValue: Int) {
-    switch rawValue {
-    case 0: self = .lastPriceUnspecified
-    case 1: self = .lastPriceExchange
-    case 2: self = .lastPriceDealer
-    default: self = .UNRECOGNIZED(rawValue)
+    public typealias RawValue = Int
+    
+    ///Не определен.
+    case lastPriceUnspecified // = 0
+    
+    /// Цена биржи.
+    case lastPriceExchange // = 1
+    
+    /// Цена дилера
+    case lastPriceDealer // = 2
+    case UNRECOGNIZED(Int)
+    
+    public init() {
+        self = .lastPriceUnspecified
     }
-  }
-
-  public var rawValue: Int {
-    switch self {
-    case .lastPriceUnspecified: return 0
-    case .lastPriceExchange: return 1
-    case .lastPriceDealer: return 2
-    case .UNRECOGNIZED(let i): return i
+    
+    public init?(rawValue: Int) {
+        switch rawValue {
+        case 0: self = .lastPriceUnspecified
+        case 1: self = .lastPriceExchange
+        case 2: self = .lastPriceDealer
+        default: self = .UNRECOGNIZED(rawValue)
+        }
     }
-  }
-
+    
+    public var rawValue: Int {
+        switch self {
+        case .lastPriceUnspecified: return 0
+        case .lastPriceExchange: return 1
+        case .lastPriceDealer: return 2
+        case .UNRECOGNIZED(let i): return i
+        }
+    }
+    
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType] = [
-    .lastPriceUnspecified,
-    .lastPriceExchange,
-    .lastPriceDealer,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType] = [
+        .lastPriceUnspecified,
+        .lastPriceExchange,
+        .lastPriceDealer,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Запрос подписки или отписки на определенные биржевые данные.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var payload: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest.OneOf_Payload? = nil
-
-  ///Запрос подписки на свечи.
-  public var subscribeCandlesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest {
-    get {
-      if case .subscribeCandlesRequest(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest()
-    }
-    set {payload = .subscribeCandlesRequest(newValue)}
-  }
-
-  ///Запрос подписки на стаканы.
-  public var subscribeOrderBookRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest {
-    get {
-      if case .subscribeOrderBookRequest(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest()
-    }
-    set {payload = .subscribeOrderBookRequest(newValue)}
-  }
-
-  ///Запрос подписки на ленту обезличенных сделок.
-  public var subscribeTradesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest {
-    get {
-      if case .subscribeTradesRequest(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest()
-    }
-    set {payload = .subscribeTradesRequest(newValue)}
-  }
-
-  ///Запрос подписки на торговые статусы инструментов.
-  public var subscribeInfoRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest {
-    get {
-      if case .subscribeInfoRequest(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest()
-    }
-    set {payload = .subscribeInfoRequest(newValue)}
-  }
-
-  ///Запрос подписки на цены последних сделок.
-  public var subscribeLastPriceRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest {
-    get {
-      if case .subscribeLastPriceRequest(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest()
-    }
-    set {payload = .subscribeLastPriceRequest(newValue)}
-  }
-
-  ///Запрос своих подписок.
-  public var getMySubscriptions: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions {
-    get {
-      if case .getMySubscriptions(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions()
-    }
-    set {payload = .getMySubscriptions(newValue)}
-  }
-
-  ///Запрос проверки активности соединения.
-  public var ping: Tinkoff_Public_Invest_Api_Contract_V1_PingRequest {
-    get {
-      if case .ping(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_PingRequest()
-    }
-    set {payload = .ping(newValue)}
-  }
-
-  ///Запрос настройки пинга.
-  public var pingSettings: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings {
-    get {
-      if case .pingSettings(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings()
-    }
-    set {payload = .pingSettings(newValue)}
-  }
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public enum OneOf_Payload: Equatable {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    public var payload: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest.OneOf_Payload? = nil
+    
     ///Запрос подписки на свечи.
-    case subscribeCandlesRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest)
-    ///Запрос подписки на стаканы.
-    case subscribeOrderBookRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest)
-    ///Запрос подписки на ленту обезличенных сделок.
-    case subscribeTradesRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest)
-    ///Запрос подписки на торговые статусы инструментов.
-    case subscribeInfoRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest)
-    ///Запрос подписки на цены последних сделок.
-    case subscribeLastPriceRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest)
-    ///Запрос своих подписок.
-    case getMySubscriptions(Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions)
-    ///Запрос проверки активности соединения.
-    case ping(Tinkoff_Public_Invest_Api_Contract_V1_PingRequest)
-    ///Запрос настройки пинга.
-    case pingSettings(Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings)
-
-  #if !swift(>=4.1)
-    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest.OneOf_Payload, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest.OneOf_Payload) -> Bool {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch (lhs, rhs) {
-      case (.subscribeCandlesRequest, .subscribeCandlesRequest): return {
-        guard case .subscribeCandlesRequest(let l) = lhs, case .subscribeCandlesRequest(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeOrderBookRequest, .subscribeOrderBookRequest): return {
-        guard case .subscribeOrderBookRequest(let l) = lhs, case .subscribeOrderBookRequest(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeTradesRequest, .subscribeTradesRequest): return {
-        guard case .subscribeTradesRequest(let l) = lhs, case .subscribeTradesRequest(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeInfoRequest, .subscribeInfoRequest): return {
-        guard case .subscribeInfoRequest(let l) = lhs, case .subscribeInfoRequest(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeLastPriceRequest, .subscribeLastPriceRequest): return {
-        guard case .subscribeLastPriceRequest(let l) = lhs, case .subscribeLastPriceRequest(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.getMySubscriptions, .getMySubscriptions): return {
-        guard case .getMySubscriptions(let l) = lhs, case .getMySubscriptions(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.ping, .ping): return {
-        guard case .ping(let l) = lhs, case .ping(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.pingSettings, .pingSettings): return {
-        guard case .pingSettings(let l) = lhs, case .pingSettings(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      default: return false
-      }
+    public var subscribeCandlesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest {
+        get {
+            if case .subscribeCandlesRequest(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest()
+        }
+        set {payload = .subscribeCandlesRequest(newValue)}
     }
-  #endif
-  }
-
-  public init() {}
+    
+    ///Запрос подписки на стаканы.
+    public var subscribeOrderBookRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest {
+        get {
+            if case .subscribeOrderBookRequest(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest()
+        }
+        set {payload = .subscribeOrderBookRequest(newValue)}
+    }
+    
+    ///Запрос подписки на ленту обезличенных сделок.
+    public var subscribeTradesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest {
+        get {
+            if case .subscribeTradesRequest(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest()
+        }
+        set {payload = .subscribeTradesRequest(newValue)}
+    }
+    
+    ///Запрос подписки на торговые статусы инструментов.
+    public var subscribeInfoRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest {
+        get {
+            if case .subscribeInfoRequest(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest()
+        }
+        set {payload = .subscribeInfoRequest(newValue)}
+    }
+    
+    ///Запрос подписки на цены последних сделок.
+    public var subscribeLastPriceRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest {
+        get {
+            if case .subscribeLastPriceRequest(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest()
+        }
+        set {payload = .subscribeLastPriceRequest(newValue)}
+    }
+    
+    ///Запрос своих подписок.
+    public var getMySubscriptions: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions {
+        get {
+            if case .getMySubscriptions(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions()
+        }
+        set {payload = .getMySubscriptions(newValue)}
+    }
+    
+    ///Запрос проверки активности соединения.
+    public var ping: Tinkoff_Public_Invest_Api_Contract_V1_PingRequest {
+        get {
+            if case .ping(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_PingRequest()
+        }
+        set {payload = .ping(newValue)}
+    }
+    
+    ///Запрос настройки пинга.
+    public var pingSettings: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings {
+        get {
+            if case .pingSettings(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings()
+        }
+        set {payload = .pingSettings(newValue)}
+    }
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public enum OneOf_Payload: Equatable {
+        ///Запрос подписки на свечи.
+        case subscribeCandlesRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest)
+        ///Запрос подписки на стаканы.
+        case subscribeOrderBookRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest)
+        ///Запрос подписки на ленту обезличенных сделок.
+        case subscribeTradesRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest)
+        ///Запрос подписки на торговые статусы инструментов.
+        case subscribeInfoRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest)
+        ///Запрос подписки на цены последних сделок.
+        case subscribeLastPriceRequest(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest)
+        ///Запрос своих подписок.
+        case getMySubscriptions(Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions)
+        ///Запрос проверки активности соединения.
+        case ping(Tinkoff_Public_Invest_Api_Contract_V1_PingRequest)
+        ///Запрос настройки пинга.
+        case pingSettings(Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings)
+        
+#if !swift(>=4.1)
+        public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest.OneOf_Payload, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest.OneOf_Payload) -> Bool {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch (lhs, rhs) {
+            case (.subscribeCandlesRequest, .subscribeCandlesRequest): return {
+                guard case .subscribeCandlesRequest(let l) = lhs, case .subscribeCandlesRequest(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeOrderBookRequest, .subscribeOrderBookRequest): return {
+                guard case .subscribeOrderBookRequest(let l) = lhs, case .subscribeOrderBookRequest(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeTradesRequest, .subscribeTradesRequest): return {
+                guard case .subscribeTradesRequest(let l) = lhs, case .subscribeTradesRequest(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeInfoRequest, .subscribeInfoRequest): return {
+                guard case .subscribeInfoRequest(let l) = lhs, case .subscribeInfoRequest(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeLastPriceRequest, .subscribeLastPriceRequest): return {
+                guard case .subscribeLastPriceRequest(let l) = lhs, case .subscribeLastPriceRequest(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.getMySubscriptions, .getMySubscriptions): return {
+                guard case .getMySubscriptions(let l) = lhs, case .getMySubscriptions(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.ping, .ping): return {
+                guard case .ping(let l) = lhs, case .ping(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.pingSettings, .pingSettings): return {
+                guard case .pingSettings(let l) = lhs, case .pingSettings(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            default: return false
+            }
+        }
+#endif
+    }
+    
+    public init() {}
 }
 
 public struct Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServerSideStreamRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Запрос подписки на свечи.
-  public var subscribeCandlesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest {
-    get {return _subscribeCandlesRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest()}
-    set {_subscribeCandlesRequest = newValue}
-  }
-  /// Returns true if `subscribeCandlesRequest` has been explicitly set.
-  public var hasSubscribeCandlesRequest: Bool {return self._subscribeCandlesRequest != nil}
-  /// Clears the value of `subscribeCandlesRequest`. Subsequent reads from it will return its default value.
-  public mutating func clearSubscribeCandlesRequest() {self._subscribeCandlesRequest = nil}
-
-  ///Запрос подписки на стаканы.
-  public var subscribeOrderBookRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest {
-    get {return _subscribeOrderBookRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest()}
-    set {_subscribeOrderBookRequest = newValue}
-  }
-  /// Returns true if `subscribeOrderBookRequest` has been explicitly set.
-  public var hasSubscribeOrderBookRequest: Bool {return self._subscribeOrderBookRequest != nil}
-  /// Clears the value of `subscribeOrderBookRequest`. Subsequent reads from it will return its default value.
-  public mutating func clearSubscribeOrderBookRequest() {self._subscribeOrderBookRequest = nil}
-
-  ///Запрос подписки на ленту обезличенных сделок.
-  public var subscribeTradesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest {
-    get {return _subscribeTradesRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest()}
-    set {_subscribeTradesRequest = newValue}
-  }
-  /// Returns true if `subscribeTradesRequest` has been explicitly set.
-  public var hasSubscribeTradesRequest: Bool {return self._subscribeTradesRequest != nil}
-  /// Clears the value of `subscribeTradesRequest`. Subsequent reads from it will return its default value.
-  public mutating func clearSubscribeTradesRequest() {self._subscribeTradesRequest = nil}
-
-  ///Запрос подписки на торговые статусы инструментов.
-  public var subscribeInfoRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest {
-    get {return _subscribeInfoRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest()}
-    set {_subscribeInfoRequest = newValue}
-  }
-  /// Returns true if `subscribeInfoRequest` has been explicitly set.
-  public var hasSubscribeInfoRequest: Bool {return self._subscribeInfoRequest != nil}
-  /// Clears the value of `subscribeInfoRequest`. Subsequent reads from it will return its default value.
-  public mutating func clearSubscribeInfoRequest() {self._subscribeInfoRequest = nil}
-
-  ///Запрос подписки на цены последних сделок.
-  public var subscribeLastPriceRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest {
-    get {return _subscribeLastPriceRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest()}
-    set {_subscribeLastPriceRequest = newValue}
-  }
-  /// Returns true if `subscribeLastPriceRequest` has been explicitly set.
-  public var hasSubscribeLastPriceRequest: Bool {return self._subscribeLastPriceRequest != nil}
-  /// Clears the value of `subscribeLastPriceRequest`. Subsequent reads from it will return its default value.
-  public mutating func clearSubscribeLastPriceRequest() {self._subscribeLastPriceRequest = nil}
-
-  ///Запрос настройки пинга.
-  public var pingSettings: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings {
-    get {return _pingSettings ?? Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings()}
-    set {_pingSettings = newValue}
-  }
-  /// Returns true if `pingSettings` has been explicitly set.
-  public var hasPingSettings: Bool {return self._pingSettings != nil}
-  /// Clears the value of `pingSettings`. Subsequent reads from it will return its default value.
-  public mutating func clearPingSettings() {self._pingSettings = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _subscribeCandlesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest? = nil
-  fileprivate var _subscribeOrderBookRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest? = nil
-  fileprivate var _subscribeTradesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest? = nil
-  fileprivate var _subscribeInfoRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest? = nil
-  fileprivate var _subscribeLastPriceRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest? = nil
-  fileprivate var _pingSettings: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Запрос подписки на свечи.
+    public var subscribeCandlesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest {
+        get {return _subscribeCandlesRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest()}
+        set {_subscribeCandlesRequest = newValue}
+    }
+    /// Returns true if `subscribeCandlesRequest` has been explicitly set.
+    public var hasSubscribeCandlesRequest: Bool {return self._subscribeCandlesRequest != nil}
+    /// Clears the value of `subscribeCandlesRequest`. Subsequent reads from it will return its default value.
+    public mutating func clearSubscribeCandlesRequest() {self._subscribeCandlesRequest = nil}
+    
+    ///Запрос подписки на стаканы.
+    public var subscribeOrderBookRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest {
+        get {return _subscribeOrderBookRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest()}
+        set {_subscribeOrderBookRequest = newValue}
+    }
+    /// Returns true if `subscribeOrderBookRequest` has been explicitly set.
+    public var hasSubscribeOrderBookRequest: Bool {return self._subscribeOrderBookRequest != nil}
+    /// Clears the value of `subscribeOrderBookRequest`. Subsequent reads from it will return its default value.
+    public mutating func clearSubscribeOrderBookRequest() {self._subscribeOrderBookRequest = nil}
+    
+    ///Запрос подписки на ленту обезличенных сделок.
+    public var subscribeTradesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest {
+        get {return _subscribeTradesRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest()}
+        set {_subscribeTradesRequest = newValue}
+    }
+    /// Returns true if `subscribeTradesRequest` has been explicitly set.
+    public var hasSubscribeTradesRequest: Bool {return self._subscribeTradesRequest != nil}
+    /// Clears the value of `subscribeTradesRequest`. Subsequent reads from it will return its default value.
+    public mutating func clearSubscribeTradesRequest() {self._subscribeTradesRequest = nil}
+    
+    ///Запрос подписки на торговые статусы инструментов.
+    public var subscribeInfoRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest {
+        get {return _subscribeInfoRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest()}
+        set {_subscribeInfoRequest = newValue}
+    }
+    /// Returns true if `subscribeInfoRequest` has been explicitly set.
+    public var hasSubscribeInfoRequest: Bool {return self._subscribeInfoRequest != nil}
+    /// Clears the value of `subscribeInfoRequest`. Subsequent reads from it will return its default value.
+    public mutating func clearSubscribeInfoRequest() {self._subscribeInfoRequest = nil}
+    
+    ///Запрос подписки на цены последних сделок.
+    public var subscribeLastPriceRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest {
+        get {return _subscribeLastPriceRequest ?? Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest()}
+        set {_subscribeLastPriceRequest = newValue}
+    }
+    /// Returns true if `subscribeLastPriceRequest` has been explicitly set.
+    public var hasSubscribeLastPriceRequest: Bool {return self._subscribeLastPriceRequest != nil}
+    /// Clears the value of `subscribeLastPriceRequest`. Subsequent reads from it will return its default value.
+    public mutating func clearSubscribeLastPriceRequest() {self._subscribeLastPriceRequest = nil}
+    
+    ///Запрос настройки пинга.
+    public var pingSettings: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings {
+        get {return _pingSettings ?? Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings()}
+        set {_pingSettings = newValue}
+    }
+    /// Returns true if `pingSettings` has been explicitly set.
+    public var hasPingSettings: Bool {return self._pingSettings != nil}
+    /// Clears the value of `pingSettings`. Subsequent reads from it will return its default value.
+    public mutating func clearPingSettings() {self._pingSettings = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _subscribeCandlesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest? = nil
+    fileprivate var _subscribeOrderBookRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest? = nil
+    fileprivate var _subscribeTradesRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest? = nil
+    fileprivate var _subscribeInfoRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest? = nil
+    fileprivate var _subscribeLastPriceRequest: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest? = nil
+    fileprivate var _pingSettings: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings? = nil
 }
 
 ///Пакет биржевой информации по подписке.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var payload: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse.OneOf_Payload? = nil
-
-  ///Результат подписки на свечи.
-  public var subscribeCandlesResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse {
-    get {
-      if case .subscribeCandlesResponse(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse()
-    }
-    set {payload = .subscribeCandlesResponse(newValue)}
-  }
-
-  ///Результат подписки на стаканы.
-  public var subscribeOrderBookResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse {
-    get {
-      if case .subscribeOrderBookResponse(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse()
-    }
-    set {payload = .subscribeOrderBookResponse(newValue)}
-  }
-
-  ///Результат подписки на поток обезличенных сделок.
-  public var subscribeTradesResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse {
-    get {
-      if case .subscribeTradesResponse(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse()
-    }
-    set {payload = .subscribeTradesResponse(newValue)}
-  }
-
-  ///Результат подписки на торговые статусы инструментов.
-  public var subscribeInfoResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse {
-    get {
-      if case .subscribeInfoResponse(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse()
-    }
-    set {payload = .subscribeInfoResponse(newValue)}
-  }
-
-  ///Свеча.
-  public var candle: Tinkoff_Public_Invest_Api_Contract_V1_Candle {
-    get {
-      if case .candle(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_Candle()
-    }
-    set {payload = .candle(newValue)}
-  }
-
-  ///Сделки.
-  public var trade: Tinkoff_Public_Invest_Api_Contract_V1_Trade {
-    get {
-      if case .trade(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_Trade()
-    }
-    set {payload = .trade(newValue)}
-  }
-
-  ///Стакан.
-  public var orderbook: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook {
-    get {
-      if case .orderbook(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_OrderBook()
-    }
-    set {payload = .orderbook(newValue)}
-  }
-
-  ///Торговый статус.
-  public var tradingStatus: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus {
-    get {
-      if case .tradingStatus(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus()
-    }
-    set {payload = .tradingStatus(newValue)}
-  }
-
-  ///Проверка активности стрима.
-  public var ping: Tinkoff_Public_Invest_Api_Contract_V1_Ping {
-    get {
-      if case .ping(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_Ping()
-    }
-    set {payload = .ping(newValue)}
-  }
-
-  ///Результат подписки на цены последние сделок по инструментам.
-  public var subscribeLastPriceResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse {
-    get {
-      if case .subscribeLastPriceResponse(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse()
-    }
-    set {payload = .subscribeLastPriceResponse(newValue)}
-  }
-
-  ///Цена последней сделки.
-  public var lastPrice: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice {
-    get {
-      if case .lastPrice(let v)? = payload {return v}
-      return Tinkoff_Public_Invest_Api_Contract_V1_LastPrice()
-    }
-    set {payload = .lastPrice(newValue)}
-  }
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public enum OneOf_Payload: Equatable {
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    public var payload: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse.OneOf_Payload? = nil
+    
     ///Результат подписки на свечи.
-    case subscribeCandlesResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse)
-    ///Результат подписки на стаканы.
-    case subscribeOrderBookResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse)
-    ///Результат подписки на поток обезличенных сделок.
-    case subscribeTradesResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse)
-    ///Результат подписки на торговые статусы инструментов.
-    case subscribeInfoResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse)
-    ///Свеча.
-    case candle(Tinkoff_Public_Invest_Api_Contract_V1_Candle)
-    ///Сделки.
-    case trade(Tinkoff_Public_Invest_Api_Contract_V1_Trade)
-    ///Стакан.
-    case orderbook(Tinkoff_Public_Invest_Api_Contract_V1_OrderBook)
-    ///Торговый статус.
-    case tradingStatus(Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus)
-    ///Проверка активности стрима.
-    case ping(Tinkoff_Public_Invest_Api_Contract_V1_Ping)
-    ///Результат подписки на цены последние сделок по инструментам.
-    case subscribeLastPriceResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse)
-    ///Цена последней сделки.
-    case lastPrice(Tinkoff_Public_Invest_Api_Contract_V1_LastPrice)
-
-  #if !swift(>=4.1)
-    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse.OneOf_Payload, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse.OneOf_Payload) -> Bool {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch (lhs, rhs) {
-      case (.subscribeCandlesResponse, .subscribeCandlesResponse): return {
-        guard case .subscribeCandlesResponse(let l) = lhs, case .subscribeCandlesResponse(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeOrderBookResponse, .subscribeOrderBookResponse): return {
-        guard case .subscribeOrderBookResponse(let l) = lhs, case .subscribeOrderBookResponse(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeTradesResponse, .subscribeTradesResponse): return {
-        guard case .subscribeTradesResponse(let l) = lhs, case .subscribeTradesResponse(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeInfoResponse, .subscribeInfoResponse): return {
-        guard case .subscribeInfoResponse(let l) = lhs, case .subscribeInfoResponse(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.candle, .candle): return {
-        guard case .candle(let l) = lhs, case .candle(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.trade, .trade): return {
-        guard case .trade(let l) = lhs, case .trade(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.orderbook, .orderbook): return {
-        guard case .orderbook(let l) = lhs, case .orderbook(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.tradingStatus, .tradingStatus): return {
-        guard case .tradingStatus(let l) = lhs, case .tradingStatus(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.ping, .ping): return {
-        guard case .ping(let l) = lhs, case .ping(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.subscribeLastPriceResponse, .subscribeLastPriceResponse): return {
-        guard case .subscribeLastPriceResponse(let l) = lhs, case .subscribeLastPriceResponse(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      case (.lastPrice, .lastPrice): return {
-        guard case .lastPrice(let l) = lhs, case .lastPrice(let r) = rhs else { preconditionFailure() }
-        return l == r
-      }()
-      default: return false
-      }
+    public var subscribeCandlesResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse {
+        get {
+            if case .subscribeCandlesResponse(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse()
+        }
+        set {payload = .subscribeCandlesResponse(newValue)}
     }
-  #endif
-  }
-
-  public init() {}
+    
+    ///Результат подписки на стаканы.
+    public var subscribeOrderBookResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse {
+        get {
+            if case .subscribeOrderBookResponse(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse()
+        }
+        set {payload = .subscribeOrderBookResponse(newValue)}
+    }
+    
+    ///Результат подписки на поток обезличенных сделок.
+    public var subscribeTradesResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse {
+        get {
+            if case .subscribeTradesResponse(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse()
+        }
+        set {payload = .subscribeTradesResponse(newValue)}
+    }
+    
+    ///Результат подписки на торговые статусы инструментов.
+    public var subscribeInfoResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse {
+        get {
+            if case .subscribeInfoResponse(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse()
+        }
+        set {payload = .subscribeInfoResponse(newValue)}
+    }
+    
+    ///Свеча.
+    public var candle: Tinkoff_Public_Invest_Api_Contract_V1_Candle {
+        get {
+            if case .candle(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_Candle()
+        }
+        set {payload = .candle(newValue)}
+    }
+    
+    ///Сделки.
+    public var trade: Tinkoff_Public_Invest_Api_Contract_V1_Trade {
+        get {
+            if case .trade(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_Trade()
+        }
+        set {payload = .trade(newValue)}
+    }
+    
+    ///Стакан.
+    public var orderbook: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook {
+        get {
+            if case .orderbook(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_OrderBook()
+        }
+        set {payload = .orderbook(newValue)}
+    }
+    
+    ///Торговый статус.
+    public var tradingStatus: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus {
+        get {
+            if case .tradingStatus(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus()
+        }
+        set {payload = .tradingStatus(newValue)}
+    }
+    
+    ///Проверка активности стрима.
+    public var ping: Tinkoff_Public_Invest_Api_Contract_V1_Ping {
+        get {
+            if case .ping(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_Ping()
+        }
+        set {payload = .ping(newValue)}
+    }
+    
+    ///Результат подписки на цены последние сделок по инструментам.
+    public var subscribeLastPriceResponse: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse {
+        get {
+            if case .subscribeLastPriceResponse(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse()
+        }
+        set {payload = .subscribeLastPriceResponse(newValue)}
+    }
+    
+    ///Цена последней сделки.
+    public var lastPrice: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice {
+        get {
+            if case .lastPrice(let v)? = payload {return v}
+            return Tinkoff_Public_Invest_Api_Contract_V1_LastPrice()
+        }
+        set {payload = .lastPrice(newValue)}
+    }
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public enum OneOf_Payload: Equatable {
+        ///Результат подписки на свечи.
+        case subscribeCandlesResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse)
+        ///Результат подписки на стаканы.
+        case subscribeOrderBookResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse)
+        ///Результат подписки на поток обезличенных сделок.
+        case subscribeTradesResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse)
+        ///Результат подписки на торговые статусы инструментов.
+        case subscribeInfoResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse)
+        ///Свеча.
+        case candle(Tinkoff_Public_Invest_Api_Contract_V1_Candle)
+        ///Сделки.
+        case trade(Tinkoff_Public_Invest_Api_Contract_V1_Trade)
+        ///Стакан.
+        case orderbook(Tinkoff_Public_Invest_Api_Contract_V1_OrderBook)
+        ///Торговый статус.
+        case tradingStatus(Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus)
+        ///Проверка активности стрима.
+        case ping(Tinkoff_Public_Invest_Api_Contract_V1_Ping)
+        ///Результат подписки на цены последние сделок по инструментам.
+        case subscribeLastPriceResponse(Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse)
+        ///Цена последней сделки.
+        case lastPrice(Tinkoff_Public_Invest_Api_Contract_V1_LastPrice)
+        
+#if !swift(>=4.1)
+        public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse.OneOf_Payload, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse.OneOf_Payload) -> Bool {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch (lhs, rhs) {
+            case (.subscribeCandlesResponse, .subscribeCandlesResponse): return {
+                guard case .subscribeCandlesResponse(let l) = lhs, case .subscribeCandlesResponse(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeOrderBookResponse, .subscribeOrderBookResponse): return {
+                guard case .subscribeOrderBookResponse(let l) = lhs, case .subscribeOrderBookResponse(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeTradesResponse, .subscribeTradesResponse): return {
+                guard case .subscribeTradesResponse(let l) = lhs, case .subscribeTradesResponse(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeInfoResponse, .subscribeInfoResponse): return {
+                guard case .subscribeInfoResponse(let l) = lhs, case .subscribeInfoResponse(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.candle, .candle): return {
+                guard case .candle(let l) = lhs, case .candle(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.trade, .trade): return {
+                guard case .trade(let l) = lhs, case .trade(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.orderbook, .orderbook): return {
+                guard case .orderbook(let l) = lhs, case .orderbook(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.tradingStatus, .tradingStatus): return {
+                guard case .tradingStatus(let l) = lhs, case .tradingStatus(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.ping, .ping): return {
+                guard case .ping(let l) = lhs, case .ping(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.subscribeLastPriceResponse, .subscribeLastPriceResponse): return {
+                guard case .subscribeLastPriceResponse(let l) = lhs, case .subscribeLastPriceResponse(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            case (.lastPrice, .lastPrice): return {
+                guard case .lastPrice(let l) = lhs, case .lastPrice(let r) = rhs else { preconditionFailure() }
+                return l == r
+            }()
+            default: return false
+            }
+        }
+#endif
+    }
+    
+    public init() {}
 }
 
 /// subscribeCandles | Изменения статуса подписки на свечи.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Изменение статуса подписки.
-  public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
-
-  ///Массив инструментов для подписки на свечи.
-  public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument] = []
-
-  ///Флаг ожидания закрытия временного интервала для отправки свечи.
-  public var waitingClose: Bool = false
-
-  ///Источник свечей.
-  public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource {
-    get {return _candleSourceType ?? .unspecified}
-    set {_candleSourceType = newValue}
-  }
-  /// Returns true if `candleSourceType` has been explicitly set.
-  public var hasCandleSourceType: Bool {return self._candleSourceType != nil}
-  /// Clears the value of `candleSourceType`. Subsequent reads from it will return its default value.
-  public mutating func clearCandleSourceType() {self._candleSourceType = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Изменение статуса подписки.
+    public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
+    
+    ///Массив инструментов для подписки на свечи.
+    public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument] = []
+    
+    ///Флаг ожидания закрытия временного интервала для отправки свечи.
+    public var waitingClose: Bool = false
+    
+    ///Источник свечей.
+    public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource {
+        get {return _candleSourceType ?? .unspecified}
+        set {_candleSourceType = newValue}
+    }
+    /// Returns true if `candleSourceType` has been explicitly set.
+    public var hasCandleSourceType: Bool {return self._candleSourceType != nil}
+    /// Clears the value of `candleSourceType`. Subsequent reads from it will return its default value.
+    public mutating func clearCandleSourceType() {self._candleSourceType = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource? = nil
 }
 
 ///Запрос изменения статус подписки на свечи.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  /// Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: String = String()
-
-  ///Интервал свечей. Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC.
-  public var interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval = .unspecified
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    /// Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: String = String()
+    
+    ///Интервал свечей. Двухчасовые и четырехчасовые свечи в стриме отсчитываются с 0:00 по UTC.
+    public var interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval = .unspecified
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Результат изменения статус подписки на свечи.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-  public var trackingID: String = String()
-
-  ///Массив статусов подписки на свечи.
-  public var candlesSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
+    public var trackingID: String = String()
+    
+    ///Массив статусов подписки на свечи.
+    public var candlesSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Статус подписки на свечи.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Интервал свечей.
-  public var interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval = .unspecified
-
-  ///Статус подписки.
-  public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Флаг ожидания закрытия временного интервала для отправки свечи.
-  public var waitingClose: Bool = false
-
-  ///Идентификатор открытого соединения.
-  public var streamID: String = String()
-
-  ///Идентификатор подписки в формате `UUID`.
-  public var subscriptionID: String = String()
-
-  ///Источник свечей.
-  public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource {
-    get {return _candleSourceType ?? .unspecified}
-    set {_candleSourceType = newValue}
-  }
-  /// Returns true if `candleSourceType` has been explicitly set.
-  public var hasCandleSourceType: Bool {return self._candleSourceType != nil}
-  /// Clears the value of `candleSourceType`. Subsequent reads from it will return its default value.
-  public mutating func clearCandleSourceType() {self._candleSourceType = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Интервал свечей.
+    public var interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval = .unspecified
+    
+    ///Статус подписки.
+    public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Флаг ожидания закрытия временного интервала для отправки свечи.
+    public var waitingClose: Bool = false
+    
+    ///Идентификатор открытого соединения.
+    public var streamID: String = String()
+    
+    ///Идентификатор подписки в формате `UUID`.
+    public var subscriptionID: String = String()
+    
+    ///Источник свечей.
+    public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource {
+        get {return _candleSourceType ?? .unspecified}
+        set {_candleSourceType = newValue}
+    }
+    /// Returns true if `candleSourceType` has been explicitly set.
+    public var hasCandleSourceType: Bool {return self._candleSourceType != nil}
+    /// Clears the value of `candleSourceType`. Subsequent reads from it will return its default value.
+    public mutating func clearCandleSourceType() {self._candleSourceType = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource? = nil
 }
 
 ///Запрос на изменение статуса подписки на стаканы.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Изменение статуса подписки.
-  public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
-
-  ///Массив инструментов для подписки на стаканы.
-  public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Изменение статуса подписки.
+    public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
+    
+    ///Массив инструментов для подписки на стаканы.
+    public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос подписки на стаканы.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: String = String()
-
-  ///Глубина стакана.
-  public var depth: Int32 = 0
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String = String()
-
-  ///Тип стакана. Значение по умолчанию — `ORDERBOOK_TYPE_ALL`, стакан биржевой и дилера.
-  public var orderBookType: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType = .unspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: String = String()
+    
+    ///Глубина стакана.
+    public var depth: Int32 = 0
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String = String()
+    
+    ///Тип стакана. Значение по умолчанию — `ORDERBOOK_TYPE_ALL`, стакан биржевой и дилера.
+    public var orderBookType: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType = .unspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Результат изменения статуса подписки на стаканы.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-  public var trackingID: String = String()
-
-  ///Массив статусов подписки на стаканы.
-  public var orderBookSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
+    public var trackingID: String = String()
+    
+    ///Массив статусов подписки на стаканы.
+    public var orderBookSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Статус подписки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Глубина стакана.
-  public var depth: Int32 = 0
-
-  ///Статус подписки.
-  public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Идентификатор открытого соединения.
-  public var streamID: String = String()
-
-  ///Идентификатор подписки в формате `UUID`.
-  public var subscriptionID: String = String()
-
-  ///Тип стакана.
-  public var orderBookType: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType = .unspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Глубина стакана.
+    public var depth: Int32 = 0
+    
+    ///Статус подписки.
+    public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Идентификатор открытого соединения.
+    public var streamID: String = String()
+    
+    ///Идентификатор подписки в формате `UUID`.
+    public var subscriptionID: String = String()
+    
+    ///Тип стакана.
+    public var orderBookType: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType = .unspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Изменение статуса подписки на поток обезличенных сделок.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Изменение статуса подписки.
-  public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
-
-  ///Массив инструментов для подписки на поток обезличенных сделок.
-  public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument] = []
-
-  ///Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
-  public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Изменение статуса подписки.
+    public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
+    
+    ///Массив инструментов для подписки на поток обезличенных сделок.
+    public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument] = []
+    
+    ///Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
+    public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос подписки на поток обезличенных сделок.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте instrument_id`.
-  public var figi: String = String()
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте instrument_id`.
+    public var figi: String = String()
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Результат изменения статуса подписки на поток обезличенных сделок.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-  public var trackingID: String = String()
-
-  ///Массив статусов подписки на поток сделок.
-  public var tradeSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription] = []
-
-  ///Тип источника сделок.
-  public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
+    public var trackingID: String = String()
+    
+    ///Массив статусов подписки на поток сделок.
+    public var tradeSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription] = []
+    
+    ///Тип источника сделок.
+    public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Статус подписки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Статус подписки.
-  public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Идентификатор открытого соединения.
-  public var streamID: String = String()
-
-  ///Идентификатор подписки в формате UUID.
-  public var subscriptionID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Статус подписки.
+    public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Идентификатор открытого соединения.
+    public var streamID: String = String()
+    
+    ///Идентификатор подписки в формате UUID.
+    public var subscriptionID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Изменение статуса подписки на торговый статус инструмента.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Изменение статуса подписки.
-  public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
-
-  ///Массив инструментов для подписки на торговый статус.
-  public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Изменение статуса подписки.
+    public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
+    
+    ///Массив инструментов для подписки на торговый статус.
+    public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос подписки на торговый статус.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте instrument_id`.
-  public var figi: String = String()
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте instrument_id`.
+    public var figi: String = String()
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Результат изменения статуса подписки на торговый статус.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-  public var trackingID: String = String()
-
-  ///Массив статусов подписки на торговый статус.
-  public var infoSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
+    public var trackingID: String = String()
+    
+    ///Массив статусов подписки на торговый статус.
+    public var infoSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Статус подписки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Статус подписки.
-  public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Идентификатор открытого соединения.
-  public var streamID: String = String()
-
-  ///Идентификатор подписки в формате UUID.
-  public var subscriptionID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Статус подписки.
+    public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Идентификатор открытого соединения.
+    public var streamID: String = String()
+    
+    ///Идентификатор подписки в формате UUID.
+    public var subscriptionID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Изменение статуса подписки на цену последней сделки по инструменту.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Изменение статуса подписки.
-  public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
-
-  ///Массив инструментов для подписки на цену последней сделки.
-  public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Изменение статуса подписки.
+    public var subscriptionAction: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction = .unspecified
+    
+    ///Массив инструментов для подписки на цену последней сделки.
+    public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос подписки на последнюю цену.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте instrument_id`.
-  public var figi: String = String()
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте instrument_id`.
+    public var figi: String = String()
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Результат изменения статуса подписки на цену последней сделки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
-  public var trackingID: String = String()
-
-  ///Массив статусов подписки на цену последней сделки.
-  public var lastPriceSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Уникальный идентификатор запроса. [Подробнее](./grpc#tracking-id).
+    public var trackingID: String = String()
+    
+    ///Массив статусов подписки на цену последней сделки.
+    public var lastPriceSubscriptions: [Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Статус подписки на цену последней сделки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Статус подписки.
-  public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Идентификатор открытого соединения.
-  public var streamID: String = String()
-
-  ///Идентификатор подписки в формате `UUID`.
-  public var subscriptionID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Статус подписки.
+    public var subscriptionStatus: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus = .unspecified
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Идентификатор открытого соединения.
+    public var streamID: String = String()
+    
+    ///Идентификатор подписки в формате `UUID`.
+    public var subscriptionID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Пакет свечей в рамках стрима.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_Candle {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String {
-    get {return _storage._figi}
-    set {_uniqueStorage()._figi = newValue}
-  }
-
-  ///Интервал свечи.
-  public var interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval {
-    get {return _storage._interval}
-    set {_uniqueStorage()._interval = newValue}
-  }
-
-  ///Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var `open`: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._open ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._open = newValue}
-  }
-  /// Returns true if ``open`` has been explicitly set.
-  public var hasOpen: Bool {return _storage._open != nil}
-  /// Clears the value of ``open``. Subsequent reads from it will return its default value.
-  public mutating func clearOpen() {_uniqueStorage()._open = nil}
-
-  ///Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._high ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._high = newValue}
-  }
-  /// Returns true if `high` has been explicitly set.
-  public var hasHigh: Bool {return _storage._high != nil}
-  /// Clears the value of `high`. Subsequent reads from it will return its default value.
-  public mutating func clearHigh() {_uniqueStorage()._high = nil}
-
-  ///Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._low ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._low = newValue}
-  }
-  /// Returns true if `low` has been explicitly set.
-  public var hasLow: Bool {return _storage._low != nil}
-  /// Clears the value of `low`. Subsequent reads from it will return its default value.
-  public mutating func clearLow() {_uniqueStorage()._low = nil}
-
-  ///Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._close ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._close = newValue}
-  }
-  /// Returns true if `close` has been explicitly set.
-  public var hasClose: Bool {return _storage._close != nil}
-  /// Clears the value of `close`. Subsequent reads from it will return its default value.
-  public mutating func clearClose() {_uniqueStorage()._close = nil}
-
-  ///Объем сделок в лотах.
-  public var volume: Int64 {
-    get {return _storage._volume}
-    set {_uniqueStorage()._volume = newValue}
-  }
-
-  ///Время начала интервала свечи по UTC.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return _storage._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {_uniqueStorage()._time = nil}
-
-  ///Время последней сделки, вошедшей в свечу по UTC.
-  public var lastTradeTs: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._lastTradeTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._lastTradeTs = newValue}
-  }
-  /// Returns true if `lastTradeTs` has been explicitly set.
-  public var hasLastTradeTs: Bool {return _storage._lastTradeTs != nil}
-  /// Clears the value of `lastTradeTs`. Subsequent reads from it will return its default value.
-  public mutating func clearLastTradeTs() {_uniqueStorage()._lastTradeTs = nil}
-
-  ///UID инструмента.
-  public var instrumentUid: String {
-    get {return _storage._instrumentUid}
-    set {_uniqueStorage()._instrumentUid = newValue}
-  }
-
-  ///Источник свечей.
-  public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_CandleSource {
-    get {return _storage._candleSourceType}
-    set {_uniqueStorage()._candleSourceType = newValue}
-  }
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _storage = _StorageClass.defaultInstance
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String {
+        get {return _storage._figi}
+        set {_uniqueStorage()._figi = newValue}
+    }
+    
+    ///Интервал свечи.
+    public var interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval {
+        get {return _storage._interval}
+        set {_uniqueStorage()._interval = newValue}
+    }
+    
+    ///Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var `open`: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._open ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._open = newValue}
+    }
+    /// Returns true if ``open`` has been explicitly set.
+    public var hasOpen: Bool {return _storage._open != nil}
+    /// Clears the value of ``open``. Subsequent reads from it will return its default value.
+    public mutating func clearOpen() {_uniqueStorage()._open = nil}
+    
+    ///Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._high ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._high = newValue}
+    }
+    /// Returns true if `high` has been explicitly set.
+    public var hasHigh: Bool {return _storage._high != nil}
+    /// Clears the value of `high`. Subsequent reads from it will return its default value.
+    public mutating func clearHigh() {_uniqueStorage()._high = nil}
+    
+    ///Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._low ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._low = newValue}
+    }
+    /// Returns true if `low` has been explicitly set.
+    public var hasLow: Bool {return _storage._low != nil}
+    /// Clears the value of `low`. Subsequent reads from it will return its default value.
+    public mutating func clearLow() {_uniqueStorage()._low = nil}
+    
+    ///Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._close ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._close = newValue}
+    }
+    /// Returns true if `close` has been explicitly set.
+    public var hasClose: Bool {return _storage._close != nil}
+    /// Clears the value of `close`. Subsequent reads from it will return its default value.
+    public mutating func clearClose() {_uniqueStorage()._close = nil}
+    
+    ///Объем сделок в лотах.
+    public var volume: Int64 {
+        get {return _storage._volume}
+        set {_uniqueStorage()._volume = newValue}
+    }
+    
+    ///Время начала интервала свечи по UTC.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return _storage._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {_uniqueStorage()._time = nil}
+    
+    ///Время последней сделки, вошедшей в свечу по UTC.
+    public var lastTradeTs: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._lastTradeTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._lastTradeTs = newValue}
+    }
+    /// Returns true if `lastTradeTs` has been explicitly set.
+    public var hasLastTradeTs: Bool {return _storage._lastTradeTs != nil}
+    /// Clears the value of `lastTradeTs`. Subsequent reads from it will return its default value.
+    public mutating func clearLastTradeTs() {_uniqueStorage()._lastTradeTs = nil}
+    
+    ///UID инструмента.
+    public var instrumentUid: String {
+        get {return _storage._instrumentUid}
+        set {_uniqueStorage()._instrumentUid = newValue}
+    }
+    
+    ///Источник свечей.
+    public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_CandleSource {
+        get {return _storage._candleSourceType}
+        set {_uniqueStorage()._candleSourceType = newValue}
+    }
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 ///Пакет стаканов в рамках стрима.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OrderBook {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Глубина стакана.
-  public var depth: Int32 = 0
-
-  ///Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
-  public var isConsistent: Bool = false
-
-  ///Массив предложений.
-  public var bids: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
-
-  ///Массив спроса.
-  public var asks: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
-
-  ///Время формирования стакана в часовом поясе UTC по времени биржи.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return self._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {self._time = nil}
-
-  ///Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _limitUp ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_limitUp = newValue}
-  }
-  /// Returns true if `limitUp` has been explicitly set.
-  public var hasLimitUp: Bool {return self._limitUp != nil}
-  /// Clears the value of `limitUp`. Subsequent reads from it will return its default value.
-  public mutating func clearLimitUp() {self._limitUp = nil}
-
-  ///Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _limitDown ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_limitDown = newValue}
-  }
-  /// Returns true if `limitDown` has been explicitly set.
-  public var hasLimitDown: Bool {return self._limitDown != nil}
-  /// Clears the value of `limitDown`. Subsequent reads from it will return its default value.
-  public mutating func clearLimitDown() {self._limitDown = nil}
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Тип стакана.
-  public var orderBookType: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType = .unspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Глубина стакана.
+    public var depth: Int32 = 0
+    
+    ///Флаг консистентности стакана. **false** — не все заявки попали в стакан из-за сетевых задержек или нарушения порядка доставки.
+    public var isConsistent: Bool = false
+    
+    ///Массив предложений.
+    public var bids: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
+    
+    ///Массив спроса.
+    public var asks: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
+    
+    ///Время формирования стакана в часовом поясе UTC по времени биржи.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return self._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {self._time = nil}
+    
+    ///Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _limitUp ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_limitUp = newValue}
+    }
+    /// Returns true if `limitUp` has been explicitly set.
+    public var hasLimitUp: Bool {return self._limitUp != nil}
+    /// Clears the value of `limitUp`. Subsequent reads from it will return its default value.
+    public mutating func clearLimitUp() {self._limitUp = nil}
+    
+    ///Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _limitDown ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_limitDown = newValue}
+    }
+    /// Returns true if `limitDown` has been explicitly set.
+    public var hasLimitDown: Bool {return self._limitDown != nil}
+    /// Clears the value of `limitDown`. Subsequent reads from it will return its default value.
+    public mutating func clearLimitDown() {self._limitDown = nil}
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Тип стакана.
+    public var orderBookType: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType = .unspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 }
 
 ///Массив предложений/спроса.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_Order {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_price = newValue}
-  }
-  /// Returns true if `price` has been explicitly set.
-  public var hasPrice: Bool {return self._price != nil}
-  /// Clears the value of `price`. Subsequent reads from it will return its default value.
-  public mutating func clearPrice() {self._price = nil}
-
-  ///Количество в лотах.
-  public var quantity: Int64 = 0
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_price = newValue}
+    }
+    /// Returns true if `price` has been explicitly set.
+    public var hasPrice: Bool {return self._price != nil}
+    /// Clears the value of `price`. Subsequent reads from it will return its default value.
+    public mutating func clearPrice() {self._price = nil}
+    
+    ///Количество в лотах.
+    public var quantity: Int64 = 0
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
 }
 
 ///Информация о сделке.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_Trade {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Направление сделки.
-  public var direction: Tinkoff_Public_Invest_Api_Contract_V1_TradeDirection = .unspecified
-
-  ///Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_price = newValue}
-  }
-  /// Returns true if `price` has been explicitly set.
-  public var hasPrice: Bool {return self._price != nil}
-  /// Clears the value of `price`. Subsequent reads from it will return its default value.
-  public mutating func clearPrice() {self._price = nil}
-
-  ///Количество лотов.
-  public var quantity: Int64 = 0
-
-  ///Время сделки в часовом поясе UTC по времени биржи.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return self._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {self._time = nil}
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Тип источника сделки.
-  public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Направление сделки.
+    public var direction: Tinkoff_Public_Invest_Api_Contract_V1_TradeDirection = .unspecified
+    
+    ///Цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_price = newValue}
+    }
+    /// Returns true if `price` has been explicitly set.
+    public var hasPrice: Bool {return self._price != nil}
+    /// Clears the value of `price`. Subsequent reads from it will return its default value.
+    public mutating func clearPrice() {self._price = nil}
+    
+    ///Количество лотов.
+    public var quantity: Int64 = 0
+    
+    ///Время сделки в часовом поясе UTC по времени биржи.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return self._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {self._time = nil}
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Тип источника сделки.
+    public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 ///Пакет изменения торгового статуса.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Статус торговли инструментом.
-  public var tradingStatus: Tinkoff_Public_Invest_Api_Contract_V1_SecurityTradingStatus = .unspecified
-
-  ///Время изменения торгового статуса по UTC.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return self._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {self._time = nil}
-
-  ///Признак доступности выставления лимитной заявки по инструменту.
-  public var limitOrderAvailableFlag: Bool = false
-
-  ///Признак доступности выставления рыночной заявки по инструменту.
-  public var marketOrderAvailableFlag: Bool = false
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Статус торговли инструментом.
+    public var tradingStatus: Tinkoff_Public_Invest_Api_Contract_V1_SecurityTradingStatus = .unspecified
+    
+    ///Время изменения торгового статуса по UTC.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return self._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {self._time = nil}
+    
+    ///Признак доступности выставления лимитной заявки по инструменту.
+    public var limitOrderAvailableFlag: Bool = false
+    
+    ///Признак доступности выставления рыночной заявки по инструменту.
+    public var marketOrderAvailableFlag: Bool = false
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 ///Запрос исторических свечей.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: String {
-    get {return _figi ?? String()}
-    set {_figi = newValue}
-  }
-  /// Returns true if `figi` has been explicitly set.
-  public var hasFigi: Bool {return self._figi != nil}
-  /// Clears the value of `figi`. Subsequent reads from it will return its default value.
-  public mutating func clearFigi() {self._figi = nil}
-
-  ///Начало запрашиваемого периода по UTC.
-  public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_from = newValue}
-  }
-  /// Returns true if `from` has been explicitly set.
-  public var hasFrom: Bool {return self._from != nil}
-  /// Clears the value of `from`. Subsequent reads from it will return its default value.
-  public mutating func clearFrom() {self._from = nil}
-
-  ///Окончание запрашиваемого периода по UTC.
-  public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_to = newValue}
-  }
-  /// Returns true if `to` has been explicitly set.
-  public var hasTo: Bool {return self._to != nil}
-  /// Clears the value of `to`. Subsequent reads from it will return its default value.
-  public mutating func clearTo() {self._to = nil}
-
-  ///Интервал запрошенных свечей.
-  public var interval: Tinkoff_Public_Invest_Api_Contract_V1_CandleInterval = .unspecified
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String {
-    get {return _instrumentID ?? String()}
-    set {_instrumentID = newValue}
-  }
-  /// Returns true if `instrumentID` has been explicitly set.
-  public var hasInstrumentID: Bool {return self._instrumentID != nil}
-  /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
-  public mutating func clearInstrumentID() {self._instrumentID = nil}
-
-  ///Тип источника свечи.
-  public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource {
-    get {return _candleSourceType ?? .unspecified}
-    set {_candleSourceType = newValue}
-  }
-  /// Returns true if `candleSourceType` has been explicitly set.
-  public var hasCandleSourceType: Bool {return self._candleSourceType != nil}
-  /// Clears the value of `candleSourceType`. Subsequent reads from it will return its default value.
-  public mutating func clearCandleSourceType() {self._candleSourceType = nil}
-
-  ///Максимальное количество свечей в ответе.
-  public var limit: Int32 {
-    get {return _limit ?? 0}
-    set {_limit = newValue}
-  }
-  /// Returns true if `limit` has been explicitly set.
-  public var hasLimit: Bool {return self._limit != nil}
-  /// Clears the value of `limit`. Subsequent reads from it will return its default value.
-  public mutating func clearLimit() {self._limit = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public enum CandleSource: SwiftProtobuf.Enum {
-    public typealias RawValue = Int
-
-    ///Все свечи.
-    case unspecified // = 0
-
-    ///Биржевые свечи.
-    case exchange // = 1
-
-    ///Все свечи с учетом торговли по выходным.
-    case includeWeekend // = 3
-    case UNRECOGNIZED(Int)
-
-    public init() {
-      self = .unspecified
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: String {
+        get {return _figi ?? String()}
+        set {_figi = newValue}
     }
-
-    public init?(rawValue: Int) {
-      switch rawValue {
-      case 0: self = .unspecified
-      case 1: self = .exchange
-      case 3: self = .includeWeekend
-      default: self = .UNRECOGNIZED(rawValue)
-      }
+    /// Returns true if `figi` has been explicitly set.
+    public var hasFigi: Bool {return self._figi != nil}
+    /// Clears the value of `figi`. Subsequent reads from it will return its default value.
+    public mutating func clearFigi() {self._figi = nil}
+    
+    ///Начало запрашиваемого периода по UTC.
+    public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_from = newValue}
     }
-
-    public var rawValue: Int {
-      switch self {
-      case .unspecified: return 0
-      case .exchange: return 1
-      case .includeWeekend: return 3
-      case .UNRECOGNIZED(let i): return i
-      }
+    /// Returns true if `from` has been explicitly set.
+    public var hasFrom: Bool {return self._from != nil}
+    /// Clears the value of `from`. Subsequent reads from it will return its default value.
+    public mutating func clearFrom() {self._from = nil}
+    
+    ///Окончание запрашиваемого периода по UTC.
+    public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_to = newValue}
     }
-
-  }
-
-  public init() {}
-
-  fileprivate var _figi: String? = nil
-  fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _instrumentID: String? = nil
-  fileprivate var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource? = nil
-  fileprivate var _limit: Int32? = nil
+    /// Returns true if `to` has been explicitly set.
+    public var hasTo: Bool {return self._to != nil}
+    /// Clears the value of `to`. Subsequent reads from it will return its default value.
+    public mutating func clearTo() {self._to = nil}
+    
+    ///Интервал запрошенных свечей.
+    public var interval: Tinkoff_Public_Invest_Api_Contract_V1_CandleInterval = .unspecified
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String {
+        get {return _instrumentID ?? String()}
+        set {_instrumentID = newValue}
+    }
+    /// Returns true if `instrumentID` has been explicitly set.
+    public var hasInstrumentID: Bool {return self._instrumentID != nil}
+    /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
+    public mutating func clearInstrumentID() {self._instrumentID = nil}
+    
+    ///Тип источника свечи.
+    public var candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource {
+        get {return _candleSourceType ?? .unspecified}
+        set {_candleSourceType = newValue}
+    }
+    /// Returns true if `candleSourceType` has been explicitly set.
+    public var hasCandleSourceType: Bool {return self._candleSourceType != nil}
+    /// Clears the value of `candleSourceType`. Subsequent reads from it will return its default value.
+    public mutating func clearCandleSourceType() {self._candleSourceType = nil}
+    
+    ///Максимальное количество свечей в ответе.
+    public var limit: Int32 {
+        get {return _limit ?? 0}
+        set {_limit = newValue}
+    }
+    /// Returns true if `limit` has been explicitly set.
+    public var hasLimit: Bool {return self._limit != nil}
+    /// Clears the value of `limit`. Subsequent reads from it will return its default value.
+    public mutating func clearLimit() {self._limit = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public enum CandleSource: SwiftProtobuf.Enum {
+        public typealias RawValue = Int
+        
+        ///Все свечи.
+        case unspecified // = 0
+        
+        ///Биржевые свечи.
+        case exchange // = 1
+        
+        ///Все свечи с учетом торговли по выходным.
+        case includeWeekend // = 3
+        case UNRECOGNIZED(Int)
+        
+        public init() {
+            self = .unspecified
+        }
+        
+        public init?(rawValue: Int) {
+            switch rawValue {
+            case 0: self = .unspecified
+            case 1: self = .exchange
+            case 3: self = .includeWeekend
+            default: self = .UNRECOGNIZED(rawValue)
+            }
+        }
+        
+        public var rawValue: Int {
+            switch self {
+            case .unspecified: return 0
+            case .exchange: return 1
+            case .includeWeekend: return 3
+            case .UNRECOGNIZED(let i): return i
+            }
+        }
+        
+    }
+    
+    public init() {}
+    
+    fileprivate var _figi: String? = nil
+    fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _instrumentID: String? = nil
+    fileprivate var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource? = nil
+    fileprivate var _limit: Int32? = nil
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource] = [
-    .unspecified,
-    .exchange,
-    .includeWeekend,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource] = [
+        .unspecified,
+        .exchange,
+        .includeWeekend,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 ///Список свечей.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив свечей.
-  public var candles: [Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Массив свечей.
+    public var candles: [Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Информация о свече.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var `open`: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _open ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_open = newValue}
-  }
-  /// Returns true if ``open`` has been explicitly set.
-  public var hasOpen: Bool {return self._open != nil}
-  /// Clears the value of ``open``. Subsequent reads from it will return its default value.
-  public mutating func clearOpen() {self._open = nil}
-
-  ///Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _high ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_high = newValue}
-  }
-  /// Returns true if `high` has been explicitly set.
-  public var hasHigh: Bool {return self._high != nil}
-  /// Clears the value of `high`. Subsequent reads from it will return its default value.
-  public mutating func clearHigh() {self._high = nil}
-
-  ///Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _low ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_low = newValue}
-  }
-  /// Returns true if `low` has been explicitly set.
-  public var hasLow: Bool {return self._low != nil}
-  /// Clears the value of `low`. Subsequent reads from it will return its default value.
-  public mutating func clearLow() {self._low = nil}
-
-  ///Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _close ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_close = newValue}
-  }
-  /// Returns true if `close` has been explicitly set.
-  public var hasClose: Bool {return self._close != nil}
-  /// Clears the value of `close`. Subsequent reads from it will return its default value.
-  public mutating func clearClose() {self._close = nil}
-
-  ///Объем торгов в лотах.
-  public var volume: Int64 = 0
-
-  ///Время свечи в часовом поясе UTC.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return self._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {self._time = nil}
-
-  ///Признак завершенности свечи. **false** — свеча за текущие интервал еще сформирована не полностью.
-  public var isComplete: Bool = false
-
-  ///Тип источника свечи
-  public var candleSource: Tinkoff_Public_Invest_Api_Contract_V1_CandleSource = .unspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _open: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Цена открытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var `open`: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _open ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_open = newValue}
+    }
+    /// Returns true if ``open`` has been explicitly set.
+    public var hasOpen: Bool {return self._open != nil}
+    /// Clears the value of ``open``. Subsequent reads from it will return its default value.
+    public mutating func clearOpen() {self._open = nil}
+    
+    ///Максимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _high ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_high = newValue}
+    }
+    /// Returns true if `high` has been explicitly set.
+    public var hasHigh: Bool {return self._high != nil}
+    /// Clears the value of `high`. Subsequent reads from it will return its default value.
+    public mutating func clearHigh() {self._high = nil}
+    
+    ///Минимальная цена за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _low ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_low = newValue}
+    }
+    /// Returns true if `low` has been explicitly set.
+    public var hasLow: Bool {return self._low != nil}
+    /// Clears the value of `low`. Subsequent reads from it will return its default value.
+    public mutating func clearLow() {self._low = nil}
+    
+    ///Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _close ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_close = newValue}
+    }
+    /// Returns true if `close` has been explicitly set.
+    public var hasClose: Bool {return self._close != nil}
+    /// Clears the value of `close`. Subsequent reads from it will return its default value.
+    public mutating func clearClose() {self._close = nil}
+    
+    ///Объем торгов в лотах.
+    public var volume: Int64 = 0
+    
+    ///Время свечи в часовом поясе UTC.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return self._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {self._time = nil}
+    
+    ///Признак завершенности свечи. **false** — свеча за текущие интервал еще сформирована не полностью.
+    public var isComplete: Bool = false
+    
+    ///Тип источника свечи
+    public var candleSource: Tinkoff_Public_Invest_Api_Contract_V1_CandleSource = .unspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _open: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 ///Запрос получения цен последних сделок.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: [String] = []
-
-  ///Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
-  public var instrumentID: [String] = []
-
-  ///Тип запрашиваемой последней цены.
-  public var lastPriceType: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType = .lastPriceUnspecified
-
-  ///Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
-  public var instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus {
-    get {return _instrumentStatus ?? .unspecified}
-    set {_instrumentStatus = newValue}
-  }
-  /// Returns true if `instrumentStatus` has been explicitly set.
-  public var hasInstrumentStatus: Bool {return self._instrumentStatus != nil}
-  /// Clears the value of `instrumentStatus`. Subsequent reads from it will return its default value.
-  public mutating func clearInstrumentStatus() {self._instrumentStatus = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: [String] = []
+    
+    ///Массив идентификаторов инструмента. Принимает значения `figi` или `instrument_uid`.
+    public var instrumentID: [String] = []
+    
+    ///Тип запрашиваемой последней цены.
+    public var lastPriceType: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType = .lastPriceUnspecified
+    
+    ///Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+    public var instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus {
+        get {return _instrumentStatus ?? .unspecified}
+        set {_instrumentStatus = newValue}
+    }
+    /// Returns true if `instrumentStatus` has been explicitly set.
+    public var hasInstrumentStatus: Bool {return self._instrumentStatus != nil}
+    /// Clears the value of `instrumentStatus`. Subsequent reads from it will return its default value.
+    public mutating func clearInstrumentStatus() {self._instrumentStatus = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus? = nil
 }
 
 ///Список цен последних сделок.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив цен последних сделок.
-  public var lastPrices: [Tinkoff_Public_Invest_Api_Contract_V1_LastPrice] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Массив цен последних сделок.
+    public var lastPrices: [Tinkoff_Public_Invest_Api_Contract_V1_LastPrice] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Информация о цене последней сделки.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_LastPrice {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI инструмента.
-  public var figi: String = String()
-
-  ///Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_price = newValue}
-  }
-  /// Returns true if `price` has been explicitly set.
-  public var hasPrice: Bool {return self._price != nil}
-  /// Clears the value of `price`. Subsequent reads from it will return its default value.
-  public mutating func clearPrice() {self._price = nil}
-
-  ///Время получения последней цены в часовом поясе UTC по времени биржи.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return self._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {self._time = nil}
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Тип последней цены.
-  public var lastPriceType: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType = .lastPriceUnspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI инструмента.
+    public var figi: String = String()
+    
+    ///Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_price = newValue}
+    }
+    /// Returns true if `price` has been explicitly set.
+    public var hasPrice: Bool {return self._price != nil}
+    /// Clears the value of `price`. Subsequent reads from it will return its default value.
+    public mutating func clearPrice() {self._price = nil}
+    
+    ///Время получения последней цены в часовом поясе UTC по времени биржи.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return self._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {self._time = nil}
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Тип последней цены.
+    public var lastPriceType: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType = .lastPriceUnspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 ///Запрос стакана.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: String {
-    get {return _figi ?? String()}
-    set {_figi = newValue}
-  }
-  /// Returns true if `figi` has been explicitly set.
-  public var hasFigi: Bool {return self._figi != nil}
-  /// Clears the value of `figi`. Subsequent reads from it will return its default value.
-  public mutating func clearFigi() {self._figi = nil}
-
-  ///Глубина стакана.
-  public var depth: Int32 = 0
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String {
-    get {return _instrumentID ?? String()}
-    set {_instrumentID = newValue}
-  }
-  /// Returns true if `instrumentID` has been explicitly set.
-  public var hasInstrumentID: Bool {return self._instrumentID != nil}
-  /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
-  public mutating func clearInstrumentID() {self._instrumentID = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _figi: String? = nil
-  fileprivate var _instrumentID: String? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: String {
+        get {return _figi ?? String()}
+        set {_figi = newValue}
+    }
+    /// Returns true if `figi` has been explicitly set.
+    public var hasFigi: Bool {return self._figi != nil}
+    /// Clears the value of `figi`. Subsequent reads from it will return its default value.
+    public mutating func clearFigi() {self._figi = nil}
+    
+    ///Глубина стакана.
+    public var depth: Int32 = 0
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String {
+        get {return _instrumentID ?? String()}
+        set {_instrumentID = newValue}
+    }
+    /// Returns true if `instrumentID` has been explicitly set.
+    public var hasInstrumentID: Bool {return self._instrumentID != nil}
+    /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
+    public mutating func clearInstrumentID() {self._instrumentID = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _figi: String? = nil
+    fileprivate var _instrumentID: String? = nil
 }
 
 ///Информация о стакане.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String {
-    get {return _storage._figi}
-    set {_uniqueStorage()._figi = newValue}
-  }
-
-  ///Глубина стакана.
-  public var depth: Int32 {
-    get {return _storage._depth}
-    set {_uniqueStorage()._depth = newValue}
-  }
-
-  ///Множество пар значений на покупку.
-  public var bids: [Tinkoff_Public_Invest_Api_Contract_V1_Order] {
-    get {return _storage._bids}
-    set {_uniqueStorage()._bids = newValue}
-  }
-
-  ///Множество пар значений на продажу.
-  public var asks: [Tinkoff_Public_Invest_Api_Contract_V1_Order] {
-    get {return _storage._asks}
-    set {_uniqueStorage()._asks = newValue}
-  }
-
-  ///Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var lastPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._lastPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._lastPrice = newValue}
-  }
-  /// Returns true if `lastPrice` has been explicitly set.
-  public var hasLastPrice: Bool {return _storage._lastPrice != nil}
-  /// Clears the value of `lastPrice`. Subsequent reads from it will return its default value.
-  public mutating func clearLastPrice() {_uniqueStorage()._lastPrice = nil}
-
-  ///Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var closePrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._closePrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._closePrice = newValue}
-  }
-  /// Returns true if `closePrice` has been explicitly set.
-  public var hasClosePrice: Bool {return _storage._closePrice != nil}
-  /// Clears the value of `closePrice`. Subsequent reads from it will return its default value.
-  public mutating func clearClosePrice() {_uniqueStorage()._closePrice = nil}
-
-  ///Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._limitUp ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._limitUp = newValue}
-  }
-  /// Returns true if `limitUp` has been explicitly set.
-  public var hasLimitUp: Bool {return _storage._limitUp != nil}
-  /// Clears the value of `limitUp`. Subsequent reads from it will return its default value.
-  public mutating func clearLimitUp() {_uniqueStorage()._limitUp = nil}
-
-  ///Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
-  public var limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _storage._limitDown ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_uniqueStorage()._limitDown = newValue}
-  }
-  /// Returns true if `limitDown` has been explicitly set.
-  public var hasLimitDown: Bool {return _storage._limitDown != nil}
-  /// Clears the value of `limitDown`. Subsequent reads from it will return its default value.
-  public mutating func clearLimitDown() {_uniqueStorage()._limitDown = nil}
-
-  ///Время получения цены последней сделки.
-  public var lastPriceTs: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._lastPriceTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._lastPriceTs = newValue}
-  }
-  /// Returns true if `lastPriceTs` has been explicitly set.
-  public var hasLastPriceTs: Bool {return _storage._lastPriceTs != nil}
-  /// Clears the value of `lastPriceTs`. Subsequent reads from it will return its default value.
-  public mutating func clearLastPriceTs() {_uniqueStorage()._lastPriceTs = nil}
-
-  ///Время получения цены закрытия.
-  public var closePriceTs: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._closePriceTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._closePriceTs = newValue}
-  }
-  /// Returns true if `closePriceTs` has been explicitly set.
-  public var hasClosePriceTs: Bool {return _storage._closePriceTs != nil}
-  /// Clears the value of `closePriceTs`. Subsequent reads from it will return its default value.
-  public mutating func clearClosePriceTs() {_uniqueStorage()._closePriceTs = nil}
-
-  ///Время формирования стакана на бирже.
-  public var orderbookTs: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _storage._orderbookTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_uniqueStorage()._orderbookTs = newValue}
-  }
-  /// Returns true if `orderbookTs` has been explicitly set.
-  public var hasOrderbookTs: Bool {return _storage._orderbookTs != nil}
-  /// Clears the value of `orderbookTs`. Subsequent reads from it will return its default value.
-  public mutating func clearOrderbookTs() {_uniqueStorage()._orderbookTs = nil}
-
-  ///UID инструмента.
-  public var instrumentUid: String {
-    get {return _storage._instrumentUid}
-    set {_uniqueStorage()._instrumentUid = newValue}
-  }
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _storage = _StorageClass.defaultInstance
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String {
+        get {return _storage._figi}
+        set {_uniqueStorage()._figi = newValue}
+    }
+    
+    ///Глубина стакана.
+    public var depth: Int32 {
+        get {return _storage._depth}
+        set {_uniqueStorage()._depth = newValue}
+    }
+    
+    ///Множество пар значений на покупку.
+    public var bids: [Tinkoff_Public_Invest_Api_Contract_V1_Order] {
+        get {return _storage._bids}
+        set {_uniqueStorage()._bids = newValue}
+    }
+    
+    ///Множество пар значений на продажу.
+    public var asks: [Tinkoff_Public_Invest_Api_Contract_V1_Order] {
+        get {return _storage._asks}
+        set {_uniqueStorage()._asks = newValue}
+    }
+    
+    ///Цена последней сделки за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var lastPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._lastPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._lastPrice = newValue}
+    }
+    /// Returns true if `lastPrice` has been explicitly set.
+    public var hasLastPrice: Bool {return _storage._lastPrice != nil}
+    /// Clears the value of `lastPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearLastPrice() {_uniqueStorage()._lastPrice = nil}
+    
+    ///Цена закрытия за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var closePrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._closePrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._closePrice = newValue}
+    }
+    /// Returns true if `closePrice` has been explicitly set.
+    public var hasClosePrice: Bool {return _storage._closePrice != nil}
+    /// Clears the value of `closePrice`. Subsequent reads from it will return its default value.
+    public mutating func clearClosePrice() {_uniqueStorage()._closePrice = nil}
+    
+    ///Верхний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._limitUp ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._limitUp = newValue}
+    }
+    /// Returns true if `limitUp` has been explicitly set.
+    public var hasLimitUp: Bool {return _storage._limitUp != nil}
+    /// Clears the value of `limitUp`. Subsequent reads from it will return its default value.
+    public mutating func clearLimitUp() {_uniqueStorage()._limitUp = nil}
+    
+    ///Нижний лимит цены за 1 инструмент. Чтобы получить стоимость лота, нужно умножить на лотность инструмента. [Подробнее про перевод цен в валюту](./faq_marketdata/#_15).
+    public var limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _storage._limitDown ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_uniqueStorage()._limitDown = newValue}
+    }
+    /// Returns true if `limitDown` has been explicitly set.
+    public var hasLimitDown: Bool {return _storage._limitDown != nil}
+    /// Clears the value of `limitDown`. Subsequent reads from it will return its default value.
+    public mutating func clearLimitDown() {_uniqueStorage()._limitDown = nil}
+    
+    ///Время получения цены последней сделки.
+    public var lastPriceTs: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._lastPriceTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._lastPriceTs = newValue}
+    }
+    /// Returns true if `lastPriceTs` has been explicitly set.
+    public var hasLastPriceTs: Bool {return _storage._lastPriceTs != nil}
+    /// Clears the value of `lastPriceTs`. Subsequent reads from it will return its default value.
+    public mutating func clearLastPriceTs() {_uniqueStorage()._lastPriceTs = nil}
+    
+    ///Время получения цены закрытия.
+    public var closePriceTs: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._closePriceTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._closePriceTs = newValue}
+    }
+    /// Returns true if `closePriceTs` has been explicitly set.
+    public var hasClosePriceTs: Bool {return _storage._closePriceTs != nil}
+    /// Clears the value of `closePriceTs`. Subsequent reads from it will return its default value.
+    public mutating func clearClosePriceTs() {_uniqueStorage()._closePriceTs = nil}
+    
+    ///Время формирования стакана на бирже.
+    public var orderbookTs: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _storage._orderbookTs ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_uniqueStorage()._orderbookTs = newValue}
+    }
+    /// Returns true if `orderbookTs` has been explicitly set.
+    public var hasOrderbookTs: Bool {return _storage._orderbookTs != nil}
+    /// Clears the value of `orderbookTs`. Subsequent reads from it will return its default value.
+    public mutating func clearOrderbookTs() {_uniqueStorage()._orderbookTs = nil}
+    
+    ///UID инструмента.
+    public var instrumentUid: String {
+        get {return _storage._instrumentUid}
+        set {_uniqueStorage()._instrumentUid = newValue}
+    }
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _storage = _StorageClass.defaultInstance
 }
 
 ///Запрос получения торгового статуса.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: String {
-    get {return _figi ?? String()}
-    set {_figi = newValue}
-  }
-  /// Returns true if `figi` has been explicitly set.
-  public var hasFigi: Bool {return self._figi != nil}
-  /// Clears the value of `figi`. Subsequent reads from it will return its default value.
-  public mutating func clearFigi() {self._figi = nil}
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String {
-    get {return _instrumentID ?? String()}
-    set {_instrumentID = newValue}
-  }
-  /// Returns true if `instrumentID` has been explicitly set.
-  public var hasInstrumentID: Bool {return self._instrumentID != nil}
-  /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
-  public mutating func clearInstrumentID() {self._instrumentID = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _figi: String? = nil
-  fileprivate var _instrumentID: String? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: String {
+        get {return _figi ?? String()}
+        set {_figi = newValue}
+    }
+    /// Returns true if `figi` has been explicitly set.
+    public var hasFigi: Bool {return self._figi != nil}
+    /// Clears the value of `figi`. Subsequent reads from it will return its default value.
+    public mutating func clearFigi() {self._figi = nil}
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String {
+        get {return _instrumentID ?? String()}
+        set {_instrumentID = newValue}
+    }
+    /// Returns true if `instrumentID` has been explicitly set.
+    public var hasInstrumentID: Bool {return self._instrumentID != nil}
+    /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
+    public mutating func clearInstrumentID() {self._instrumentID = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _figi: String? = nil
+    fileprivate var _instrumentID: String? = nil
 }
 
 ///Запрос получения торгового статуса.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: [String] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: [String] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Информация о торговом статусе.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив информации о торговых статусах.
-  public var tradingStatuses: [Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Массив информации о торговых статусах.
+    public var tradingStatuses: [Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Информация о торговом статусе.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI-идентификатор инструмента.
-  public var figi: String = String()
-
-  ///Статус торговли инструментом.
-  public var tradingStatus: Tinkoff_Public_Invest_Api_Contract_V1_SecurityTradingStatus = .unspecified
-
-  ///Признак доступности выставления лимитной заявки по инструменту.
-  public var limitOrderAvailableFlag: Bool = false
-
-  ///Признак доступности выставления рыночной заявки по инструменту.
-  public var marketOrderAvailableFlag: Bool = false
-
-  ///Признак доступности торгов через API.
-  public var apiTradeAvailableFlag: Bool = false
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Признак доступности завяки по лучшей цене.
-  public var bestpriceOrderAvailableFlag: Bool = false
-
-  ///Признак доступности только заявки по лучшей цене.
-  public var onlyBestPrice: Bool = false
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI-идентификатор инструмента.
+    public var figi: String = String()
+    
+    ///Статус торговли инструментом.
+    public var tradingStatus: Tinkoff_Public_Invest_Api_Contract_V1_SecurityTradingStatus = .unspecified
+    
+    ///Признак доступности выставления лимитной заявки по инструменту.
+    public var limitOrderAvailableFlag: Bool = false
+    
+    ///Признак доступности выставления рыночной заявки по инструменту.
+    public var marketOrderAvailableFlag: Bool = false
+    
+    ///Признак доступности торгов через API.
+    public var apiTradeAvailableFlag: Bool = false
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Признак доступности завяки по лучшей цене.
+    public var bestpriceOrderAvailableFlag: Bool = false
+    
+    ///Признак доступности только заявки по лучшей цене.
+    public var onlyBestPrice: Bool = false
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос обезличенных сделок за последний час.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
-  public var figi: String {
-    get {return _figi ?? String()}
-    set {_figi = newValue}
-  }
-  /// Returns true if `figi` has been explicitly set.
-  public var hasFigi: Bool {return self._figi != nil}
-  /// Clears the value of `figi`. Subsequent reads from it will return its default value.
-  public mutating func clearFigi() {self._figi = nil}
-
-  ///Начало запрашиваемого периода по UTC.
-  public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_from = newValue}
-  }
-  /// Returns true if `from` has been explicitly set.
-  public var hasFrom: Bool {return self._from != nil}
-  /// Clears the value of `from`. Subsequent reads from it will return its default value.
-  public mutating func clearFrom() {self._from = nil}
-
-  ///Окончание запрашиваемого периода по UTC.
-  public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_to = newValue}
-  }
-  /// Returns true if `to` has been explicitly set.
-  public var hasTo: Bool {return self._to != nil}
-  /// Clears the value of `to`. Subsequent reads from it will return its default value.
-  public mutating func clearTo() {self._to = nil}
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String {
-    get {return _instrumentID ?? String()}
-    set {_instrumentID = newValue}
-  }
-  /// Returns true if `instrumentID` has been explicitly set.
-  public var hasInstrumentID: Bool {return self._instrumentID != nil}
-  /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
-  public mutating func clearInstrumentID() {self._instrumentID = nil}
-
-  ///Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
-  public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _figi: String? = nil
-  fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _instrumentID: String? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Deprecated FIGI-идентификатор инструмента. Используйте `instrument_id`.
+    public var figi: String {
+        get {return _figi ?? String()}
+        set {_figi = newValue}
+    }
+    /// Returns true if `figi` has been explicitly set.
+    public var hasFigi: Bool {return self._figi != nil}
+    /// Clears the value of `figi`. Subsequent reads from it will return its default value.
+    public mutating func clearFigi() {self._figi = nil}
+    
+    ///Начало запрашиваемого периода по UTC.
+    public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_from = newValue}
+    }
+    /// Returns true if `from` has been explicitly set.
+    public var hasFrom: Bool {return self._from != nil}
+    /// Clears the value of `from`. Subsequent reads from it will return its default value.
+    public mutating func clearFrom() {self._from = nil}
+    
+    ///Окончание запрашиваемого периода по UTC.
+    public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_to = newValue}
+    }
+    /// Returns true if `to` has been explicitly set.
+    public var hasTo: Bool {return self._to != nil}
+    /// Clears the value of `to`. Subsequent reads from it will return its default value.
+    public mutating func clearTo() {self._to = nil}
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String {
+        get {return _instrumentID ?? String()}
+        set {_instrumentID = newValue}
+    }
+    /// Returns true if `instrumentID` has been explicitly set.
+    public var hasInstrumentID: Bool {return self._instrumentID != nil}
+    /// Clears the value of `instrumentID`. Subsequent reads from it will return its default value.
+    public mutating func clearInstrumentID() {self._instrumentID = nil}
+    
+    ///Тип источника сделок. Значение по умолчанию — `TRADE_SOURCE_ALL`, все сделки.
+    public var tradeSource: Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType = .tradeSourceUnspecified
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _figi: String? = nil
+    fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _instrumentID: String? = nil
 }
 
 ///Обезличенных сделок за последний час.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив сделок.
-  public var trades: [Tinkoff_Public_Invest_Api_Contract_V1_Trade] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Массив сделок.
+    public var trades: [Tinkoff_Public_Invest_Api_Contract_V1_Trade] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос активных подписок. Возвращает по одному сообщению на каждый тип активных подписок — `SubscribeLastPriceResponse`, `SubscribeInfoResponse`, `SubscribeTradesResponse`, `SubscribeOrderBookResponse`, `SubscribeCandlesResponse`.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Запрос цен закрытия торговой сессии по инструментам.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив по инструментам.
-  public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest] = []
-
-  ///Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
-  public var instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus {
-    get {return _instrumentStatus ?? .unspecified}
-    set {_instrumentStatus = newValue}
-  }
-  /// Returns true if `instrumentStatus` has been explicitly set.
-  public var hasInstrumentStatus: Bool {return self._instrumentStatus != nil}
-  /// Clears the value of `instrumentStatus`. Subsequent reads from it will return its default value.
-  public mutating func clearInstrumentStatus() {self._instrumentStatus = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Массив по инструментам.
+    public var instruments: [Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest] = []
+    
+    ///Статус запрашиваемых инструментов. [Возможные значения](#instrumentstatus).
+    public var instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus {
+        get {return _instrumentStatus ?? .unspecified}
+        set {_instrumentStatus = newValue}
+    }
+    /// Returns true if `instrumentStatus` has been explicitly set.
+    public var hasInstrumentStatus: Bool {return self._instrumentStatus != nil}
+    /// Clears the value of `instrumentStatus`. Subsequent reads from it will return its default value.
+    public mutating func clearInstrumentStatus() {self._instrumentStatus = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _instrumentStatus: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentStatus? = nil
 }
 
 ///Запрос цен закрытия торговой сессии по инструменту.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
-  public var instrumentID: String = String()
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Идентификатор инструмента. Принимает значение `figi` или `instrument_uid`.
+    public var instrumentID: String = String()
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Цены закрытия торговой сессии по инструментам.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив по инструментам.
-  public var closePrices: [Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///Массив по инструментам.
+    public var closePrices: [Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse] = []
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
 }
 
 ///Цена закрытия торговой сессии по инструменту.
 public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///FIGI инструмента.
-  public var figi: String = String()
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Цена закрытия торговой сессии.
-  public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_price = newValue}
-  }
-  /// Returns true if `price` has been explicitly set.
-  public var hasPrice: Bool {return self._price != nil}
-  /// Clears the value of `price`. Subsequent reads from it will return its default value.
-  public mutating func clearPrice() {self._price = nil}
-
-  ///Цена последней сделки с вечерней сессии. Цена публикуется биржей по торговым дням и в нерабочие дни не обновляется.
-  public var eveningSessionPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-    get {return _eveningSessionPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-    set {_eveningSessionPrice = newValue}
-  }
-  /// Returns true if `eveningSessionPrice` has been explicitly set.
-  public var hasEveningSessionPrice: Bool {return self._eveningSessionPrice != nil}
-  /// Clears the value of `eveningSessionPrice`. Subsequent reads from it will return its default value.
-  public mutating func clearEveningSessionPrice() {self._eveningSessionPrice = nil}
-
-  ///Дата совершения торгов.
-  public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_time = newValue}
-  }
-  /// Returns true if `time` has been explicitly set.
-  public var hasTime: Bool {return self._time != nil}
-  /// Clears the value of `time`. Subsequent reads from it will return its default value.
-  public mutating func clearTime() {self._time = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public init() {}
-
-  fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _eveningSessionPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    // SwiftProtobuf.Message conformance is added in an extension below. See the
+    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+    // methods supported on all messages.
+    
+    ///FIGI инструмента.
+    public var figi: String = String()
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Цена закрытия торговой сессии.
+    public var price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _price ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_price = newValue}
+    }
+    /// Returns true if `price` has been explicitly set.
+    public var hasPrice: Bool {return self._price != nil}
+    /// Clears the value of `price`. Subsequent reads from it will return its default value.
+    public mutating func clearPrice() {self._price = nil}
+    
+    ///Цена последней сделки с вечерней сессии. Цена публикуется биржей по торговым дням и в нерабочие дни не обновляется.
+    public var eveningSessionPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+        get {return _eveningSessionPrice ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+        set {_eveningSessionPrice = newValue}
+    }
+    /// Returns true if `eveningSessionPrice` has been explicitly set.
+    public var hasEveningSessionPrice: Bool {return self._eveningSessionPrice != nil}
+    /// Clears the value of `eveningSessionPrice`. Subsequent reads from it will return its default value.
+    public mutating func clearEveningSessionPrice() {self._eveningSessionPrice = nil}
+    
+    ///Дата совершения торгов.
+    public var time: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _time ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_time = newValue}
+    }
+    /// Returns true if `time` has been explicitly set.
+    public var hasTime: Bool {return self._time != nil}
+    /// Clears the value of `time`. Subsequent reads from it will return its default value.
+    public mutating func clearTime() {self._time = nil}
+    
+    public var unknownFields = SwiftProtobuf.UnknownStorage()
+    
+    public init() {}
+    
+    fileprivate var _price: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _eveningSessionPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    fileprivate var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
 }
 
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Тип технического индикатора.
-  public var indicatorType: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorType = .unspecified
-
-  ///UID инструмента.
-  public var instrumentUid: String = String()
-
-  ///Начало запрашиваемого периода по UTC.
-  public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_from = newValue}
-  }
-  /// Returns true if `from` has been explicitly set.
-  public var hasFrom: Bool {return self._from != nil}
-  /// Clears the value of `from`. Subsequent reads from it will return its default value.
-  public mutating func clearFrom() {self._from = nil}
-
-  ///Окончание запрашиваемого периода по UTC.
-  public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
-    get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-    set {_to = newValue}
-  }
-  /// Returns true if `to` has been explicitly set.
-  public var hasTo: Bool {return self._to != nil}
-  /// Clears the value of `to`. Subsequent reads from it will return its default value.
-  public mutating func clearTo() {self._to = nil}
-
-  ///Интервал, за который рассчитывается индикатор.
-  public var interval: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorInterval = .unspecified
-
-  ///Тип цены, который используется при расчете индикатора.
-  public var typeOfPrice: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.TypeOfPrice = .unspecified
-
-  ///Торговый период, за который рассчитывается индикатор.
-  public var length: Int32 = 0
-
-  ///Параметры отклонения.
-  public var deviation: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation {
-    get {return _deviation ?? Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation()}
-    set {_deviation = newValue}
-  }
-  /// Returns true if `deviation` has been explicitly set.
-  public var hasDeviation: Bool {return self._deviation != nil}
-  /// Clears the value of `deviation`. Subsequent reads from it will return its default value.
-  public mutating func clearDeviation() {self._deviation = nil}
-
-  ///Параметры сглаживания.
-  public var smoothing: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing {
-    get {return _smoothing ?? Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing()}
-    set {_smoothing = newValue}
-  }
-  /// Returns true if `smoothing` has been explicitly set.
-  public var hasSmoothing: Bool {return self._smoothing != nil}
-  /// Clears the value of `smoothing`. Subsequent reads from it will return its default value.
-  public mutating func clearSmoothing() {self._smoothing = nil}
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  ///Интервал свечи.
-  public enum IndicatorInterval: SwiftProtobuf.Enum {
-    public typealias RawValue = Int
-
-    ///Интервал не определен.
-    case unspecified // = 0
-
-    ///1 минута.
-    case oneMinute // = 1
-
-    ///5 минут.
-    case fiveMinutes // = 2
-
-    ///15 минут.
-    case fifteenMinutes // = 3
-
-    ///1 час.
-    case oneHour // = 4
-
-    ///1 день.
-    case oneDay // = 5
-
-    ///2 минуты.
-    case indicatorInterval2Min // = 6
-
-    ///3 минуты.
-    case indicatorInterval3Min // = 7
-
-    ///10 минут.
-    case indicatorInterval10Min // = 8
-
-    ///30 минут.
-    case indicatorInterval30Min // = 9
-
-    ///2 часа.
-    case indicatorInterval2Hour // = 10
-
-    ///4 часа.
-    case indicatorInterval4Hour // = 11
-
-    ///Неделя.
-    case week // = 12
-
-    ///Месяц.
-    case month // = 13
-    case UNRECOGNIZED(Int)
-
-    public init() {
-      self = .unspecified
-    }
-
-    public init?(rawValue: Int) {
-      switch rawValue {
-      case 0: self = .unspecified
-      case 1: self = .oneMinute
-      case 2: self = .fiveMinutes
-      case 3: self = .fifteenMinutes
-      case 4: self = .oneHour
-      case 5: self = .oneDay
-      case 6: self = .indicatorInterval2Min
-      case 7: self = .indicatorInterval3Min
-      case 8: self = .indicatorInterval10Min
-      case 9: self = .indicatorInterval30Min
-      case 10: self = .indicatorInterval2Hour
-      case 11: self = .indicatorInterval4Hour
-      case 12: self = .week
-      case 13: self = .month
-      default: self = .UNRECOGNIZED(rawValue)
-      }
-    }
-
-    public var rawValue: Int {
-      switch self {
-      case .unspecified: return 0
-      case .oneMinute: return 1
-      case .fiveMinutes: return 2
-      case .fifteenMinutes: return 3
-      case .oneHour: return 4
-      case .oneDay: return 5
-      case .indicatorInterval2Min: return 6
-      case .indicatorInterval3Min: return 7
-      case .indicatorInterval10Min: return 8
-      case .indicatorInterval30Min: return 9
-      case .indicatorInterval2Hour: return 10
-      case .indicatorInterval4Hour: return 11
-      case .week: return 12
-      case .month: return 13
-      case .UNRECOGNIZED(let i): return i
-      }
-    }
-
-  }
-
-  public enum TypeOfPrice: SwiftProtobuf.Enum {
-    public typealias RawValue = Int
-
-    ///Не указано.
-    case unspecified // = 0
-
-    ///Цена закрытия.
-    case close // = 1
-
-    ///Цена открытия.
-    case `open` // = 2
-
-    ///Максимальное значение за выбранный интервал.
-    case high // = 3
-
-    ///Минимальное значение за выбранный интервал.
-    case low // = 4
-
-    ///Среднее значение по показателям [ (close + open + high + low) / 4 ].
-    case avg // = 5
-    case UNRECOGNIZED(Int)
-
-    public init() {
-      self = .unspecified
-    }
-
-    public init?(rawValue: Int) {
-      switch rawValue {
-      case 0: self = .unspecified
-      case 1: self = .close
-      case 2: self = .open
-      case 3: self = .high
-      case 4: self = .low
-      case 5: self = .avg
-      default: self = .UNRECOGNIZED(rawValue)
-      }
-    }
-
-    public var rawValue: Int {
-      switch self {
-      case .unspecified: return 0
-      case .close: return 1
-      case .open: return 2
-      case .high: return 3
-      case .low: return 4
-      case .avg: return 5
-      case .UNRECOGNIZED(let i): return i
-      }
-    }
-
-  }
-
-  public enum IndicatorType: SwiftProtobuf.Enum {
-    public typealias RawValue = Int
-
-    ///Не определен.
-    case unspecified // = 0
-
-    ///Bollinger Bands — линия Боллинжера.
-    case bb // = 1
-
-    ///Exponential Moving Average — EMA, экспоненциальная скользящая средняя.
-    case ema // = 2
-
-    ///Relative Strength Index — индекс относительной силы.
-    case rsi // = 3
-
-    ///Moving Average Convergence/Divergence — схождение/расхождение скользящих средних.
-    case macd // = 4
-
-    ///Simple Moving Average — простое скользящее среднее.
-    case sma // = 5
-    case UNRECOGNIZED(Int)
-
-    public init() {
-      self = .unspecified
-    }
-
-    public init?(rawValue: Int) {
-      switch rawValue {
-      case 0: self = .unspecified
-      case 1: self = .bb
-      case 2: self = .ema
-      case 3: self = .rsi
-      case 4: self = .macd
-      case 5: self = .sma
-      default: self = .UNRECOGNIZED(rawValue)
-      }
-    }
-
-    public var rawValue: Int {
-      switch self {
-      case .unspecified: return 0
-      case .bb: return 1
-      case .ema: return 2
-      case .rsi: return 3
-      case .macd: return 4
-      case .sma: return 5
-      case .UNRECOGNIZED(let i): return i
-      }
-    }
-
-  }
-
-  public struct Smoothing {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
-
-    ///Короткий период сглаживания для первой экспоненциальной скользящей средней (EMA).
-    public var fastLength: Int32 = 0
-
-    ///Длинный период сглаживания для второй экспоненциальной скользящей средней (EMA).
-    public var slowLength: Int32 = 0
-
-    ///Период сглаживания для третьей экспоненциальной скользящей средней (EMA)
-    public var signalSmoothing: Int32 = 0
-
-    public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-    public init() {}
-  }
-
-  public struct Deviation {
-    // SwiftProtobuf.Message conformance is added in an extension below. See the
-    // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-    // methods supported on all messages.
-
-    ///Количество стандартных отклонений, на которые отступают верхняя и нижняя границы.
-    public var deviationMultiplier: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _deviationMultiplier ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_deviationMultiplier = newValue}
+    
+    ///Тип технического индикатора.
+    public var indicatorType: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorType = .unspecified
+    
+    ///UID инструмента.
+    public var instrumentUid: String = String()
+    
+    ///Начало запрашиваемого периода по UTC.
+    public var from: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _from ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_from = newValue}
     }
-    /// Returns true if `deviationMultiplier` has been explicitly set.
-    public var hasDeviationMultiplier: Bool {return self._deviationMultiplier != nil}
-    /// Clears the value of `deviationMultiplier`. Subsequent reads from it will return its default value.
-    public mutating func clearDeviationMultiplier() {self._deviationMultiplier = nil}
-
+    /// Returns true if `from` has been explicitly set.
+    public var hasFrom: Bool {return self._from != nil}
+    /// Clears the value of `from`. Subsequent reads from it will return its default value.
+    public mutating func clearFrom() {self._from = nil}
+    
+    ///Окончание запрашиваемого периода по UTC.
+    public var to: SwiftProtobuf.Google_Protobuf_Timestamp {
+        get {return _to ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+        set {_to = newValue}
+    }
+    /// Returns true if `to` has been explicitly set.
+    public var hasTo: Bool {return self._to != nil}
+    /// Clears the value of `to`. Subsequent reads from it will return its default value.
+    public mutating func clearTo() {self._to = nil}
+    
+    ///Интервал, за который рассчитывается индикатор.
+    public var interval: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorInterval = .unspecified
+    
+    ///Тип цены, который используется при расчете индикатора.
+    public var typeOfPrice: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.TypeOfPrice = .unspecified
+    
+    ///Торговый период, за который рассчитывается индикатор.
+    public var length: Int32 = 0
+    
+    ///Параметры отклонения.
+    public var deviation: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation {
+        get {return _deviation ?? Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation()}
+        set {_deviation = newValue}
+    }
+    /// Returns true if `deviation` has been explicitly set.
+    public var hasDeviation: Bool {return self._deviation != nil}
+    /// Clears the value of `deviation`. Subsequent reads from it will return its default value.
+    public mutating func clearDeviation() {self._deviation = nil}
+    
+    ///Параметры сглаживания.
+    public var smoothing: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing {
+        get {return _smoothing ?? Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing()}
+        set {_smoothing = newValue}
+    }
+    /// Returns true if `smoothing` has been explicitly set.
+    public var hasSmoothing: Bool {return self._smoothing != nil}
+    /// Clears the value of `smoothing`. Subsequent reads from it will return its default value.
+    public mutating func clearSmoothing() {self._smoothing = nil}
+    
     public var unknownFields = SwiftProtobuf.UnknownStorage()
-
+    
+    ///Интервал свечи.
+    public enum IndicatorInterval: SwiftProtobuf.Enum {
+        public typealias RawValue = Int
+        
+        ///Интервал не определен.
+        case unspecified // = 0
+        
+        ///1 минута.
+        case oneMinute // = 1
+        
+        ///5 минут.
+        case fiveMinutes // = 2
+        
+        ///15 минут.
+        case fifteenMinutes // = 3
+        
+        ///1 час.
+        case oneHour // = 4
+        
+        ///1 день.
+        case oneDay // = 5
+        
+        ///2 минуты.
+        case indicatorInterval2Min // = 6
+        
+        ///3 минуты.
+        case indicatorInterval3Min // = 7
+        
+        ///10 минут.
+        case indicatorInterval10Min // = 8
+        
+        ///30 минут.
+        case indicatorInterval30Min // = 9
+        
+        ///2 часа.
+        case indicatorInterval2Hour // = 10
+        
+        ///4 часа.
+        case indicatorInterval4Hour // = 11
+        
+        ///Неделя.
+        case week // = 12
+        
+        ///Месяц.
+        case month // = 13
+        case UNRECOGNIZED(Int)
+        
+        public init() {
+            self = .unspecified
+        }
+        
+        public init?(rawValue: Int) {
+            switch rawValue {
+            case 0: self = .unspecified
+            case 1: self = .oneMinute
+            case 2: self = .fiveMinutes
+            case 3: self = .fifteenMinutes
+            case 4: self = .oneHour
+            case 5: self = .oneDay
+            case 6: self = .indicatorInterval2Min
+            case 7: self = .indicatorInterval3Min
+            case 8: self = .indicatorInterval10Min
+            case 9: self = .indicatorInterval30Min
+            case 10: self = .indicatorInterval2Hour
+            case 11: self = .indicatorInterval4Hour
+            case 12: self = .week
+            case 13: self = .month
+            default: self = .UNRECOGNIZED(rawValue)
+            }
+        }
+        
+        public var rawValue: Int {
+            switch self {
+            case .unspecified: return 0
+            case .oneMinute: return 1
+            case .fiveMinutes: return 2
+            case .fifteenMinutes: return 3
+            case .oneHour: return 4
+            case .oneDay: return 5
+            case .indicatorInterval2Min: return 6
+            case .indicatorInterval3Min: return 7
+            case .indicatorInterval10Min: return 8
+            case .indicatorInterval30Min: return 9
+            case .indicatorInterval2Hour: return 10
+            case .indicatorInterval4Hour: return 11
+            case .week: return 12
+            case .month: return 13
+            case .UNRECOGNIZED(let i): return i
+            }
+        }
+        
+    }
+    
+    public enum TypeOfPrice: SwiftProtobuf.Enum {
+        public typealias RawValue = Int
+        
+        ///Не указано.
+        case unspecified // = 0
+        
+        ///Цена закрытия.
+        case close // = 1
+        
+        ///Цена открытия.
+        case `open` // = 2
+        
+        ///Максимальное значение за выбранный интервал.
+        case high // = 3
+        
+        ///Минимальное значение за выбранный интервал.
+        case low // = 4
+        
+        ///Среднее значение по показателям [ (close + open + high + low) / 4 ].
+        case avg // = 5
+        case UNRECOGNIZED(Int)
+        
+        public init() {
+            self = .unspecified
+        }
+        
+        public init?(rawValue: Int) {
+            switch rawValue {
+            case 0: self = .unspecified
+            case 1: self = .close
+            case 2: self = .open
+            case 3: self = .high
+            case 4: self = .low
+            case 5: self = .avg
+            default: self = .UNRECOGNIZED(rawValue)
+            }
+        }
+        
+        public var rawValue: Int {
+            switch self {
+            case .unspecified: return 0
+            case .close: return 1
+            case .open: return 2
+            case .high: return 3
+            case .low: return 4
+            case .avg: return 5
+            case .UNRECOGNIZED(let i): return i
+            }
+        }
+        
+    }
+    
+    public enum IndicatorType: SwiftProtobuf.Enum {
+        public typealias RawValue = Int
+        
+        ///Не определен.
+        case unspecified // = 0
+        
+        ///Bollinger Bands — линия Боллинжера.
+        case bb // = 1
+        
+        ///Exponential Moving Average — EMA, экспоненциальная скользящая средняя.
+        case ema // = 2
+        
+        ///Relative Strength Index — индекс относительной силы.
+        case rsi // = 3
+        
+        ///Moving Average Convergence/Divergence — схождение/расхождение скользящих средних.
+        case macd // = 4
+        
+        ///Simple Moving Average — простое скользящее среднее.
+        case sma // = 5
+        case UNRECOGNIZED(Int)
+        
+        public init() {
+            self = .unspecified
+        }
+        
+        public init?(rawValue: Int) {
+            switch rawValue {
+            case 0: self = .unspecified
+            case 1: self = .bb
+            case 2: self = .ema
+            case 3: self = .rsi
+            case 4: self = .macd
+            case 5: self = .sma
+            default: self = .UNRECOGNIZED(rawValue)
+            }
+        }
+        
+        public var rawValue: Int {
+            switch self {
+            case .unspecified: return 0
+            case .bb: return 1
+            case .ema: return 2
+            case .rsi: return 3
+            case .macd: return 4
+            case .sma: return 5
+            case .UNRECOGNIZED(let i): return i
+            }
+        }
+        
+    }
+    
+    public struct Smoothing {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+        
+        ///Короткий период сглаживания для первой экспоненциальной скользящей средней (EMA).
+        public var fastLength: Int32 = 0
+        
+        ///Длинный период сглаживания для второй экспоненциальной скользящей средней (EMA).
+        public var slowLength: Int32 = 0
+        
+        ///Период сглаживания для третьей экспоненциальной скользящей средней (EMA)
+        public var signalSmoothing: Int32 = 0
+        
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+        
+        public init() {}
+    }
+    
+    public struct Deviation {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+        
+        ///Количество стандартных отклонений, на которые отступают верхняя и нижняя границы.
+        public var deviationMultiplier: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _deviationMultiplier ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_deviationMultiplier = newValue}
+        }
+        /// Returns true if `deviationMultiplier` has been explicitly set.
+        public var hasDeviationMultiplier: Bool {return self._deviationMultiplier != nil}
+        /// Clears the value of `deviationMultiplier`. Subsequent reads from it will return its default value.
+        public mutating func clearDeviationMultiplier() {self._deviationMultiplier = nil}
+        
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+        
+        public init() {}
+        
+        fileprivate var _deviationMultiplier: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    }
+    
     public init() {}
-
-    fileprivate var _deviationMultiplier: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  }
-
-  public init() {}
-
-  fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-  fileprivate var _deviation: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation? = nil
-  fileprivate var _smoothing: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing? = nil
+    
+    fileprivate var _from: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _to: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+    fileprivate var _deviation: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation? = nil
+    fileprivate var _smoothing: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing? = nil
 }
 
 #if swift(>=4.2)
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorInterval: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorInterval] = [
-    .unspecified,
-    .oneMinute,
-    .fiveMinutes,
-    .fifteenMinutes,
-    .oneHour,
-    .oneDay,
-    .indicatorInterval2Min,
-    .indicatorInterval3Min,
-    .indicatorInterval10Min,
-    .indicatorInterval30Min,
-    .indicatorInterval2Hour,
-    .indicatorInterval4Hour,
-    .week,
-    .month,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorInterval] = [
+        .unspecified,
+        .oneMinute,
+        .fiveMinutes,
+        .fifteenMinutes,
+        .oneHour,
+        .oneDay,
+        .indicatorInterval2Min,
+        .indicatorInterval3Min,
+        .indicatorInterval10Min,
+        .indicatorInterval30Min,
+        .indicatorInterval2Hour,
+        .indicatorInterval4Hour,
+        .week,
+        .month,
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.TypeOfPrice: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.TypeOfPrice] = [
-    .unspecified,
-    .close,
-    .open,
-    .high,
-    .low,
-    .avg,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.TypeOfPrice] = [
+        .unspecified,
+        .close,
+        .open,
+        .high,
+        .low,
+        .avg,
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorType: CaseIterable {
-  // The compiler won't synthesize support with the UNRECOGNIZED case.
-  public static var allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorType] = [
-    .unspecified,
-    .bb,
-    .ema,
-    .rsi,
-    .macd,
-    .sma,
-  ]
+    // The compiler won't synthesize support with the UNRECOGNIZED case.
+    public static let allCases: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorType] = [
+        .unspecified,
+        .bb,
+        .ema,
+        .rsi,
+        .macd,
+        .sma,
+    ]
 }
 
 #endif  // swift(>=4.2)
 
 public struct Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse {
-  // SwiftProtobuf.Message conformance is added in an extension below. See the
-  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
-  // methods supported on all messages.
-
-  ///Массив значений результатов технического анализа.
-  public var technicalIndicators: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnalysisItem] = []
-
-  public var unknownFields = SwiftProtobuf.UnknownStorage()
-
-  public struct TechAnalysisItem {
     // SwiftProtobuf.Message conformance is added in an extension below. See the
     // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
     // methods supported on all messages.
-
-    ///Временная метка по UTC, для которой были рассчитаны значения индикатора.
-    public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
-      get {return _timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
-      set {_timestamp = newValue}
-    }
-    /// Returns true if `timestamp` has been explicitly set.
-    public var hasTimestamp: Bool {return self._timestamp != nil}
-    /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
-    public mutating func clearTimestamp() {self._timestamp = nil}
-
-    ///Значение простого скользящего среднего (средней линии).
-    public var middleBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _middleBand ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_middleBand = newValue}
-    }
-    /// Returns true if `middleBand` has been explicitly set.
-    public var hasMiddleBand: Bool {return self._middleBand != nil}
-    /// Clears the value of `middleBand`. Subsequent reads from it will return its default value.
-    public mutating func clearMiddleBand() {self._middleBand = nil}
-
-    ///Значение верхней линии Боллинджера.
-    public var upperBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _upperBand ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_upperBand = newValue}
-    }
-    /// Returns true if `upperBand` has been explicitly set.
-    public var hasUpperBand: Bool {return self._upperBand != nil}
-    /// Clears the value of `upperBand`. Subsequent reads from it will return its default value.
-    public mutating func clearUpperBand() {self._upperBand = nil}
-
-    ///Значение нижней линии Боллинджера.
-    public var lowerBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _lowerBand ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_lowerBand = newValue}
-    }
-    /// Returns true if `lowerBand` has been explicitly set.
-    public var hasLowerBand: Bool {return self._lowerBand != nil}
-    /// Clears the value of `lowerBand`. Subsequent reads from it will return its default value.
-    public mutating func clearLowerBand() {self._lowerBand = nil}
-
-    ///Значение сигнальной линии.
-    public var signal: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _signal ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_signal = newValue}
-    }
-    /// Returns true if `signal` has been explicitly set.
-    public var hasSignal: Bool {return self._signal != nil}
-    /// Clears the value of `signal`. Subsequent reads from it will return its default value.
-    public mutating func clearSignal() {self._signal = nil}
-
-    ///Значение линии MACD.
-    public var macd: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
-      get {return _macd ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
-      set {_macd = newValue}
-    }
-    /// Returns true if `macd` has been explicitly set.
-    public var hasMacd: Bool {return self._macd != nil}
-    /// Clears the value of `macd`. Subsequent reads from it will return its default value.
-    public mutating func clearMacd() {self._macd = nil}
-
+    
+    ///Массив значений результатов технического анализа.
+    public var technicalIndicators: [Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnalysisItem] = []
+    
     public var unknownFields = SwiftProtobuf.UnknownStorage()
-
+    
+    public struct TechAnalysisItem {
+        // SwiftProtobuf.Message conformance is added in an extension below. See the
+        // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+        // methods supported on all messages.
+        
+        ///Временная метка по UTC, для которой были рассчитаны значения индикатора.
+        public var timestamp: SwiftProtobuf.Google_Protobuf_Timestamp {
+            get {return _timestamp ?? SwiftProtobuf.Google_Protobuf_Timestamp()}
+            set {_timestamp = newValue}
+        }
+        /// Returns true if `timestamp` has been explicitly set.
+        public var hasTimestamp: Bool {return self._timestamp != nil}
+        /// Clears the value of `timestamp`. Subsequent reads from it will return its default value.
+        public mutating func clearTimestamp() {self._timestamp = nil}
+        
+        ///Значение простого скользящего среднего (средней линии).
+        public var middleBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _middleBand ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_middleBand = newValue}
+        }
+        /// Returns true if `middleBand` has been explicitly set.
+        public var hasMiddleBand: Bool {return self._middleBand != nil}
+        /// Clears the value of `middleBand`. Subsequent reads from it will return its default value.
+        public mutating func clearMiddleBand() {self._middleBand = nil}
+        
+        ///Значение верхней линии Боллинджера.
+        public var upperBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _upperBand ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_upperBand = newValue}
+        }
+        /// Returns true if `upperBand` has been explicitly set.
+        public var hasUpperBand: Bool {return self._upperBand != nil}
+        /// Clears the value of `upperBand`. Subsequent reads from it will return its default value.
+        public mutating func clearUpperBand() {self._upperBand = nil}
+        
+        ///Значение нижней линии Боллинджера.
+        public var lowerBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _lowerBand ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_lowerBand = newValue}
+        }
+        /// Returns true if `lowerBand` has been explicitly set.
+        public var hasLowerBand: Bool {return self._lowerBand != nil}
+        /// Clears the value of `lowerBand`. Subsequent reads from it will return its default value.
+        public mutating func clearLowerBand() {self._lowerBand = nil}
+        
+        ///Значение сигнальной линии.
+        public var signal: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _signal ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_signal = newValue}
+        }
+        /// Returns true if `signal` has been explicitly set.
+        public var hasSignal: Bool {return self._signal != nil}
+        /// Clears the value of `signal`. Subsequent reads from it will return its default value.
+        public mutating func clearSignal() {self._signal = nil}
+        
+        ///Значение линии MACD.
+        public var macd: Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
+            get {return _macd ?? Tinkoff_Public_Invest_Api_Contract_V1_Quotation()}
+            set {_macd = newValue}
+        }
+        /// Returns true if `macd` has been explicitly set.
+        public var hasMacd: Bool {return self._macd != nil}
+        /// Clears the value of `macd`. Subsequent reads from it will return its default value.
+        public mutating func clearMacd() {self._macd = nil}
+        
+        public var unknownFields = SwiftProtobuf.UnknownStorage()
+        
+        public init() {}
+        
+        fileprivate var _timestamp: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        fileprivate var _middleBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _upperBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _lowerBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _signal: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        fileprivate var _macd: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+    }
+    
     public init() {}
-
-    fileprivate var _timestamp: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    fileprivate var _middleBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _upperBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _lowerBand: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _signal: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    fileprivate var _macd: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-  }
-
-  public init() {}
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
@@ -3073,3229 +3073,3229 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnal
 fileprivate let _protobuf_package = "tinkoff.public.invest.api.contract.v1"
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionAction: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "SUBSCRIPTION_ACTION_UNSPECIFIED"),
-    1: .same(proto: "SUBSCRIPTION_ACTION_SUBSCRIBE"),
-    2: .same(proto: "SUBSCRIPTION_ACTION_UNSUBSCRIBE"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "SUBSCRIPTION_ACTION_UNSPECIFIED"),
+        1: .same(proto: "SUBSCRIPTION_ACTION_SUBSCRIBE"),
+        2: .same(proto: "SUBSCRIPTION_ACTION_UNSUBSCRIBE"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "SUBSCRIPTION_INTERVAL_UNSPECIFIED"),
-    1: .same(proto: "SUBSCRIPTION_INTERVAL_ONE_MINUTE"),
-    2: .same(proto: "SUBSCRIPTION_INTERVAL_FIVE_MINUTES"),
-    3: .same(proto: "SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES"),
-    4: .same(proto: "SUBSCRIPTION_INTERVAL_ONE_HOUR"),
-    5: .same(proto: "SUBSCRIPTION_INTERVAL_ONE_DAY"),
-    6: .same(proto: "SUBSCRIPTION_INTERVAL_2_MIN"),
-    7: .same(proto: "SUBSCRIPTION_INTERVAL_3_MIN"),
-    8: .same(proto: "SUBSCRIPTION_INTERVAL_10_MIN"),
-    9: .same(proto: "SUBSCRIPTION_INTERVAL_30_MIN"),
-    10: .same(proto: "SUBSCRIPTION_INTERVAL_2_HOUR"),
-    11: .same(proto: "SUBSCRIPTION_INTERVAL_4_HOUR"),
-    12: .same(proto: "SUBSCRIPTION_INTERVAL_WEEK"),
-    13: .same(proto: "SUBSCRIPTION_INTERVAL_MONTH"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "SUBSCRIPTION_INTERVAL_UNSPECIFIED"),
+        1: .same(proto: "SUBSCRIPTION_INTERVAL_ONE_MINUTE"),
+        2: .same(proto: "SUBSCRIPTION_INTERVAL_FIVE_MINUTES"),
+        3: .same(proto: "SUBSCRIPTION_INTERVAL_FIFTEEN_MINUTES"),
+        4: .same(proto: "SUBSCRIPTION_INTERVAL_ONE_HOUR"),
+        5: .same(proto: "SUBSCRIPTION_INTERVAL_ONE_DAY"),
+        6: .same(proto: "SUBSCRIPTION_INTERVAL_2_MIN"),
+        7: .same(proto: "SUBSCRIPTION_INTERVAL_3_MIN"),
+        8: .same(proto: "SUBSCRIPTION_INTERVAL_10_MIN"),
+        9: .same(proto: "SUBSCRIPTION_INTERVAL_30_MIN"),
+        10: .same(proto: "SUBSCRIPTION_INTERVAL_2_HOUR"),
+        11: .same(proto: "SUBSCRIPTION_INTERVAL_4_HOUR"),
+        12: .same(proto: "SUBSCRIPTION_INTERVAL_WEEK"),
+        13: .same(proto: "SUBSCRIPTION_INTERVAL_MONTH"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionStatus: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "SUBSCRIPTION_STATUS_UNSPECIFIED"),
-    1: .same(proto: "SUBSCRIPTION_STATUS_SUCCESS"),
-    2: .same(proto: "SUBSCRIPTION_STATUS_INSTRUMENT_NOT_FOUND"),
-    3: .same(proto: "SUBSCRIPTION_STATUS_SUBSCRIPTION_ACTION_IS_INVALID"),
-    4: .same(proto: "SUBSCRIPTION_STATUS_DEPTH_IS_INVALID"),
-    5: .same(proto: "SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID"),
-    6: .same(proto: "SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED"),
-    7: .same(proto: "SUBSCRIPTION_STATUS_INTERNAL_ERROR"),
-    8: .same(proto: "SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS"),
-    9: .same(proto: "SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND"),
-    10: .same(proto: "SUBSCRIPTION_STATUS_SOURCE_IS_INVALID"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "SUBSCRIPTION_STATUS_UNSPECIFIED"),
+        1: .same(proto: "SUBSCRIPTION_STATUS_SUCCESS"),
+        2: .same(proto: "SUBSCRIPTION_STATUS_INSTRUMENT_NOT_FOUND"),
+        3: .same(proto: "SUBSCRIPTION_STATUS_SUBSCRIPTION_ACTION_IS_INVALID"),
+        4: .same(proto: "SUBSCRIPTION_STATUS_DEPTH_IS_INVALID"),
+        5: .same(proto: "SUBSCRIPTION_STATUS_INTERVAL_IS_INVALID"),
+        6: .same(proto: "SUBSCRIPTION_STATUS_LIMIT_IS_EXCEEDED"),
+        7: .same(proto: "SUBSCRIPTION_STATUS_INTERNAL_ERROR"),
+        8: .same(proto: "SUBSCRIPTION_STATUS_TOO_MANY_REQUESTS"),
+        9: .same(proto: "SUBSCRIPTION_STATUS_SUBSCRIPTION_NOT_FOUND"),
+        10: .same(proto: "SUBSCRIPTION_STATUS_SOURCE_IS_INVALID"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradeSourceType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "TRADE_SOURCE_UNSPECIFIED"),
-    1: .same(proto: "TRADE_SOURCE_EXCHANGE"),
-    2: .same(proto: "TRADE_SOURCE_DEALER"),
-    3: .same(proto: "TRADE_SOURCE_ALL"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "TRADE_SOURCE_UNSPECIFIED"),
+        1: .same(proto: "TRADE_SOURCE_EXCHANGE"),
+        2: .same(proto: "TRADE_SOURCE_DEALER"),
+        3: .same(proto: "TRADE_SOURCE_ALL"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradeDirection: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "TRADE_DIRECTION_UNSPECIFIED"),
-    1: .same(proto: "TRADE_DIRECTION_BUY"),
-    2: .same(proto: "TRADE_DIRECTION_SELL"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "TRADE_DIRECTION_UNSPECIFIED"),
+        1: .same(proto: "TRADE_DIRECTION_BUY"),
+        2: .same(proto: "TRADE_DIRECTION_SELL"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CandleInterval: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "CANDLE_INTERVAL_UNSPECIFIED"),
-    1: .same(proto: "CANDLE_INTERVAL_1_MIN"),
-    2: .same(proto: "CANDLE_INTERVAL_5_MIN"),
-    3: .same(proto: "CANDLE_INTERVAL_15_MIN"),
-    4: .same(proto: "CANDLE_INTERVAL_HOUR"),
-    5: .same(proto: "CANDLE_INTERVAL_DAY"),
-    6: .same(proto: "CANDLE_INTERVAL_2_MIN"),
-    7: .same(proto: "CANDLE_INTERVAL_3_MIN"),
-    8: .same(proto: "CANDLE_INTERVAL_10_MIN"),
-    9: .same(proto: "CANDLE_INTERVAL_30_MIN"),
-    10: .same(proto: "CANDLE_INTERVAL_2_HOUR"),
-    11: .same(proto: "CANDLE_INTERVAL_4_HOUR"),
-    12: .same(proto: "CANDLE_INTERVAL_WEEK"),
-    13: .same(proto: "CANDLE_INTERVAL_MONTH"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "CANDLE_INTERVAL_UNSPECIFIED"),
+        1: .same(proto: "CANDLE_INTERVAL_1_MIN"),
+        2: .same(proto: "CANDLE_INTERVAL_5_MIN"),
+        3: .same(proto: "CANDLE_INTERVAL_15_MIN"),
+        4: .same(proto: "CANDLE_INTERVAL_HOUR"),
+        5: .same(proto: "CANDLE_INTERVAL_DAY"),
+        6: .same(proto: "CANDLE_INTERVAL_2_MIN"),
+        7: .same(proto: "CANDLE_INTERVAL_3_MIN"),
+        8: .same(proto: "CANDLE_INTERVAL_10_MIN"),
+        9: .same(proto: "CANDLE_INTERVAL_30_MIN"),
+        10: .same(proto: "CANDLE_INTERVAL_2_HOUR"),
+        11: .same(proto: "CANDLE_INTERVAL_4_HOUR"),
+        12: .same(proto: "CANDLE_INTERVAL_WEEK"),
+        13: .same(proto: "CANDLE_INTERVAL_MONTH"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CandleSource: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "CANDLE_SOURCE_UNSPECIFIED"),
-    1: .same(proto: "CANDLE_SOURCE_EXCHANGE"),
-    2: .same(proto: "CANDLE_SOURCE_DEALER_WEEKEND"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "CANDLE_SOURCE_UNSPECIFIED"),
+        1: .same(proto: "CANDLE_SOURCE_EXCHANGE"),
+        2: .same(proto: "CANDLE_SOURCE_DEALER_WEEKEND"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrderBookType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "ORDERBOOK_TYPE_UNSPECIFIED"),
-    1: .same(proto: "ORDERBOOK_TYPE_EXCHANGE"),
-    2: .same(proto: "ORDERBOOK_TYPE_DEALER"),
-    3: .same(proto: "ORDERBOOK_TYPE_ALL"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "ORDERBOOK_TYPE_UNSPECIFIED"),
+        1: .same(proto: "ORDERBOOK_TYPE_EXCHANGE"),
+        2: .same(proto: "ORDERBOOK_TYPE_DEALER"),
+        3: .same(proto: "ORDERBOOK_TYPE_ALL"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_LastPriceType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "LAST_PRICE_UNSPECIFIED"),
-    1: .same(proto: "LAST_PRICE_EXCHANGE"),
-    2: .same(proto: "LAST_PRICE_DEALER"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "LAST_PRICE_UNSPECIFIED"),
+        1: .same(proto: "LAST_PRICE_EXCHANGE"),
+        2: .same(proto: "LAST_PRICE_DEALER"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".MarketDataRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscribe_candles_request"),
-    2: .standard(proto: "subscribe_order_book_request"),
-    3: .standard(proto: "subscribe_trades_request"),
-    4: .standard(proto: "subscribe_info_request"),
-    5: .standard(proto: "subscribe_last_price_request"),
-    6: .standard(proto: "get_my_subscriptions"),
-    7: .same(proto: "ping"),
-    15: .standard(proto: "ping_settings"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeCandlesRequest(let m) = current {v = m}
+    public static let protoMessageName: String = _protobuf_package + ".MarketDataRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscribe_candles_request"),
+        2: .standard(proto: "subscribe_order_book_request"),
+        3: .standard(proto: "subscribe_trades_request"),
+        4: .standard(proto: "subscribe_info_request"),
+        5: .standard(proto: "subscribe_last_price_request"),
+        6: .standard(proto: "get_my_subscriptions"),
+        7: .same(proto: "ping"),
+        15: .standard(proto: "ping_settings"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeCandlesRequest(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeCandlesRequest(v)
+                }
+            }()
+            case 2: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeOrderBookRequest(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeOrderBookRequest(v)
+                }
+            }()
+            case 3: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeTradesRequest(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeTradesRequest(v)
+                }
+            }()
+            case 4: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeInfoRequest(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeInfoRequest(v)
+                }
+            }()
+            case 5: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeLastPriceRequest(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeLastPriceRequest(v)
+                }
+            }()
+            case 6: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .getMySubscriptions(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .getMySubscriptions(v)
+                }
+            }()
+            case 7: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_PingRequest?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .ping(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .ping(v)
+                }
+            }()
+            case 15: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .pingSettings(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .pingSettings(v)
+                }
+            }()
+            default: break
+            }
         }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeCandlesRequest(v)
-        }
-      }()
-      case 2: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeOrderBookRequest(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeOrderBookRequest(v)
-        }
-      }()
-      case 3: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeTradesRequest(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeTradesRequest(v)
-        }
-      }()
-      case 4: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeInfoRequest(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeInfoRequest(v)
-        }
-      }()
-      case 5: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeLastPriceRequest(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeLastPriceRequest(v)
-        }
-      }()
-      case 6: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .getMySubscriptions(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .getMySubscriptions(v)
-        }
-      }()
-      case 7: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_PingRequest?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .ping(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .ping(v)
-        }
-      }()
-      case 15: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_PingDelaySettings?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .pingSettings(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .pingSettings(v)
-        }
-      }()
-      default: break
-      }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    switch self.payload {
-    case .subscribeCandlesRequest?: try {
-      guard case .subscribeCandlesRequest(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    }()
-    case .subscribeOrderBookRequest?: try {
-      guard case .subscribeOrderBookRequest(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    }()
-    case .subscribeTradesRequest?: try {
-      guard case .subscribeTradesRequest(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    }()
-    case .subscribeInfoRequest?: try {
-      guard case .subscribeInfoRequest(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    }()
-    case .subscribeLastPriceRequest?: try {
-      guard case .subscribeLastPriceRequest(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-    }()
-    case .getMySubscriptions?: try {
-      guard case .getMySubscriptions(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-    }()
-    case .ping?: try {
-      guard case .ping(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
-    }()
-    case .pingSettings?: try {
-      guard case .pingSettings(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
-    }()
-    case nil: break
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        switch self.payload {
+        case .subscribeCandlesRequest?: try {
+            guard case .subscribeCandlesRequest(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        }()
+        case .subscribeOrderBookRequest?: try {
+            guard case .subscribeOrderBookRequest(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        }()
+        case .subscribeTradesRequest?: try {
+            guard case .subscribeTradesRequest(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        }()
+        case .subscribeInfoRequest?: try {
+            guard case .subscribeInfoRequest(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+        }()
+        case .subscribeLastPriceRequest?: try {
+            guard case .subscribeLastPriceRequest(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+        }()
+        case .getMySubscriptions?: try {
+            guard case .getMySubscriptions(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+        }()
+        case .ping?: try {
+            guard case .ping(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+        }()
+        case .pingSettings?: try {
+            guard case .pingSettings(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
+        }()
+        case nil: break
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest) -> Bool {
-    if lhs.payload != rhs.payload {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataRequest) -> Bool {
+        if lhs.payload != rhs.payload {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServerSideStreamRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".MarketDataServerSideStreamRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscribe_candles_request"),
-    2: .standard(proto: "subscribe_order_book_request"),
-    3: .standard(proto: "subscribe_trades_request"),
-    4: .standard(proto: "subscribe_info_request"),
-    5: .standard(proto: "subscribe_last_price_request"),
-    15: .standard(proto: "ping_settings"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._subscribeCandlesRequest) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._subscribeOrderBookRequest) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._subscribeTradesRequest) }()
-      case 4: try { try decoder.decodeSingularMessageField(value: &self._subscribeInfoRequest) }()
-      case 5: try { try decoder.decodeSingularMessageField(value: &self._subscribeLastPriceRequest) }()
-      case 15: try { try decoder.decodeSingularMessageField(value: &self._pingSettings) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".MarketDataServerSideStreamRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscribe_candles_request"),
+        2: .standard(proto: "subscribe_order_book_request"),
+        3: .standard(proto: "subscribe_trades_request"),
+        4: .standard(proto: "subscribe_info_request"),
+        5: .standard(proto: "subscribe_last_price_request"),
+        15: .standard(proto: "ping_settings"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._subscribeCandlesRequest) }()
+            case 2: try { try decoder.decodeSingularMessageField(value: &self._subscribeOrderBookRequest) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._subscribeTradesRequest) }()
+            case 4: try { try decoder.decodeSingularMessageField(value: &self._subscribeInfoRequest) }()
+            case 5: try { try decoder.decodeSingularMessageField(value: &self._subscribeLastPriceRequest) }()
+            case 15: try { try decoder.decodeSingularMessageField(value: &self._pingSettings) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._subscribeCandlesRequest {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    try { if let v = self._subscribeOrderBookRequest {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try { if let v = self._subscribeTradesRequest {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    try { if let v = self._subscribeInfoRequest {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    } }()
-    try { if let v = self._subscribeLastPriceRequest {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-    } }()
-    try { if let v = self._pingSettings {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServerSideStreamRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServerSideStreamRequest) -> Bool {
-    if lhs._subscribeCandlesRequest != rhs._subscribeCandlesRequest {return false}
-    if lhs._subscribeOrderBookRequest != rhs._subscribeOrderBookRequest {return false}
-    if lhs._subscribeTradesRequest != rhs._subscribeTradesRequest {return false}
-    if lhs._subscribeInfoRequest != rhs._subscribeInfoRequest {return false}
-    if lhs._subscribeLastPriceRequest != rhs._subscribeLastPriceRequest {return false}
-    if lhs._pingSettings != rhs._pingSettings {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._subscribeCandlesRequest {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        try { if let v = self._subscribeOrderBookRequest {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        } }()
+        try { if let v = self._subscribeTradesRequest {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        try { if let v = self._subscribeInfoRequest {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+        } }()
+        try { if let v = self._subscribeLastPriceRequest {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+        } }()
+        try { if let v = self._pingSettings {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 15)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServerSideStreamRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataServerSideStreamRequest) -> Bool {
+        if lhs._subscribeCandlesRequest != rhs._subscribeCandlesRequest {return false}
+        if lhs._subscribeOrderBookRequest != rhs._subscribeOrderBookRequest {return false}
+        if lhs._subscribeTradesRequest != rhs._subscribeTradesRequest {return false}
+        if lhs._subscribeInfoRequest != rhs._subscribeInfoRequest {return false}
+        if lhs._subscribeLastPriceRequest != rhs._subscribeLastPriceRequest {return false}
+        if lhs._pingSettings != rhs._pingSettings {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".MarketDataResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscribe_candles_response"),
-    2: .standard(proto: "subscribe_order_book_response"),
-    3: .standard(proto: "subscribe_trades_response"),
-    4: .standard(proto: "subscribe_info_response"),
-    5: .same(proto: "candle"),
-    6: .same(proto: "trade"),
-    7: .same(proto: "orderbook"),
-    8: .standard(proto: "trading_status"),
-    9: .same(proto: "ping"),
-    10: .standard(proto: "subscribe_last_price_response"),
-    11: .standard(proto: "last_price"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeCandlesResponse(let m) = current {v = m}
+    public static let protoMessageName: String = _protobuf_package + ".MarketDataResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscribe_candles_response"),
+        2: .standard(proto: "subscribe_order_book_response"),
+        3: .standard(proto: "subscribe_trades_response"),
+        4: .standard(proto: "subscribe_info_response"),
+        5: .same(proto: "candle"),
+        6: .same(proto: "trade"),
+        7: .same(proto: "orderbook"),
+        8: .standard(proto: "trading_status"),
+        9: .same(proto: "ping"),
+        10: .standard(proto: "subscribe_last_price_response"),
+        11: .standard(proto: "last_price"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeCandlesResponse(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeCandlesResponse(v)
+                }
+            }()
+            case 2: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeOrderBookResponse(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeOrderBookResponse(v)
+                }
+            }()
+            case 3: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeTradesResponse(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeTradesResponse(v)
+                }
+            }()
+            case 4: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeInfoResponse(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeInfoResponse(v)
+                }
+            }()
+            case 5: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_Candle?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .candle(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .candle(v)
+                }
+            }()
+            case 6: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_Trade?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .trade(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .trade(v)
+                }
+            }()
+            case 7: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .orderbook(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .orderbook(v)
+                }
+            }()
+            case 8: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .tradingStatus(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .tradingStatus(v)
+                }
+            }()
+            case 9: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_Ping?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .ping(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .ping(v)
+                }
+            }()
+            case 10: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .subscribeLastPriceResponse(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .subscribeLastPriceResponse(v)
+                }
+            }()
+            case 11: try {
+                var v: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice?
+                var hadOneofValue = false
+                if let current = self.payload {
+                    hadOneofValue = true
+                    if case .lastPrice(let m) = current {v = m}
+                }
+                try decoder.decodeSingularMessageField(value: &v)
+                if let v = v {
+                    if hadOneofValue {try decoder.handleConflictingOneOf()}
+                    self.payload = .lastPrice(v)
+                }
+            }()
+            default: break
+            }
         }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeCandlesResponse(v)
-        }
-      }()
-      case 2: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeOrderBookResponse(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeOrderBookResponse(v)
-        }
-      }()
-      case 3: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeTradesResponse(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeTradesResponse(v)
-        }
-      }()
-      case 4: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeInfoResponse(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeInfoResponse(v)
-        }
-      }()
-      case 5: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_Candle?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .candle(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .candle(v)
-        }
-      }()
-      case 6: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_Trade?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .trade(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .trade(v)
-        }
-      }()
-      case 7: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .orderbook(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .orderbook(v)
-        }
-      }()
-      case 8: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .tradingStatus(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .tradingStatus(v)
-        }
-      }()
-      case 9: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_Ping?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .ping(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .ping(v)
-        }
-      }()
-      case 10: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .subscribeLastPriceResponse(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .subscribeLastPriceResponse(v)
-        }
-      }()
-      case 11: try {
-        var v: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice?
-        var hadOneofValue = false
-        if let current = self.payload {
-          hadOneofValue = true
-          if case .lastPrice(let m) = current {v = m}
-        }
-        try decoder.decodeSingularMessageField(value: &v)
-        if let v = v {
-          if hadOneofValue {try decoder.handleConflictingOneOf()}
-          self.payload = .lastPrice(v)
-        }
-      }()
-      default: break
-      }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    switch self.payload {
-    case .subscribeCandlesResponse?: try {
-      guard case .subscribeCandlesResponse(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    }()
-    case .subscribeOrderBookResponse?: try {
-      guard case .subscribeOrderBookResponse(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    }()
-    case .subscribeTradesResponse?: try {
-      guard case .subscribeTradesResponse(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    }()
-    case .subscribeInfoResponse?: try {
-      guard case .subscribeInfoResponse(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    }()
-    case .candle?: try {
-      guard case .candle(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-    }()
-    case .trade?: try {
-      guard case .trade(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-    }()
-    case .orderbook?: try {
-      guard case .orderbook(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
-    }()
-    case .tradingStatus?: try {
-      guard case .tradingStatus(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-    }()
-    case .ping?: try {
-      guard case .ping(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
-    }()
-    case .subscribeLastPriceResponse?: try {
-      guard case .subscribeLastPriceResponse(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
-    }()
-    case .lastPrice?: try {
-      guard case .lastPrice(let v)? = self.payload else { preconditionFailure() }
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
-    }()
-    case nil: break
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        switch self.payload {
+        case .subscribeCandlesResponse?: try {
+            guard case .subscribeCandlesResponse(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        }()
+        case .subscribeOrderBookResponse?: try {
+            guard case .subscribeOrderBookResponse(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        }()
+        case .subscribeTradesResponse?: try {
+            guard case .subscribeTradesResponse(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        }()
+        case .subscribeInfoResponse?: try {
+            guard case .subscribeInfoResponse(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+        }()
+        case .candle?: try {
+            guard case .candle(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+        }()
+        case .trade?: try {
+            guard case .trade(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+        }()
+        case .orderbook?: try {
+            guard case .orderbook(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+        }()
+        case .tradingStatus?: try {
+            guard case .tradingStatus(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+        }()
+        case .ping?: try {
+            guard case .ping(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+        }()
+        case .subscribeLastPriceResponse?: try {
+            guard case .subscribeLastPriceResponse(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 10)
+        }()
+        case .lastPrice?: try {
+            guard case .lastPrice(let v)? = self.payload else { preconditionFailure() }
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+        }()
+        case nil: break
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse) -> Bool {
-    if lhs.payload != rhs.payload {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_MarketDataResponse) -> Bool {
+        if lhs.payload != rhs.payload {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeCandlesRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscription_action"),
-    2: .same(proto: "instruments"),
-    3: .standard(proto: "waiting_close"),
-    9: .standard(proto: "candle_source_type"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.waitingClose) }()
-      case 9: try { try decoder.decodeSingularEnumField(value: &self._candleSourceType) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeCandlesRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscription_action"),
+        2: .same(proto: "instruments"),
+        3: .standard(proto: "waiting_close"),
+        9: .standard(proto: "candle_source_type"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
+            case 3: try { try decoder.decodeSingularBoolField(value: &self.waitingClose) }()
+            case 9: try { try decoder.decodeSingularEnumField(value: &self._candleSourceType) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if self.subscriptionAction != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if self.subscriptionAction != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+        }
+        if !self.instruments.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+        }
+        if self.waitingClose != false {
+            try visitor.visitSingularBoolField(value: self.waitingClose, fieldNumber: 3)
+        }
+        try { if let v = self._candleSourceType {
+            try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instruments.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest) -> Bool {
+        if lhs.subscriptionAction != rhs.subscriptionAction {return false}
+        if lhs.instruments != rhs.instruments {return false}
+        if lhs.waitingClose != rhs.waitingClose {return false}
+        if lhs._candleSourceType != rhs._candleSourceType {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.waitingClose != false {
-      try visitor.visitSingularBoolField(value: self.waitingClose, fieldNumber: 3)
-    }
-    try { if let v = self._candleSourceType {
-      try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesRequest) -> Bool {
-    if lhs.subscriptionAction != rhs.subscriptionAction {return false}
-    if lhs.instruments != rhs.instruments {return false}
-    if lhs.waitingClose != rhs.waitingClose {return false}
-    if lhs._candleSourceType != rhs._candleSourceType {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".CandleInstrument"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "interval"),
-    3: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".CandleInstrument"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "interval"),
+        3: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
+            case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.interval != .unspecified {
+            try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 2)
+        }
+        if !self.instrumentID.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 3)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.interval != .unspecified {
-      try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.interval != rhs.interval {return false}
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if !self.instrumentID.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 3)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleInstrument) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.interval != rhs.interval {return false}
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeCandlesResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "tracking_id"),
-    2: .standard(proto: "candles_subscriptions"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.candlesSubscriptions) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeCandlesResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "tracking_id"),
+        2: .standard(proto: "candles_subscriptions"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.candlesSubscriptions) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.trackingID.isEmpty {
-      try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.trackingID.isEmpty {
+            try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+        }
+        if !self.candlesSubscriptions.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.candlesSubscriptions, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.candlesSubscriptions.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.candlesSubscriptions, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse) -> Bool {
+        if lhs.trackingID != rhs.trackingID {return false}
+        if lhs.candlesSubscriptions != rhs.candlesSubscriptions {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeCandlesResponse) -> Bool {
-    if lhs.trackingID != rhs.trackingID {return false}
-    if lhs.candlesSubscriptions != rhs.candlesSubscriptions {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".CandleSubscription"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "interval"),
-    3: .standard(proto: "subscription_status"),
-    4: .standard(proto: "instrument_uid"),
-    5: .standard(proto: "waiting_close"),
-    6: .standard(proto: "stream_id"),
-    7: .standard(proto: "subscription_id"),
-    9: .standard(proto: "candle_source_type"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
-      case 3: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 5: try { try decoder.decodeSingularBoolField(value: &self.waitingClose) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
-      case 7: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
-      case 9: try { try decoder.decodeSingularEnumField(value: &self._candleSourceType) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".CandleSubscription"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "interval"),
+        3: .standard(proto: "subscription_status"),
+        4: .standard(proto: "instrument_uid"),
+        5: .standard(proto: "waiting_close"),
+        6: .standard(proto: "stream_id"),
+        7: .standard(proto: "subscription_id"),
+        9: .standard(proto: "candle_source_type"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
+            case 3: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
+            case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 5: try { try decoder.decodeSingularBoolField(value: &self.waitingClose) }()
+            case 6: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
+            case 7: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
+            case 9: try { try decoder.decodeSingularEnumField(value: &self._candleSourceType) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.interval != .unspecified {
+            try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 2)
+        }
+        if self.subscriptionStatus != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 3)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 4)
+        }
+        if self.waitingClose != false {
+            try visitor.visitSingularBoolField(value: self.waitingClose, fieldNumber: 5)
+        }
+        if !self.streamID.isEmpty {
+            try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 6)
+        }
+        if !self.subscriptionID.isEmpty {
+            try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 7)
+        }
+        try { if let v = self._candleSourceType {
+            try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.interval != .unspecified {
-      try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.interval != rhs.interval {return false}
+        if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.waitingClose != rhs.waitingClose {return false}
+        if lhs.streamID != rhs.streamID {return false}
+        if lhs.subscriptionID != rhs.subscriptionID {return false}
+        if lhs._candleSourceType != rhs._candleSourceType {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.subscriptionStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 3)
-    }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 4)
-    }
-    if self.waitingClose != false {
-      try visitor.visitSingularBoolField(value: self.waitingClose, fieldNumber: 5)
-    }
-    if !self.streamID.isEmpty {
-      try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 6)
-    }
-    if !self.subscriptionID.isEmpty {
-      try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 7)
-    }
-    try { if let v = self._candleSourceType {
-      try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_CandleSubscription) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.interval != rhs.interval {return false}
-    if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.waitingClose != rhs.waitingClose {return false}
-    if lhs.streamID != rhs.streamID {return false}
-    if lhs.subscriptionID != rhs.subscriptionID {return false}
-    if lhs._candleSourceType != rhs._candleSourceType {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeOrderBookRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscription_action"),
-    2: .same(proto: "instruments"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeOrderBookRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscription_action"),
+        2: .same(proto: "instruments"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.subscriptionAction != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if self.subscriptionAction != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+        }
+        if !self.instruments.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instruments.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest) -> Bool {
+        if lhs.subscriptionAction != rhs.subscriptionAction {return false}
+        if lhs.instruments != rhs.instruments {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookRequest) -> Bool {
-    if lhs.subscriptionAction != rhs.subscriptionAction {return false}
-    if lhs.instruments != rhs.instruments {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".OrderBookInstrument"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "depth"),
-    3: .standard(proto: "instrument_id"),
-    4: .standard(proto: "order_book_type"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
-      case 4: try { try decoder.decodeSingularEnumField(value: &self.orderBookType) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".OrderBookInstrument"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "depth"),
+        3: .standard(proto: "instrument_id"),
+        4: .standard(proto: "order_book_type"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
+            case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+            case 4: try { try decoder.decodeSingularEnumField(value: &self.orderBookType) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.depth != 0 {
+            try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+        }
+        if !self.instrumentID.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 3)
+        }
+        if self.orderBookType != .unspecified {
+            try visitor.visitSingularEnumField(value: self.orderBookType, fieldNumber: 4)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.depth != 0 {
-      try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.depth != rhs.depth {return false}
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.orderBookType != rhs.orderBookType {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if !self.instrumentID.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 3)
-    }
-    if self.orderBookType != .unspecified {
-      try visitor.visitSingularEnumField(value: self.orderBookType, fieldNumber: 4)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookInstrument) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.depth != rhs.depth {return false}
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.orderBookType != rhs.orderBookType {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeOrderBookResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "tracking_id"),
-    2: .standard(proto: "order_book_subscriptions"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.orderBookSubscriptions) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeOrderBookResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "tracking_id"),
+        2: .standard(proto: "order_book_subscriptions"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.orderBookSubscriptions) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.trackingID.isEmpty {
-      try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.trackingID.isEmpty {
+            try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+        }
+        if !self.orderBookSubscriptions.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.orderBookSubscriptions, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.orderBookSubscriptions.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.orderBookSubscriptions, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse) -> Bool {
+        if lhs.trackingID != rhs.trackingID {return false}
+        if lhs.orderBookSubscriptions != rhs.orderBookSubscriptions {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeOrderBookResponse) -> Bool {
-    if lhs.trackingID != rhs.trackingID {return false}
-    if lhs.orderBookSubscriptions != rhs.orderBookSubscriptions {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".OrderBookSubscription"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "depth"),
-    3: .standard(proto: "subscription_status"),
-    4: .standard(proto: "instrument_uid"),
-    5: .standard(proto: "stream_id"),
-    6: .standard(proto: "subscription_id"),
-    7: .standard(proto: "order_book_type"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
-      case 3: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
-      case 7: try { try decoder.decodeSingularEnumField(value: &self.orderBookType) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".OrderBookSubscription"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "depth"),
+        3: .standard(proto: "subscription_status"),
+        4: .standard(proto: "instrument_uid"),
+        5: .standard(proto: "stream_id"),
+        6: .standard(proto: "subscription_id"),
+        7: .standard(proto: "order_book_type"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
+            case 3: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
+            case 4: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 5: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
+            case 6: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
+            case 7: try { try decoder.decodeSingularEnumField(value: &self.orderBookType) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.depth != 0 {
+            try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+        }
+        if self.subscriptionStatus != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 3)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 4)
+        }
+        if !self.streamID.isEmpty {
+            try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 5)
+        }
+        if !self.subscriptionID.isEmpty {
+            try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 6)
+        }
+        if self.orderBookType != .unspecified {
+            try visitor.visitSingularEnumField(value: self.orderBookType, fieldNumber: 7)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.depth != 0 {
-      try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.depth != rhs.depth {return false}
+        if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.streamID != rhs.streamID {return false}
+        if lhs.subscriptionID != rhs.subscriptionID {return false}
+        if lhs.orderBookType != rhs.orderBookType {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.subscriptionStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 3)
-    }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 4)
-    }
-    if !self.streamID.isEmpty {
-      try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 5)
-    }
-    if !self.subscriptionID.isEmpty {
-      try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 6)
-    }
-    if self.orderBookType != .unspecified {
-      try visitor.visitSingularEnumField(value: self.orderBookType, fieldNumber: 7)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBookSubscription) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.depth != rhs.depth {return false}
-    if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.streamID != rhs.streamID {return false}
-    if lhs.subscriptionID != rhs.subscriptionID {return false}
-    if lhs.orderBookType != rhs.orderBookType {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeTradesRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscription_action"),
-    2: .same(proto: "instruments"),
-    3: .standard(proto: "trade_source"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
-      case 3: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeTradesRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscription_action"),
+        2: .same(proto: "instruments"),
+        3: .standard(proto: "trade_source"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
+            case 3: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.subscriptionAction != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if self.subscriptionAction != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+        }
+        if !self.instruments.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+        }
+        if self.tradeSource != .tradeSourceUnspecified {
+            try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 3)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instruments.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest) -> Bool {
+        if lhs.subscriptionAction != rhs.subscriptionAction {return false}
+        if lhs.instruments != rhs.instruments {return false}
+        if lhs.tradeSource != rhs.tradeSource {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.tradeSource != .tradeSourceUnspecified {
-      try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 3)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesRequest) -> Bool {
-    if lhs.subscriptionAction != rhs.subscriptionAction {return false}
-    if lhs.instruments != rhs.instruments {return false}
-    if lhs.tradeSource != rhs.tradeSource {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".TradeInstrument"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".TradeInstrument"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if !self.instrumentID.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instrumentID.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeInstrument) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeTradesResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "tracking_id"),
-    2: .standard(proto: "trade_subscriptions"),
-    3: .standard(proto: "trade_source"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.tradeSubscriptions) }()
-      case 3: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeTradesResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "tracking_id"),
+        2: .standard(proto: "trade_subscriptions"),
+        3: .standard(proto: "trade_source"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.tradeSubscriptions) }()
+            case 3: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.trackingID.isEmpty {
-      try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.trackingID.isEmpty {
+            try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+        }
+        if !self.tradeSubscriptions.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.tradeSubscriptions, fieldNumber: 2)
+        }
+        if self.tradeSource != .tradeSourceUnspecified {
+            try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 3)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.tradeSubscriptions.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.tradeSubscriptions, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse) -> Bool {
+        if lhs.trackingID != rhs.trackingID {return false}
+        if lhs.tradeSubscriptions != rhs.tradeSubscriptions {return false}
+        if lhs.tradeSource != rhs.tradeSource {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.tradeSource != .tradeSourceUnspecified {
-      try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 3)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeTradesResponse) -> Bool {
-    if lhs.trackingID != rhs.trackingID {return false}
-    if lhs.tradeSubscriptions != rhs.tradeSubscriptions {return false}
-    if lhs.tradeSource != rhs.tradeSource {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".TradeSubscription"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "subscription_status"),
-    3: .standard(proto: "instrument_uid"),
-    4: .standard(proto: "stream_id"),
-    5: .standard(proto: "subscription_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".TradeSubscription"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "subscription_status"),
+        3: .standard(proto: "instrument_uid"),
+        4: .standard(proto: "stream_id"),
+        5: .standard(proto: "subscription_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
+            case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 4: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
+            case 5: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.subscriptionStatus != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 2)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 3)
+        }
+        if !self.streamID.isEmpty {
+            try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 4)
+        }
+        if !self.subscriptionID.isEmpty {
+            try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 5)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.subscriptionStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.streamID != rhs.streamID {return false}
+        if lhs.subscriptionID != rhs.subscriptionID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 3)
-    }
-    if !self.streamID.isEmpty {
-      try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 4)
-    }
-    if !self.subscriptionID.isEmpty {
-      try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 5)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradeSubscription) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.streamID != rhs.streamID {return false}
-    if lhs.subscriptionID != rhs.subscriptionID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeInfoRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscription_action"),
-    2: .same(proto: "instruments"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeInfoRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscription_action"),
+        2: .same(proto: "instruments"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.subscriptionAction != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if self.subscriptionAction != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+        }
+        if !self.instruments.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instruments.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest) -> Bool {
+        if lhs.subscriptionAction != rhs.subscriptionAction {return false}
+        if lhs.instruments != rhs.instruments {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoRequest) -> Bool {
-    if lhs.subscriptionAction != rhs.subscriptionAction {return false}
-    if lhs.instruments != rhs.instruments {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".InfoInstrument"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".InfoInstrument"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if !self.instrumentID.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instrumentID.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoInstrument) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeInfoResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "tracking_id"),
-    2: .standard(proto: "info_subscriptions"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.infoSubscriptions) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeInfoResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "tracking_id"),
+        2: .standard(proto: "info_subscriptions"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.infoSubscriptions) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.trackingID.isEmpty {
-      try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.trackingID.isEmpty {
+            try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+        }
+        if !self.infoSubscriptions.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.infoSubscriptions, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.infoSubscriptions.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.infoSubscriptions, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse) -> Bool {
+        if lhs.trackingID != rhs.trackingID {return false}
+        if lhs.infoSubscriptions != rhs.infoSubscriptions {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeInfoResponse) -> Bool {
-    if lhs.trackingID != rhs.trackingID {return false}
-    if lhs.infoSubscriptions != rhs.infoSubscriptions {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".InfoSubscription"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "subscription_status"),
-    3: .standard(proto: "instrument_uid"),
-    4: .standard(proto: "stream_id"),
-    5: .standard(proto: "subscription_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".InfoSubscription"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "subscription_status"),
+        3: .standard(proto: "instrument_uid"),
+        4: .standard(proto: "stream_id"),
+        5: .standard(proto: "subscription_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
+            case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 4: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
+            case 5: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.subscriptionStatus != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 2)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 3)
+        }
+        if !self.streamID.isEmpty {
+            try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 4)
+        }
+        if !self.subscriptionID.isEmpty {
+            try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 5)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.subscriptionStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.streamID != rhs.streamID {return false}
+        if lhs.subscriptionID != rhs.subscriptionID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 3)
-    }
-    if !self.streamID.isEmpty {
-      try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 4)
-    }
-    if !self.subscriptionID.isEmpty {
-      try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 5)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InfoSubscription) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.streamID != rhs.streamID {return false}
-    if lhs.subscriptionID != rhs.subscriptionID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeLastPriceRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "subscription_action"),
-    2: .same(proto: "instruments"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeLastPriceRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "subscription_action"),
+        2: .same(proto: "instruments"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularEnumField(value: &self.subscriptionAction) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.subscriptionAction != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if self.subscriptionAction != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionAction, fieldNumber: 1)
+        }
+        if !self.instruments.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instruments.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest) -> Bool {
+        if lhs.subscriptionAction != rhs.subscriptionAction {return false}
+        if lhs.instruments != rhs.instruments {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceRequest) -> Bool {
-    if lhs.subscriptionAction != rhs.subscriptionAction {return false}
-    if lhs.instruments != rhs.instruments {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".LastPriceInstrument"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".LastPriceInstrument"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if !self.instrumentID.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instrumentID.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument, rhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceInstrument) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".SubscribeLastPriceResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "tracking_id"),
-    2: .standard(proto: "last_price_subscriptions"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
-      case 2: try { try decoder.decodeRepeatedMessageField(value: &self.lastPriceSubscriptions) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".SubscribeLastPriceResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "tracking_id"),
+        2: .standard(proto: "last_price_subscriptions"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.trackingID) }()
+            case 2: try { try decoder.decodeRepeatedMessageField(value: &self.lastPriceSubscriptions) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.trackingID.isEmpty {
-      try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.trackingID.isEmpty {
+            try visitor.visitSingularStringField(value: self.trackingID, fieldNumber: 1)
+        }
+        if !self.lastPriceSubscriptions.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.lastPriceSubscriptions, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.lastPriceSubscriptions.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.lastPriceSubscriptions, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse) -> Bool {
+        if lhs.trackingID != rhs.trackingID {return false}
+        if lhs.lastPriceSubscriptions != rhs.lastPriceSubscriptions {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_SubscribeLastPriceResponse) -> Bool {
-    if lhs.trackingID != rhs.trackingID {return false}
-    if lhs.lastPriceSubscriptions != rhs.lastPriceSubscriptions {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".LastPriceSubscription"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "subscription_status"),
-    3: .standard(proto: "instrument_uid"),
-    4: .standard(proto: "stream_id"),
-    5: .standard(proto: "subscription_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".LastPriceSubscription"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "subscription_status"),
+        3: .standard(proto: "instrument_uid"),
+        4: .standard(proto: "stream_id"),
+        5: .standard(proto: "subscription_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.subscriptionStatus) }()
+            case 3: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 4: try { try decoder.decodeSingularStringField(value: &self.streamID) }()
+            case 5: try { try decoder.decodeSingularStringField(value: &self.subscriptionID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.subscriptionStatus != .unspecified {
+            try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 2)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 3)
+        }
+        if !self.streamID.isEmpty {
+            try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 4)
+        }
+        if !self.subscriptionID.isEmpty {
+            try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 5)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.subscriptionStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.subscriptionStatus, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.streamID != rhs.streamID {return false}
+        if lhs.subscriptionID != rhs.subscriptionID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 3)
-    }
-    if !self.streamID.isEmpty {
-      try visitor.visitSingularStringField(value: self.streamID, fieldNumber: 4)
-    }
-    if !self.subscriptionID.isEmpty {
-      try visitor.visitSingularStringField(value: self.subscriptionID, fieldNumber: 5)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription, rhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPriceSubscription) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.subscriptionStatus != rhs.subscriptionStatus {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.streamID != rhs.streamID {return false}
-    if lhs.subscriptionID != rhs.subscriptionID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_Candle: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Candle"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "interval"),
-    3: .same(proto: "open"),
-    4: .same(proto: "high"),
-    5: .same(proto: "low"),
-    6: .same(proto: "close"),
-    7: .same(proto: "volume"),
-    8: .same(proto: "time"),
-    9: .standard(proto: "last_trade_ts"),
-    10: .standard(proto: "instrument_uid"),
-    19: .standard(proto: "candle_source_type"),
-  ]
-
-  fileprivate class _StorageClass {
-    var _figi: String = String()
-    var _interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval = .unspecified
-    var _open: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _volume: Int64 = 0
-    var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _lastTradeTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _instrumentUid: String = String()
-    var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_CandleSource = .unspecified
-
-    static let defaultInstance = _StorageClass()
-
-    private init() {}
-
-    init(copying source: _StorageClass) {
-      _figi = source._figi
-      _interval = source._interval
-      _open = source._open
-      _high = source._high
-      _low = source._low
-      _close = source._close
-      _volume = source._volume
-      _time = source._time
-      _lastTradeTs = source._lastTradeTs
-      _instrumentUid = source._instrumentUid
-      _candleSourceType = source._candleSourceType
-    }
-  }
-
-  fileprivate mutating func _uniqueStorage() -> _StorageClass {
-    if !isKnownUniquelyReferenced(&_storage) {
-      _storage = _StorageClass(copying: _storage)
-    }
-    return _storage
-  }
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    _ = _uniqueStorage()
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      while let fieldNumber = try decoder.nextFieldNumber() {
-        // The use of inline closures is to circumvent an issue where the compiler
-        // allocates stack space for every case branch when no optimizations are
-        // enabled. https://github.com/apple/swift-protobuf/issues/1034
-        switch fieldNumber {
-        case 1: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
-        case 2: try { try decoder.decodeSingularEnumField(value: &_storage._interval) }()
-        case 3: try { try decoder.decodeSingularMessageField(value: &_storage._open) }()
-        case 4: try { try decoder.decodeSingularMessageField(value: &_storage._high) }()
-        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._low) }()
-        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._close) }()
-        case 7: try { try decoder.decodeSingularInt64Field(value: &_storage._volume) }()
-        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._time) }()
-        case 9: try { try decoder.decodeSingularMessageField(value: &_storage._lastTradeTs) }()
-        case 10: try { try decoder.decodeSingularStringField(value: &_storage._instrumentUid) }()
-        case 19: try { try decoder.decodeSingularEnumField(value: &_storage._candleSourceType) }()
-        default: break
+    public static let protoMessageName: String = _protobuf_package + ".Candle"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "interval"),
+        3: .same(proto: "open"),
+        4: .same(proto: "high"),
+        5: .same(proto: "low"),
+        6: .same(proto: "close"),
+        7: .same(proto: "volume"),
+        8: .same(proto: "time"),
+        9: .standard(proto: "last_trade_ts"),
+        10: .standard(proto: "instrument_uid"),
+        19: .standard(proto: "candle_source_type"),
+    ]
+    
+    fileprivate class _StorageClass: @unchecked Sendable {
+        var _figi: String = String()
+        var _interval: Tinkoff_Public_Invest_Api_Contract_V1_SubscriptionInterval = .unspecified
+        var _open: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _high: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _low: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _close: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _volume: Int64 = 0
+        var _time: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _lastTradeTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _instrumentUid: String = String()
+        var _candleSourceType: Tinkoff_Public_Invest_Api_Contract_V1_CandleSource = .unspecified
+        
+        static let defaultInstance = _StorageClass()
+        
+        private init() {}
+        
+        init(copying source: _StorageClass) {
+            _figi = source._figi
+            _interval = source._interval
+            _open = source._open
+            _high = source._high
+            _low = source._low
+            _close = source._close
+            _volume = source._volume
+            _time = source._time
+            _lastTradeTs = source._lastTradeTs
+            _instrumentUid = source._instrumentUid
+            _candleSourceType = source._candleSourceType
         }
-      }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every if/case branch local when no optimizations
-      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-      // https://github.com/apple/swift-protobuf/issues/1182
-      if !_storage._figi.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._figi, fieldNumber: 1)
-      }
-      if _storage._interval != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._interval, fieldNumber: 2)
-      }
-      try { if let v = _storage._open {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-      } }()
-      try { if let v = _storage._high {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-      } }()
-      try { if let v = _storage._low {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-      } }()
-      try { if let v = _storage._close {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-      } }()
-      if _storage._volume != 0 {
-        try visitor.visitSingularInt64Field(value: _storage._volume, fieldNumber: 7)
-      }
-      try { if let v = _storage._time {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-      } }()
-      try { if let v = _storage._lastTradeTs {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
-      } }()
-      if !_storage._instrumentUid.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._instrumentUid, fieldNumber: 10)
-      }
-      if _storage._candleSourceType != .unspecified {
-        try visitor.visitSingularEnumField(value: _storage._candleSourceType, fieldNumber: 19)
-      }
+    
+    fileprivate mutating func _uniqueStorage() -> _StorageClass {
+        if !isKnownUniquelyReferenced(&_storage) {
+            _storage = _StorageClass(copying: _storage)
+        }
+        return _storage
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_Candle, rhs: Tinkoff_Public_Invest_Api_Contract_V1_Candle) -> Bool {
-    if lhs._storage !== rhs._storage {
-      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
-        let _storage = _args.0
-        let rhs_storage = _args.1
-        if _storage._figi != rhs_storage._figi {return false}
-        if _storage._interval != rhs_storage._interval {return false}
-        if _storage._open != rhs_storage._open {return false}
-        if _storage._high != rhs_storage._high {return false}
-        if _storage._low != rhs_storage._low {return false}
-        if _storage._close != rhs_storage._close {return false}
-        if _storage._volume != rhs_storage._volume {return false}
-        if _storage._time != rhs_storage._time {return false}
-        if _storage._lastTradeTs != rhs_storage._lastTradeTs {return false}
-        if _storage._instrumentUid != rhs_storage._instrumentUid {return false}
-        if _storage._candleSourceType != rhs_storage._candleSourceType {return false}
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        _ = _uniqueStorage()
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            while let fieldNumber = try decoder.nextFieldNumber() {
+                // The use of inline closures is to circumvent an issue where the compiler
+                // allocates stack space for every case branch when no optimizations are
+                // enabled. https://github.com/apple/swift-protobuf/issues/1034
+                switch fieldNumber {
+                case 1: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
+                case 2: try { try decoder.decodeSingularEnumField(value: &_storage._interval) }()
+                case 3: try { try decoder.decodeSingularMessageField(value: &_storage._open) }()
+                case 4: try { try decoder.decodeSingularMessageField(value: &_storage._high) }()
+                case 5: try { try decoder.decodeSingularMessageField(value: &_storage._low) }()
+                case 6: try { try decoder.decodeSingularMessageField(value: &_storage._close) }()
+                case 7: try { try decoder.decodeSingularInt64Field(value: &_storage._volume) }()
+                case 8: try { try decoder.decodeSingularMessageField(value: &_storage._time) }()
+                case 9: try { try decoder.decodeSingularMessageField(value: &_storage._lastTradeTs) }()
+                case 10: try { try decoder.decodeSingularStringField(value: &_storage._instrumentUid) }()
+                case 19: try { try decoder.decodeSingularEnumField(value: &_storage._candleSourceType) }()
+                default: break
+                }
+            }
+        }
+    }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every if/case branch local when no optimizations
+            // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+            // https://github.com/apple/swift-protobuf/issues/1182
+            if !_storage._figi.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._figi, fieldNumber: 1)
+            }
+            if _storage._interval != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._interval, fieldNumber: 2)
+            }
+            try { if let v = _storage._open {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+            } }()
+            try { if let v = _storage._high {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+            } }()
+            try { if let v = _storage._low {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+            } }()
+            try { if let v = _storage._close {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+            } }()
+            if _storage._volume != 0 {
+                try visitor.visitSingularInt64Field(value: _storage._volume, fieldNumber: 7)
+            }
+            try { if let v = _storage._time {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+            } }()
+            try { if let v = _storage._lastTradeTs {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+            } }()
+            if !_storage._instrumentUid.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._instrumentUid, fieldNumber: 10)
+            }
+            if _storage._candleSourceType != .unspecified {
+                try visitor.visitSingularEnumField(value: _storage._candleSourceType, fieldNumber: 19)
+            }
+        }
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_Candle, rhs: Tinkoff_Public_Invest_Api_Contract_V1_Candle) -> Bool {
+        if lhs._storage !== rhs._storage {
+            let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+                let _storage = _args.0
+                let rhs_storage = _args.1
+                if _storage._figi != rhs_storage._figi {return false}
+                if _storage._interval != rhs_storage._interval {return false}
+                if _storage._open != rhs_storage._open {return false}
+                if _storage._high != rhs_storage._high {return false}
+                if _storage._low != rhs_storage._low {return false}
+                if _storage._close != rhs_storage._close {return false}
+                if _storage._volume != rhs_storage._volume {return false}
+                if _storage._time != rhs_storage._time {return false}
+                if _storage._lastTradeTs != rhs_storage._lastTradeTs {return false}
+                if _storage._instrumentUid != rhs_storage._instrumentUid {return false}
+                if _storage._candleSourceType != rhs_storage._candleSourceType {return false}
+                return true
+            }
+            if !storagesAreEqual {return false}
+        }
+        if lhs.unknownFields != rhs.unknownFields {return false}
         return true
-      }
-      if !storagesAreEqual {return false}
     }
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrderBook: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".OrderBook"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "depth"),
-    3: .standard(proto: "is_consistent"),
-    4: .same(proto: "bids"),
-    5: .same(proto: "asks"),
-    6: .same(proto: "time"),
-    7: .standard(proto: "limit_up"),
-    8: .standard(proto: "limit_down"),
-    9: .standard(proto: "instrument_uid"),
-    10: .standard(proto: "order_book_type"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.isConsistent) }()
-      case 4: try { try decoder.decodeRepeatedMessageField(value: &self.bids) }()
-      case 5: try { try decoder.decodeRepeatedMessageField(value: &self.asks) }()
-      case 6: try { try decoder.decodeSingularMessageField(value: &self._time) }()
-      case 7: try { try decoder.decodeSingularMessageField(value: &self._limitUp) }()
-      case 8: try { try decoder.decodeSingularMessageField(value: &self._limitDown) }()
-      case 9: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 10: try { try decoder.decodeSingularEnumField(value: &self.orderBookType) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".OrderBook"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "depth"),
+        3: .standard(proto: "is_consistent"),
+        4: .same(proto: "bids"),
+        5: .same(proto: "asks"),
+        6: .same(proto: "time"),
+        7: .standard(proto: "limit_up"),
+        8: .standard(proto: "limit_down"),
+        9: .standard(proto: "instrument_uid"),
+        10: .standard(proto: "order_book_type"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
+            case 3: try { try decoder.decodeSingularBoolField(value: &self.isConsistent) }()
+            case 4: try { try decoder.decodeRepeatedMessageField(value: &self.bids) }()
+            case 5: try { try decoder.decodeRepeatedMessageField(value: &self.asks) }()
+            case 6: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+            case 7: try { try decoder.decodeSingularMessageField(value: &self._limitUp) }()
+            case 8: try { try decoder.decodeSingularMessageField(value: &self._limitDown) }()
+            case 9: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 10: try { try decoder.decodeSingularEnumField(value: &self.orderBookType) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.depth != 0 {
+            try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+        }
+        if self.isConsistent != false {
+            try visitor.visitSingularBoolField(value: self.isConsistent, fieldNumber: 3)
+        }
+        if !self.bids.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.bids, fieldNumber: 4)
+        }
+        if !self.asks.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.asks, fieldNumber: 5)
+        }
+        try { if let v = self._time {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+        } }()
+        try { if let v = self._limitUp {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+        } }()
+        try { if let v = self._limitDown {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+        } }()
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 9)
+        }
+        if self.orderBookType != .unspecified {
+            try visitor.visitSingularEnumField(value: self.orderBookType, fieldNumber: 10)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.depth != 0 {
-      try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook, rhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.depth != rhs.depth {return false}
+        if lhs.isConsistent != rhs.isConsistent {return false}
+        if lhs.bids != rhs.bids {return false}
+        if lhs.asks != rhs.asks {return false}
+        if lhs._time != rhs._time {return false}
+        if lhs._limitUp != rhs._limitUp {return false}
+        if lhs._limitDown != rhs._limitDown {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.orderBookType != rhs.orderBookType {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.isConsistent != false {
-      try visitor.visitSingularBoolField(value: self.isConsistent, fieldNumber: 3)
-    }
-    if !self.bids.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.bids, fieldNumber: 4)
-    }
-    if !self.asks.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.asks, fieldNumber: 5)
-    }
-    try { if let v = self._time {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-    } }()
-    try { if let v = self._limitUp {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
-    } }()
-    try { if let v = self._limitDown {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-    } }()
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 9)
-    }
-    if self.orderBookType != .unspecified {
-      try visitor.visitSingularEnumField(value: self.orderBookType, fieldNumber: 10)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook, rhs: Tinkoff_Public_Invest_Api_Contract_V1_OrderBook) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.depth != rhs.depth {return false}
-    if lhs.isConsistent != rhs.isConsistent {return false}
-    if lhs.bids != rhs.bids {return false}
-    if lhs.asks != rhs.asks {return false}
-    if lhs._time != rhs._time {return false}
-    if lhs._limitUp != rhs._limitUp {return false}
-    if lhs._limitDown != rhs._limitDown {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.orderBookType != rhs.orderBookType {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_Order: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Order"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "price"),
-    2: .same(proto: "quantity"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._price) }()
-      case 2: try { try decoder.decodeSingularInt64Field(value: &self.quantity) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".Order"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "price"),
+        2: .same(proto: "quantity"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._price) }()
+            case 2: try { try decoder.decodeSingularInt64Field(value: &self.quantity) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._price {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    if self.quantity != 0 {
-      try visitor.visitSingularInt64Field(value: self.quantity, fieldNumber: 2)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._price {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        if self.quantity != 0 {
+            try visitor.visitSingularInt64Field(value: self.quantity, fieldNumber: 2)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_Order, rhs: Tinkoff_Public_Invest_Api_Contract_V1_Order) -> Bool {
-    if lhs._price != rhs._price {return false}
-    if lhs.quantity != rhs.quantity {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_Order, rhs: Tinkoff_Public_Invest_Api_Contract_V1_Order) -> Bool {
+        if lhs._price != rhs._price {return false}
+        if lhs.quantity != rhs.quantity {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_Trade: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".Trade"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "direction"),
-    3: .same(proto: "price"),
-    4: .same(proto: "quantity"),
-    5: .same(proto: "time"),
-    6: .standard(proto: "instrument_uid"),
-    7: .standard(proto: "trade_source"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.direction) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._price) }()
-      case 4: try { try decoder.decodeSingularInt64Field(value: &self.quantity) }()
-      case 5: try { try decoder.decodeSingularMessageField(value: &self._time) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 7: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".Trade"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "direction"),
+        3: .same(proto: "price"),
+        4: .same(proto: "quantity"),
+        5: .same(proto: "time"),
+        6: .standard(proto: "instrument_uid"),
+        7: .standard(proto: "trade_source"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.direction) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._price) }()
+            case 4: try { try decoder.decodeSingularInt64Field(value: &self.quantity) }()
+            case 5: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+            case 6: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 7: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.direction != .unspecified {
+            try visitor.visitSingularEnumField(value: self.direction, fieldNumber: 2)
+        }
+        try { if let v = self._price {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        if self.quantity != 0 {
+            try visitor.visitSingularInt64Field(value: self.quantity, fieldNumber: 4)
+        }
+        try { if let v = self._time {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+        } }()
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 6)
+        }
+        if self.tradeSource != .tradeSourceUnspecified {
+            try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 7)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.direction != .unspecified {
-      try visitor.visitSingularEnumField(value: self.direction, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_Trade, rhs: Tinkoff_Public_Invest_Api_Contract_V1_Trade) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.direction != rhs.direction {return false}
+        if lhs._price != rhs._price {return false}
+        if lhs.quantity != rhs.quantity {return false}
+        if lhs._time != rhs._time {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.tradeSource != rhs.tradeSource {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try { if let v = self._price {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    if self.quantity != 0 {
-      try visitor.visitSingularInt64Field(value: self.quantity, fieldNumber: 4)
-    }
-    try { if let v = self._time {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-    } }()
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 6)
-    }
-    if self.tradeSource != .tradeSourceUnspecified {
-      try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 7)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_Trade, rhs: Tinkoff_Public_Invest_Api_Contract_V1_Trade) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.direction != rhs.direction {return false}
-    if lhs._price != rhs._price {return false}
-    if lhs.quantity != rhs.quantity {return false}
-    if lhs._time != rhs._time {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.tradeSource != rhs.tradeSource {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".TradingStatus"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "trading_status"),
-    3: .same(proto: "time"),
-    4: .standard(proto: "limit_order_available_flag"),
-    5: .standard(proto: "market_order_available_flag"),
-    6: .standard(proto: "instrument_uid"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.tradingStatus) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._time) }()
-      case 4: try { try decoder.decodeSingularBoolField(value: &self.limitOrderAvailableFlag) }()
-      case 5: try { try decoder.decodeSingularBoolField(value: &self.marketOrderAvailableFlag) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".TradingStatus"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "trading_status"),
+        3: .same(proto: "time"),
+        4: .standard(proto: "limit_order_available_flag"),
+        5: .standard(proto: "market_order_available_flag"),
+        6: .standard(proto: "instrument_uid"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.tradingStatus) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+            case 4: try { try decoder.decodeSingularBoolField(value: &self.limitOrderAvailableFlag) }()
+            case 5: try { try decoder.decodeSingularBoolField(value: &self.marketOrderAvailableFlag) }()
+            case 6: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.tradingStatus != .unspecified {
+            try visitor.visitSingularEnumField(value: self.tradingStatus, fieldNumber: 2)
+        }
+        try { if let v = self._time {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        if self.limitOrderAvailableFlag != false {
+            try visitor.visitSingularBoolField(value: self.limitOrderAvailableFlag, fieldNumber: 4)
+        }
+        if self.marketOrderAvailableFlag != false {
+            try visitor.visitSingularBoolField(value: self.marketOrderAvailableFlag, fieldNumber: 5)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 6)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.tradingStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.tradingStatus, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.tradingStatus != rhs.tradingStatus {return false}
+        if lhs._time != rhs._time {return false}
+        if lhs.limitOrderAvailableFlag != rhs.limitOrderAvailableFlag {return false}
+        if lhs.marketOrderAvailableFlag != rhs.marketOrderAvailableFlag {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try { if let v = self._time {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    if self.limitOrderAvailableFlag != false {
-      try visitor.visitSingularBoolField(value: self.limitOrderAvailableFlag, fieldNumber: 4)
-    }
-    if self.marketOrderAvailableFlag != false {
-      try visitor.visitSingularBoolField(value: self.marketOrderAvailableFlag, fieldNumber: 5)
-    }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 6)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus, rhs: Tinkoff_Public_Invest_Api_Contract_V1_TradingStatus) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.tradingStatus != rhs.tradingStatus {return false}
-    if lhs._time != rhs._time {return false}
-    if lhs.limitOrderAvailableFlag != rhs.limitOrderAvailableFlag {return false}
-    if lhs.marketOrderAvailableFlag != rhs.marketOrderAvailableFlag {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetCandlesRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "from"),
-    3: .same(proto: "to"),
-    4: .same(proto: "interval"),
-    5: .standard(proto: "instrument_id"),
-    7: .standard(proto: "candle_source_type"),
-    10: .same(proto: "limit"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
-      case 4: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
-      case 5: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
-      case 7: try { try decoder.decodeSingularEnumField(value: &self._candleSourceType) }()
-      case 10: try { try decoder.decodeSingularInt32Field(value: &self._limit) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetCandlesRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "from"),
+        3: .same(proto: "to"),
+        4: .same(proto: "interval"),
+        5: .standard(proto: "instrument_id"),
+        7: .standard(proto: "candle_source_type"),
+        10: .same(proto: "limit"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
+            case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+            case 4: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
+            case 5: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
+            case 7: try { try decoder.decodeSingularEnumField(value: &self._candleSourceType) }()
+            case 10: try { try decoder.decodeSingularInt32Field(value: &self._limit) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._figi {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
-    } }()
-    try { if let v = self._from {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try { if let v = self._to {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    if self.interval != .unspecified {
-      try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 4)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._figi {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+        } }()
+        try { if let v = self._from {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        } }()
+        try { if let v = self._to {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        if self.interval != .unspecified {
+            try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 4)
+        }
+        try { if let v = self._instrumentID {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 5)
+        } }()
+        try { if let v = self._candleSourceType {
+            try visitor.visitSingularEnumField(value: v, fieldNumber: 7)
+        } }()
+        try { if let v = self._limit {
+            try visitor.visitSingularInt32Field(value: v, fieldNumber: 10)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try { if let v = self._instrumentID {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 5)
-    } }()
-    try { if let v = self._candleSourceType {
-      try visitor.visitSingularEnumField(value: v, fieldNumber: 7)
-    } }()
-    try { if let v = self._limit {
-      try visitor.visitSingularInt32Field(value: v, fieldNumber: 10)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest) -> Bool {
-    if lhs._figi != rhs._figi {return false}
-    if lhs._from != rhs._from {return false}
-    if lhs._to != rhs._to {return false}
-    if lhs.interval != rhs.interval {return false}
-    if lhs._instrumentID != rhs._instrumentID {return false}
-    if lhs._candleSourceType != rhs._candleSourceType {return false}
-    if lhs._limit != rhs._limit {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest) -> Bool {
+        if lhs._figi != rhs._figi {return false}
+        if lhs._from != rhs._from {return false}
+        if lhs._to != rhs._to {return false}
+        if lhs.interval != rhs.interval {return false}
+        if lhs._instrumentID != rhs._instrumentID {return false}
+        if lhs._candleSourceType != rhs._candleSourceType {return false}
+        if lhs._limit != rhs._limit {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesRequest.CandleSource: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "CANDLE_SOURCE_UNSPECIFIED"),
-    1: .same(proto: "CANDLE_SOURCE_EXCHANGE"),
-    3: .same(proto: "CANDLE_SOURCE_INCLUDE_WEEKEND"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "CANDLE_SOURCE_UNSPECIFIED"),
+        1: .same(proto: "CANDLE_SOURCE_EXCHANGE"),
+        3: .same(proto: "CANDLE_SOURCE_INCLUDE_WEEKEND"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetCandlesResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "candles"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.candles) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetCandlesResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "candles"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.candles) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.candles.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.candles, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.candles.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.candles, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesResponse) -> Bool {
-    if lhs.candles != rhs.candles {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetCandlesResponse) -> Bool {
+        if lhs.candles != rhs.candles {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".HistoricCandle"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "open"),
-    2: .same(proto: "high"),
-    3: .same(proto: "low"),
-    4: .same(proto: "close"),
-    5: .same(proto: "volume"),
-    6: .same(proto: "time"),
-    7: .standard(proto: "is_complete"),
-    9: .standard(proto: "candle_source"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._open) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._high) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._low) }()
-      case 4: try { try decoder.decodeSingularMessageField(value: &self._close) }()
-      case 5: try { try decoder.decodeSingularInt64Field(value: &self.volume) }()
-      case 6: try { try decoder.decodeSingularMessageField(value: &self._time) }()
-      case 7: try { try decoder.decodeSingularBoolField(value: &self.isComplete) }()
-      case 9: try { try decoder.decodeSingularEnumField(value: &self.candleSource) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".HistoricCandle"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "open"),
+        2: .same(proto: "high"),
+        3: .same(proto: "low"),
+        4: .same(proto: "close"),
+        5: .same(proto: "volume"),
+        6: .same(proto: "time"),
+        7: .standard(proto: "is_complete"),
+        9: .standard(proto: "candle_source"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._open) }()
+            case 2: try { try decoder.decodeSingularMessageField(value: &self._high) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._low) }()
+            case 4: try { try decoder.decodeSingularMessageField(value: &self._close) }()
+            case 5: try { try decoder.decodeSingularInt64Field(value: &self.volume) }()
+            case 6: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+            case 7: try { try decoder.decodeSingularBoolField(value: &self.isComplete) }()
+            case 9: try { try decoder.decodeSingularEnumField(value: &self.candleSource) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._open {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    try { if let v = self._high {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try { if let v = self._low {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    try { if let v = self._close {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    } }()
-    if self.volume != 0 {
-      try visitor.visitSingularInt64Field(value: self.volume, fieldNumber: 5)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._open {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        try { if let v = self._high {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        } }()
+        try { if let v = self._low {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        try { if let v = self._close {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+        } }()
+        if self.volume != 0 {
+            try visitor.visitSingularInt64Field(value: self.volume, fieldNumber: 5)
+        }
+        try { if let v = self._time {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+        } }()
+        if self.isComplete != false {
+            try visitor.visitSingularBoolField(value: self.isComplete, fieldNumber: 7)
+        }
+        if self.candleSource != .unspecified {
+            try visitor.visitSingularEnumField(value: self.candleSource, fieldNumber: 9)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try { if let v = self._time {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-    } }()
-    if self.isComplete != false {
-      try visitor.visitSingularBoolField(value: self.isComplete, fieldNumber: 7)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle, rhs: Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle) -> Bool {
+        if lhs._open != rhs._open {return false}
+        if lhs._high != rhs._high {return false}
+        if lhs._low != rhs._low {return false}
+        if lhs._close != rhs._close {return false}
+        if lhs.volume != rhs.volume {return false}
+        if lhs._time != rhs._time {return false}
+        if lhs.isComplete != rhs.isComplete {return false}
+        if lhs.candleSource != rhs.candleSource {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.candleSource != .unspecified {
-      try visitor.visitSingularEnumField(value: self.candleSource, fieldNumber: 9)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle, rhs: Tinkoff_Public_Invest_Api_Contract_V1_HistoricCandle) -> Bool {
-    if lhs._open != rhs._open {return false}
-    if lhs._high != rhs._high {return false}
-    if lhs._low != rhs._low {return false}
-    if lhs._close != rhs._close {return false}
-    if lhs.volume != rhs.volume {return false}
-    if lhs._time != rhs._time {return false}
-    if lhs.isComplete != rhs.isComplete {return false}
-    if lhs.candleSource != rhs.candleSource {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetLastPricesRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "instrument_id"),
-    3: .standard(proto: "last_price_type"),
-    9: .standard(proto: "instrument_status"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeRepeatedStringField(value: &self.instrumentID) }()
-      case 3: try { try decoder.decodeSingularEnumField(value: &self.lastPriceType) }()
-      case 9: try { try decoder.decodeSingularEnumField(value: &self._instrumentStatus) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetLastPricesRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "instrument_id"),
+        3: .standard(proto: "last_price_type"),
+        9: .standard(proto: "instrument_status"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeRepeatedStringField(value: &self.instrumentID) }()
+            case 3: try { try decoder.decodeSingularEnumField(value: &self.lastPriceType) }()
+            case 9: try { try decoder.decodeSingularEnumField(value: &self._instrumentStatus) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.figi.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.figi.isEmpty {
+            try visitor.visitRepeatedStringField(value: self.figi, fieldNumber: 1)
+        }
+        if !self.instrumentID.isEmpty {
+            try visitor.visitRepeatedStringField(value: self.instrumentID, fieldNumber: 2)
+        }
+        if self.lastPriceType != .lastPriceUnspecified {
+            try visitor.visitSingularEnumField(value: self.lastPriceType, fieldNumber: 3)
+        }
+        try { if let v = self._instrumentStatus {
+            try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instrumentID.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.instrumentID, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesRequest) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.lastPriceType != rhs.lastPriceType {return false}
+        if lhs._instrumentStatus != rhs._instrumentStatus {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.lastPriceType != .lastPriceUnspecified {
-      try visitor.visitSingularEnumField(value: self.lastPriceType, fieldNumber: 3)
-    }
-    try { if let v = self._instrumentStatus {
-      try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesRequest) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.lastPriceType != rhs.lastPriceType {return false}
-    if lhs._instrumentStatus != rhs._instrumentStatus {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetLastPricesResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "last_prices"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.lastPrices) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetLastPricesResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "last_prices"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.lastPrices) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.lastPrices.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.lastPrices, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.lastPrices.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.lastPrices, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesResponse) -> Bool {
-    if lhs.lastPrices != rhs.lastPrices {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastPricesResponse) -> Bool {
+        if lhs.lastPrices != rhs.lastPrices {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_LastPrice: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".LastPrice"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "price"),
-    3: .same(proto: "time"),
-    11: .standard(proto: "instrument_uid"),
-    12: .standard(proto: "last_price_type"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._price) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._time) }()
-      case 11: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 12: try { try decoder.decodeSingularEnumField(value: &self.lastPriceType) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".LastPrice"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "price"),
+        3: .same(proto: "time"),
+        11: .standard(proto: "instrument_uid"),
+        12: .standard(proto: "last_price_type"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularMessageField(value: &self._price) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+            case 11: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 12: try { try decoder.decodeSingularEnumField(value: &self.lastPriceType) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        try { if let v = self._price {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        } }()
+        try { if let v = self._time {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 11)
+        }
+        if self.lastPriceType != .lastPriceUnspecified {
+            try visitor.visitSingularEnumField(value: self.lastPriceType, fieldNumber: 12)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try { if let v = self._price {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try { if let v = self._time {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 11)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice, rhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs._price != rhs._price {return false}
+        if lhs._time != rhs._time {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.lastPriceType != rhs.lastPriceType {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.lastPriceType != .lastPriceUnspecified {
-      try visitor.visitSingularEnumField(value: self.lastPriceType, fieldNumber: 12)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice, rhs: Tinkoff_Public_Invest_Api_Contract_V1_LastPrice) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs._price != rhs._price {return false}
-    if lhs._time != rhs._time {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.lastPriceType != rhs.lastPriceType {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetOrderBookRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "depth"),
-    3: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
-      case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
-      case 3: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetOrderBookRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "depth"),
+        3: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
+            case 2: try { try decoder.decodeSingularInt32Field(value: &self.depth) }()
+            case 3: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._figi {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
-    } }()
-    if self.depth != 0 {
-      try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._figi {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+        } }()
+        if self.depth != 0 {
+            try visitor.visitSingularInt32Field(value: self.depth, fieldNumber: 2)
+        }
+        try { if let v = self._instrumentID {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 3)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try { if let v = self._instrumentID {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 3)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookRequest) -> Bool {
-    if lhs._figi != rhs._figi {return false}
-    if lhs.depth != rhs.depth {return false}
-    if lhs._instrumentID != rhs._instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookRequest) -> Bool {
+        if lhs._figi != rhs._figi {return false}
+        if lhs.depth != rhs.depth {return false}
+        if lhs._instrumentID != rhs._instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetOrderBookResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "depth"),
-    3: .same(proto: "bids"),
-    4: .same(proto: "asks"),
-    5: .standard(proto: "last_price"),
-    6: .standard(proto: "close_price"),
-    7: .standard(proto: "limit_up"),
-    8: .standard(proto: "limit_down"),
-    21: .standard(proto: "last_price_ts"),
-    22: .standard(proto: "close_price_ts"),
-    23: .standard(proto: "orderbook_ts"),
-    9: .standard(proto: "instrument_uid"),
-  ]
-
-  fileprivate class _StorageClass {
-    var _figi: String = String()
-    var _depth: Int32 = 0
-    var _bids: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
-    var _asks: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
-    var _lastPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _closePrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
-    var _lastPriceTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _closePriceTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _orderbookTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
-    var _instrumentUid: String = String()
-
-    static let defaultInstance = _StorageClass()
-
-    private init() {}
-
-    init(copying source: _StorageClass) {
-      _figi = source._figi
-      _depth = source._depth
-      _bids = source._bids
-      _asks = source._asks
-      _lastPrice = source._lastPrice
-      _closePrice = source._closePrice
-      _limitUp = source._limitUp
-      _limitDown = source._limitDown
-      _lastPriceTs = source._lastPriceTs
-      _closePriceTs = source._closePriceTs
-      _orderbookTs = source._orderbookTs
-      _instrumentUid = source._instrumentUid
-    }
-  }
-
-  fileprivate mutating func _uniqueStorage() -> _StorageClass {
-    if !isKnownUniquelyReferenced(&_storage) {
-      _storage = _StorageClass(copying: _storage)
-    }
-    return _storage
-  }
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    _ = _uniqueStorage()
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      while let fieldNumber = try decoder.nextFieldNumber() {
-        // The use of inline closures is to circumvent an issue where the compiler
-        // allocates stack space for every case branch when no optimizations are
-        // enabled. https://github.com/apple/swift-protobuf/issues/1034
-        switch fieldNumber {
-        case 1: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
-        case 2: try { try decoder.decodeSingularInt32Field(value: &_storage._depth) }()
-        case 3: try { try decoder.decodeRepeatedMessageField(value: &_storage._bids) }()
-        case 4: try { try decoder.decodeRepeatedMessageField(value: &_storage._asks) }()
-        case 5: try { try decoder.decodeSingularMessageField(value: &_storage._lastPrice) }()
-        case 6: try { try decoder.decodeSingularMessageField(value: &_storage._closePrice) }()
-        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._limitUp) }()
-        case 8: try { try decoder.decodeSingularMessageField(value: &_storage._limitDown) }()
-        case 9: try { try decoder.decodeSingularStringField(value: &_storage._instrumentUid) }()
-        case 21: try { try decoder.decodeSingularMessageField(value: &_storage._lastPriceTs) }()
-        case 22: try { try decoder.decodeSingularMessageField(value: &_storage._closePriceTs) }()
-        case 23: try { try decoder.decodeSingularMessageField(value: &_storage._orderbookTs) }()
-        default: break
+    public static let protoMessageName: String = _protobuf_package + ".GetOrderBookResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "depth"),
+        3: .same(proto: "bids"),
+        4: .same(proto: "asks"),
+        5: .standard(proto: "last_price"),
+        6: .standard(proto: "close_price"),
+        7: .standard(proto: "limit_up"),
+        8: .standard(proto: "limit_down"),
+        21: .standard(proto: "last_price_ts"),
+        22: .standard(proto: "close_price_ts"),
+        23: .standard(proto: "orderbook_ts"),
+        9: .standard(proto: "instrument_uid"),
+    ]
+    
+    fileprivate class _StorageClass: @unchecked Sendable {
+        var _figi: String = String()
+        var _depth: Int32 = 0
+        var _bids: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
+        var _asks: [Tinkoff_Public_Invest_Api_Contract_V1_Order] = []
+        var _lastPrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _closePrice: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _limitUp: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _limitDown: Tinkoff_Public_Invest_Api_Contract_V1_Quotation? = nil
+        var _lastPriceTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _closePriceTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _orderbookTs: SwiftProtobuf.Google_Protobuf_Timestamp? = nil
+        var _instrumentUid: String = String()
+        
+        static let defaultInstance = _StorageClass()
+        
+        private init() {}
+        
+        init(copying source: _StorageClass) {
+            _figi = source._figi
+            _depth = source._depth
+            _bids = source._bids
+            _asks = source._asks
+            _lastPrice = source._lastPrice
+            _closePrice = source._closePrice
+            _limitUp = source._limitUp
+            _limitDown = source._limitDown
+            _lastPriceTs = source._lastPriceTs
+            _closePriceTs = source._closePriceTs
+            _orderbookTs = source._orderbookTs
+            _instrumentUid = source._instrumentUid
         }
-      }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every if/case branch local when no optimizations
-      // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-      // https://github.com/apple/swift-protobuf/issues/1182
-      if !_storage._figi.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._figi, fieldNumber: 1)
-      }
-      if _storage._depth != 0 {
-        try visitor.visitSingularInt32Field(value: _storage._depth, fieldNumber: 2)
-      }
-      if !_storage._bids.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._bids, fieldNumber: 3)
-      }
-      if !_storage._asks.isEmpty {
-        try visitor.visitRepeatedMessageField(value: _storage._asks, fieldNumber: 4)
-      }
-      try { if let v = _storage._lastPrice {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-      } }()
-      try { if let v = _storage._closePrice {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-      } }()
-      try { if let v = _storage._limitUp {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
-      } }()
-      try { if let v = _storage._limitDown {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-      } }()
-      if !_storage._instrumentUid.isEmpty {
-        try visitor.visitSingularStringField(value: _storage._instrumentUid, fieldNumber: 9)
-      }
-      try { if let v = _storage._lastPriceTs {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 21)
-      } }()
-      try { if let v = _storage._closePriceTs {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 22)
-      } }()
-      try { if let v = _storage._orderbookTs {
-        try visitor.visitSingularMessageField(value: v, fieldNumber: 23)
-      } }()
+    
+    fileprivate mutating func _uniqueStorage() -> _StorageClass {
+        if !isKnownUniquelyReferenced(&_storage) {
+            _storage = _StorageClass(copying: _storage)
+        }
+        return _storage
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookResponse) -> Bool {
-    if lhs._storage !== rhs._storage {
-      let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
-        let _storage = _args.0
-        let rhs_storage = _args.1
-        if _storage._figi != rhs_storage._figi {return false}
-        if _storage._depth != rhs_storage._depth {return false}
-        if _storage._bids != rhs_storage._bids {return false}
-        if _storage._asks != rhs_storage._asks {return false}
-        if _storage._lastPrice != rhs_storage._lastPrice {return false}
-        if _storage._closePrice != rhs_storage._closePrice {return false}
-        if _storage._limitUp != rhs_storage._limitUp {return false}
-        if _storage._limitDown != rhs_storage._limitDown {return false}
-        if _storage._lastPriceTs != rhs_storage._lastPriceTs {return false}
-        if _storage._closePriceTs != rhs_storage._closePriceTs {return false}
-        if _storage._orderbookTs != rhs_storage._orderbookTs {return false}
-        if _storage._instrumentUid != rhs_storage._instrumentUid {return false}
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        _ = _uniqueStorage()
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            while let fieldNumber = try decoder.nextFieldNumber() {
+                // The use of inline closures is to circumvent an issue where the compiler
+                // allocates stack space for every case branch when no optimizations are
+                // enabled. https://github.com/apple/swift-protobuf/issues/1034
+                switch fieldNumber {
+                case 1: try { try decoder.decodeSingularStringField(value: &_storage._figi) }()
+                case 2: try { try decoder.decodeSingularInt32Field(value: &_storage._depth) }()
+                case 3: try { try decoder.decodeRepeatedMessageField(value: &_storage._bids) }()
+                case 4: try { try decoder.decodeRepeatedMessageField(value: &_storage._asks) }()
+                case 5: try { try decoder.decodeSingularMessageField(value: &_storage._lastPrice) }()
+                case 6: try { try decoder.decodeSingularMessageField(value: &_storage._closePrice) }()
+                case 7: try { try decoder.decodeSingularMessageField(value: &_storage._limitUp) }()
+                case 8: try { try decoder.decodeSingularMessageField(value: &_storage._limitDown) }()
+                case 9: try { try decoder.decodeSingularStringField(value: &_storage._instrumentUid) }()
+                case 21: try { try decoder.decodeSingularMessageField(value: &_storage._lastPriceTs) }()
+                case 22: try { try decoder.decodeSingularMessageField(value: &_storage._closePriceTs) }()
+                case 23: try { try decoder.decodeSingularMessageField(value: &_storage._orderbookTs) }()
+                default: break
+                }
+            }
+        }
+    }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        try withExtendedLifetime(_storage) { (_storage: _StorageClass) in
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every if/case branch local when no optimizations
+            // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+            // https://github.com/apple/swift-protobuf/issues/1182
+            if !_storage._figi.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._figi, fieldNumber: 1)
+            }
+            if _storage._depth != 0 {
+                try visitor.visitSingularInt32Field(value: _storage._depth, fieldNumber: 2)
+            }
+            if !_storage._bids.isEmpty {
+                try visitor.visitRepeatedMessageField(value: _storage._bids, fieldNumber: 3)
+            }
+            if !_storage._asks.isEmpty {
+                try visitor.visitRepeatedMessageField(value: _storage._asks, fieldNumber: 4)
+            }
+            try { if let v = _storage._lastPrice {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+            } }()
+            try { if let v = _storage._closePrice {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+            } }()
+            try { if let v = _storage._limitUp {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+            } }()
+            try { if let v = _storage._limitDown {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+            } }()
+            if !_storage._instrumentUid.isEmpty {
+                try visitor.visitSingularStringField(value: _storage._instrumentUid, fieldNumber: 9)
+            }
+            try { if let v = _storage._lastPriceTs {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 21)
+            } }()
+            try { if let v = _storage._closePriceTs {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 22)
+            } }()
+            try { if let v = _storage._orderbookTs {
+                try visitor.visitSingularMessageField(value: v, fieldNumber: 23)
+            } }()
+        }
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderBookResponse) -> Bool {
+        if lhs._storage !== rhs._storage {
+            let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
+                let _storage = _args.0
+                let rhs_storage = _args.1
+                if _storage._figi != rhs_storage._figi {return false}
+                if _storage._depth != rhs_storage._depth {return false}
+                if _storage._bids != rhs_storage._bids {return false}
+                if _storage._asks != rhs_storage._asks {return false}
+                if _storage._lastPrice != rhs_storage._lastPrice {return false}
+                if _storage._closePrice != rhs_storage._closePrice {return false}
+                if _storage._limitUp != rhs_storage._limitUp {return false}
+                if _storage._limitDown != rhs_storage._limitDown {return false}
+                if _storage._lastPriceTs != rhs_storage._lastPriceTs {return false}
+                if _storage._closePriceTs != rhs_storage._closePriceTs {return false}
+                if _storage._orderbookTs != rhs_storage._orderbookTs {return false}
+                if _storage._instrumentUid != rhs_storage._instrumentUid {return false}
+                return true
+            }
+            if !storagesAreEqual {return false}
+        }
+        if lhs.unknownFields != rhs.unknownFields {return false}
         return true
-      }
-      if !storagesAreEqual {return false}
     }
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._figi {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
-    } }()
-    try { if let v = self._instrumentID {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 2)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusRequest) -> Bool {
-    if lhs._figi != rhs._figi {return false}
-    if lhs._instrumentID != rhs._instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._figi {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+        } }()
+        try { if let v = self._instrumentID {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 2)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusRequest) -> Bool {
+        if lhs._figi != rhs._figi {return false}
+        if lhs._instrumentID != rhs._instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusesRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedStringField(value: &self.instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusesRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedStringField(value: &self.instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.instrumentID.isEmpty {
-      try visitor.visitRepeatedStringField(value: self.instrumentID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.instrumentID.isEmpty {
+            try visitor.visitRepeatedStringField(value: self.instrumentID, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesRequest) -> Bool {
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesRequest) -> Bool {
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusesResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "trading_statuses"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.tradingStatuses) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusesResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "trading_statuses"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.tradingStatuses) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.tradingStatuses.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.tradingStatuses, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.tradingStatuses.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.tradingStatuses, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesResponse) -> Bool {
-    if lhs.tradingStatuses != rhs.tradingStatuses {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusesResponse) -> Bool {
+        if lhs.tradingStatuses != rhs.tradingStatuses {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "trading_status"),
-    3: .standard(proto: "limit_order_available_flag"),
-    4: .standard(proto: "market_order_available_flag"),
-    5: .standard(proto: "api_trade_available_flag"),
-    6: .standard(proto: "instrument_uid"),
-    8: .standard(proto: "bestprice_order_available_flag"),
-    9: .standard(proto: "only_best_price"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularEnumField(value: &self.tradingStatus) }()
-      case 3: try { try decoder.decodeSingularBoolField(value: &self.limitOrderAvailableFlag) }()
-      case 4: try { try decoder.decodeSingularBoolField(value: &self.marketOrderAvailableFlag) }()
-      case 5: try { try decoder.decodeSingularBoolField(value: &self.apiTradeAvailableFlag) }()
-      case 6: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 8: try { try decoder.decodeSingularBoolField(value: &self.bestpriceOrderAvailableFlag) }()
-      case 9: try { try decoder.decodeSingularBoolField(value: &self.onlyBestPrice) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetTradingStatusResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "trading_status"),
+        3: .standard(proto: "limit_order_available_flag"),
+        4: .standard(proto: "market_order_available_flag"),
+        5: .standard(proto: "api_trade_available_flag"),
+        6: .standard(proto: "instrument_uid"),
+        8: .standard(proto: "bestprice_order_available_flag"),
+        9: .standard(proto: "only_best_price"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularEnumField(value: &self.tradingStatus) }()
+            case 3: try { try decoder.decodeSingularBoolField(value: &self.limitOrderAvailableFlag) }()
+            case 4: try { try decoder.decodeSingularBoolField(value: &self.marketOrderAvailableFlag) }()
+            case 5: try { try decoder.decodeSingularBoolField(value: &self.apiTradeAvailableFlag) }()
+            case 6: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 8: try { try decoder.decodeSingularBoolField(value: &self.bestpriceOrderAvailableFlag) }()
+            case 9: try { try decoder.decodeSingularBoolField(value: &self.onlyBestPrice) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if self.tradingStatus != .unspecified {
+            try visitor.visitSingularEnumField(value: self.tradingStatus, fieldNumber: 2)
+        }
+        if self.limitOrderAvailableFlag != false {
+            try visitor.visitSingularBoolField(value: self.limitOrderAvailableFlag, fieldNumber: 3)
+        }
+        if self.marketOrderAvailableFlag != false {
+            try visitor.visitSingularBoolField(value: self.marketOrderAvailableFlag, fieldNumber: 4)
+        }
+        if self.apiTradeAvailableFlag != false {
+            try visitor.visitSingularBoolField(value: self.apiTradeAvailableFlag, fieldNumber: 5)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 6)
+        }
+        if self.bestpriceOrderAvailableFlag != false {
+            try visitor.visitSingularBoolField(value: self.bestpriceOrderAvailableFlag, fieldNumber: 8)
+        }
+        if self.onlyBestPrice != false {
+            try visitor.visitSingularBoolField(value: self.onlyBestPrice, fieldNumber: 9)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.tradingStatus != .unspecified {
-      try visitor.visitSingularEnumField(value: self.tradingStatus, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.tradingStatus != rhs.tradingStatus {return false}
+        if lhs.limitOrderAvailableFlag != rhs.limitOrderAvailableFlag {return false}
+        if lhs.marketOrderAvailableFlag != rhs.marketOrderAvailableFlag {return false}
+        if lhs.apiTradeAvailableFlag != rhs.apiTradeAvailableFlag {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs.bestpriceOrderAvailableFlag != rhs.bestpriceOrderAvailableFlag {return false}
+        if lhs.onlyBestPrice != rhs.onlyBestPrice {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.limitOrderAvailableFlag != false {
-      try visitor.visitSingularBoolField(value: self.limitOrderAvailableFlag, fieldNumber: 3)
-    }
-    if self.marketOrderAvailableFlag != false {
-      try visitor.visitSingularBoolField(value: self.marketOrderAvailableFlag, fieldNumber: 4)
-    }
-    if self.apiTradeAvailableFlag != false {
-      try visitor.visitSingularBoolField(value: self.apiTradeAvailableFlag, fieldNumber: 5)
-    }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 6)
-    }
-    if self.bestpriceOrderAvailableFlag != false {
-      try visitor.visitSingularBoolField(value: self.bestpriceOrderAvailableFlag, fieldNumber: 8)
-    }
-    if self.onlyBestPrice != false {
-      try visitor.visitSingularBoolField(value: self.onlyBestPrice, fieldNumber: 9)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTradingStatusResponse) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.tradingStatus != rhs.tradingStatus {return false}
-    if lhs.limitOrderAvailableFlag != rhs.limitOrderAvailableFlag {return false}
-    if lhs.marketOrderAvailableFlag != rhs.marketOrderAvailableFlag {return false}
-    if lhs.apiTradeAvailableFlag != rhs.apiTradeAvailableFlag {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs.bestpriceOrderAvailableFlag != rhs.bestpriceOrderAvailableFlag {return false}
-    if lhs.onlyBestPrice != rhs.onlyBestPrice {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetLastTradesRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .same(proto: "from"),
-    3: .same(proto: "to"),
-    4: .standard(proto: "instrument_id"),
-    5: .standard(proto: "trade_source"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
-      case 4: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
-      case 5: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetLastTradesRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .same(proto: "from"),
+        3: .same(proto: "to"),
+        4: .standard(proto: "instrument_id"),
+        5: .standard(proto: "trade_source"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self._figi) }()
+            case 2: try { try decoder.decodeSingularMessageField(value: &self._from) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+            case 4: try { try decoder.decodeSingularStringField(value: &self._instrumentID) }()
+            case 5: try { try decoder.decodeSingularEnumField(value: &self.tradeSource) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._figi {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 1)
-    } }()
-    try { if let v = self._from {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try { if let v = self._to {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    try { if let v = self._instrumentID {
-      try visitor.visitSingularStringField(value: v, fieldNumber: 4)
-    } }()
-    if self.tradeSource != .tradeSourceUnspecified {
-      try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 5)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._figi {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 1)
+        } }()
+        try { if let v = self._from {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        } }()
+        try { if let v = self._to {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        try { if let v = self._instrumentID {
+            try visitor.visitSingularStringField(value: v, fieldNumber: 4)
+        } }()
+        if self.tradeSource != .tradeSourceUnspecified {
+            try visitor.visitSingularEnumField(value: self.tradeSource, fieldNumber: 5)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesRequest) -> Bool {
-    if lhs._figi != rhs._figi {return false}
-    if lhs._from != rhs._from {return false}
-    if lhs._to != rhs._to {return false}
-    if lhs._instrumentID != rhs._instrumentID {return false}
-    if lhs.tradeSource != rhs.tradeSource {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesRequest) -> Bool {
+        if lhs._figi != rhs._figi {return false}
+        if lhs._from != rhs._from {return false}
+        if lhs._to != rhs._to {return false}
+        if lhs._instrumentID != rhs._instrumentID {return false}
+        if lhs.tradeSource != rhs.tradeSource {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetLastTradesResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "trades"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.trades) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetLastTradesResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "trades"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.trades) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.trades.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.trades, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.trades.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.trades, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesResponse) -> Bool {
-    if lhs.trades != rhs.trades {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetLastTradesResponse) -> Bool {
+        if lhs.trades != rhs.trades {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetMySubscriptions"
-  public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let _ = try decoder.nextFieldNumber() {
+    public static let protoMessageName: String = _protobuf_package + ".GetMySubscriptions"
+    public static let _protobuf_nameMap = SwiftProtobuf._NameMap()
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let _ = try decoder.nextFieldNumber() {
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions) -> Bool {
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetMySubscriptions) -> Bool {
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetClosePricesRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "instruments"),
-    9: .standard(proto: "instrument_status"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
-      case 9: try { try decoder.decodeSingularEnumField(value: &self._instrumentStatus) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetClosePricesRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "instruments"),
+        9: .standard(proto: "instrument_status"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.instruments) }()
+            case 9: try { try decoder.decodeSingularEnumField(value: &self._instrumentStatus) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.instruments.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.instruments.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.instruments, fieldNumber: 1)
+        }
+        try { if let v = self._instrumentStatus {
+            try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try { if let v = self._instrumentStatus {
-      try visitor.visitSingularEnumField(value: v, fieldNumber: 9)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest) -> Bool {
-    if lhs.instruments != rhs.instruments {return false}
-    if lhs._instrumentStatus != rhs._instrumentStatus {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesRequest) -> Bool {
+        if lhs.instruments != rhs.instruments {return false}
+        if lhs._instrumentStatus != rhs._instrumentStatus {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".InstrumentClosePriceRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "instrument_id"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".InstrumentClosePriceRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "instrument_id"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.instrumentID) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.instrumentID.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.instrumentID.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentID, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest) -> Bool {
-    if lhs.instrumentID != rhs.instrumentID {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceRequest) -> Bool {
+        if lhs.instrumentID != rhs.instrumentID {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetClosePricesResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "close_prices"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.closePrices) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetClosePricesResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "close_prices"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.closePrices) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.closePrices.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.closePrices, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.closePrices.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.closePrices, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse) -> Bool {
-    if lhs.closePrices != rhs.closePrices {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetClosePricesResponse) -> Bool {
+        if lhs.closePrices != rhs.closePrices {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".InstrumentClosePriceResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "figi"),
-    2: .standard(proto: "instrument_uid"),
-    11: .same(proto: "price"),
-    12: .standard(proto: "evening_session_price"),
-    21: .same(proto: "time"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 11: try { try decoder.decodeSingularMessageField(value: &self._price) }()
-      case 12: try { try decoder.decodeSingularMessageField(value: &self._eveningSessionPrice) }()
-      case 21: try { try decoder.decodeSingularMessageField(value: &self._time) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".InstrumentClosePriceResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "figi"),
+        2: .standard(proto: "instrument_uid"),
+        11: .same(proto: "price"),
+        12: .standard(proto: "evening_session_price"),
+        21: .same(proto: "time"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularStringField(value: &self.figi) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 11: try { try decoder.decodeSingularMessageField(value: &self._price) }()
+            case 12: try { try decoder.decodeSingularMessageField(value: &self._eveningSessionPrice) }()
+            case 21: try { try decoder.decodeSingularMessageField(value: &self._time) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if !self.figi.isEmpty {
-      try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if !self.figi.isEmpty {
+            try visitor.visitSingularStringField(value: self.figi, fieldNumber: 1)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 2)
+        }
+        try { if let v = self._price {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
+        } }()
+        try { if let v = self._eveningSessionPrice {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 12)
+        } }()
+        try { if let v = self._time {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 21)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse) -> Bool {
+        if lhs.figi != rhs.figi {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs._price != rhs._price {return false}
+        if lhs._eveningSessionPrice != rhs._eveningSessionPrice {return false}
+        if lhs._time != rhs._time {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try { if let v = self._price {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 11)
-    } }()
-    try { if let v = self._eveningSessionPrice {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 12)
-    } }()
-    try { if let v = self._time {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 21)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentClosePriceResponse) -> Bool {
-    if lhs.figi != rhs.figi {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs._price != rhs._price {return false}
-    if lhs._eveningSessionPrice != rhs._eveningSessionPrice {return false}
-    if lhs._time != rhs._time {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetTechAnalysisRequest"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "indicator_type"),
-    2: .standard(proto: "instrument_uid"),
-    3: .same(proto: "from"),
-    4: .same(proto: "to"),
-    5: .same(proto: "interval"),
-    6: .standard(proto: "type_of_price"),
-    7: .same(proto: "length"),
-    8: .same(proto: "deviation"),
-    9: .same(proto: "smoothing"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularEnumField(value: &self.indicatorType) }()
-      case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._from) }()
-      case 4: try { try decoder.decodeSingularMessageField(value: &self._to) }()
-      case 5: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
-      case 6: try { try decoder.decodeSingularEnumField(value: &self.typeOfPrice) }()
-      case 7: try { try decoder.decodeSingularInt32Field(value: &self.length) }()
-      case 8: try { try decoder.decodeSingularMessageField(value: &self._deviation) }()
-      case 9: try { try decoder.decodeSingularMessageField(value: &self._smoothing) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetTechAnalysisRequest"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "indicator_type"),
+        2: .standard(proto: "instrument_uid"),
+        3: .same(proto: "from"),
+        4: .same(proto: "to"),
+        5: .same(proto: "interval"),
+        6: .standard(proto: "type_of_price"),
+        7: .same(proto: "length"),
+        8: .same(proto: "deviation"),
+        9: .same(proto: "smoothing"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularEnumField(value: &self.indicatorType) }()
+            case 2: try { try decoder.decodeSingularStringField(value: &self.instrumentUid) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._from) }()
+            case 4: try { try decoder.decodeSingularMessageField(value: &self._to) }()
+            case 5: try { try decoder.decodeSingularEnumField(value: &self.interval) }()
+            case 6: try { try decoder.decodeSingularEnumField(value: &self.typeOfPrice) }()
+            case 7: try { try decoder.decodeSingularInt32Field(value: &self.length) }()
+            case 8: try { try decoder.decodeSingularMessageField(value: &self._deviation) }()
+            case 9: try { try decoder.decodeSingularMessageField(value: &self._smoothing) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    if self.indicatorType != .unspecified {
-      try visitor.visitSingularEnumField(value: self.indicatorType, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        if self.indicatorType != .unspecified {
+            try visitor.visitSingularEnumField(value: self.indicatorType, fieldNumber: 1)
+        }
+        if !self.instrumentUid.isEmpty {
+            try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 2)
+        }
+        try { if let v = self._from {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        try { if let v = self._to {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+        } }()
+        if self.interval != .unspecified {
+            try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 5)
+        }
+        if self.typeOfPrice != .unspecified {
+            try visitor.visitSingularEnumField(value: self.typeOfPrice, fieldNumber: 6)
+        }
+        if self.length != 0 {
+            try visitor.visitSingularInt32Field(value: self.length, fieldNumber: 7)
+        }
+        try { if let v = self._deviation {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
+        } }()
+        try { if let v = self._smoothing {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if !self.instrumentUid.isEmpty {
-      try visitor.visitSingularStringField(value: self.instrumentUid, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest) -> Bool {
+        if lhs.indicatorType != rhs.indicatorType {return false}
+        if lhs.instrumentUid != rhs.instrumentUid {return false}
+        if lhs._from != rhs._from {return false}
+        if lhs._to != rhs._to {return false}
+        if lhs.interval != rhs.interval {return false}
+        if lhs.typeOfPrice != rhs.typeOfPrice {return false}
+        if lhs.length != rhs.length {return false}
+        if lhs._deviation != rhs._deviation {return false}
+        if lhs._smoothing != rhs._smoothing {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    try { if let v = self._from {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    try { if let v = self._to {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    } }()
-    if self.interval != .unspecified {
-      try visitor.visitSingularEnumField(value: self.interval, fieldNumber: 5)
-    }
-    if self.typeOfPrice != .unspecified {
-      try visitor.visitSingularEnumField(value: self.typeOfPrice, fieldNumber: 6)
-    }
-    if self.length != 0 {
-      try visitor.visitSingularInt32Field(value: self.length, fieldNumber: 7)
-    }
-    try { if let v = self._deviation {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 8)
-    } }()
-    try { if let v = self._smoothing {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 9)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest) -> Bool {
-    if lhs.indicatorType != rhs.indicatorType {return false}
-    if lhs.instrumentUid != rhs.instrumentUid {return false}
-    if lhs._from != rhs._from {return false}
-    if lhs._to != rhs._to {return false}
-    if lhs.interval != rhs.interval {return false}
-    if lhs.typeOfPrice != rhs.typeOfPrice {return false}
-    if lhs.length != rhs.length {return false}
-    if lhs._deviation != rhs._deviation {return false}
-    if lhs._smoothing != rhs._smoothing {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorInterval: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "INDICATOR_INTERVAL_UNSPECIFIED"),
-    1: .same(proto: "INDICATOR_INTERVAL_ONE_MINUTE"),
-    2: .same(proto: "INDICATOR_INTERVAL_FIVE_MINUTES"),
-    3: .same(proto: "INDICATOR_INTERVAL_FIFTEEN_MINUTES"),
-    4: .same(proto: "INDICATOR_INTERVAL_ONE_HOUR"),
-    5: .same(proto: "INDICATOR_INTERVAL_ONE_DAY"),
-    6: .same(proto: "INDICATOR_INTERVAL_2_MIN"),
-    7: .same(proto: "INDICATOR_INTERVAL_3_MIN"),
-    8: .same(proto: "INDICATOR_INTERVAL_10_MIN"),
-    9: .same(proto: "INDICATOR_INTERVAL_30_MIN"),
-    10: .same(proto: "INDICATOR_INTERVAL_2_HOUR"),
-    11: .same(proto: "INDICATOR_INTERVAL_4_HOUR"),
-    12: .same(proto: "INDICATOR_INTERVAL_WEEK"),
-    13: .same(proto: "INDICATOR_INTERVAL_MONTH"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "INDICATOR_INTERVAL_UNSPECIFIED"),
+        1: .same(proto: "INDICATOR_INTERVAL_ONE_MINUTE"),
+        2: .same(proto: "INDICATOR_INTERVAL_FIVE_MINUTES"),
+        3: .same(proto: "INDICATOR_INTERVAL_FIFTEEN_MINUTES"),
+        4: .same(proto: "INDICATOR_INTERVAL_ONE_HOUR"),
+        5: .same(proto: "INDICATOR_INTERVAL_ONE_DAY"),
+        6: .same(proto: "INDICATOR_INTERVAL_2_MIN"),
+        7: .same(proto: "INDICATOR_INTERVAL_3_MIN"),
+        8: .same(proto: "INDICATOR_INTERVAL_10_MIN"),
+        9: .same(proto: "INDICATOR_INTERVAL_30_MIN"),
+        10: .same(proto: "INDICATOR_INTERVAL_2_HOUR"),
+        11: .same(proto: "INDICATOR_INTERVAL_4_HOUR"),
+        12: .same(proto: "INDICATOR_INTERVAL_WEEK"),
+        13: .same(proto: "INDICATOR_INTERVAL_MONTH"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.TypeOfPrice: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "TYPE_OF_PRICE_UNSPECIFIED"),
-    1: .same(proto: "TYPE_OF_PRICE_CLOSE"),
-    2: .same(proto: "TYPE_OF_PRICE_OPEN"),
-    3: .same(proto: "TYPE_OF_PRICE_HIGH"),
-    4: .same(proto: "TYPE_OF_PRICE_LOW"),
-    5: .same(proto: "TYPE_OF_PRICE_AVG"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "TYPE_OF_PRICE_UNSPECIFIED"),
+        1: .same(proto: "TYPE_OF_PRICE_CLOSE"),
+        2: .same(proto: "TYPE_OF_PRICE_OPEN"),
+        3: .same(proto: "TYPE_OF_PRICE_HIGH"),
+        4: .same(proto: "TYPE_OF_PRICE_LOW"),
+        5: .same(proto: "TYPE_OF_PRICE_AVG"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.IndicatorType: SwiftProtobuf._ProtoNameProviding {
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    0: .same(proto: "INDICATOR_TYPE_UNSPECIFIED"),
-    1: .same(proto: "INDICATOR_TYPE_BB"),
-    2: .same(proto: "INDICATOR_TYPE_EMA"),
-    3: .same(proto: "INDICATOR_TYPE_RSI"),
-    4: .same(proto: "INDICATOR_TYPE_MACD"),
-    5: .same(proto: "INDICATOR_TYPE_SMA"),
-  ]
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        0: .same(proto: "INDICATOR_TYPE_UNSPECIFIED"),
+        1: .same(proto: "INDICATOR_TYPE_BB"),
+        2: .same(proto: "INDICATOR_TYPE_EMA"),
+        3: .same(proto: "INDICATOR_TYPE_RSI"),
+        4: .same(proto: "INDICATOR_TYPE_MACD"),
+        5: .same(proto: "INDICATOR_TYPE_SMA"),
+    ]
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.protoMessageName + ".Smoothing"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "fast_length"),
-    2: .standard(proto: "slow_length"),
-    3: .standard(proto: "signal_smoothing"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularInt32Field(value: &self.fastLength) }()
-      case 2: try { try decoder.decodeSingularInt32Field(value: &self.slowLength) }()
-      case 3: try { try decoder.decodeSingularInt32Field(value: &self.signalSmoothing) }()
-      default: break
-      }
+    public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.protoMessageName + ".Smoothing"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "fast_length"),
+        2: .standard(proto: "slow_length"),
+        3: .standard(proto: "signal_smoothing"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularInt32Field(value: &self.fastLength) }()
+            case 2: try { try decoder.decodeSingularInt32Field(value: &self.slowLength) }()
+            case 3: try { try decoder.decodeSingularInt32Field(value: &self.signalSmoothing) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if self.fastLength != 0 {
-      try visitor.visitSingularInt32Field(value: self.fastLength, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if self.fastLength != 0 {
+            try visitor.visitSingularInt32Field(value: self.fastLength, fieldNumber: 1)
+        }
+        if self.slowLength != 0 {
+            try visitor.visitSingularInt32Field(value: self.slowLength, fieldNumber: 2)
+        }
+        if self.signalSmoothing != 0 {
+            try visitor.visitSingularInt32Field(value: self.signalSmoothing, fieldNumber: 3)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    if self.slowLength != 0 {
-      try visitor.visitSingularInt32Field(value: self.slowLength, fieldNumber: 2)
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing) -> Bool {
+        if lhs.fastLength != rhs.fastLength {return false}
+        if lhs.slowLength != rhs.slowLength {return false}
+        if lhs.signalSmoothing != rhs.signalSmoothing {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
     }
-    if self.signalSmoothing != 0 {
-      try visitor.visitSingularInt32Field(value: self.signalSmoothing, fieldNumber: 3)
-    }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Smoothing) -> Bool {
-    if lhs.fastLength != rhs.fastLength {return false}
-    if lhs.slowLength != rhs.slowLength {return false}
-    if lhs.signalSmoothing != rhs.signalSmoothing {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.protoMessageName + ".Deviation"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "deviation_multiplier"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._deviationMultiplier) }()
-      default: break
-      }
+    public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.protoMessageName + ".Deviation"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "deviation_multiplier"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._deviationMultiplier) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._deviationMultiplier {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation) -> Bool {
-    if lhs._deviationMultiplier != rhs._deviationMultiplier {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._deviationMultiplier {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisRequest.Deviation) -> Bool {
+        if lhs._deviationMultiplier != rhs._deviationMultiplier {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = _protobuf_package + ".GetTechAnalysisResponse"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .standard(proto: "technical_indicators"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeRepeatedMessageField(value: &self.technicalIndicators) }()
-      default: break
-      }
+    public static let protoMessageName: String = _protobuf_package + ".GetTechAnalysisResponse"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .standard(proto: "technical_indicators"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeRepeatedMessageField(value: &self.technicalIndicators) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    if !self.technicalIndicators.isEmpty {
-      try visitor.visitRepeatedMessageField(value: self.technicalIndicators, fieldNumber: 1)
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        if !self.technicalIndicators.isEmpty {
+            try visitor.visitRepeatedMessageField(value: self.technicalIndicators, fieldNumber: 1)
+        }
+        try unknownFields.traverse(visitor: &visitor)
     }
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse) -> Bool {
-    if lhs.technicalIndicators != rhs.technicalIndicators {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse) -> Bool {
+        if lhs.technicalIndicators != rhs.technicalIndicators {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnalysisItem: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.protoMessageName + ".TechAnalysisItem"
-  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
-    1: .same(proto: "timestamp"),
-    2: .standard(proto: "middle_band"),
-    3: .standard(proto: "upper_band"),
-    4: .standard(proto: "lower_band"),
-    5: .same(proto: "signal"),
-    6: .same(proto: "macd"),
-  ]
-
-  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
-    while let fieldNumber = try decoder.nextFieldNumber() {
-      // The use of inline closures is to circumvent an issue where the compiler
-      // allocates stack space for every case branch when no optimizations are
-      // enabled. https://github.com/apple/swift-protobuf/issues/1034
-      switch fieldNumber {
-      case 1: try { try decoder.decodeSingularMessageField(value: &self._timestamp) }()
-      case 2: try { try decoder.decodeSingularMessageField(value: &self._middleBand) }()
-      case 3: try { try decoder.decodeSingularMessageField(value: &self._upperBand) }()
-      case 4: try { try decoder.decodeSingularMessageField(value: &self._lowerBand) }()
-      case 5: try { try decoder.decodeSingularMessageField(value: &self._signal) }()
-      case 6: try { try decoder.decodeSingularMessageField(value: &self._macd) }()
-      default: break
-      }
+    public static let protoMessageName: String = Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.protoMessageName + ".TechAnalysisItem"
+    public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+        1: .same(proto: "timestamp"),
+        2: .standard(proto: "middle_band"),
+        3: .standard(proto: "upper_band"),
+        4: .standard(proto: "lower_band"),
+        5: .same(proto: "signal"),
+        6: .same(proto: "macd"),
+    ]
+    
+    public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+        while let fieldNumber = try decoder.nextFieldNumber() {
+            // The use of inline closures is to circumvent an issue where the compiler
+            // allocates stack space for every case branch when no optimizations are
+            // enabled. https://github.com/apple/swift-protobuf/issues/1034
+            switch fieldNumber {
+            case 1: try { try decoder.decodeSingularMessageField(value: &self._timestamp) }()
+            case 2: try { try decoder.decodeSingularMessageField(value: &self._middleBand) }()
+            case 3: try { try decoder.decodeSingularMessageField(value: &self._upperBand) }()
+            case 4: try { try decoder.decodeSingularMessageField(value: &self._lowerBand) }()
+            case 5: try { try decoder.decodeSingularMessageField(value: &self._signal) }()
+            case 6: try { try decoder.decodeSingularMessageField(value: &self._macd) }()
+            default: break
+            }
+        }
     }
-  }
-
-  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
-    // The use of inline closures is to circumvent an issue where the compiler
-    // allocates stack space for every if/case branch local when no optimizations
-    // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
-    // https://github.com/apple/swift-protobuf/issues/1182
-    try { if let v = self._timestamp {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
-    } }()
-    try { if let v = self._middleBand {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
-    } }()
-    try { if let v = self._upperBand {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
-    } }()
-    try { if let v = self._lowerBand {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
-    } }()
-    try { if let v = self._signal {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
-    } }()
-    try { if let v = self._macd {
-      try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
-    } }()
-    try unknownFields.traverse(visitor: &visitor)
-  }
-
-  public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnalysisItem, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnalysisItem) -> Bool {
-    if lhs._timestamp != rhs._timestamp {return false}
-    if lhs._middleBand != rhs._middleBand {return false}
-    if lhs._upperBand != rhs._upperBand {return false}
-    if lhs._lowerBand != rhs._lowerBand {return false}
-    if lhs._signal != rhs._signal {return false}
-    if lhs._macd != rhs._macd {return false}
-    if lhs.unknownFields != rhs.unknownFields {return false}
-    return true
-  }
+    
+    public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+        // The use of inline closures is to circumvent an issue where the compiler
+        // allocates stack space for every if/case branch local when no optimizations
+        // are enabled. https://github.com/apple/swift-protobuf/issues/1034 and
+        // https://github.com/apple/swift-protobuf/issues/1182
+        try { if let v = self._timestamp {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 1)
+        } }()
+        try { if let v = self._middleBand {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 2)
+        } }()
+        try { if let v = self._upperBand {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 3)
+        } }()
+        try { if let v = self._lowerBand {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 4)
+        } }()
+        try { if let v = self._signal {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 5)
+        } }()
+        try { if let v = self._macd {
+            try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
+        } }()
+        try unknownFields.traverse(visitor: &visitor)
+    }
+    
+    public static func ==(lhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnalysisItem, rhs: Tinkoff_Public_Invest_Api_Contract_V1_GetTechAnalysisResponse.TechAnalysisItem) -> Bool {
+        if lhs._timestamp != rhs._timestamp {return false}
+        if lhs._middleBand != rhs._middleBand {return false}
+        if lhs._upperBand != rhs._upperBand {return false}
+        if lhs._lowerBand != rhs._lowerBand {return false}
+        if lhs._signal != rhs._signal {return false}
+        if lhs._macd != rhs._macd {return false}
+        if lhs.unknownFields != rhs.unknownFields {return false}
+        return true
+    }
 }

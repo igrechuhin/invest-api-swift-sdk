@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о торговом статусе.
-public protocol TradingStatus {
+public protocol TradingStatus: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

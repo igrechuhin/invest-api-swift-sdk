@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о цене.
-public protocol LastPrice {
+public protocol LastPrice: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

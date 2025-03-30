@@ -1,5 +1,5 @@
 /// Направление инвистирования фонда.
-public enum EtfFocusType: String, Codable {
+public enum EtfFocusType: String, Codable, Sendable {
     /// Акции.
     case equity
 

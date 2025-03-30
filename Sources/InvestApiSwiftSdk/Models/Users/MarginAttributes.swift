@@ -1,5 +1,5 @@
 /// Маржинальные показатели.
-public protocol MarginAttributes {
+public protocol MarginAttributes: Sendable {
     /// Ликвидная стоимость портфеля.
     var liquidPortfolio: MoneyValue { get }
     

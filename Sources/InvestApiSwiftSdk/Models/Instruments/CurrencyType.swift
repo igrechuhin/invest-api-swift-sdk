@@ -1,5 +1,5 @@
 /// Тип валюты.
-public enum CurrencyType: String, Codable {
+public enum CurrencyType: String, Codable, Sendable {
     /// Валюта не определена.
     case unspecified
     

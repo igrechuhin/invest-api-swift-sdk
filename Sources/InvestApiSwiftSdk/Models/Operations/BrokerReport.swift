@@ -1,7 +1,7 @@
 import Foundation
 
 /// Брокерский отчёт.
-public protocol BrokerReport {
+public protocol BrokerReport: Sendable {
     /// Элементы отчёта.
     var items: [BrokerReportItem] { get }
     

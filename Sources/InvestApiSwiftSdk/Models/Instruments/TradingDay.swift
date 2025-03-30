@@ -1,7 +1,7 @@
 import Foundation
 
 /// Торговый / неторговый день.
-public protocol TradingDay {
+public protocol TradingDay: Sendable {
     /// Дата.
     var date: Date { get }
     

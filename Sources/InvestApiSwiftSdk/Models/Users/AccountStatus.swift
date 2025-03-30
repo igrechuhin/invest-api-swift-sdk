@@ -1,5 +1,5 @@
 /// Статус счёта.
-public enum AccountStatus: Int, Codable {
+public enum AccountStatus: Int, Codable, Sendable {
     /// Статус счёта не определён.
     case unspecified
     

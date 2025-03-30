@@ -1,5 +1,5 @@
 /// Баланс позиции.
-public protocol PositionElement {
+public protocol PositionElement: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

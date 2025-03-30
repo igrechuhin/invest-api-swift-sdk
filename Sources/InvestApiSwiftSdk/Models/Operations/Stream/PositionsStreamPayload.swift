@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение по изменению позиций портфеля.
-public protocol PositionsStreamPayload: StreamData where StreamDataType == PositionsStreamItem {
+public protocol PositionsStreamPayload: StreamData, Sendable where StreamDataType == PositionsStreamItem {
     /// Время поступления сообщения.
     var time: Date { get }
     

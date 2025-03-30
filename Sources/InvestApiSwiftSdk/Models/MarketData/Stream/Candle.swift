@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о свече.
-public protocol Candle {
+public protocol Candle: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

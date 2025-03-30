@@ -1,5 +1,5 @@
 /// Лимит stream-соединений.
-public protocol StreamLimit {
+public protocol StreamLimit: Sendable {
     /// Максимальное количество stream-соединений.
     var limit: Int32 { get }
     

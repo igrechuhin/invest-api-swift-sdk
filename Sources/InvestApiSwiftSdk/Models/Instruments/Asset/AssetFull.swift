@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация об активе.
-public protocol AssetFull {
+public protocol AssetFull: Sendable {
     /// Уникальный идентификатор актива.
     var uid: String { get }
     

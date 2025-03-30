@@ -1,5 +1,5 @@
 /// Тип опционного контракта по способу исполнения.
-public enum OptionContractType: Int, Codable {
+public enum OptionContractType: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

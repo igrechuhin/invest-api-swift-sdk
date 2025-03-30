@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение об обновлении портфеля.
-public protocol PortfolioStreamPayload: StreamData where StreamDataType == Portfolio {
+public protocol PortfolioStreamPayload: StreamData, Sendable where StreamDataType == Portfolio {
     /// Время поступления сообщения.
     var time: Date { get }
     

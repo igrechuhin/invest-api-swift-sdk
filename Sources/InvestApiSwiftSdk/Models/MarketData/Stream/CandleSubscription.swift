@@ -1,5 +1,5 @@
 /// Статус подписки на свечи.
-public protocol CandleSubscription {
+public protocol CandleSubscription: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

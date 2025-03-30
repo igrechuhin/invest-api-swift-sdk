@@ -1,5 +1,5 @@
 /// Результат подписки.
-public protocol OperationsStreamSubscriptionResult {
+public protocol OperationsStreamSubscriptionResult: Sendable {
     /// Идентификатор счёта.
     var accountId: String { get }
     

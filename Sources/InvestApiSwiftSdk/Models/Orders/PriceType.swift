@@ -1,5 +1,5 @@
 /// Тип цены.
-public enum PriceType: Int, Codable {
+public enum PriceType: Int, Codable, Sendable {
     /// Значение не указано.
     case unspecified
     

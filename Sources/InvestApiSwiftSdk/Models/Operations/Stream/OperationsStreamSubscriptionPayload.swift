@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с результатами подписки на потоки `OperationsStreamService`.
-public protocol OperationsStreamSubscriptionPayload: StreamData where StreamDataType == [OperationsStreamSubscriptionResult] {
+public protocol OperationsStreamSubscriptionPayload: StreamData, Sendable where StreamDataType == [OperationsStreamSubscriptionResult] {
     /// Время поступления сообщения.
     var time: Date { get }
     

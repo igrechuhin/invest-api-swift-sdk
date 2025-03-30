@@ -1,5 +1,5 @@
 /// Тип расчетов по опционному контракту.
-public enum OptionPaymentType: Int, Codable {
+public enum OptionPaymentType: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

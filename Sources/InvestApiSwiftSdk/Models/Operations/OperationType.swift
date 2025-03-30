@@ -1,5 +1,5 @@
 /// Тип операции.
-public enum OperationType: Int, Codable {
+public enum OperationType: Int, Codable, Sendable {
     /// Тип операции не определён.
     case unspecified
 

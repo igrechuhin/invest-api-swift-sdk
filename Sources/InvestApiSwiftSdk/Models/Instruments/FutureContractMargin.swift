@@ -1,5 +1,5 @@
 ///  Размер гарантийного обеспечения по фьючерсному контракту.
-public protocol FutureContractMargin {
+public protocol FutureContractMargin: Sendable {
     /// Гарантийное обеспечение при покупке.
     var initialMarginOnBuy: MoneyValue { get }
     

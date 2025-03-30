@@ -1,5 +1,5 @@
 /// Тип инструмента.
-public enum InstrumentType: String, Codable {
+public enum InstrumentType: String, Codable, Sendable {
     /// Значение не установлено.
     case unspecified = ""
 

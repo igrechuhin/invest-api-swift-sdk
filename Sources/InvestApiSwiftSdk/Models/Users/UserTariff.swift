@@ -1,5 +1,5 @@
 /// Текущие лимиты пользователя.
-public protocol UserTariff {
+public protocol UserTariff: Sendable {
     /// Лимиты пользователя по unary-запросам.
     var unaryLimits: [UnaryLimit] { get }
     

@@ -1,5 +1,5 @@
 /// Статус подписки.
-public enum OperationsStreamSubscriptionStatus: Int, Codable {
+public enum OperationsStreamSubscriptionStatus: Int, Codable, Sendable {
     /// Статус подписки не определён.
     case unspecified
     

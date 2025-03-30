@@ -1,7 +1,7 @@
 import Foundation
 
 /// Виртуальная (подарочная) позиция портфеля.
-public protocol PortfolioVirtualPosition {
+public protocol PortfolioVirtualPosition: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

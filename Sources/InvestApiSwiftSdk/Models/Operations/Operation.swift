@@ -1,7 +1,7 @@
 import Foundation
 
 /// Данные по операции.
-public protocol Operation {
+public protocol Operation: Sendable {
     /// Идентификатор операции.
     var id: String { get }
     

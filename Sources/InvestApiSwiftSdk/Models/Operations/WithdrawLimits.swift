@@ -1,5 +1,5 @@
 /// Лимиты на вывод средств.
-public protocol WithdrawLimits {
+public protocol WithdrawLimits: Sendable {
     /// Валютные позиции портфеля.
     var money: [MoneyValue] { get }
 

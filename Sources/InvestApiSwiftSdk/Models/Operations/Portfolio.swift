@@ -1,7 +1,7 @@
 import Foundation
 
 /// Портфель по счёту.
-public protocol Portfolio {
+public protocol Portfolio: Sendable {
     /// Идентификатор счёта пользователя.
     var accountId: String { get }
     

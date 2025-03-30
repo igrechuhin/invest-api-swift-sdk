@@ -1,5 +1,5 @@
 /// Статус торговли инструментом.
-public enum SecurityTradingStatus: Int, Codable {
+public enum SecurityTradingStatus: Int, Codable, Sendable {
     /// Торговый статус не определён.
     case unspecified
     

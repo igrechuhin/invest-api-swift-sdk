@@ -1,5 +1,5 @@
 /// Статус подписки.
-public enum MarketDataStreamSubscriptionStatus: Int, Codable {
+public enum MarketDataStreamSubscriptionStatus: Int, Codable, Sendable {
     /// Статус подписки не определён.
     case unspecified
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Денежная сумма в определенной валюте.
-public struct MoneyValue: Codable {
+public struct MoneyValue: Codable, Sendable {
     /// Строковый ISO-код валюты.
     public let currency: CurrencyType
     

@@ -1,5 +1,5 @@
 /// Результат подписки.
-public protocol LastPricesSubscriptionResult {
+public protocol LastPricesSubscriptionResult: Sendable {
     /// Уникальный идентификатор запроса.
     var trackingId: String { get }
     

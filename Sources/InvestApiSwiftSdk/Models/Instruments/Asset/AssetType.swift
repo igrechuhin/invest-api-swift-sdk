@@ -1,5 +1,5 @@
 /// Тип актива.
-public enum AssetType: Int, Codable {
+public enum AssetType: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

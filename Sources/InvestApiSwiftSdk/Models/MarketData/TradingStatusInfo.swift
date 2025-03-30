@@ -1,5 +1,5 @@
 /// Информация о торговом статусе.
-public protocol TradingStatusInfo {
+public protocol TradingStatusInfo: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

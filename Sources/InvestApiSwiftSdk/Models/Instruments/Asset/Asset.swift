@@ -1,5 +1,5 @@
 /// Информация об активе.
-public protocol Asset {
+public protocol Asset: Sendable {
     /// Уникальный идентификатор актива.
     var uid: String { get }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с результатами подписки на цены последних сделок.
-public protocol LastPricesSubscriptionPayload: StreamData where StreamDataType == LastPricesSubscriptionResult {
+public protocol LastPricesSubscriptionPayload: StreamData, Sendable where StreamDataType == LastPricesSubscriptionResult {
     /// Время поступления сообщения.
     var time: Date { get }
     

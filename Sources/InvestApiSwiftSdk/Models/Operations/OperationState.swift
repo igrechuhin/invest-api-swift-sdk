@@ -1,5 +1,5 @@
 /// Статус запрашиваемых операций.
-public enum OperationState: Int, Codable {
+public enum OperationState: Int, Codable, Sendable {
     /// Не определён.
     case unspecified
     

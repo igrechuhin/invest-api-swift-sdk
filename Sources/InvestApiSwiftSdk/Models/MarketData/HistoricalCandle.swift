@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о свече.
-public protocol HistoricalCandle {
+public protocol HistoricalCandle: Sendable {
     /// Цена открытия (1 единица).
     var open: Quotation { get }
     

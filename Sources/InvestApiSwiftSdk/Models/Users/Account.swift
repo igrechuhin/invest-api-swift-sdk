@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о счёте.
-public protocol Account {
+public protocol Account: Sendable {
     /// Идентификатор счёта.
     var id: String { get }
     

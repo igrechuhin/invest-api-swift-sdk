@@ -1,7 +1,7 @@
 import Foundation
 
 /// Акция.
-public protocol AssetShare {
+public protocol AssetShare: Sendable {
     /// Тип акции.
     var type: AssetShareType { get }
     

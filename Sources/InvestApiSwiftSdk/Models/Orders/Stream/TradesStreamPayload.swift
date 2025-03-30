@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с информацией о совершенной сделке.
-public protocol TradesStreamPayload: StreamData where StreamDataType == TradeStreamItem {
+public protocol TradesStreamPayload: StreamData, Sendable where StreamDataType == TradeStreamItem {
     /// Время поступления сообщения.
     var time: Date { get }
     

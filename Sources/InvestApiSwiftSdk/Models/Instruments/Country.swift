@@ -1,5 +1,5 @@
 /// Данные о стране.
-public protocol Country {
+public protocol Country: Sendable {
     /// Двухбуквенный код страны.
     var alfaTwo: String { get }
     

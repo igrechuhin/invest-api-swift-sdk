@@ -1,7 +1,7 @@
 import Foundation
 
 /// Структурная нота.
-public protocol AssetStructuredProduct {
+public protocol AssetStructuredProduct: Sendable {
     /// Наименование заемщика.
     var borrowName: String { get }
     

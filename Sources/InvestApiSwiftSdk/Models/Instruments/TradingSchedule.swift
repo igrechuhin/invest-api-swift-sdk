@@ -1,5 +1,5 @@
 /// Данные по торговой площадке.
-public protocol TradingSchedule {
+public protocol TradingSchedule: Sendable {
     /// Наименование торговой площадки.
     var exchange: String { get }
     

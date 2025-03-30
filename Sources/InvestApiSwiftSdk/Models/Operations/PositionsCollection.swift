@@ -1,7 +1,7 @@
 import Foundation
 
 /// Список позиций по счёту.
-public protocol PositionsCollection {
+public protocol PositionsCollection: Sendable {
     /// Валютные позиции портфеля.
     var money: [MoneyValue] { get }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация об облигации.
-public protocol Bond {
+public protocol Bond: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

@@ -1,5 +1,5 @@
 /// Тип полезной нагрузки в сообщении полученном из потока.
-public enum StreamPayloadType: Int, Codable {
+public enum StreamPayloadType: Int, Codable, Sendable {
     /// Информация о подписке на поток.
     case subscriptionInfo
     

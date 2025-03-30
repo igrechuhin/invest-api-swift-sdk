@@ -1,5 +1,5 @@
 /// Форма выпуска.
-public enum IssueKindType: String, Codable {
+public enum IssueKindType: String, Codable, Sendable {
     /// Документарная.
     case documentary
     

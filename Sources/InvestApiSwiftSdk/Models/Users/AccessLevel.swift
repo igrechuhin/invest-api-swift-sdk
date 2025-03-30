@@ -1,5 +1,5 @@
 /// Уровень доступа к счёту.
-public enum AccessLevel: Int, Codable {
+public enum AccessLevel: Int, Codable, Sendable {
     /// Уровень доступа не определён.
     case unspecified
     

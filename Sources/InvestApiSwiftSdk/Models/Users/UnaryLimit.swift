@@ -1,5 +1,5 @@
 /// Лимит unary-методов.
-public protocol UnaryLimit {
+public protocol UnaryLimit: Sendable {
     /// Количество unary-запросов в минуту.
     var limitPerMinute: Int32 { get }
     

@@ -1,5 +1,5 @@
 /// Информация о пользователе.
-public protocol UserInfo {
+public protocol UserInfo: Sendable {
     /// Признак премиум клиента.
     var premStatus: Bool { get }
     

@@ -1,5 +1,5 @@
 /// Идентификаторы инструмента.
-public protocol AssetInstrument {
+public protocol AssetInstrument: Sendable {
     /// Uid идентификатор инструмента.
     var uid: String { get }
     

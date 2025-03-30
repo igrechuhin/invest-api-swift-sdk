@@ -1,7 +1,7 @@
 import Foundation
 
 /// Отчёт "Справка о доходах за пределами РФ".
-public protocol DividendsForeignIssuerReportItem {
+public protocol DividendsForeignIssuerReportItem: Sendable {
     /// Дата фиксации реестра.
     var recordDate: Date { get }
     

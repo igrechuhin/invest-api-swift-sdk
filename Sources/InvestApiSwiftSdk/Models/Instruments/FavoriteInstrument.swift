@@ -1,5 +1,5 @@
 /// Краткая информация об избранном инструменте.
-public protocol FavoriteInstrument {
+public protocol FavoriteInstrument: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

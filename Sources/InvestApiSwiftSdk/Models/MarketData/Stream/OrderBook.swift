@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о стакане.
-public protocol OrderBook {
+public protocol OrderBook: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

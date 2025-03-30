@@ -1,5 +1,5 @@
 /// Интервал свечей.
-public enum CandleInterval: Int, Codable {
+public enum CandleInterval: Int, Codable, Sendable {
     /// Интервал не определён.
     case unspecified
     

@@ -1,5 +1,5 @@
 /// Тип идентификатора инструмента.
-public enum InstrumentIdType: Int, Codable {
+public enum InstrumentIdType: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

@@ -1,5 +1,5 @@
 /// Вид инструмента.
-public enum InstrumentKind: Int, Codable {
+public enum InstrumentKind: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

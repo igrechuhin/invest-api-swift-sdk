@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с информацией о цене последней сделки.
-public protocol LastPricePayload: StreamData where StreamDataType == LastPrice {
+public protocol LastPricePayload: StreamData, Sendable where StreamDataType == LastPrice {
     /// Время поступления сообщения.
     var time: Date { get }
     

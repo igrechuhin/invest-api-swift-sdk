@@ -1,13 +1,13 @@
-// swift-tools-version: 5.5
+// swift-tools-version: 6.0
 import PackageDescription
 
 let package = Package(
     name: "invest-api-swift-sdk",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v13),
-        .tvOS(.v13),
-        .watchOS(.v6)
+        .macOS(.v12),
+        .iOS(.v15),
+        .tvOS(.v15),
+        .watchOS(.v8)
     ],
     products: [
         .library(
@@ -16,7 +16,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/grpc/grpc-swift.git", from: "1.20.0"),
+        .package(url: "https://github.com/grpc/grpc-swift.git", from: "1.24.2"),
     ],
     targets: [
         .target(

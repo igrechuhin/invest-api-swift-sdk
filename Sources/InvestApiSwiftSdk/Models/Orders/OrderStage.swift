@@ -1,5 +1,5 @@
 /// Сделка в рамках торгового поручения.
-public protocol OrderStage {
+public protocol OrderStage: Sendable {
     /// Цена за 1 инструмент (для получения стоимости лота требуется умножить на лотность инструмента).
     var price: MoneyValue { get }
     

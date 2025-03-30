@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol AssetFundamentals {
+public protocol AssetFundamentals: Sendable {
     ///Идентификатор актива.
     var assetUid: String { get }
     

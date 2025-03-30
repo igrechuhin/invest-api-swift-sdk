@@ -1,7 +1,7 @@
 import Foundation
 
 /// Котировка - денежная сумма без указания валюты.
-public struct Quotation: Codable {
+public struct Quotation: Codable, Sendable {
     /// Целая часть суммы, может быть отрицательным числом.
     public let units: Int64
     

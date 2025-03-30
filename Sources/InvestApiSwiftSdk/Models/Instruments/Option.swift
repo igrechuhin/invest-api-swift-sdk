@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация об опционном контракте.
-public protocol Option {
+public protocol Option: Sendable {
     /// Уникальный идентификатор инструмента.
     var uid: String { get }
     

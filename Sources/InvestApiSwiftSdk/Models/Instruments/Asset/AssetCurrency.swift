@@ -1,5 +1,5 @@
 /// Валюта.
-public protocol AssetCurrency {
+public protocol AssetCurrency: Sendable {
     /// ISO-код валюты.
     var baseCurrency: String { get }
 }

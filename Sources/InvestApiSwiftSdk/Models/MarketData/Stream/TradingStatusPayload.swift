@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с информацией о торговом статусе.
-public protocol TradingStatusPayload: StreamData where StreamDataType == TradingStatus {
+public protocol TradingStatusPayload: StreamData, Sendable where StreamDataType == TradingStatus {
     /// Время поступления сообщения.
     var time: Date { get }
     

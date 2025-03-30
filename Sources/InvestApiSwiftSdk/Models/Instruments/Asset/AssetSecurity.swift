@@ -1,5 +1,5 @@
 /// Ценная бумага.
-public protocol AssetSecurity {
+public protocol AssetSecurity: Sendable {
     /// ISIN-идентификатор ценной бумаги.
     var isin: String { get }
     

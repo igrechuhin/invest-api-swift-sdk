@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о сделке.
-public protocol Trade {
+public protocol Trade: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

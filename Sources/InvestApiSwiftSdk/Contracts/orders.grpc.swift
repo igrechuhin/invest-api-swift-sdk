@@ -13,69 +13,69 @@ import SwiftProtobuf
 
 /// Usage: instantiate `Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClient`, then call methods of this protocol to make API calls.
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientProtocol: GRPCClient {
-  var serviceName: String { get }
-  var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? { get }
-
-  func tradesStream(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
-    callOptions: CallOptions?,
-    handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse) -> Void
-  ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse>
-
-  func orderStateStream(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
-    callOptions: CallOptions?,
-    handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse) -> Void
-  ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse>
+    var serviceName: String { get }
+    var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? { get }
+    
+    func tradesStream(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
+        callOptions: CallOptions?,
+        handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse) -> Void
+    ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse>
+    
+    func orderStateStream(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
+        callOptions: CallOptions?,
+        handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse) -> Void
+    ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse>
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientProtocol {
-  public var serviceName: String {
-    return "tinkoff.public.invest.api.contract.v1.OrdersStreamService"
-  }
-
-  ///Stream сделок пользователя.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to TradesStream.
-  ///   - callOptions: Call options.
-  ///   - handler: A closure called when each response is received from the server.
-  /// - Returns: A `ServerStreamingCall` with futures for the metadata and status.
-  public func tradesStream(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
-    callOptions: CallOptions? = nil,
-    handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse) -> Void
-  ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse> {
-    return self.makeServerStreamingCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeTradesStreamInterceptors() ?? [],
-      handler: handler
-    )
-  }
-
-  ///Stream поручений пользователя.
-  ///Перед работой прочитайте [статью](/invest/services/orders/orders_state_stream).
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to OrderStateStream.
-  ///   - callOptions: Call options.
-  ///   - handler: A closure called when each response is received from the server.
-  /// - Returns: A `ServerStreamingCall` with futures for the metadata and status.
-  public func orderStateStream(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
-    callOptions: CallOptions? = nil,
-    handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse) -> Void
-  ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse> {
-    return self.makeServerStreamingCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOrderStateStreamInterceptors() ?? [],
-      handler: handler
-    )
-  }
+    public var serviceName: String {
+        return "tinkoff.public.invest.api.contract.v1.OrdersStreamService"
+    }
+    
+    ///Stream сделок пользователя.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to TradesStream.
+    ///   - callOptions: Call options.
+    ///   - handler: A closure called when each response is received from the server.
+    /// - Returns: A `ServerStreamingCall` with futures for the metadata and status.
+    public func tradesStream(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
+        callOptions: CallOptions? = nil,
+        handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse) -> Void
+    ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse> {
+        return self.makeServerStreamingCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeTradesStreamInterceptors() ?? [],
+            handler: handler
+        )
+    }
+    
+    ///Stream поручений пользователя.
+    ///Перед работой прочитайте [статью](/invest/services/orders/orders_state_stream).
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to OrderStateStream.
+    ///   - callOptions: Call options.
+    ///   - handler: A closure called when each response is received from the server.
+    /// - Returns: A `ServerStreamingCall` with futures for the metadata and status.
+    public func orderStateStream(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
+        callOptions: CallOptions? = nil,
+        handler: @escaping (Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse) -> Void
+    ) -> ServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse> {
+        return self.makeServerStreamingCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOrderStateStreamInterceptors() ?? [],
+            handler: handler
+        )
+    }
 }
 
 @available(*, deprecated)
@@ -83,185 +83,185 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClient: @unch
 
 @available(*, deprecated, renamed: "Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceNIOClient")
 public final class Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClient: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientProtocol {
-  private let lock = Lock()
-  private var _defaultCallOptions: CallOptions
-  private var _interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol?
-  public let channel: GRPCChannel
-  public var defaultCallOptions: CallOptions {
-    get { self.lock.withLock { return self._defaultCallOptions } }
-    set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
-  }
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? {
-    get { self.lock.withLock { return self._interceptors } }
-    set { self.lock.withLockVoid { self._interceptors = newValue } }
-  }
-
-  /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersStreamService service.
-  ///
-  /// - Parameters:
-  ///   - channel: `GRPCChannel` to the service host.
-  ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
-  ///   - interceptors: A factory providing interceptors for each RPC.
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self._defaultCallOptions = defaultCallOptions
-    self._interceptors = interceptors
-  }
+    private let lock = Lock()
+    private var _defaultCallOptions: CallOptions
+    private var _interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol?
+    public let channel: GRPCChannel
+    public var defaultCallOptions: CallOptions {
+        get { self.lock.withLock { return self._defaultCallOptions } }
+        set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
+    }
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? {
+        get { self.lock.withLock { return self._interceptors } }
+        set { self.lock.withLockVoid { self._interceptors = newValue } }
+    }
+    
+    /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersStreamService service.
+    ///
+    /// - Parameters:
+    ///   - channel: `GRPCChannel` to the service host.
+    ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
+    ///   - interceptors: A factory providing interceptors for each RPC.
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self._defaultCallOptions = defaultCallOptions
+        self._interceptors = interceptors
+    }
 }
 
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceNIOClient: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientProtocol {
-  public var channel: GRPCChannel
-  public var defaultCallOptions: CallOptions
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol?
-
-  /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersStreamService service.
-  ///
-  /// - Parameters:
-  ///   - channel: `GRPCChannel` to the service host.
-  ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
-  ///   - interceptors: A factory providing interceptors for each RPC.
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self.defaultCallOptions = defaultCallOptions
-    self.interceptors = interceptors
-  }
+    public var channel: GRPCChannel
+    public var defaultCallOptions: CallOptions
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol?
+    
+    /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersStreamService service.
+    ///
+    /// - Parameters:
+    ///   - channel: `GRPCChannel` to the service host.
+    ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
+    ///   - interceptors: A factory providing interceptors for each RPC.
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self.defaultCallOptions = defaultCallOptions
+        self.interceptors = interceptors
+    }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceAsyncClientProtocol: GRPCClient {
-  static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? { get }
-
-  func makeTradesStreamCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse>
-
-  func makeOrderStateStreamCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse>
+    static var serviceDescriptor: GRPCServiceDescriptor { get }
+    var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? { get }
+    
+    func makeTradesStreamCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse>
+    
+    func makeOrderStateStreamCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceAsyncClientProtocol {
-  public static var serviceDescriptor: GRPCServiceDescriptor {
-    return Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.serviceDescriptor
-  }
-
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? {
-    return nil
-  }
-
-  public func makeTradesStreamCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse> {
-    return self.makeAsyncServerStreamingCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeTradesStreamInterceptors() ?? []
-    )
-  }
-
-  public func makeOrderStateStreamCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse> {
-    return self.makeAsyncServerStreamingCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOrderStateStreamInterceptors() ?? []
-    )
-  }
+    public static var serviceDescriptor: GRPCServiceDescriptor {
+        return Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.serviceDescriptor
+    }
+    
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? {
+        return nil
+    }
+    
+    public func makeTradesStreamCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse> {
+        return self.makeAsyncServerStreamingCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeTradesStreamInterceptors() ?? []
+        )
+    }
+    
+    public func makeOrderStateStreamCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncServerStreamingCall<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse> {
+        return self.makeAsyncServerStreamingCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOrderStateStreamInterceptors() ?? []
+        )
+    }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceAsyncClientProtocol {
-  public func tradesStream(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncResponseStream<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse> {
-    return self.performAsyncServerStreamingCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeTradesStreamInterceptors() ?? []
-    )
-  }
-
-  public func orderStateStream(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncResponseStream<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse> {
-    return self.performAsyncServerStreamingCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOrderStateStreamInterceptors() ?? []
-    )
-  }
+    public func tradesStream(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncResponseStream<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse> {
+        return self.performAsyncServerStreamingCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeTradesStreamInterceptors() ?? []
+        )
+    }
+    
+    public func orderStateStream(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncResponseStream<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse> {
+        return self.performAsyncServerStreamingCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOrderStateStreamInterceptors() ?? []
+        )
+    }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceAsyncClient: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceAsyncClientProtocol {
-  public var channel: GRPCChannel
-  public var defaultCallOptions: CallOptions
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol?
-
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self.defaultCallOptions = defaultCallOptions
-    self.interceptors = interceptors
-  }
+    public var channel: GRPCChannel
+    public var defaultCallOptions: CallOptions
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol?
+    
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self.defaultCallOptions = defaultCallOptions
+        self.interceptors = interceptors
+    }
 }
 
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientInterceptorFactoryProtocol: Sendable {
-
-  /// - Returns: Interceptors to use when invoking 'tradesStream'.
-  func makeTradesStreamInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'orderStateStream'.
-  func makeOrderStateStreamInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'tradesStream'.
+    func makeTradesStreamInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradesStreamResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'orderStateStream'.
+    func makeOrderStateStreamInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderStateStreamResponse>]
 }
 
 public enum Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata {
-  public static let serviceDescriptor = GRPCServiceDescriptor(
-    name: "OrdersStreamService",
-    fullName: "tinkoff.public.invest.api.contract.v1.OrdersStreamService",
-    methods: [
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream,
-    ]
-  )
-
-  public enum Methods {
-    public static let tradesStream = GRPCMethodDescriptor(
-      name: "TradesStream",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersStreamService/TradesStream",
-      type: GRPCCallType.serverStreaming
+    public static let serviceDescriptor = GRPCServiceDescriptor(
+        name: "OrdersStreamService",
+        fullName: "tinkoff.public.invest.api.contract.v1.OrdersStreamService",
+        methods: [
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.tradesStream,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetadata.Methods.orderStateStream,
+        ]
     )
-
-    public static let orderStateStream = GRPCMethodDescriptor(
-      name: "OrderStateStream",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersStreamService/OrderStateStream",
-      type: GRPCCallType.serverStreaming
-    )
-  }
+    
+    public enum Methods {
+        public static let tradesStream = GRPCMethodDescriptor(
+            name: "TradesStream",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersStreamService/TradesStream",
+            type: GRPCCallType.serverStreaming
+        )
+        
+        public static let orderStateStream = GRPCMethodDescriptor(
+            name: "OrderStateStream",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersStreamService/OrderStateStream",
+            type: GRPCCallType.serverStreaming
+        )
+    }
 }
 
 /// Сервис предназначен для работы с торговыми поручениями:<br/> **1**.
@@ -270,198 +270,198 @@ public enum Tinkoff_Public_Invest_Api_Contract_V1_OrdersStreamServiceClientMetad
 ///
 /// Usage: instantiate `Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClient`, then call methods of this protocol to make API calls.
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientProtocol: GRPCClient {
-  var serviceName: String { get }
-  var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? { get }
-
-  func postOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
-
-  func postOrderAsync(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse>
-
-  func cancelOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse>
-
-  func getOrderState(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState>
-
-  func getOrders(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse>
-
-  func replaceOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
-
-  func getMaxLots(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>
-
-  func getOrderPrice(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse>
+    var serviceName: String { get }
+    var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? { get }
+    
+    func postOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
+    
+    func postOrderAsync(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse>
+    
+    func cancelOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse>
+    
+    func getOrderState(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState>
+    
+    func getOrders(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse>
+    
+    func replaceOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
+    
+    func getMaxLots(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>
+    
+    func getOrderPrice(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse>
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientProtocol {
-  public var serviceName: String {
-    return "tinkoff.public.invest.api.contract.v1.OrdersService"
-  }
-
-  ///Метод выставления заявки.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PostOrder.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func postOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePostOrderInterceptors() ?? []
-    )
-  }
-
-  ///Асинхронный метод выставления заявки.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to PostOrderAsync.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func postOrderAsync(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePostOrderAsyncInterceptors() ?? []
-    )
-  }
-
-  ///Метод отмены биржевой заявки.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to CancelOrder.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func cancelOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCancelOrderInterceptors() ?? []
-    )
-  }
-
-  ///Метод получения статуса торгового поручения.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetOrderState.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getOrderState(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrderStateInterceptors() ?? []
-    )
-  }
-
-  ///Метод получения списка активных заявок по счету.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetOrders.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getOrders(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrdersInterceptors() ?? []
-    )
-  }
-
-  ///Метод изменения выставленной заявки.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ReplaceOrder.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func replaceOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReplaceOrderInterceptors() ?? []
-    )
-  }
-
-  ///Расчет количества доступных для покупки/продажи лотов.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetMaxLots.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getMaxLots(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetMaxLotsInterceptors() ?? []
-    )
-  }
-
-  ///Метод получения предварительной стоимости для лимитной заявки.
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetOrderPrice.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getOrderPrice(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrderPriceInterceptors() ?? []
-    )
-  }
+    public var serviceName: String {
+        return "tinkoff.public.invest.api.contract.v1.OrdersService"
+    }
+    
+    ///Метод выставления заявки.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to PostOrder.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func postOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makePostOrderInterceptors() ?? []
+        )
+    }
+    
+    ///Асинхронный метод выставления заявки.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to PostOrderAsync.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func postOrderAsync(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makePostOrderAsyncInterceptors() ?? []
+        )
+    }
+    
+    ///Метод отмены биржевой заявки.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to CancelOrder.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func cancelOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCancelOrderInterceptors() ?? []
+        )
+    }
+    
+    ///Метод получения статуса торгового поручения.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetOrderState.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getOrderState(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrderStateInterceptors() ?? []
+        )
+    }
+    
+    ///Метод получения списка активных заявок по счету.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetOrders.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getOrders(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrdersInterceptors() ?? []
+        )
+    }
+    
+    ///Метод изменения выставленной заявки.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to ReplaceOrder.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func replaceOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeReplaceOrderInterceptors() ?? []
+        )
+    }
+    
+    ///Расчет количества доступных для покупки/продажи лотов.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetMaxLots.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getMaxLots(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetMaxLotsInterceptors() ?? []
+        )
+    }
+    
+    ///Метод получения предварительной стоимости для лимитной заявки.
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetOrderPrice.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getOrderPrice(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrderPriceInterceptors() ?? []
+        )
+    }
 }
 
 @available(*, deprecated)
@@ -469,56 +469,56 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClient: @unchecked 
 
 @available(*, deprecated, renamed: "Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceNIOClient")
 public final class Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClient: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientProtocol {
-  private let lock = Lock()
-  private var _defaultCallOptions: CallOptions
-  private var _interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol?
-  public let channel: GRPCChannel
-  public var defaultCallOptions: CallOptions {
-    get { self.lock.withLock { return self._defaultCallOptions } }
-    set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
-  }
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? {
-    get { self.lock.withLock { return self._interceptors } }
-    set { self.lock.withLockVoid { self._interceptors = newValue } }
-  }
-
-  /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersService service.
-  ///
-  /// - Parameters:
-  ///   - channel: `GRPCChannel` to the service host.
-  ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
-  ///   - interceptors: A factory providing interceptors for each RPC.
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self._defaultCallOptions = defaultCallOptions
-    self._interceptors = interceptors
-  }
+    private let lock = Lock()
+    private var _defaultCallOptions: CallOptions
+    private var _interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol?
+    public let channel: GRPCChannel
+    public var defaultCallOptions: CallOptions {
+        get { self.lock.withLock { return self._defaultCallOptions } }
+        set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
+    }
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? {
+        get { self.lock.withLock { return self._interceptors } }
+        set { self.lock.withLockVoid { self._interceptors = newValue } }
+    }
+    
+    /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersService service.
+    ///
+    /// - Parameters:
+    ///   - channel: `GRPCChannel` to the service host.
+    ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
+    ///   - interceptors: A factory providing interceptors for each RPC.
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self._defaultCallOptions = defaultCallOptions
+        self._interceptors = interceptors
+    }
 }
 
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceNIOClient: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientProtocol {
-  public var channel: GRPCChannel
-  public var defaultCallOptions: CallOptions
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol?
-
-  /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersService service.
-  ///
-  /// - Parameters:
-  ///   - channel: `GRPCChannel` to the service host.
-  ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
-  ///   - interceptors: A factory providing interceptors for each RPC.
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self.defaultCallOptions = defaultCallOptions
-    self.interceptors = interceptors
-  }
+    public var channel: GRPCChannel
+    public var defaultCallOptions: CallOptions
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol?
+    
+    /// Creates a client for the tinkoff.public.invest.api.contract.v1.OrdersService service.
+    ///
+    /// - Parameters:
+    ///   - channel: `GRPCChannel` to the service host.
+    ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
+    ///   - interceptors: A factory providing interceptors for each RPC.
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self.defaultCallOptions = defaultCallOptions
+        self.interceptors = interceptors
+    }
 }
 
 /// Сервис предназначен для работы с торговыми поручениями:<br/> **1**.
@@ -526,364 +526,364 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceNIOClient: Tink
 ///расчет полной стоимости;<br/> **5**. получение списка заявок.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceAsyncClientProtocol: GRPCClient {
-  static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? { get }
-
-  func makePostOrderCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
-
-  func makePostOrderAsyncCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse>
-
-  func makeCancelOrderCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse>
-
-  func makeGetOrderStateCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState>
-
-  func makeGetOrdersCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse>
-
-  func makeReplaceOrderCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
-
-  func makeGetMaxLotsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>
-
-  func makeGetOrderPriceCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse>
+    static var serviceDescriptor: GRPCServiceDescriptor { get }
+    var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? { get }
+    
+    func makePostOrderCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
+    
+    func makePostOrderAsyncCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse>
+    
+    func makeCancelOrderCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse>
+    
+    func makeGetOrderStateCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState>
+    
+    func makeGetOrdersCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse>
+    
+    func makeReplaceOrderCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>
+    
+    func makeGetMaxLotsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>
+    
+    func makeGetOrderPriceCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceAsyncClientProtocol {
-  public static var serviceDescriptor: GRPCServiceDescriptor {
-    return Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.serviceDescriptor
-  }
-
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? {
-    return nil
-  }
-
-  public func makePostOrderCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePostOrderInterceptors() ?? []
-    )
-  }
-
-  public func makePostOrderAsyncCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePostOrderAsyncInterceptors() ?? []
-    )
-  }
-
-  public func makeCancelOrderCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCancelOrderInterceptors() ?? []
-    )
-  }
-
-  public func makeGetOrderStateCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrderStateInterceptors() ?? []
-    )
-  }
-
-  public func makeGetOrdersCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrdersInterceptors() ?? []
-    )
-  }
-
-  public func makeReplaceOrderCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReplaceOrderInterceptors() ?? []
-    )
-  }
-
-  public func makeGetMaxLotsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetMaxLotsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetOrderPriceCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrderPriceInterceptors() ?? []
-    )
-  }
+    public static var serviceDescriptor: GRPCServiceDescriptor {
+        return Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.serviceDescriptor
+    }
+    
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? {
+        return nil
+    }
+    
+    public func makePostOrderCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makePostOrderInterceptors() ?? []
+        )
+    }
+    
+    public func makePostOrderAsyncCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makePostOrderAsyncInterceptors() ?? []
+        )
+    }
+    
+    public func makeCancelOrderCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCancelOrderInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetOrderStateCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrderStateInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetOrdersCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrdersInterceptors() ?? []
+        )
+    }
+    
+    public func makeReplaceOrderCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeReplaceOrderInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetMaxLotsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetMaxLotsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetOrderPriceCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrderPriceInterceptors() ?? []
+        )
+    }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceAsyncClientProtocol {
-  public func postOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePostOrderInterceptors() ?? []
-    )
-  }
-
-  public func postOrderAsync(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makePostOrderAsyncInterceptors() ?? []
-    )
-  }
-
-  public func cancelOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCancelOrderInterceptors() ?? []
-    )
-  }
-
-  public func getOrderState(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OrderState {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrderStateInterceptors() ?? []
-    )
-  }
-
-  public func getOrders(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrdersInterceptors() ?? []
-    )
-  }
-
-  public func replaceOrder(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeReplaceOrderInterceptors() ?? []
-    )
-  }
-
-  public func getMaxLots(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetMaxLotsInterceptors() ?? []
-    )
-  }
-
-  public func getOrderPrice(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetOrderPriceInterceptors() ?? []
-    )
-  }
+    public func postOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makePostOrderInterceptors() ?? []
+        )
+    }
+    
+    public func postOrderAsync(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makePostOrderAsyncInterceptors() ?? []
+        )
+    }
+    
+    public func cancelOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCancelOrderInterceptors() ?? []
+        )
+    }
+    
+    public func getOrderState(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OrderState {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrderStateInterceptors() ?? []
+        )
+    }
+    
+    public func getOrders(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrdersInterceptors() ?? []
+        )
+    }
+    
+    public func replaceOrder(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeReplaceOrderInterceptors() ?? []
+        )
+    }
+    
+    public func getMaxLots(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetMaxLotsInterceptors() ?? []
+        )
+    }
+    
+    public func getOrderPrice(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetOrderPriceInterceptors() ?? []
+        )
+    }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceAsyncClient: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceAsyncClientProtocol {
-  public var channel: GRPCChannel
-  public var defaultCallOptions: CallOptions
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol?
-
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self.defaultCallOptions = defaultCallOptions
-    self.interceptors = interceptors
-  }
+    public var channel: GRPCChannel
+    public var defaultCallOptions: CallOptions
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol?
+    
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self.defaultCallOptions = defaultCallOptions
+        self.interceptors = interceptors
+    }
 }
 
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientInterceptorFactoryProtocol: Sendable {
-
-  /// - Returns: Interceptors to use when invoking 'postOrder'.
-  func makePostOrderInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'postOrderAsync'.
-  func makePostOrderAsyncInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'cancelOrder'.
-  func makeCancelOrderInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getOrderState'.
-  func makeGetOrderStateInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState>]
-
-  /// - Returns: Interceptors to use when invoking 'getOrders'.
-  func makeGetOrdersInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'replaceOrder'.
-  func makeReplaceOrderInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getMaxLots'.
-  func makeGetMaxLotsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getOrderPrice'.
-  func makeGetOrderPriceInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'postOrder'.
+    func makePostOrderInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'postOrderAsync'.
+    func makePostOrderAsyncInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderAsyncResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'cancelOrder'.
+    func makeCancelOrderInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_CancelOrderResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getOrderState'.
+    func makeGetOrderStateInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderStateRequest, Tinkoff_Public_Invest_Api_Contract_V1_OrderState>]
+    
+    /// - Returns: Interceptors to use when invoking 'getOrders'.
+    func makeGetOrdersInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrdersResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'replaceOrder'.
+    func makeReplaceOrderInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_ReplaceOrderRequest, Tinkoff_Public_Invest_Api_Contract_V1_PostOrderResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getMaxLots'.
+    func makeGetMaxLotsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetMaxLotsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getOrderPrice'.
+    func makeGetOrderPriceInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetOrderPriceResponse>]
 }
 
 public enum Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata {
-  public static let serviceDescriptor = GRPCServiceDescriptor(
-    name: "OrdersService",
-    fullName: "tinkoff.public.invest.api.contract.v1.OrdersService",
-    methods: [
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots,
-      Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice,
-    ]
-  )
-
-  public enum Methods {
-    public static let postOrder = GRPCMethodDescriptor(
-      name: "PostOrder",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrder",
-      type: GRPCCallType.unary
+    public static let serviceDescriptor = GRPCServiceDescriptor(
+        name: "OrdersService",
+        fullName: "tinkoff.public.invest.api.contract.v1.OrdersService",
+        methods: [
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrder,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.postOrderAsync,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.cancelOrder,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderState,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrders,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.replaceOrder,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getMaxLots,
+            Tinkoff_Public_Invest_Api_Contract_V1_OrdersServiceClientMetadata.Methods.getOrderPrice,
+        ]
     )
-
-    public static let postOrderAsync = GRPCMethodDescriptor(
-      name: "PostOrderAsync",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrderAsync",
-      type: GRPCCallType.unary
-    )
-
-    public static let cancelOrder = GRPCMethodDescriptor(
-      name: "CancelOrder",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/CancelOrder",
-      type: GRPCCallType.unary
-    )
-
-    public static let getOrderState = GRPCMethodDescriptor(
-      name: "GetOrderState",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrderState",
-      type: GRPCCallType.unary
-    )
-
-    public static let getOrders = GRPCMethodDescriptor(
-      name: "GetOrders",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrders",
-      type: GRPCCallType.unary
-    )
-
-    public static let replaceOrder = GRPCMethodDescriptor(
-      name: "ReplaceOrder",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/ReplaceOrder",
-      type: GRPCCallType.unary
-    )
-
-    public static let getMaxLots = GRPCMethodDescriptor(
-      name: "GetMaxLots",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetMaxLots",
-      type: GRPCCallType.unary
-    )
-
-    public static let getOrderPrice = GRPCMethodDescriptor(
-      name: "GetOrderPrice",
-      path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrderPrice",
-      type: GRPCCallType.unary
-    )
-  }
+    
+    public enum Methods {
+        public static let postOrder = GRPCMethodDescriptor(
+            name: "PostOrder",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrder",
+            type: GRPCCallType.unary
+        )
+        
+        public static let postOrderAsync = GRPCMethodDescriptor(
+            name: "PostOrderAsync",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrderAsync",
+            type: GRPCCallType.unary
+        )
+        
+        public static let cancelOrder = GRPCMethodDescriptor(
+            name: "CancelOrder",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/CancelOrder",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getOrderState = GRPCMethodDescriptor(
+            name: "GetOrderState",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrderState",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getOrders = GRPCMethodDescriptor(
+            name: "GetOrders",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrders",
+            type: GRPCCallType.unary
+        )
+        
+        public static let replaceOrder = GRPCMethodDescriptor(
+            name: "ReplaceOrder",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/ReplaceOrder",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getMaxLots = GRPCMethodDescriptor(
+            name: "GetMaxLots",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetMaxLots",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getOrderPrice = GRPCMethodDescriptor(
+            name: "GetOrderPrice",
+            path: "/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrderPrice",
+            type: GRPCCallType.unary
+        )
+    }
 }
 

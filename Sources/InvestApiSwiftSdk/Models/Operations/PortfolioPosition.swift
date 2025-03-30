@@ -1,7 +1,7 @@
 import Foundation
 
 /// Позиция портфеля.
-public protocol PortfolioPosition {
+public protocol PortfolioPosition: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

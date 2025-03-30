@@ -1,5 +1,5 @@
 /// Результат подписки.
-public protocol CandlesSubscriptionResult {
+public protocol CandlesSubscriptionResult: Sendable {
     /// Уникальный идентификатор запроса.
     var trackingId: String { get }
     

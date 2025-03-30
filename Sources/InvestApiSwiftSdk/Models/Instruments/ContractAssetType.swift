@@ -1,5 +1,5 @@
 /// Тип базового актива контракта.
-public enum ContractAssetType: String, Codable {
+public enum ContractAssetType: String, Codable, Sendable {
     /// Товар.
     case commodity = "TYPE_COMMODITY"
     

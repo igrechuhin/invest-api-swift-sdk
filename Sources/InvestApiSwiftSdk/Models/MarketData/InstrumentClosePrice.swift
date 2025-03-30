@@ -1,7 +1,7 @@
 import Foundation
 
 /// Цена закрытия торговой сессии по инструменту.
-public protocol InstrumentClosePrice {
+public protocol InstrumentClosePrice: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

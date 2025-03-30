@@ -1,7 +1,7 @@
 import Foundation
 
 /// Краткая информация об инструменте.
-public protocol InstrumentShort {
+public protocol InstrumentShort: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

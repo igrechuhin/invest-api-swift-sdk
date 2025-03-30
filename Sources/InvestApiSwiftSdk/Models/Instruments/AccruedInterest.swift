@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о накопленном купонном доходе.
-public protocol AccruedInterest {
+public protocol AccruedInterest: Sendable {
     /// Дата и время в часовом поясе UTC.
     var date: Date { get }
     

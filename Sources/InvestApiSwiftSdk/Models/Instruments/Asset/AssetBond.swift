@@ -1,7 +1,7 @@
 import Foundation
 
 /// Облигация.
-public protocol AssetBond {
+public protocol AssetBond: Sendable {
     /// Текущий номинал.
     var currentNominal: Quotation { get }
     

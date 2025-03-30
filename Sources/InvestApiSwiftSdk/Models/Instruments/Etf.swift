@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация об инвестиционном фонде.
-public protocol Etf {
+public protocol Etf: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

@@ -1,5 +1,5 @@
 /// Тип акции.
-public enum AssetShareType: Int, Codable {
+public enum AssetShareType: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

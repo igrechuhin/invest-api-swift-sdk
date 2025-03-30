@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сделка по операции.
-public protocol OperationItemTrade {
+public protocol OperationItemTrade: Sendable {
     /// Номер сделки.
     var number: String { get }
     

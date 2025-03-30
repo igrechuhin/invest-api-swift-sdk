@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация об исполнении торгового поручения.
-public protocol TradeStreamItem {
+public protocol TradeStreamItem: Sendable {
     /// Идентификатор торгового поручения.
     var orderId: String { get }
     

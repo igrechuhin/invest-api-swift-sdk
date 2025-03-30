@@ -1,5 +1,5 @@
 /// Тип счёта.
-public enum AccountType: Int, Codable {
+public enum AccountType: Int, Codable, Sendable {
     /// Тип аккаунта не определён.
     case unspecified
     

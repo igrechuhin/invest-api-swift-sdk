@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol AssetReport {
+public protocol AssetReport: Sendable {
     /// Идентификатор инструмента.
     var instrumentID: String { get }
     

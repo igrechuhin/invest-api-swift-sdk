@@ -2,7 +2,7 @@
 import GRPC
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-public struct AsyncStreamIterator<StreamResponse, ServiceResponce>: AsyncIteratorProtocol {
+public struct AsyncStreamIterator<StreamResponse: Sendable, ServiceResponce>: AsyncIteratorProtocol {
     public typealias Element = ServiceResponce
     
     private let mapper: (StreamResponse?) -> ServiceResponce

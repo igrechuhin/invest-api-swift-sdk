@@ -1,7 +1,7 @@
 import Foundation
 
 /// Отчёт "Справка о доходах за пределами РФ".
-public protocol DividendsForeignIssuerReport {
+public protocol DividendsForeignIssuerReport: Sendable {
     /// Элементы отчёта.
     var items: [DividendsForeignIssuerReportItem] { get }
     

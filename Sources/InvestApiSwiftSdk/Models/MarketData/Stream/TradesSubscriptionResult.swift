@@ -1,5 +1,5 @@
 /// Результат подписки.
-public protocol TradesSubscriptionResult {
+public protocol TradesSubscriptionResult: Sendable {
     /// Уникальный идентификатор запроса.
     var trackingId: String { get }
     

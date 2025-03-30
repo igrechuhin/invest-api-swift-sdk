@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о биржевой заявке.
-public protocol OrderInfo {
+public protocol OrderInfo: Sendable {
     /// Биржевой идентификатор заявки.
     var orderId: String { get }
     

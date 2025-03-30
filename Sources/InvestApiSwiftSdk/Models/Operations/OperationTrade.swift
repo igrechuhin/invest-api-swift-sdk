@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сделка по операции.
-public protocol OperationTrade {
+public protocol OperationTrade: Sendable {
     /// Идентификатор сделки.
     var tradeId: String { get }
     

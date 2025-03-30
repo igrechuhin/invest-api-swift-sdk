@@ -1,5 +1,5 @@
 /// Бренд.
-public protocol Brand {
+public protocol Brand: Sendable {
     /// Uid идентификатор бренда.
     var uid: String { get }
     

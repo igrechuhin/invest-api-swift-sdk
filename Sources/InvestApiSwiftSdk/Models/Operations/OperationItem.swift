@@ -1,7 +1,7 @@
 import Foundation
 
 /// Данные об операции.
-public protocol OperationItem {
+public protocol OperationItem: Sendable {
     /// Курсор.
     var cursor: String { get }
     

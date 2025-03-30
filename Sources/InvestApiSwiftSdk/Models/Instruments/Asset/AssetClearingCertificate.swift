@@ -1,5 +1,5 @@
 /// Клиринговый сертификат участия.
-public protocol AssetClearingCertificate {
+public protocol AssetClearingCertificate: Sendable {
     /// Номинал.
     var nominal: Quotation { get }
     

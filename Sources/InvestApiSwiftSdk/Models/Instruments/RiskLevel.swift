@@ -1,5 +1,5 @@
 /// Уровень риска облигации.
-public enum RiskLevel: Int, Codable {
+public enum RiskLevel: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

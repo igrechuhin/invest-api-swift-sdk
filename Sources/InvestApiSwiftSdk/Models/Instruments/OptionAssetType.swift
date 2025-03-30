@@ -1,5 +1,5 @@
 /// Тип базового актива опционного контракта.
-public enum OptionAssetType: String, Codable {
+public enum OptionAssetType: String, Codable, Sendable {
     /// Товар.
     case commodity
     

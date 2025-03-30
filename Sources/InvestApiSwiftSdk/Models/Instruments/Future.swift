@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о фьючерсном контракте.
-public protocol Future {
+public protocol Future: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

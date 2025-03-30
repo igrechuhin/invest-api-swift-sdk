@@ -1,7 +1,7 @@
 import Foundation
 
 /// Информация о валюте.
-public protocol Currency {
+public protocol Currency: Sendable {
     /// Figi-идентификатор инструмента.
     var figi: String { get }
     

@@ -1,5 +1,5 @@
 /// Направление операции.
-public enum OrderDirection: Int, Codable {
+public enum OrderDirection: Int, Codable, Sendable {
     /// Направление не определено.
     case unspecified
     

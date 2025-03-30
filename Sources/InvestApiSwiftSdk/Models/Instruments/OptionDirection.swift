@@ -1,5 +1,5 @@
 /// Тип опционного контракта по направлению сделки.
-public enum OptionDirection: Int, Codable {
+public enum OptionDirection: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

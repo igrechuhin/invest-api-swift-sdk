@@ -1,7 +1,7 @@
 import Foundation
 
 /// Стоп-заявка.
-public protocol StopOrder {
+public protocol StopOrder: Sendable {
     /// Идентификатор стоп-заявки.
     var stopOrderId: String { get }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Сообщение с результатами подписки на потоки обезличенных сделок.
-public protocol TradesSubscriptionPayload: StreamData where StreamDataType == TradesSubscriptionResult {
+public protocol TradesSubscriptionPayload: StreamData, Sendable where StreamDataType == TradesSubscriptionResult {
     /// Время поступления сообщения.
     var time: Date { get }
     

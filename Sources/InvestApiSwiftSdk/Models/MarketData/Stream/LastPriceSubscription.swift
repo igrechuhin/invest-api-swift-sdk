@@ -1,5 +1,5 @@
 /// Статус подписки на цену последней сделки.
-public protocol LastPriceSubscription {
+public protocol LastPriceSubscription: Sendable {
     /// Figi идентификатор инструмента.
     var figi: String { get }
     

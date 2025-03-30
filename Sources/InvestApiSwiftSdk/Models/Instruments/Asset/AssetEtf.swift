@@ -1,7 +1,7 @@
 import Foundation
 
 /// Фонд.
-public protocol AssetEtf {
+public protocol AssetEtf: Sendable {
     /// Суммарные расходы фонда (в процентах).
     var totalExpense: Quotation { get }
     

@@ -1,5 +1,5 @@
 /// Направление сделки.
-public enum TradeDirection: Int, Codable {
+public enum TradeDirection: Int, Codable, Sendable {
     /// Интервал не определён.
     case unspecified
     

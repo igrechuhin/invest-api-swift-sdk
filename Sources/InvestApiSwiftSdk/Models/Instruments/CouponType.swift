@@ -1,5 +1,5 @@
 /// Тип купона.
-public enum CouponType: Int, Codable {
+public enum CouponType: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
     

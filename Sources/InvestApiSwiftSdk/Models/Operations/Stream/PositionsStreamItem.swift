@@ -1,7 +1,7 @@
 import Foundation
 
 /// Данные о позиции портфеля.
-public protocol PositionsStreamItem {
+public protocol PositionsStreamItem: Sendable {
     /// Идентификатор счёта пользователя.
     var accountId: String { get }
     

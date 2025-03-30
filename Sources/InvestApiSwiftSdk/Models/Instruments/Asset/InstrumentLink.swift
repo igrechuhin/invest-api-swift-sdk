@@ -1,5 +1,5 @@
 /// Связь с другим инструментом.
-public protocol InstrumentLink {
+public protocol InstrumentLink: Sendable {
     /// Тип связи.
     var type: String { get }
     

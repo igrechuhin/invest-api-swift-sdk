@@ -17,865 +17,865 @@ import SwiftProtobuf
 ///
 /// Usage: instantiate `Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClient`, then call methods of this protocol to make API calls.
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientProtocol: GRPCClient {
-  var serviceName: String { get }
-  var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? { get }
-
-  func tradingSchedules(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse>
-
-  func bondBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse>
-
-  func bonds(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse>
-
-  func getBondCoupons(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse>
-
-  func getBondEvents(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse>
-
-  func currencyBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse>
-
-  func currencies(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse>
-
-  func etfBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse>
-
-  func etfs(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse>
-
-  func futureBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse>
-
-  func futures(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse>
-
-  func optionBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse>
-
-  func options(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
-
-  func optionsBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
-
-  func shareBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse>
-
-  func shares(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse>
-
-  func indicatives(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse>
-
-  func getAccruedInterests(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse>
-
-  func getFuturesMargin(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse>
-
-  func getInstrumentBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse>
-
-  func getDividends(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse>
-
-  func getAssetBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse>
-
-  func getAssets(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse>
-
-  func getFavorites(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse>
-
-  func editFavorites(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse>
-
-  func createFavoriteGroup(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse>
-
-  func deleteFavoriteGroup(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse>
-
-  func getFavoriteGroups(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse>
-
-  func getCountries(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse>
-
-  func findInstrument(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse>
-
-  func getBrands(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse>
-
-  func getBrandBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand>
-
-  func getAssetFundamentals(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse>
-
-  func getAssetReports(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse>
-
-  func getConsensusForecasts(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse>
-
-  func getForecastBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse>
-
-  func getRiskRates(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
-    callOptions: CallOptions?
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse>
+    var serviceName: String { get }
+    var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? { get }
+    
+    func tradingSchedules(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse>
+    
+    func bondBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse>
+    
+    func bonds(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse>
+    
+    func getBondCoupons(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse>
+    
+    func getBondEvents(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse>
+    
+    func currencyBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse>
+    
+    func currencies(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse>
+    
+    func etfBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse>
+    
+    func etfs(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse>
+    
+    func futureBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse>
+    
+    func futures(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse>
+    
+    func optionBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse>
+    
+    func options(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
+    
+    func optionsBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
+    
+    func shareBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse>
+    
+    func shares(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse>
+    
+    func indicatives(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse>
+    
+    func getAccruedInterests(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse>
+    
+    func getFuturesMargin(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse>
+    
+    func getInstrumentBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse>
+    
+    func getDividends(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse>
+    
+    func getAssetBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse>
+    
+    func getAssets(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse>
+    
+    func getFavorites(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse>
+    
+    func editFavorites(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse>
+    
+    func createFavoriteGroup(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse>
+    
+    func deleteFavoriteGroup(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse>
+    
+    func getFavoriteGroups(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse>
+    
+    func getCountries(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse>
+    
+    func findInstrument(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse>
+    
+    func getBrands(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse>
+    
+    func getBrandBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand>
+    
+    func getAssetFundamentals(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse>
+    
+    func getAssetReports(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse>
+    
+    func getConsensusForecasts(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse>
+    
+    func getForecastBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse>
+    
+    func getRiskRates(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
+        callOptions: CallOptions?
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse>
 }
 
 extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientProtocol {
-  public var serviceName: String {
-    return "tinkoff.public.invest.api.contract.v1.InstrumentsService"
-  }
-
-  ///Получить расписания торгов торговых площадок
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to TradingSchedules.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func tradingSchedules(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeTradingSchedulesInterceptors() ?? []
-    )
-  }
-
-  ///Получить облигации по ее идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to BondBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func bondBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBondByInterceptors() ?? []
-    )
-  }
-
-  ///Получить список облигаций
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Bonds.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func bonds(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBondsInterceptors() ?? []
-    )
-  }
-
-  ///Получить график выплат купонов по облигации
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetBondCoupons.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getBondCoupons(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBondCouponsInterceptors() ?? []
-    )
-  }
-
-  ///Получить события по облигации
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetBondEvents.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getBondEvents(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBondEventsInterceptors() ?? []
-    )
-  }
-
-  ///Получить валюту по ее идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to CurrencyBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func currencyBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCurrencyByInterceptors() ?? []
-    )
-  }
-
-  ///Получить список валют
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Currencies.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func currencies(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCurrenciesInterceptors() ?? []
-    )
-  }
-
-  ///Получить инвестиционный фонд по его идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to EtfBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func etfBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEtfByInterceptors() ?? []
-    )
-  }
-
-  ///Получить список инвестиционных фондов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Etfs.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func etfs(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEtfsInterceptors() ?? []
-    )
-  }
-
-  ///Получить фьючерс по его идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to FutureBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func futureBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFutureByInterceptors() ?? []
-    )
-  }
-
-  ///Получить список фьючерсов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Futures.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func futures(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFuturesInterceptors() ?? []
-    )
-  }
-
-  ///Получить опцион по его идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to OptionBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func optionBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionByInterceptors() ?? []
-    )
-  }
-
-  ///Deprecated Получить список опционов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Options.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func options(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionsInterceptors() ?? []
-    )
-  }
-
-  ///Получить список опционов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to OptionsBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func optionsBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionsByInterceptors() ?? []
-    )
-  }
-
-  ///Получить акцию по ее идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to ShareBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func shareBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShareByInterceptors() ?? []
-    )
-  }
-
-  ///Получить список акций
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Shares.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func shares(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSharesInterceptors() ?? []
-    )
-  }
-
-  ///Получить индикативные инструменты — индексы, товары и другие
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to Indicatives.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func indicatives(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeIndicativesInterceptors() ?? []
-    )
-  }
-
-  ///Получить накопленный купонный доход по облигации
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetAccruedInterests.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getAccruedInterests(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAccruedInterestsInterceptors() ?? []
-    )
-  }
-
-  ///Получить размера гарантийного обеспечения по фьючерсам
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetFuturesMargin.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getFuturesMargin(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFuturesMarginInterceptors() ?? []
-    )
-  }
-
-  ///Получить основную информацию об инструменте
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetInstrumentBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getInstrumentBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetInstrumentByInterceptors() ?? []
-    )
-  }
-
-  ///Получить события выплаты дивидендов по инструменту
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetDividends.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getDividends(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetDividendsInterceptors() ?? []
-    )
-  }
-
-  ///Получить актив по его идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetAssetBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getAssetBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetByInterceptors() ?? []
-    )
-  }
-
-  ///Получить список активов. Метод работает для всех инструментов, кроме срочных — фьючерсов и опционов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetAssets.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getAssets(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetsInterceptors() ?? []
-    )
-  }
-
-  ///Получить список избранных инструментов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetFavorites.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getFavorites(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFavoritesInterceptors() ?? []
-    )
-  }
-
-  ///Отредактировать список избранных инструментов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to EditFavorites.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func editFavorites(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEditFavoritesInterceptors() ?? []
-    )
-  }
-
-  ///Создать новую группу избранных инструментов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to CreateFavoriteGroup.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func createFavoriteGroup(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreateFavoriteGroupInterceptors() ?? []
-    )
-  }
-
-  ///Удалить группу избранных инструментов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to DeleteFavoriteGroup.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func deleteFavoriteGroup(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDeleteFavoriteGroupInterceptors() ?? []
-    )
-  }
-
-  ///Получить список групп избранных инструментов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetFavoriteGroups.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getFavoriteGroups(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFavoriteGroupsInterceptors() ?? []
-    )
-  }
-
-  ///Получить список стран
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetCountries.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getCountries(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetCountriesInterceptors() ?? []
-    )
-  }
-
-  ///Найти инструмент
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to FindInstrument.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func findInstrument(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFindInstrumentInterceptors() ?? []
-    )
-  }
-
-  ///Получить список брендов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetBrands.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getBrands(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBrandsInterceptors() ?? []
-    )
-  }
-
-  ///Получить бренд по его идентификатору
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetBrandBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getBrandBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBrandByInterceptors() ?? []
-    )
-  }
-
-  ///Получить фундаментальные показатели по активу
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetAssetFundamentals.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getAssetFundamentals(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetFundamentalsInterceptors() ?? []
-    )
-  }
-
-  ///Получить расписания выхода отчетностей эмитентов
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetAssetReports.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getAssetReports(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetReportsInterceptors() ?? []
-    )
-  }
-
-  ///Получить мнения аналитиков по инструменту
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetConsensusForecasts.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getConsensusForecasts(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetConsensusForecastsInterceptors() ?? []
-    )
-  }
-
-  ///Получить прогнозов инвестдомов по инструменту
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetForecastBy.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getForecastBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetForecastByInterceptors() ?? []
-    )
-  }
-
-  /// Unary call to GetRiskRates
-  ///
-  /// - Parameters:
-  ///   - request: Request to send to GetRiskRates.
-  ///   - callOptions: Call options.
-  /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
-  public func getRiskRates(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
-    callOptions: CallOptions? = nil
-  ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse> {
-    return self.makeUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetRiskRatesInterceptors() ?? []
-    )
-  }
+    public var serviceName: String {
+        return "tinkoff.public.invest.api.contract.v1.InstrumentsService"
+    }
+    
+    ///Получить расписания торгов торговых площадок
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to TradingSchedules.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func tradingSchedules(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeTradingSchedulesInterceptors() ?? []
+        )
+    }
+    
+    ///Получить облигации по ее идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to BondBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func bondBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeBondByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список облигаций
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to Bonds.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func bonds(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeBondsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить график выплат купонов по облигации
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetBondCoupons.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getBondCoupons(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBondCouponsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить события по облигации
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetBondEvents.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getBondEvents(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBondEventsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить валюту по ее идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to CurrencyBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func currencyBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCurrencyByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список валют
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to Currencies.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func currencies(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCurrenciesInterceptors() ?? []
+        )
+    }
+    
+    ///Получить инвестиционный фонд по его идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to EtfBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func etfBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEtfByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список инвестиционных фондов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to Etfs.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func etfs(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEtfsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить фьючерс по его идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to FutureBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func futureBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFutureByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список фьючерсов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to Futures.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func futures(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFuturesInterceptors() ?? []
+        )
+    }
+    
+    ///Получить опцион по его идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to OptionBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func optionBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionByInterceptors() ?? []
+        )
+    }
+    
+    ///Deprecated Получить список опционов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to Options.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func options(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список опционов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to OptionsBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func optionsBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionsByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить акцию по ее идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to ShareBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func shareBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeShareByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список акций
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to Shares.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func shares(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeSharesInterceptors() ?? []
+        )
+    }
+    
+    ///Получить индикативные инструменты — индексы, товары и другие
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to Indicatives.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func indicatives(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeIndicativesInterceptors() ?? []
+        )
+    }
+    
+    ///Получить накопленный купонный доход по облигации
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetAccruedInterests.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getAccruedInterests(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAccruedInterestsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить размера гарантийного обеспечения по фьючерсам
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetFuturesMargin.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getFuturesMargin(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFuturesMarginInterceptors() ?? []
+        )
+    }
+    
+    ///Получить основную информацию об инструменте
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetInstrumentBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getInstrumentBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetInstrumentByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить события выплаты дивидендов по инструменту
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetDividends.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getDividends(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetDividendsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить актив по его идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetAssetBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getAssetBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список активов. Метод работает для всех инструментов, кроме срочных — фьючерсов и опционов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetAssets.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getAssets(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список избранных инструментов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetFavorites.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getFavorites(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFavoritesInterceptors() ?? []
+        )
+    }
+    
+    ///Отредактировать список избранных инструментов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to EditFavorites.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func editFavorites(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEditFavoritesInterceptors() ?? []
+        )
+    }
+    
+    ///Создать новую группу избранных инструментов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to CreateFavoriteGroup.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func createFavoriteGroup(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCreateFavoriteGroupInterceptors() ?? []
+        )
+    }
+    
+    ///Удалить группу избранных инструментов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to DeleteFavoriteGroup.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func deleteFavoriteGroup(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeDeleteFavoriteGroupInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список групп избранных инструментов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetFavoriteGroups.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getFavoriteGroups(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFavoriteGroupsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список стран
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetCountries.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getCountries(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetCountriesInterceptors() ?? []
+        )
+    }
+    
+    ///Найти инструмент
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to FindInstrument.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func findInstrument(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFindInstrumentInterceptors() ?? []
+        )
+    }
+    
+    ///Получить список брендов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetBrands.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getBrands(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBrandsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить бренд по его идентификатору
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetBrandBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getBrandBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBrandByInterceptors() ?? []
+        )
+    }
+    
+    ///Получить фундаментальные показатели по активу
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetAssetFundamentals.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getAssetFundamentals(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetFundamentalsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить расписания выхода отчетностей эмитентов
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetAssetReports.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getAssetReports(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetReportsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить мнения аналитиков по инструменту
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetConsensusForecasts.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getConsensusForecasts(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetConsensusForecastsInterceptors() ?? []
+        )
+    }
+    
+    ///Получить прогнозов инвестдомов по инструменту
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetForecastBy.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getForecastBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetForecastByInterceptors() ?? []
+        )
+    }
+    
+    /// Unary call to GetRiskRates
+    ///
+    /// - Parameters:
+    ///   - request: Request to send to GetRiskRates.
+    ///   - callOptions: Call options.
+    /// - Returns: A `UnaryCall` with futures for the metadata, status and response.
+    public func getRiskRates(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
+        callOptions: CallOptions? = nil
+    ) -> UnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse> {
+        return self.makeUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetRiskRatesInterceptors() ?? []
+        )
+    }
 }
 
 @available(*, deprecated)
@@ -883,56 +883,56 @@ extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClient: @unche
 
 @available(*, deprecated, renamed: "Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceNIOClient")
 public final class Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClient: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientProtocol {
-  private let lock = Lock()
-  private var _defaultCallOptions: CallOptions
-  private var _interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol?
-  public let channel: GRPCChannel
-  public var defaultCallOptions: CallOptions {
-    get { self.lock.withLock { return self._defaultCallOptions } }
-    set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
-  }
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? {
-    get { self.lock.withLock { return self._interceptors } }
-    set { self.lock.withLockVoid { self._interceptors = newValue } }
-  }
-
-  /// Creates a client for the tinkoff.public.invest.api.contract.v1.InstrumentsService service.
-  ///
-  /// - Parameters:
-  ///   - channel: `GRPCChannel` to the service host.
-  ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
-  ///   - interceptors: A factory providing interceptors for each RPC.
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self._defaultCallOptions = defaultCallOptions
-    self._interceptors = interceptors
-  }
+    private let lock = Lock()
+    private var _defaultCallOptions: CallOptions
+    private var _interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol?
+    public let channel: GRPCChannel
+    public var defaultCallOptions: CallOptions {
+        get { self.lock.withLock { return self._defaultCallOptions } }
+        set { self.lock.withLockVoid { self._defaultCallOptions = newValue } }
+    }
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? {
+        get { self.lock.withLock { return self._interceptors } }
+        set { self.lock.withLockVoid { self._interceptors = newValue } }
+    }
+    
+    /// Creates a client for the tinkoff.public.invest.api.contract.v1.InstrumentsService service.
+    ///
+    /// - Parameters:
+    ///   - channel: `GRPCChannel` to the service host.
+    ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
+    ///   - interceptors: A factory providing interceptors for each RPC.
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self._defaultCallOptions = defaultCallOptions
+        self._interceptors = interceptors
+    }
 }
 
 public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceNIOClient: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientProtocol {
-  public var channel: GRPCChannel
-  public var defaultCallOptions: CallOptions
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol?
-
-  /// Creates a client for the tinkoff.public.invest.api.contract.v1.InstrumentsService service.
-  ///
-  /// - Parameters:
-  ///   - channel: `GRPCChannel` to the service host.
-  ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
-  ///   - interceptors: A factory providing interceptors for each RPC.
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self.defaultCallOptions = defaultCallOptions
-    self.interceptors = interceptors
-  }
+    public var channel: GRPCChannel
+    public var defaultCallOptions: CallOptions
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol?
+    
+    /// Creates a client for the tinkoff.public.invest.api.contract.v1.InstrumentsService service.
+    ///
+    /// - Parameters:
+    ///   - channel: `GRPCChannel` to the service host.
+    ///   - defaultCallOptions: Options to use for each service call if the user doesn't provide them.
+    ///   - interceptors: A factory providing interceptors for each RPC.
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self.defaultCallOptions = defaultCallOptions
+        self.interceptors = interceptors
+    }
 }
 
 ///Методы сервиса предназначены для получения:<br/>1. Информации об инструментах.<br/>2.
@@ -940,1495 +940,1495 @@ public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceNIOClient:
 ///Размера гарантийного обеспечения по фьючерсам.<br/>5. Дивидендов по ценной бумаге.
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceAsyncClientProtocol: GRPCClient {
-  static var serviceDescriptor: GRPCServiceDescriptor { get }
-  var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? { get }
-
-  func makeTradingSchedulesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse>
-
-  func makeBondByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse>
-
-  func makeBondsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse>
-
-  func makeGetBondCouponsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse>
-
-  func makeGetBondEventsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse>
-
-  func makeCurrencyByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse>
-
-  func makeCurrenciesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse>
-
-  func makeEtfByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse>
-
-  func makeEtfsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse>
-
-  func makeFutureByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse>
-
-  func makeFuturesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse>
-
-  func makeOptionByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse>
-
-  func makeOptionsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
-
-  func makeOptionsByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
-
-  func makeShareByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse>
-
-  func makeSharesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse>
-
-  func makeIndicativesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse>
-
-  func makeGetAccruedInterestsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse>
-
-  func makeGetFuturesMarginCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse>
-
-  func makeGetInstrumentByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse>
-
-  func makeGetDividendsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse>
-
-  func makeGetAssetByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse>
-
-  func makeGetAssetsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse>
-
-  func makeGetFavoritesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse>
-
-  func makeEditFavoritesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse>
-
-  func makeCreateFavoriteGroupCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse>
-
-  func makeDeleteFavoriteGroupCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse>
-
-  func makeGetFavoriteGroupsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse>
-
-  func makeGetCountriesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse>
-
-  func makeFindInstrumentCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse>
-
-  func makeGetBrandsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse>
-
-  func makeGetBrandByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand>
-
-  func makeGetAssetFundamentalsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse>
-
-  func makeGetAssetReportsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse>
-
-  func makeGetConsensusForecastsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse>
-
-  func makeGetForecastByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse>
-
-  func makeGetRiskRatesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
-    callOptions: CallOptions?
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse>
+    static var serviceDescriptor: GRPCServiceDescriptor { get }
+    var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? { get }
+    
+    func makeTradingSchedulesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse>
+    
+    func makeBondByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse>
+    
+    func makeBondsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse>
+    
+    func makeGetBondCouponsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse>
+    
+    func makeGetBondEventsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse>
+    
+    func makeCurrencyByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse>
+    
+    func makeCurrenciesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse>
+    
+    func makeEtfByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse>
+    
+    func makeEtfsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse>
+    
+    func makeFutureByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse>
+    
+    func makeFuturesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse>
+    
+    func makeOptionByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse>
+    
+    func makeOptionsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
+    
+    func makeOptionsByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>
+    
+    func makeShareByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse>
+    
+    func makeSharesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse>
+    
+    func makeIndicativesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse>
+    
+    func makeGetAccruedInterestsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse>
+    
+    func makeGetFuturesMarginCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse>
+    
+    func makeGetInstrumentByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse>
+    
+    func makeGetDividendsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse>
+    
+    func makeGetAssetByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse>
+    
+    func makeGetAssetsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse>
+    
+    func makeGetFavoritesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse>
+    
+    func makeEditFavoritesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse>
+    
+    func makeCreateFavoriteGroupCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse>
+    
+    func makeDeleteFavoriteGroupCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse>
+    
+    func makeGetFavoriteGroupsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse>
+    
+    func makeGetCountriesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse>
+    
+    func makeFindInstrumentCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse>
+    
+    func makeGetBrandsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse>
+    
+    func makeGetBrandByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand>
+    
+    func makeGetAssetFundamentalsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse>
+    
+    func makeGetAssetReportsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse>
+    
+    func makeGetConsensusForecastsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse>
+    
+    func makeGetForecastByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse>
+    
+    func makeGetRiskRatesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
+        callOptions: CallOptions?
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse>
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceAsyncClientProtocol {
-  public static var serviceDescriptor: GRPCServiceDescriptor {
-    return Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.serviceDescriptor
-  }
-
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? {
-    return nil
-  }
-
-  public func makeTradingSchedulesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeTradingSchedulesInterceptors() ?? []
-    )
-  }
-
-  public func makeBondByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBondByInterceptors() ?? []
-    )
-  }
-
-  public func makeBondsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBondsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetBondCouponsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBondCouponsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetBondEventsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBondEventsInterceptors() ?? []
-    )
-  }
-
-  public func makeCurrencyByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCurrencyByInterceptors() ?? []
-    )
-  }
-
-  public func makeCurrenciesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCurrenciesInterceptors() ?? []
-    )
-  }
-
-  public func makeEtfByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEtfByInterceptors() ?? []
-    )
-  }
-
-  public func makeEtfsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEtfsInterceptors() ?? []
-    )
-  }
-
-  public func makeFutureByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFutureByInterceptors() ?? []
-    )
-  }
-
-  public func makeFuturesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFuturesInterceptors() ?? []
-    )
-  }
-
-  public func makeOptionByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionByInterceptors() ?? []
-    )
-  }
-
-  public func makeOptionsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionsInterceptors() ?? []
-    )
-  }
-
-  public func makeOptionsByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionsByInterceptors() ?? []
-    )
-  }
-
-  public func makeShareByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShareByInterceptors() ?? []
-    )
-  }
-
-  public func makeSharesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSharesInterceptors() ?? []
-    )
-  }
-
-  public func makeIndicativesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeIndicativesInterceptors() ?? []
-    )
-  }
-
-  public func makeGetAccruedInterestsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAccruedInterestsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetFuturesMarginCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFuturesMarginInterceptors() ?? []
-    )
-  }
-
-  public func makeGetInstrumentByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetInstrumentByInterceptors() ?? []
-    )
-  }
-
-  public func makeGetDividendsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetDividendsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetAssetByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetByInterceptors() ?? []
-    )
-  }
-
-  public func makeGetAssetsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetFavoritesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFavoritesInterceptors() ?? []
-    )
-  }
-
-  public func makeEditFavoritesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEditFavoritesInterceptors() ?? []
-    )
-  }
-
-  public func makeCreateFavoriteGroupCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreateFavoriteGroupInterceptors() ?? []
-    )
-  }
-
-  public func makeDeleteFavoriteGroupCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDeleteFavoriteGroupInterceptors() ?? []
-    )
-  }
-
-  public func makeGetFavoriteGroupsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFavoriteGroupsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetCountriesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetCountriesInterceptors() ?? []
-    )
-  }
-
-  public func makeFindInstrumentCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFindInstrumentInterceptors() ?? []
-    )
-  }
-
-  public func makeGetBrandsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBrandsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetBrandByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBrandByInterceptors() ?? []
-    )
-  }
-
-  public func makeGetAssetFundamentalsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetFundamentalsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetAssetReportsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetReportsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetConsensusForecastsCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetConsensusForecastsInterceptors() ?? []
-    )
-  }
-
-  public func makeGetForecastByCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetForecastByInterceptors() ?? []
-    )
-  }
-
-  public func makeGetRiskRatesCall(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
-    callOptions: CallOptions? = nil
-  ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse> {
-    return self.makeAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetRiskRatesInterceptors() ?? []
-    )
-  }
+    public static var serviceDescriptor: GRPCServiceDescriptor {
+        return Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.serviceDescriptor
+    }
+    
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? {
+        return nil
+    }
+    
+    public func makeTradingSchedulesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeTradingSchedulesInterceptors() ?? []
+        )
+    }
+    
+    public func makeBondByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeBondByInterceptors() ?? []
+        )
+    }
+    
+    public func makeBondsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeBondsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetBondCouponsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBondCouponsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetBondEventsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBondEventsInterceptors() ?? []
+        )
+    }
+    
+    public func makeCurrencyByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCurrencyByInterceptors() ?? []
+        )
+    }
+    
+    public func makeCurrenciesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCurrenciesInterceptors() ?? []
+        )
+    }
+    
+    public func makeEtfByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEtfByInterceptors() ?? []
+        )
+    }
+    
+    public func makeEtfsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEtfsInterceptors() ?? []
+        )
+    }
+    
+    public func makeFutureByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFutureByInterceptors() ?? []
+        )
+    }
+    
+    public func makeFuturesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFuturesInterceptors() ?? []
+        )
+    }
+    
+    public func makeOptionByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionByInterceptors() ?? []
+        )
+    }
+    
+    public func makeOptionsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionsInterceptors() ?? []
+        )
+    }
+    
+    public func makeOptionsByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionsByInterceptors() ?? []
+        )
+    }
+    
+    public func makeShareByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeShareByInterceptors() ?? []
+        )
+    }
+    
+    public func makeSharesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeSharesInterceptors() ?? []
+        )
+    }
+    
+    public func makeIndicativesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeIndicativesInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetAccruedInterestsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAccruedInterestsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetFuturesMarginCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFuturesMarginInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetInstrumentByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetInstrumentByInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetDividendsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetDividendsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetAssetByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetByInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetAssetsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetFavoritesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFavoritesInterceptors() ?? []
+        )
+    }
+    
+    public func makeEditFavoritesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEditFavoritesInterceptors() ?? []
+        )
+    }
+    
+    public func makeCreateFavoriteGroupCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCreateFavoriteGroupInterceptors() ?? []
+        )
+    }
+    
+    public func makeDeleteFavoriteGroupCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeDeleteFavoriteGroupInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetFavoriteGroupsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFavoriteGroupsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetCountriesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetCountriesInterceptors() ?? []
+        )
+    }
+    
+    public func makeFindInstrumentCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFindInstrumentInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetBrandsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBrandsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetBrandByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBrandByInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetAssetFundamentalsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetFundamentalsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetAssetReportsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetReportsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetConsensusForecastsCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetConsensusForecastsInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetForecastByCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetForecastByInterceptors() ?? []
+        )
+    }
+    
+    public func makeGetRiskRatesCall(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
+        callOptions: CallOptions? = nil
+    ) -> GRPCAsyncUnaryCall<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse> {
+        return self.makeAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetRiskRatesInterceptors() ?? []
+        )
+    }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceAsyncClientProtocol {
-  public func tradingSchedules(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeTradingSchedulesInterceptors() ?? []
-    )
-  }
-
-  public func bondBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_BondResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBondByInterceptors() ?? []
-    )
-  }
-
-  public func bonds(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeBondsInterceptors() ?? []
-    )
-  }
-
-  public func getBondCoupons(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBondCouponsInterceptors() ?? []
-    )
-  }
-
-  public func getBondEvents(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBondEventsInterceptors() ?? []
-    )
-  }
-
-  public func currencyBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCurrencyByInterceptors() ?? []
-    )
-  }
-
-  public func currencies(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCurrenciesInterceptors() ?? []
-    )
-  }
-
-  public func etfBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEtfByInterceptors() ?? []
-    )
-  }
-
-  public func etfs(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEtfsInterceptors() ?? []
-    )
-  }
-
-  public func futureBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFutureByInterceptors() ?? []
-    )
-  }
-
-  public func futures(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFuturesInterceptors() ?? []
-    )
-  }
-
-  public func optionBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionByInterceptors() ?? []
-    )
-  }
-
-  public func options(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionsInterceptors() ?? []
-    )
-  }
-
-  public func optionsBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeOptionsByInterceptors() ?? []
-    )
-  }
-
-  public func shareBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeShareByInterceptors() ?? []
-    )
-  }
-
-  public func shares(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeSharesInterceptors() ?? []
-    )
-  }
-
-  public func indicatives(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeIndicativesInterceptors() ?? []
-    )
-  }
-
-  public func getAccruedInterests(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAccruedInterestsInterceptors() ?? []
-    )
-  }
-
-  public func getFuturesMargin(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFuturesMarginInterceptors() ?? []
-    )
-  }
-
-  public func getInstrumentBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetInstrumentByInterceptors() ?? []
-    )
-  }
-
-  public func getDividends(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetDividendsInterceptors() ?? []
-    )
-  }
-
-  public func getAssetBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetByInterceptors() ?? []
-    )
-  }
-
-  public func getAssets(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetsInterceptors() ?? []
-    )
-  }
-
-  public func getFavorites(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFavoritesInterceptors() ?? []
-    )
-  }
-
-  public func editFavorites(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeEditFavoritesInterceptors() ?? []
-    )
-  }
-
-  public func createFavoriteGroup(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeCreateFavoriteGroupInterceptors() ?? []
-    )
-  }
-
-  public func deleteFavoriteGroup(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeDeleteFavoriteGroupInterceptors() ?? []
-    )
-  }
-
-  public func getFavoriteGroups(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetFavoriteGroupsInterceptors() ?? []
-    )
-  }
-
-  public func getCountries(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetCountriesInterceptors() ?? []
-    )
-  }
-
-  public func findInstrument(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeFindInstrumentInterceptors() ?? []
-    )
-  }
-
-  public func getBrands(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBrandsInterceptors() ?? []
-    )
-  }
-
-  public func getBrandBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_Brand {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetBrandByInterceptors() ?? []
-    )
-  }
-
-  public func getAssetFundamentals(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetFundamentalsInterceptors() ?? []
-    )
-  }
-
-  public func getAssetReports(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetAssetReportsInterceptors() ?? []
-    )
-  }
-
-  public func getConsensusForecasts(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetConsensusForecastsInterceptors() ?? []
-    )
-  }
-
-  public func getForecastBy(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetForecastByInterceptors() ?? []
-    )
-  }
-
-  public func getRiskRates(
-    _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
-    callOptions: CallOptions? = nil
-  ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse {
-    return try await self.performAsyncUnaryCall(
-      path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates.path,
-      request: request,
-      callOptions: callOptions ?? self.defaultCallOptions,
-      interceptors: self.interceptors?.makeGetRiskRatesInterceptors() ?? []
-    )
-  }
+    public func tradingSchedules(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeTradingSchedulesInterceptors() ?? []
+        )
+    }
+    
+    public func bondBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_BondResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeBondByInterceptors() ?? []
+        )
+    }
+    
+    public func bonds(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeBondsInterceptors() ?? []
+        )
+    }
+    
+    public func getBondCoupons(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBondCouponsInterceptors() ?? []
+        )
+    }
+    
+    public func getBondEvents(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBondEventsInterceptors() ?? []
+        )
+    }
+    
+    public func currencyBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCurrencyByInterceptors() ?? []
+        )
+    }
+    
+    public func currencies(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCurrenciesInterceptors() ?? []
+        )
+    }
+    
+    public func etfBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEtfByInterceptors() ?? []
+        )
+    }
+    
+    public func etfs(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEtfsInterceptors() ?? []
+        )
+    }
+    
+    public func futureBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFutureByInterceptors() ?? []
+        )
+    }
+    
+    public func futures(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFuturesInterceptors() ?? []
+        )
+    }
+    
+    public func optionBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionByInterceptors() ?? []
+        )
+    }
+    
+    public func options(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionsInterceptors() ?? []
+        )
+    }
+    
+    public func optionsBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeOptionsByInterceptors() ?? []
+        )
+    }
+    
+    public func shareBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeShareByInterceptors() ?? []
+        )
+    }
+    
+    public func shares(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeSharesInterceptors() ?? []
+        )
+    }
+    
+    public func indicatives(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeIndicativesInterceptors() ?? []
+        )
+    }
+    
+    public func getAccruedInterests(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAccruedInterestsInterceptors() ?? []
+        )
+    }
+    
+    public func getFuturesMargin(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFuturesMarginInterceptors() ?? []
+        )
+    }
+    
+    public func getInstrumentBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetInstrumentByInterceptors() ?? []
+        )
+    }
+    
+    public func getDividends(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetDividendsInterceptors() ?? []
+        )
+    }
+    
+    public func getAssetBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetByInterceptors() ?? []
+        )
+    }
+    
+    public func getAssets(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetsInterceptors() ?? []
+        )
+    }
+    
+    public func getFavorites(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFavoritesInterceptors() ?? []
+        )
+    }
+    
+    public func editFavorites(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeEditFavoritesInterceptors() ?? []
+        )
+    }
+    
+    public func createFavoriteGroup(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeCreateFavoriteGroupInterceptors() ?? []
+        )
+    }
+    
+    public func deleteFavoriteGroup(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeDeleteFavoriteGroupInterceptors() ?? []
+        )
+    }
+    
+    public func getFavoriteGroups(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetFavoriteGroupsInterceptors() ?? []
+        )
+    }
+    
+    public func getCountries(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetCountriesInterceptors() ?? []
+        )
+    }
+    
+    public func findInstrument(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeFindInstrumentInterceptors() ?? []
+        )
+    }
+    
+    public func getBrands(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBrandsInterceptors() ?? []
+        )
+    }
+    
+    public func getBrandBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_Brand {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetBrandByInterceptors() ?? []
+        )
+    }
+    
+    public func getAssetFundamentals(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetFundamentalsInterceptors() ?? []
+        )
+    }
+    
+    public func getAssetReports(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetAssetReportsInterceptors() ?? []
+        )
+    }
+    
+    public func getConsensusForecasts(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetConsensusForecastsInterceptors() ?? []
+        )
+    }
+    
+    public func getForecastBy(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetForecastByInterceptors() ?? []
+        )
+    }
+    
+    public func getRiskRates(
+        _ request: Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest,
+        callOptions: CallOptions? = nil
+    ) async throws -> Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse {
+        return try await self.performAsyncUnaryCall(
+            path: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates.path,
+            request: request,
+            callOptions: callOptions ?? self.defaultCallOptions,
+            interceptors: self.interceptors?.makeGetRiskRatesInterceptors() ?? []
+        )
+    }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public struct Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceAsyncClient: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceAsyncClientProtocol {
-  public var channel: GRPCChannel
-  public var defaultCallOptions: CallOptions
-  public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol?
-
-  public init(
-    channel: GRPCChannel,
-    defaultCallOptions: CallOptions = CallOptions(),
-    interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? = nil
-  ) {
-    self.channel = channel
-    self.defaultCallOptions = defaultCallOptions
-    self.interceptors = interceptors
-  }
+    public var channel: GRPCChannel
+    public var defaultCallOptions: CallOptions
+    public var interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol?
+    
+    public init(
+        channel: GRPCChannel,
+        defaultCallOptions: CallOptions = CallOptions(),
+        interceptors: Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol? = nil
+    ) {
+        self.channel = channel
+        self.defaultCallOptions = defaultCallOptions
+        self.interceptors = interceptors
+    }
 }
 
 public protocol Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientInterceptorFactoryProtocol: Sendable {
-
-  /// - Returns: Interceptors to use when invoking 'tradingSchedules'.
-  func makeTradingSchedulesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'bondBy'.
-  func makeBondByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'bonds'.
-  func makeBondsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getBondCoupons'.
-  func makeGetBondCouponsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getBondEvents'.
-  func makeGetBondEventsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'currencyBy'.
-  func makeCurrencyByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'currencies'.
-  func makeCurrenciesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'etfBy'.
-  func makeEtfByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'etfs'.
-  func makeEtfsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'futureBy'.
-  func makeFutureByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'futures'.
-  func makeFuturesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'optionBy'.
-  func makeOptionByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'options'.
-  func makeOptionsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'optionsBy'.
-  func makeOptionsByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'shareBy'.
-  func makeShareByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'shares'.
-  func makeSharesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'indicatives'.
-  func makeIndicativesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getAccruedInterests'.
-  func makeGetAccruedInterestsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getFuturesMargin'.
-  func makeGetFuturesMarginInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getInstrumentBy'.
-  func makeGetInstrumentByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getDividends'.
-  func makeGetDividendsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getAssetBy'.
-  func makeGetAssetByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getAssets'.
-  func makeGetAssetsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getFavorites'.
-  func makeGetFavoritesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'editFavorites'.
-  func makeEditFavoritesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'createFavoriteGroup'.
-  func makeCreateFavoriteGroupInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'deleteFavoriteGroup'.
-  func makeDeleteFavoriteGroupInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getFavoriteGroups'.
-  func makeGetFavoriteGroupsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getCountries'.
-  func makeGetCountriesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'findInstrument'.
-  func makeFindInstrumentInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getBrands'.
-  func makeGetBrandsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getBrandBy'.
-  func makeGetBrandByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand>]
-
-  /// - Returns: Interceptors to use when invoking 'getAssetFundamentals'.
-  func makeGetAssetFundamentalsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getAssetReports'.
-  func makeGetAssetReportsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getConsensusForecasts'.
-  func makeGetConsensusForecastsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getForecastBy'.
-  func makeGetForecastByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse>]
-
-  /// - Returns: Interceptors to use when invoking 'getRiskRates'.
-  func makeGetRiskRatesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'tradingSchedules'.
+    func makeTradingSchedulesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesRequest, Tinkoff_Public_Invest_Api_Contract_V1_TradingSchedulesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'bondBy'.
+    func makeBondByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'bonds'.
+    func makeBondsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_BondsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getBondCoupons'.
+    func makeGetBondCouponsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondCouponsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getBondEvents'.
+    func makeGetBondEventsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBondEventsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'currencyBy'.
+    func makeCurrencyByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrencyResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'currencies'.
+    func makeCurrenciesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_CurrenciesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'etfBy'.
+    func makeEtfByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'etfs'.
+    func makeEtfsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_EtfsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'futureBy'.
+    func makeFutureByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FutureResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'futures'.
+    func makeFuturesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_FuturesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'optionBy'.
+    func makeOptionByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'options'.
+    func makeOptionsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'optionsBy'.
+    func makeOptionsByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_FilterOptionsRequest, Tinkoff_Public_Invest_Api_Contract_V1_OptionsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'shareBy'.
+    func makeShareByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_ShareResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'shares'.
+    func makeSharesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsRequest, Tinkoff_Public_Invest_Api_Contract_V1_SharesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'indicatives'.
+    func makeIndicativesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_IndicativesRequest, Tinkoff_Public_Invest_Api_Contract_V1_IndicativesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getAccruedInterests'.
+    func makeGetAccruedInterestsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAccruedInterestsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getFuturesMargin'.
+    func makeGetFuturesMarginInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFuturesMarginResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getInstrumentBy'.
+    func makeGetInstrumentByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_InstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_InstrumentResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getDividends'.
+    func makeGetDividendsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetDividendsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getAssetBy'.
+    func makeGetAssetByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_AssetRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getAssets'.
+    func makeGetAssetsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_AssetsRequest, Tinkoff_Public_Invest_Api_Contract_V1_AssetsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getFavorites'.
+    func makeGetFavoritesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoritesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'editFavorites'.
+    func makeEditFavoritesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesRequest, Tinkoff_Public_Invest_Api_Contract_V1_EditFavoritesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'createFavoriteGroup'.
+    func makeCreateFavoriteGroupInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_CreateFavoriteGroupResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'deleteFavoriteGroup'.
+    func makeDeleteFavoriteGroupInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupRequest, Tinkoff_Public_Invest_Api_Contract_V1_DeleteFavoriteGroupResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getFavoriteGroups'.
+    func makeGetFavoriteGroupsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetFavoriteGroupsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getCountries'.
+    func makeGetCountriesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetCountriesResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'findInstrument'.
+    func makeFindInstrumentInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentRequest, Tinkoff_Public_Invest_Api_Contract_V1_FindInstrumentResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getBrands'.
+    func makeGetBrandsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetBrandsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getBrandBy'.
+    func makeGetBrandByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetBrandRequest, Tinkoff_Public_Invest_Api_Contract_V1_Brand>]
+    
+    /// - Returns: Interceptors to use when invoking 'getAssetFundamentals'.
+    func makeGetAssetFundamentalsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetFundamentalsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getAssetReports'.
+    func makeGetAssetReportsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetAssetReportsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getConsensusForecasts'.
+    func makeGetConsensusForecastsInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetConsensusForecastsResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getForecastBy'.
+    func makeGetForecastByInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_GetForecastRequest, Tinkoff_Public_Invest_Api_Contract_V1_GetForecastResponse>]
+    
+    /// - Returns: Interceptors to use when invoking 'getRiskRates'.
+    func makeGetRiskRatesInterceptors() -> [ClientInterceptor<Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesRequest, Tinkoff_Public_Invest_Api_Contract_V1_RiskRatesResponse>]
 }
 
 public enum Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata {
-  public static let serviceDescriptor = GRPCServiceDescriptor(
-    name: "InstrumentsService",
-    fullName: "tinkoff.public.invest.api.contract.v1.InstrumentsService",
-    methods: [
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy,
-      Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates,
-    ]
-  )
-
-  public enum Methods {
-    public static let tradingSchedules = GRPCMethodDescriptor(
-      name: "TradingSchedules",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/TradingSchedules",
-      type: GRPCCallType.unary
+    public static let serviceDescriptor = GRPCServiceDescriptor(
+        name: "InstrumentsService",
+        fullName: "tinkoff.public.invest.api.contract.v1.InstrumentsService",
+        methods: [
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.tradingSchedules,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bondBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.bonds,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondCoupons,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBondEvents,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencyBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.currencies,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.etfs,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futureBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.futures,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.options,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.optionsBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shareBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.shares,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.indicatives,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAccruedInterests,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFuturesMargin,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getInstrumentBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getDividends,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssets,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavorites,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.editFavorites,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.createFavoriteGroup,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.deleteFavoriteGroup,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getFavoriteGroups,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getCountries,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.findInstrument,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrands,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getBrandBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetFundamentals,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getAssetReports,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getConsensusForecasts,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getForecastBy,
+            Tinkoff_Public_Invest_Api_Contract_V1_InstrumentsServiceClientMetadata.Methods.getRiskRates,
+        ]
     )
-
-    public static let bondBy = GRPCMethodDescriptor(
-      name: "BondBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/BondBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let bonds = GRPCMethodDescriptor(
-      name: "Bonds",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Bonds",
-      type: GRPCCallType.unary
-    )
-
-    public static let getBondCoupons = GRPCMethodDescriptor(
-      name: "GetBondCoupons",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondCoupons",
-      type: GRPCCallType.unary
-    )
-
-    public static let getBondEvents = GRPCMethodDescriptor(
-      name: "GetBondEvents",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondEvents",
-      type: GRPCCallType.unary
-    )
-
-    public static let currencyBy = GRPCMethodDescriptor(
-      name: "CurrencyBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/CurrencyBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let currencies = GRPCMethodDescriptor(
-      name: "Currencies",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Currencies",
-      type: GRPCCallType.unary
-    )
-
-    public static let etfBy = GRPCMethodDescriptor(
-      name: "EtfBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/EtfBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let etfs = GRPCMethodDescriptor(
-      name: "Etfs",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Etfs",
-      type: GRPCCallType.unary
-    )
-
-    public static let futureBy = GRPCMethodDescriptor(
-      name: "FutureBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/FutureBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let futures = GRPCMethodDescriptor(
-      name: "Futures",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Futures",
-      type: GRPCCallType.unary
-    )
-
-    public static let optionBy = GRPCMethodDescriptor(
-      name: "OptionBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let options = GRPCMethodDescriptor(
-      name: "Options",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Options",
-      type: GRPCCallType.unary
-    )
-
-    public static let optionsBy = GRPCMethodDescriptor(
-      name: "OptionsBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionsBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let shareBy = GRPCMethodDescriptor(
-      name: "ShareBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/ShareBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let shares = GRPCMethodDescriptor(
-      name: "Shares",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Shares",
-      type: GRPCCallType.unary
-    )
-
-    public static let indicatives = GRPCMethodDescriptor(
-      name: "Indicatives",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Indicatives",
-      type: GRPCCallType.unary
-    )
-
-    public static let getAccruedInterests = GRPCMethodDescriptor(
-      name: "GetAccruedInterests",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAccruedInterests",
-      type: GRPCCallType.unary
-    )
-
-    public static let getFuturesMargin = GRPCMethodDescriptor(
-      name: "GetFuturesMargin",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFuturesMargin",
-      type: GRPCCallType.unary
-    )
-
-    public static let getInstrumentBy = GRPCMethodDescriptor(
-      name: "GetInstrumentBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetInstrumentBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let getDividends = GRPCMethodDescriptor(
-      name: "GetDividends",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetDividends",
-      type: GRPCCallType.unary
-    )
-
-    public static let getAssetBy = GRPCMethodDescriptor(
-      name: "GetAssetBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let getAssets = GRPCMethodDescriptor(
-      name: "GetAssets",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssets",
-      type: GRPCCallType.unary
-    )
-
-    public static let getFavorites = GRPCMethodDescriptor(
-      name: "GetFavorites",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFavorites",
-      type: GRPCCallType.unary
-    )
-
-    public static let editFavorites = GRPCMethodDescriptor(
-      name: "EditFavorites",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/EditFavorites",
-      type: GRPCCallType.unary
-    )
-
-    public static let createFavoriteGroup = GRPCMethodDescriptor(
-      name: "CreateFavoriteGroup",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/CreateFavoriteGroup",
-      type: GRPCCallType.unary
-    )
-
-    public static let deleteFavoriteGroup = GRPCMethodDescriptor(
-      name: "DeleteFavoriteGroup",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/DeleteFavoriteGroup",
-      type: GRPCCallType.unary
-    )
-
-    public static let getFavoriteGroups = GRPCMethodDescriptor(
-      name: "GetFavoriteGroups",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFavoriteGroups",
-      type: GRPCCallType.unary
-    )
-
-    public static let getCountries = GRPCMethodDescriptor(
-      name: "GetCountries",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetCountries",
-      type: GRPCCallType.unary
-    )
-
-    public static let findInstrument = GRPCMethodDescriptor(
-      name: "FindInstrument",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/FindInstrument",
-      type: GRPCCallType.unary
-    )
-
-    public static let getBrands = GRPCMethodDescriptor(
-      name: "GetBrands",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrands",
-      type: GRPCCallType.unary
-    )
-
-    public static let getBrandBy = GRPCMethodDescriptor(
-      name: "GetBrandBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrandBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let getAssetFundamentals = GRPCMethodDescriptor(
-      name: "GetAssetFundamentals",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetFundamentals",
-      type: GRPCCallType.unary
-    )
-
-    public static let getAssetReports = GRPCMethodDescriptor(
-      name: "GetAssetReports",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetReports",
-      type: GRPCCallType.unary
-    )
-
-    public static let getConsensusForecasts = GRPCMethodDescriptor(
-      name: "GetConsensusForecasts",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetConsensusForecasts",
-      type: GRPCCallType.unary
-    )
-
-    public static let getForecastBy = GRPCMethodDescriptor(
-      name: "GetForecastBy",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetForecastBy",
-      type: GRPCCallType.unary
-    )
-
-    public static let getRiskRates = GRPCMethodDescriptor(
-      name: "GetRiskRates",
-      path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetRiskRates",
-      type: GRPCCallType.unary
-    )
-  }
+    
+    public enum Methods {
+        public static let tradingSchedules = GRPCMethodDescriptor(
+            name: "TradingSchedules",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/TradingSchedules",
+            type: GRPCCallType.unary
+        )
+        
+        public static let bondBy = GRPCMethodDescriptor(
+            name: "BondBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/BondBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let bonds = GRPCMethodDescriptor(
+            name: "Bonds",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Bonds",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getBondCoupons = GRPCMethodDescriptor(
+            name: "GetBondCoupons",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondCoupons",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getBondEvents = GRPCMethodDescriptor(
+            name: "GetBondEvents",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondEvents",
+            type: GRPCCallType.unary
+        )
+        
+        public static let currencyBy = GRPCMethodDescriptor(
+            name: "CurrencyBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/CurrencyBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let currencies = GRPCMethodDescriptor(
+            name: "Currencies",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Currencies",
+            type: GRPCCallType.unary
+        )
+        
+        public static let etfBy = GRPCMethodDescriptor(
+            name: "EtfBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/EtfBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let etfs = GRPCMethodDescriptor(
+            name: "Etfs",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Etfs",
+            type: GRPCCallType.unary
+        )
+        
+        public static let futureBy = GRPCMethodDescriptor(
+            name: "FutureBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/FutureBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let futures = GRPCMethodDescriptor(
+            name: "Futures",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Futures",
+            type: GRPCCallType.unary
+        )
+        
+        public static let optionBy = GRPCMethodDescriptor(
+            name: "OptionBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let options = GRPCMethodDescriptor(
+            name: "Options",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Options",
+            type: GRPCCallType.unary
+        )
+        
+        public static let optionsBy = GRPCMethodDescriptor(
+            name: "OptionsBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionsBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let shareBy = GRPCMethodDescriptor(
+            name: "ShareBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/ShareBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let shares = GRPCMethodDescriptor(
+            name: "Shares",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Shares",
+            type: GRPCCallType.unary
+        )
+        
+        public static let indicatives = GRPCMethodDescriptor(
+            name: "Indicatives",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/Indicatives",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getAccruedInterests = GRPCMethodDescriptor(
+            name: "GetAccruedInterests",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAccruedInterests",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getFuturesMargin = GRPCMethodDescriptor(
+            name: "GetFuturesMargin",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFuturesMargin",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getInstrumentBy = GRPCMethodDescriptor(
+            name: "GetInstrumentBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetInstrumentBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getDividends = GRPCMethodDescriptor(
+            name: "GetDividends",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetDividends",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getAssetBy = GRPCMethodDescriptor(
+            name: "GetAssetBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getAssets = GRPCMethodDescriptor(
+            name: "GetAssets",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssets",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getFavorites = GRPCMethodDescriptor(
+            name: "GetFavorites",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFavorites",
+            type: GRPCCallType.unary
+        )
+        
+        public static let editFavorites = GRPCMethodDescriptor(
+            name: "EditFavorites",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/EditFavorites",
+            type: GRPCCallType.unary
+        )
+        
+        public static let createFavoriteGroup = GRPCMethodDescriptor(
+            name: "CreateFavoriteGroup",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/CreateFavoriteGroup",
+            type: GRPCCallType.unary
+        )
+        
+        public static let deleteFavoriteGroup = GRPCMethodDescriptor(
+            name: "DeleteFavoriteGroup",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/DeleteFavoriteGroup",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getFavoriteGroups = GRPCMethodDescriptor(
+            name: "GetFavoriteGroups",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFavoriteGroups",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getCountries = GRPCMethodDescriptor(
+            name: "GetCountries",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetCountries",
+            type: GRPCCallType.unary
+        )
+        
+        public static let findInstrument = GRPCMethodDescriptor(
+            name: "FindInstrument",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/FindInstrument",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getBrands = GRPCMethodDescriptor(
+            name: "GetBrands",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrands",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getBrandBy = GRPCMethodDescriptor(
+            name: "GetBrandBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrandBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getAssetFundamentals = GRPCMethodDescriptor(
+            name: "GetAssetFundamentals",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetFundamentals",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getAssetReports = GRPCMethodDescriptor(
+            name: "GetAssetReports",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetReports",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getConsensusForecasts = GRPCMethodDescriptor(
+            name: "GetConsensusForecasts",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetConsensusForecasts",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getForecastBy = GRPCMethodDescriptor(
+            name: "GetForecastBy",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetForecastBy",
+            type: GRPCCallType.unary
+        )
+        
+        public static let getRiskRates = GRPCMethodDescriptor(
+            name: "GetRiskRates",
+            path: "/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetRiskRates",
+            type: GRPCCallType.unary
+        )
+    }
 }
 

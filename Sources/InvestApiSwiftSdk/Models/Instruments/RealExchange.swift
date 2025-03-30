@@ -1,5 +1,5 @@
 /// Площадка исполнения расчётов (биржа).
-public enum RealExchange: Int, Codable {
+public enum RealExchange: Int, Codable, Sendable {
     /// Значение не определено.
     case unspecified
 

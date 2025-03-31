@@ -101,6 +101,9 @@ public protocol Share: Sendable {
     /// Уникальный идентификатор позиции инструмента.
     var positionUid: String { get }
     
+    /// Уникальный идентификатор актива.
+    var assetUid: String { get }
+    
     /// Признак доступности для ИИС.
     var forIisFlag: Bool { get }
     
@@ -190,6 +193,8 @@ internal struct ShareModel: Share {
     
     let positionUid: String
     
+    let assetUid: String
+    
     let forIisFlag: Bool
     
     let forQualInvestorFlag: Bool
@@ -240,6 +245,7 @@ internal extension ShareModel {
         self.apiTradeAvailableFlag = grpcModel.apiTradeAvailableFlag
         self.realExchange = try .new(rawValue: grpcModel.realExchange.rawValue)
         self.positionUid = grpcModel.positionUid
+        self.assetUid = grpcModel.assetUid
         self.forIisFlag = grpcModel.forIisFlag
         self.forQualInvestorFlag = grpcModel.forQualInvestorFlag
         self.weekendFlag = grpcModel.weekendFlag

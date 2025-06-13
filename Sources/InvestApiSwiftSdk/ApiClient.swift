@@ -1,7 +1,7 @@
 import NIOCore
 
 /// Протокол для взаимодействия с Tinkoff API
-public protocol ApiClient {
+public protocol ApiClient: Sendable {
     associatedtype UsersService: SandboxUsersService
     
     /// Сервис предоставления справочной информации о пользователе.

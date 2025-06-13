@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "invest-api-swift-sdk",
     platforms: [
-        .macOS(.v12),
+        .macOS(.v15),
         .iOS(.v15),
         .tvOS(.v15),
         .watchOS(.v8)

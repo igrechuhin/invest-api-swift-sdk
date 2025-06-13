@@ -1,5 +1,5 @@
 /// Сервис получения биржевой информации в реальном времени.
-public protocol MarketDataStreamService {
+public protocol MarketDataStreamService: Sendable {
     /// Поток предоставления биржевой информации.
     ///
     /// - Parameter handler: Обработчик событий поступления сообщений из потока.

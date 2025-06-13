@@ -2,7 +2,7 @@ import NIOCore
 import Foundation
 
 /// Сервис получения справочной информации о ценных бумагах
-public protocol InstrumentsService {
+public protocol InstrumentsService: Sendable {
     /// Получает расписание работы торговых площадок.
     ///
     /// - Parameters:

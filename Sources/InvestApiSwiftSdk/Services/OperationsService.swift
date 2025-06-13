@@ -2,7 +2,7 @@ import NIOCore
 import Foundation
 
 /// Сервис получения списка операций, портфеля, позиций ценных бумаг и т.д.
-public protocol OperationsService {
+public protocol OperationsService: Sendable {
     
     typealias GenerateBrokerReportResult = (id: String, report: BrokerReport)
     

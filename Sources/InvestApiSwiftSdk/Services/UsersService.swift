@@ -1,7 +1,7 @@
 import NIOCore
 
 /// Сервис предоставления справочной информации о пользователе.
-public protocol SandboxUsersService {
+public protocol SandboxUsersService: Sendable {
     /// Получает счета пользователя.
     ///
     ///  - Returns: Массив счетов пользователя `[Account]`.

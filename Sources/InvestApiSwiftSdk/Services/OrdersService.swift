@@ -2,7 +2,7 @@ import NIOCore
 import Foundation
 
 /// Сервис работы с торговыми поручениями.
-public protocol OrdersService {
+public protocol OrdersService: Sendable {
     /// Выставляет биржевую заявку.
     ///
     /// - Parameters:

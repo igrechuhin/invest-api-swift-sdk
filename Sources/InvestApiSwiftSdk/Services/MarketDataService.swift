@@ -2,7 +2,7 @@ import NIOCore
 import Foundation
 
 /// Сервис получения биржевой информации.
-public protocol MarketDataService {
+public protocol MarketDataService: Sendable {
     /// Получает исторические свечи по инструменту.
     ///
     ///  - Parameters:

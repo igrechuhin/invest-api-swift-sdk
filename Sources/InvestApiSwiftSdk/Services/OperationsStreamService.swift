@@ -1,5 +1,5 @@
 /// Сервис получения информации о портфеле в реальном времени.
-public protocol OperationsStreamService {
+public protocol OperationsStreamService: Sendable {
     /// Поток обновлений портфеля.
     ///
     /// - Parameters:

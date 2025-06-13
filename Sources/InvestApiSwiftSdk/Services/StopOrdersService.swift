@@ -2,7 +2,7 @@ import NIOCore
 import Foundation
 
 /// Сервис работы со стоп-ордерами.
-public protocol StopOrdersService {
+public protocol StopOrdersService: Sendable {
     /// Выставляет стоп-заявку.
     ///
     /// - Parameters:

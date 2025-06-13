@@ -2,7 +2,7 @@ import NIOCore
 import Foundation
 
 /// Сервис для работы с песочницей.
-public protocol SandboxService {
+public protocol SandboxService: Sendable {
     /// Регистрирует счёт в песочнице.
     ///
     ///  - Returns: Идентификатор зарегистрированного счёта.

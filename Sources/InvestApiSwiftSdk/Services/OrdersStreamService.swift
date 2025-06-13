@@ -1,5 +1,5 @@
 /// Сервис работы с торговыми поручениями в реальном времени.
-public protocol OrdersStreamService {
+public protocol OrdersStreamService: Sendable {
     /// Поток сделок пользователя.
     ///
     /// - Parameters:

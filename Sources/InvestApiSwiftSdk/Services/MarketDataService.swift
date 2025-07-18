@@ -122,91 +122,95 @@ internal struct GrpcMarketDataService: MarketDataService {
     }
     
     func getCandles(figi: String, from: Date, to: Date, interval: CandleInterval) throws -> EventLoopFuture<[HistoricalCandle]> {
-        self.client
-            .getCandles(try .new(figi: figi, from: from, to: to, interval: interval))
-            .response
-            .map {
-                $0.candles.map { $0.toModel() }
-            }
+        try autoreleasepool {
+            client
+                .getCandles(try .new(figi: figi, from: from, to: to, interval: interval))
+                .response
+                .map { $0.candles.map { $0.toModel() } }
+        }
     }
     
     func getLastPrices(figis: [String]) throws -> EventLoopFuture<[LastPrice]> {
-        self.client
-            .getLastPrices(.new(figis: figis))
-            .response
-            .map {
-                $0.lastPrices.map { $0.toModel() }
-            }
+        autoreleasepool {
+            client
+                .getLastPrices(.new(figis: figis))
+                .response
+                .map { $0.lastPrices.map { $0.toModel() } }
+        }
     }
     
     func getOrderBook(figi: String, depth: Int32) throws -> EventLoopFuture<OrderBookInfo> {
-        self.client
-            .getOrderBook(.new(figi: figi, depth: depth))
-            .response
-            .map { $0.toModel() }
+        autoreleasepool {
+            client
+                .getOrderBook(.new(figi: figi, depth: depth))
+                .response
+                .map { $0.toModel() }
+        }
     }
     
     func getTradingStatus(figi: String) throws -> EventLoopFuture<TradingStatusInfo> {
-        self.client
-            .getTradingStatus(.new(figi: figi))
-            .response
-            .flatMapThrowing { try $0.toModel() }
+        autoreleasepool {
+            client
+                .getTradingStatus(.new(figi: figi))
+                .response
+                .flatMapThrowing { try $0.toModel() }
+        }
     }
     
     func getLastTrades(figi: String, from: Date, to: Date) -> EventLoopFuture<[Trade]> {
-        self.client
-            .getLastTrades(.new(figi: figi, from: from, to: to))
-            .response
-            .map {
-                $0.trades.map { $0.toModel() }
-            }
+        autoreleasepool {
+            client
+                .getLastTrades(.new(figi: figi, from: from, to: to))
+                .response
+                .map { $0.trades.map { $0.toModel() } }
+        }
     }
     
     func getClosePrices(figis: [String]) throws -> EventLoopFuture<[InstrumentClosePrice]> {
-        self.client
-            .getClosePrices(.new(figis: figis))
-            .response
-            .map {
-                $0.closePrices.map{ $0.toModel() }
-            }
+        autoreleasepool {
+            client
+                .getClosePrices(.new(figis: figis))
+                .response
+                .map { $0.closePrices.map{ $0.toModel() } }
+        }
     }
     
 #if compiler(>=5.5) && canImport(_Concurrency)
     func getCandles(figi: String, from: Date, to: Date, interval: CandleInterval) async throws -> [HistoricalCandle] {
-        try await self.client
+        try await client
             .getCandles(try .new(figi: figi, from: from, to: to, interval: interval))
             .candles
             .map { $0.toModel() }
     }
     
     func getLastPrices(figis: [String]) async throws -> [LastPrice] {
-        try await self.client
+        try await client
             .getLastPrices(.new(figis: figis))
             .lastPrices
             .map { $0.toModel() }
     }
     
     func getOrderBook(figi: String, depth: Int32) async throws -> OrderBookInfo {
-        try await self.client
+        try await client
             .getOrderBook(.new(figi: figi, depth: depth))
             .toModel()
     }
     
     func getTradingStatus(figi: String) async throws -> TradingStatusInfo {
-        try await self.client
+        try await client
             .getTradingStatus(.new(figi: figi))
             .toModel()
     }
     
     func getLastTrades(figi: String, from: Date, to: Date) async throws -> [Trade] {
-        try await self.client
+        try await client
             .getLastTrades(.new(figi: figi, from: from, to: to))
             .trades
             .map { $0.toModel() }
     }
     
     func getClosePrices(figis: [String]) async throws -> [InstrumentClosePrice] {
-        try await self.client
+        try await client
             .getClosePrices(.new(figis: figis))
             .closePrices
             .map{ $0.toModel() }

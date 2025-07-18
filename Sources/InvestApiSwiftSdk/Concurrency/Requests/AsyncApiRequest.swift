@@ -8,7 +8,7 @@ public class AsyncApiRequest<Client, Result> {
     }
 
     internal func sendAsync(client: Client) async throws -> Result {
-        return try await closure(client)
+        try await closure(client)
     }
 }
 #endif

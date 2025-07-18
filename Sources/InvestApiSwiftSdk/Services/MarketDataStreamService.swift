@@ -24,7 +24,7 @@ internal struct GrpcMarketDataStreamService: MarketDataStreamService {
     }
     
     func stream(handler: @escaping (any StreamData) -> Void) -> MarketDataStream {
-        let call = self.client.marketDataStream { response in
+        let call = client.marketDataStream { response in
             handler(response.transform())
         }
         return MarketDataStream(call)
@@ -32,7 +32,7 @@ internal struct GrpcMarketDataStreamService: MarketDataStreamService {
     
 #if compiler(>=5.5) && canImport(_Concurrency)
     func stream() -> MarketDataAsyncStream {
-        MarketDataAsyncStream(self.client.makeMarketDataStreamCall())
+        MarketDataAsyncStream(client.makeMarketDataStreamCall())
     }
 #endif
 }

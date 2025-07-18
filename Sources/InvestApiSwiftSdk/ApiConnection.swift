@@ -16,11 +16,26 @@ internal struct ApiConnection {
         ) { config in
             // Максимальный объём данных в сообщении, принимаемом от сервера
             config.maximumReceiveMessageLength = 8 * 1000000 // 8 МБ
+
+            // Connection lifecycle management to prevent memory leaks
+            config.idleTimeout = .seconds(30)
+            config.keepalive = ClientConnectionKeepalive(
+                interval: .seconds(15),
+                timeout: .seconds(5),
+                permitWithoutCalls: false
+            )
         }
     }
     
     func close() {
+        // Close the channel first
         _ = self.channel.close()
-        try? self.group.syncShutdownGracefully()
+        
+        // Properly shutdown the EventLoopGroup with error handling
+        do {
+            try self.group.syncShutdownGracefully()
+        } catch {
+            print("Error during EventLoopGroup shutdown: \(error)")
+        }
     }
 }

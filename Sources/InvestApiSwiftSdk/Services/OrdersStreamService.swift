@@ -36,7 +36,7 @@ internal struct GrpcOrdersStreamService: OrdersStreamService {
     
 #if compiler(>=5.5) && canImport(_Concurrency)
     func tradesStream(accounts: [String]) -> OrdersAsyncStream {
-        OrdersAsyncStream(self.client.tradesStream(.new(accounts: accounts)))
+        OrdersAsyncStream(self.client.makeTradesStreamCall(.new(accounts: accounts)).responseStream)
     }
 #endif
 }

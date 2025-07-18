@@ -2,11 +2,11 @@
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 public extension CommonApiClient {
     func sendRequest<Result>(_ request: CommonAsyncApiRequest<Result>) async throws -> Result {
-        return try await request.sendAsync(client: self)
+        try await request.sendAsync(client: self)
     }
     
     func stream<Stream>(_ stream: CommonAsyncStreamWrapper<Stream>) -> Stream {
-        return stream.get(client: self)
+        stream.get(client: self)
     }
 }
 #endif

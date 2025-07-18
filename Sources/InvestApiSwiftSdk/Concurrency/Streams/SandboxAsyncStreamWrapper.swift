@@ -9,9 +9,7 @@ public final class SandboxAsyncStreamWrapper<Stream>: AsyncStreamWrapper<Sandbox
     ///
     ///  - Returns: Экземпляр `SandboxAsyncStreamWrapper`.
     public static func portfolio(accounts: [String]) -> SandboxAsyncStreamWrapper<PortfolioAsyncStream> {
-        .init {
-            return $0.operationsStream.portfolioStream(accounts: accounts)
-        }
+        .init { $0.operationsStream.portfolioStream(accounts: accounts) }
     }
     
     /// Возвращает экземпляр `SandboxAsyncStreamWrapper` для получения потока информации по изменению позиций портфеля.
@@ -20,18 +18,14 @@ public final class SandboxAsyncStreamWrapper<Stream>: AsyncStreamWrapper<Sandbox
     ///
     ///  - Returns: Экземпляр `SandboxAsyncStreamWrapper`.
     public static func positions(accounts: [String]) -> SandboxAsyncStreamWrapper<PositionsAsyncStream> {
-        .init {
-            return $0.operationsStream.positionsStream(accounts: accounts)
-        }
+        .init { $0.operationsStream.positionsStream(accounts: accounts) }
     }
     
     // MARK: Сервис получения биржевой информации в реальном времени.
     
     /// Экземпляр `SandboxAsyncStreamWrapper` для получения потока предоставления биржевой информации.
     public static var market: SandboxAsyncStreamWrapper<MarketDataAsyncStream> {
-        .init {
-            return $0.marketDataStream.stream()
-        }
+        .init { $0.marketDataStream.stream() }
     }
     
     // MARK: Сервис работы с торговыми поручениями в реальном времени.
@@ -42,9 +36,7 @@ public final class SandboxAsyncStreamWrapper<Stream>: AsyncStreamWrapper<Sandbox
     ///
     ///  - Returns: Экземпляр `SandboxAsyncStreamWrapper`.
     public static func trades(accounts: [String]) -> SandboxAsyncStreamWrapper<OrdersAsyncStream> {
-        .init {
-            return $0.ordersStream.tradesStream(accounts: accounts)
-        }
+        .init { $0.ordersStream.tradesStream(accounts: accounts) }
     }
 }
 #endif

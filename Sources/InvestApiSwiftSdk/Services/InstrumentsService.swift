@@ -950,17 +950,18 @@ internal struct GrpcInstrumentsService: InstrumentsService {
 
         var result = [ConsensusForecasts]()
         
-        var request = Request.new(
-            limit: 10000,
-            pageNumber: 0
-        )
+        var pageNumber: Int32 = 0
         
         var proceed = true
         while proceed {
+            let request = Request.new(
+                limit: 10000,
+                pageNumber: pageNumber
+            )
             let response = try await self.client.getConsensusForecasts(request)
             result.append(contentsOf: response.items.map { $0.toModel() })
             proceed = result.count < response.page.totalCount
-            request.paging.pageNumber += 1
+            pageNumber += 1
         }
 
         return result

@@ -11,8 +11,6 @@ public struct MoneyValue: Codable, Sendable {
     /// Дробная часть суммы, может быть отрицательным числом.
     public let nano: Int32
     
-    private static let nanoFactor: Decimal = 1_000_000_000;
-    
     public init(currency: CurrencyType, units: Int64, nano: Int32) {
         self.currency = currency
         self.units = units
@@ -21,8 +19,8 @@ public struct MoneyValue: Codable, Sendable {
 }
 
 public extension MoneyValue {
-    func toDecimal() -> Decimal {
-        return Decimal(units) + Decimal(nano) / MoneyValue.nanoFactor;
+    func toDouble() -> Double {
+        return Double(units) + Double(nano) / nanoFactor
     }
 }
 
@@ -46,7 +44,7 @@ public extension MoneyValue {
 
 extension MoneyValue: CustomStringConvertible {
     public var description: String {
-        return "\(toDecimal()) \(currency.rawValue.uppercased())"
+        return "\(toDouble()) \(currency.rawValue.uppercased())"
     }
 }
 
@@ -100,3 +98,5 @@ internal extension Tinkoff_Public_Invest_Api_Contract_V1_MoneyValue {
         MoneyValue(grpcModel: self)
     }
 }
+
+private let nanoFactor: Double = 1_000_000_000;

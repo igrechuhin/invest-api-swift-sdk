@@ -8,21 +8,19 @@ public struct Quotation: Codable, Sendable {
     /// Дробная часть суммы, может быть отрицательным числом.
     public let nano: Int32
     
-    private static let nanoFactor: Decimal = 1_000_000_000;
-    
     public init(units: Int64, nano: Int32) {
         self.units = units
         self.nano = nano
     }
     
-    public init(decimalValue: Decimal) {
-        self.init(units: decimalValue.units, nano: decimalValue.nano)
+    public init(doubleValue: Double) {
+        self.init(units: doubleValue.units, nano: doubleValue.nano)
     }
 }
 
 public extension Quotation {
-    func toDecimal() -> Decimal {
-        return Decimal(units) + Decimal(nano) / Quotation.nanoFactor;
+    func toDouble() -> Double {
+        return Double(units) + Double(nano) / nanoFactor;
     }
 }
 
@@ -43,7 +41,7 @@ public extension Quotation {
     /// - Parameter percentage: Величина процента, на которую необходимо увеличить данную сумму.
     ///
     /// - Returns: Сумма увеличенная на указанный процент `Quotation`.
-    func increaseBy(percentage: Decimal) -> Self {
+    func increaseBy(percentage: Double) -> Self {
         increaseBy(percentage: percentage, priceStep: 0)
     }
     
@@ -55,8 +53,8 @@ public extension Quotation {
     ///     - rounding: Направление округления (по умолчанию .down).
     ///
     /// - Returns: Сумма увеличенная на указанный процент `Quotation`.
-    func increaseBy(percentage: Decimal, priceStep: Quotation, rounding: RoundingMode = .down) -> Self {
-        return increaseBy(percentage: percentage, priceStep: priceStep.toDecimal(), rounding: rounding)
+    func increaseBy(percentage: Double, priceStep: Quotation, rounding: RoundingMode = .down) -> Self {
+        return increaseBy(percentage: percentage, priceStep: priceStep.toDouble(), rounding: rounding)
     }
     
     /// Увеличивает данную сумму на указанный процент.
@@ -67,12 +65,12 @@ public extension Quotation {
     ///     - rounding: Направление округления (по умолчанию .down).
     ///
     /// - Returns: Сумма увеличенная на указанный процент `Quotation`.
-    func increaseBy(percentage: Decimal, priceStep: Decimal, rounding: RoundingMode = .down) -> Self {
-        let decimalValue = applyOperation(operation: .increase, percentage: percentage)
+    func increaseBy(percentage: Double, priceStep: Double, rounding: RoundingMode = .down) -> Self {
+        let doubleValue = applyOperation(operation: .increase, percentage: percentage)
         if priceStep == 0 {
-            return Quotation(decimalValue: decimalValue)
+            return Quotation(doubleValue: doubleValue)
         }
-        return roundValue(decimalValue: decimalValue, priceStep: priceStep, rounding: rounding)
+        return roundValue(doubleValue: doubleValue, priceStep: priceStep, rounding: rounding)
     }
     
     /// Уменьшает данную сумму на указанный процент.
@@ -80,7 +78,7 @@ public extension Quotation {
     /// - Parameter percentage: Величина процента, на которую необходимо уменьшить данную сумму.
     ///
     /// - Returns: Сумма уменьшенная на указанный процент `Quotation`.
-    func decreaseBy(percentage: Decimal) -> Self {
+    func decreaseBy(percentage: Double) -> Self {
         decreaseBy(percentage: percentage, priceStep: 0)
     }
     
@@ -92,8 +90,8 @@ public extension Quotation {
     ///     - rounding: Направление округления (по умолчанию .down).
     ///
     /// - Returns: Сумма уменьшенная на указанный процент `Quotation`.
-    func decreaseBy(percentage: Decimal, priceStep: Quotation, rounding: RoundingMode = .down) -> Self {
-        return decreaseBy(percentage: percentage, priceStep: priceStep.toDecimal(), rounding: rounding)
+    func decreaseBy(percentage: Double, priceStep: Quotation, rounding: RoundingMode = .down) -> Self {
+        return decreaseBy(percentage: percentage, priceStep: priceStep.toDouble(), rounding: rounding)
     }
     
     /// Уменьшает данную сумму на указанный процент.
@@ -104,23 +102,23 @@ public extension Quotation {
     ///     - rounding: Направление округления (по умолчанию .down).
     ///
     /// - Returns: Сумма уменьшенная на указанный процент `Quotation`.
-    func decreaseBy(percentage: Decimal, priceStep: Decimal, rounding: RoundingMode = .down) -> Self {
-        let decimalValue = applyOperation(operation: .decrease, percentage: percentage)
+    func decreaseBy(percentage: Double, priceStep: Double, rounding: RoundingMode = .down) -> Self {
+        let doubleValue = applyOperation(operation: .decrease, percentage: percentage)
         if priceStep == 0 {
-            return Quotation(decimalValue: decimalValue)
+            return Quotation(doubleValue: doubleValue)
         }
-        return roundValue(decimalValue: decimalValue, priceStep: priceStep, rounding: rounding)
+        return roundValue(doubleValue: doubleValue, priceStep: priceStep, rounding: rounding)
     }
     
-    private func applyOperation(operation: Quotation.Operation, percentage: Decimal) -> Decimal {
-        let decimalValue = self.toDecimal()
-        let secondValue = (decimalValue / 100 * percentage)
-        return operation == .increase ? decimalValue + secondValue : decimalValue - secondValue
+    private func applyOperation(operation: Quotation.Operation, percentage: Double) -> Double {
+        let doubleValue = toDouble()
+        let secondValue = (doubleValue / 100 * percentage)
+        return operation == .increase ? doubleValue + secondValue : doubleValue - secondValue
     }
     
-    private func roundValue(decimalValue: Decimal, priceStep: Decimal, rounding: RoundingMode) -> Quotation {
-        let units = decimalValue.units
-        let nano = decimalValue.nano
+    private func roundValue(doubleValue: Double, priceStep: Double, rounding: RoundingMode) -> Quotation {
+        let units = doubleValue.units
+        let nano = doubleValue.nano
         let newNano = rounding == .down ? nano - nano % priceStep.nano : nano + (priceStep.nano - nano % priceStep.nano)
         return Quotation(
             units: newNano < 0 ? units - 1 : newNano < 1000000000 ? units : units + 1,
@@ -149,7 +147,7 @@ public extension Quotation {
 
 extension Quotation: CustomStringConvertible {
     public var description: String {
-        return "\(toDecimal())"
+        return "\(toDouble())"
     }
 }
 
@@ -171,3 +169,5 @@ internal extension Tinkoff_Public_Invest_Api_Contract_V1_Quotation {
         Quotation(grpcModel: self)
     }
 }
+
+private let nanoFactor: Double = 1_000_000_000;
